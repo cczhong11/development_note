@@ -160,7 +160,7 @@
     <meta itemprop="headline" content="Fork">
     
     <meta itemprop="datePublished" content="2021-04-05T22:48:39+00:00">
-    <meta itemprop="dateModified" content="2021-04-05T22:48:45+00:00">
+    <meta itemprop="dateModified" content="2021-04-25T23:11:03+00:00">
 
     <div class="page__inner-wrap">
 
@@ -172,8 +172,14 @@
 
         <h1 id="fork"><a aria-hidden="true" class="anchor-heading" href="#fork"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Fork</h1>
 <p>system call</p>
-<p>fork函数调用一次，返回两次，并发执行，相同但是独立的地址空间。相同代码和数据段、堆、共享库以及用户栈，共享文件，最大区别是调用一次，返回两次。对所有fork 拓扑排序，可以得到一个输出顺序。</p>
-<p>fork为当前进程调用，是内核，为新进程创建各种数据结构，并分配给他一个唯一的pid.为了给这个新进程创建虚拟内存，它创建当前进程的mm_struct, 区域结构和页表的原样副本，他将两个进程中的每个页面都标记为只读，并将两个进程中每个区域结构都标记为私有的写时复制 copy on write。</p><span id="navId" data="27148b7c-1a4b-4f57-8980-48c50e158b39"></span>
+<p>fork函数调用一次，返回两次，并发执行，<strong>相同但是独立的地址空间</strong>。相同代码和数据段、堆、共享库以及用户栈，共享文件，最大区别是父和子有不同的pid。</p>
+<p>对所有fork 拓扑排序，可以得到一个输出顺序。</p>
+<p>fork为当前进程调用，是内核，为新进程创建各种数据结构，并分配给他一个唯一的pid.为了给这个新进程创建虚拟内存，它创建当前进程的mm_struct, 区域结构和页表的原样副本，他将两个进程中的每个页面都标记为只读，并将两个进程中每个区域结构都标记为私有的写时复制 copy on write。</p>
+<hr>
+<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
+<ul>
+<li><a href="https://notes.tczhong.com/notes/68e49ff0-58d9-43fa-a47f-a0d50b88095d.html">Process (my_note)</a></li>
+</ul><span id="navId" data="27148b7c-1a4b-4f57-8980-48c50e158b39"></span>
 
                 
       </section>

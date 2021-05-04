@@ -160,7 +160,7 @@
     <meta itemprop="headline" content="Basic">
     
     <meta itemprop="datePublished" content="2021-04-12T19:52:30+00:00">
-    <meta itemprop="dateModified" content="2021-04-12T19:53:05+00:00">
+    <meta itemprop="dateModified" content="2021-05-03T20:36:34+00:00">
 
     <div class="page__inner-wrap">
 
@@ -185,10 +185,11 @@
 <li><strong>why</strong>:Conceptually,manages a pool of resources.</li>
 <li><strong>how</strong>:
 <ul>
-<li>P operation: Wait for resource to be available</li>
-<li>V operation: Make resource available</li>
+<li>P operation: Wait for resource to be available (lock s-=1)</li>
+<li>V operation: Make resource available (unlock s+=1)</li>
 <li>Deschedule (move to blocked queue) blocked thread or process </li>
 <li>Reschedule (move to ready queue) when resource available</li>
+<li>初始s=1，s不会是负值</li>
 </ul>
 </li>
 </ul>
