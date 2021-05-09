@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   
-  <title>Loadbalance - my_note</title>
+  <title>Service_mesh - my_note</title>
   
 
   <link
@@ -42,22 +42,22 @@
 <meta name="description" content="Personal knowledge space">
 <meta name="author" content="">
 
-<link rel="canonical" href="https://notes.tczhong.com/notes/f5ca7595-879b-46b9-966a-5952a292fdfc.html">
+<link rel="canonical" href="https://notes.tczhong.com/notes/07907bab-beb0-4cd2-b2c0-c6d113989711.html">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://notes.tczhong.com/notes/f5ca7595-879b-46b9-966a-5952a292fdfc.html">
+<meta property="og:url" content="https://notes.tczhong.com/notes/07907bab-beb0-4cd2-b2c0-c6d113989711.html">
 <meta property="og:description" content="Personal knowledge space">
 <meta property="og:image" content="https://notes.tczhong.comundefined">
 
 <meta name="twitter:card" content="summary">
 
-<meta name="twitter:url" content="https://notes.tczhong.com/notes/f5ca7595-879b-46b9-966a-5952a292fdfc.html">
+<meta name="twitter:url" content="https://notes.tczhong.com/notes/07907bab-beb0-4cd2-b2c0-c6d113989711.html">
 <meta name="twitter:description" content="Personal knowledge space">
 <meta name="twitter:image" content="https://notes.tczhong.comundefined">
 
 
-  <meta property="og:title" content="Loadbalance - my_note" />
-  <meta name="twitter:title" content="Loadbalance - my_note" />
+  <meta property="og:title" content="Service_mesh - my_note" />
+  <meta name="twitter:title" content="Service_mesh - my_note" />
   
 </head>
 
@@ -130,7 +130,7 @@
       
         
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://notes.tczhong.com">Development</a></li><li class="breadcrumb-nav-list-item"><a href="https://notes.tczhong.com/notes/92917ea3-452e-48dc-875e-5cd0002041db.html">Network</a></li><li class="breadcrumb-nav-list-item">Loadbalance</li></ol>
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://notes.tczhong.com">Development</a></li><li class="breadcrumb-nav-list-item"><a href="https://notes.tczhong.com/notes/3524d0a7-be73-45d6-847e-c970f5c1c760.html">Tools</a></li><li class="breadcrumb-nav-list-item">Service_mesh</li></ol>
           </nav>
         
       
@@ -157,10 +157,10 @@
 <div id="main" role="main">
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Loadbalance">
+    <meta itemprop="headline" content="Service_mesh">
     
-    <meta itemprop="datePublished" content="2021-03-23T22:18:24+00:00">
-    <meta itemprop="dateModified" content="2021-05-03T22:44:25+00:00">
+    <meta itemprop="datePublished" content="2021-05-06T22:15:03+00:00">
+    <meta itemprop="dateModified" content="2021-05-06T22:29:33+00:00">
 
     <div class="page__inner-wrap">
 
@@ -170,67 +170,23 @@
 
         
 
-        <h1 id="loadbalance"><a aria-hidden="true" class="anchor-heading" href="#loadbalance"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Loadbalance</h1>
-<h1 id="load-balance"><a aria-hidden="true" class="anchor-heading" href="#load-balance"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>load balance</h1>
-<p>把一系列task分给不同的机器。</p>
-<ul>
-<li>静态
-<ul>
-<li>it does not take into account the state of the system for the distribution of tasks</li>
-<li>are easy to set up and extremely efficient in the case of fairly regular tasks</li>
-</ul>
-</li>
-<li>动态
-<ul>
-<li>take into account the current load of each of the computing units</li>
-<li>tasks can be moved dynamically from an overloaded node to an underloaded node in order to receive faster processing</li>
-</ul>
-</li>
-</ul>
-<h2 id="proxy"><a aria-hidden="true" class="anchor-heading" href="#proxy"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>proxy</h2>
-<ul>
-<li>
-<p>Client-side random load balancing: deliver a list of server IPs to the client, and then to have client randomly select the IP from the list on each connection</p>
-<ul>
-<li>the method of delivery of list of IPs to the client can vary</li>
-</ul>
-</li>
-<li>
-<p>Server-side load balancers</p>
-<ul>
-<li>The load balancer forwards requests to one of the "backend" servers</li>
-<li>load balancers are implemented in high-availability pairs which may also replicate session persistence data if required by the specific application</li>
-</ul>
-</li>
-<li>
-<p>presistence</p>
-<ul>
-<li>important issue when operating a load-balanced service is how to handle information that must be kept across the multiple requests in a user's session. </li>
-<li>One basic solution to the session data issue is to send all requests in a user session consistently to the same backend server.</li>
-<li>Assignment to a particular server might be based on a username, client IP address, or be random.</li>
-<li>use memcache to save session info</li>
-<li>a simple but efficient approach is to store the per-session data in the browser itself: cookie
-<ul>
-<li>or URL rewriting</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="forward"><a aria-hidden="true" class="anchor-heading" href="#forward"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>forward</h3>
-<p>前向代理作为客户端的代理，将从互联网上获取的资源返回给一个或多个的客户端，服务端（如Web服务器）只知道代理的IP地址而不知道客户端的IP地址
-Forward proxies ensure that websites never communicate directly with a user</p>
-<p><img src="/assets/images/2021-05-03-22-38-13.png"></p>
-<h3 id="reverse"><a aria-hidden="true" class="anchor-heading" href="#reverse"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>reverse</h3>
-<p>反向代理是作为服务器端（如Web服务器）的代理使用，而不是客户端。反向代理是供很多客户端都通过它间接访问不同后端服务器上的资源，而不需要知道这些后端服务器的存在，而以为所有资源都来自于这个反向代理服务器。
-reverse proxies ensure that users would not communicate directly with a back-end server.
-<img src="/assets/images/2021-05-03-22-39-21.png"></p>
-<p>A reverse proxy server is a type of proxy server that typically sits behind the firewall in a private network and directs client requests to the appropriate backend server. A reverse proxy provides an additional level of abstraction and control to ensure the smooth flow of network traffic between clients and servers.</p>
-<h2 id="dns"><a aria-hidden="true" class="anchor-heading" href="#dns"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>DNS</h2>
-<ul>
-<li>round-robin DNS: multiple IP addresses are associated with a single domain name</li>
-<li><a href="https://en.wikipedia.org/wiki/Load_balancing_(computing)#DNS_delegation">DNS delegation</a>: delegate <a href="http://www.example.org">www.example.org</a> as a sub-domain whose zone is served by each of the same servers that are serving the web site. This technique works particularly well where individual servers are spread geographically on the Internet. </li>
-</ul><span id="navId" data="f5ca7595-879b-46b9-966a-5952a292fdfc"></span>
+        <h1 id="service_mesh"><a aria-hidden="true" class="anchor-heading" href="#service_mesh"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Service_mesh</h1>
+<p><a href="https://philcalcado.com/2017/08/03/pattern_service_mesh.html">reference</a></p>
+<p>A service mesh is a dedicated infrastructure layer for handling service-to-service communication. It’s responsible for the reliable delivery of requests through the complex topology of services that comprise a modern, cloud native application. In practice, the service mesh is typically implemented as an array of lightweight network proxies that are deployed alongside application code, without the application needing to be aware.</p>
+<p><img src="/assets/images/2021-05-06-22-27-43.png"></p>
+<p>In such model, each of your services will have a companion proxy sidecar. Given that services communicate with each other only through the sidecar proxy, we end up with a deployment similar to the diagram below:</p>
+<p><img src="/assets/images/2021-05-06-22-27-11.png"></p>
+<p>下面以 Istio 为例讲解 Service Mesh 如何工作，后续文章将会详解 Istio 如何在 Kubernetes 中工作。</p>
+<ol>
+<li>Sidecar（Istio 中使用 Envoy 作为 sidecar 代理）将服务请求路由到目的地址，根据请求中的参数判断是到生产环境、测试环境还是 staging 环境中的服务（服务可能同时部署在这三个环境中），是路由到本地环境还是公有云环境？所有的这些路由信息可以动态配置，可以是全局配置也可以为某些服务单独配置。这些配置是由服务网格的控制平面推送给各个 sidecar 的，</li>
+<li>当 sidecar 确认了目的地址后，将流量发送到相应服务发现端点，在 Kubernetes 中是 service，然后 service 会将服务转发给后端的实例。</li>
+<li>Sidecar 根据它观测到最近请求的延迟时间，选择出所有应用程序的实例中响应最快的实例。</li>
+<li>Sidecar 将请求发送给该实例，同时记录响应类型和延迟数据。</li>
+<li>如果该实例挂了、不响应了或者进程不工作了，sidecar 会将把请求发送到其他实例上重试。</li>
+<li>如果该实例持续返回 error，sidecar 会将该实例从负载均衡池中移除，稍后再周期性得重试。
+7.如果请求的截止时间已过，sidecar 主动标记该请求为失败，而不是再次尝试添加负载。</li>
+<li>SIdecar 以 metric 和分布式追踪的形式捕获上述行为的各个方面，这些追踪信息将发送到集中 metric 系统。</li>
+</ol><span id="navId" data="07907bab-beb0-4cd2-b2c0-c6d113989711"></span>
 
                 
       </section>
