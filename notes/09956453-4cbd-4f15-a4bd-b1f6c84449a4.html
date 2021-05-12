@@ -160,7 +160,7 @@
     <meta itemprop="headline" content="File_system">
     
     <meta itemprop="datePublished" content="2021-05-03T15:16:50+00:00">
-    <meta itemprop="dateModified" content="2021-05-03T15:16:50+00:00">
+    <meta itemprop="dateModified" content="2021-05-11T20:56:11+00:00">
 
     <div class="page__inner-wrap">
 
@@ -170,7 +170,61 @@
 
         
 
-        <h1 id="file_system"><a aria-hidden="true" class="anchor-heading" href="#file_system"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>File_system</h1><span id="navId" data="09956453-4cbd-4f15-a4bd-b1f6c84449a4"></span>
+        <h1 id="file_system"><a aria-hidden="true" class="anchor-heading" href="#file_system"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>File_system</h1>
+<p><a href="https://notes.tczhong.com/notes/b1e1dad4-5179-4629-af74-208cef96a55e.html">Io</a></p>
+<p>the in-memory data structure vnode is just an inode cache that stores information about the file(typically inode stores in the disk) so that it can be accessed more quickly.</p>
+<p><img src="/assets/images/2021-05-11-19-41-30.png"></p>
+<h1 id="file-system"><a aria-hidden="true" class="anchor-heading" href="#file-system"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>file system</h1>
+<p><img src="/assets/images/2021-05-11-19-43-14.png"></p>
+<ul>
+<li>
+<p>The boot block occupies the beginning of a file system, typically the first sector, and may contain the bootstrap code that is read into the machine to boot, or initialize, the operating system. Although only one boot block is needed to boot the system, every file system has a (possibly empty) boot block.</p>
+</li>
+<li>
+<p>The super block describes the state of a file system — how large it is, how many files it can store, where to find free space on the file system, and other information.</p>
+</li>
+<li>
+<p>The mode list is a list of Modes that follows the super block in the file system. Administrators specify the size of the Mode list when configuring a file system. The kernel references Modes by index into the Mode list. One Mode is the root mode of the file system: it is the Mode by which the directory structure of the file system is accessible after execution of the mount system call (Section 5.14).</p>
+</li>
+<li>
+<p>The data blocks start at the end of the Mode list and contain file data and administrative data. An allocated data block can belong to one and only one file in the file system.</p>
+</li>
+</ul>
+<h2 id="inode"><a aria-hidden="true" class="anchor-heading" href="#inode"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>inode</h2>
+<p>Modes exist in a static form on disk, and the kernel reads them into an in-core mode to manipulate them. Disk modes consist of the following fields</p>
+<ul>
+<li>file owner identifier</li>
+<li>file type</li>
+<li>file access permission</li>
+<li>access time, last modified, last accessed</li>
+<li>number of links to the file</li>
+<li>table of contents for the disk addresses of data in a file</li>
+<li>file size</li>
+<li>no path</li>
+</ul>
+<h2 id="structure-of-a-regular-file"><a aria-hidden="true" class="anchor-heading" href="#structure-of-a-regular-file"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>STRUCTURE OF A REGULAR FILE</h2>
+<p>the Mode contains the table of contents to locate a file's data on disk. Since each block on a disk is addressable by number, the table of contents consists of a set of disk block numbers.</p>
+<p>For greater flexibility, the kernel allocates file space one block at a time and allows the data in a file to be spread throughout the file system.</p>
+<p>To access the data via the indirect block, the kernel must read the indirect block, find the appropriate direct block entry, and then read the direct block to find the data.</p>
+<p><img src="/assets/images/2021-05-11-19-58-08.png"></p>
+<h2 id="directories"><a aria-hidden="true" class="anchor-heading" href="#directories"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>directories</h2>
+<p>A directory is a file whose data is a sequence of entries, each consisting of an mode number and the name of a file contained in the directory.</p>
+<p><img src="/assets/images/2021-05-11-20-05-57.png"></p>
+<h2 id="ls"><a aria-hidden="true" class="anchor-heading" href="#ls"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>ls</h2>
+<pre><code>-rwxrw-r--    10    root   root 2048    Jan 13 07:11 afile.exe
+?UUUGGGOOOS   00  UUUUUU GGGGGG ####    ^-- date stamp and file name are obvious ;-)
+^ ^  ^  ^ ^    ^      ^      ^    ^
+| |  |  | |    |      |      |    \--- File Size
+| |  |  | |    |      |      \-------- Group Name (for example, Users, Administrators, etc)
+| |  |  | |    |      \--------------- Owner Acct
+| |  |  | |    \---------------------- Link count (what constitutes a "link" here varies)
+| |  |  | \--------------------------- Alternative Access (blank means none defined, anything else varies)
+| \--\--\----------------------------- Read, Write and Special access modes for [U]ser, [G]roup, and [O]thers (everyone else)
+\------------------------------------- File type flag
+</code></pre>
+<h2 id="conversion-of-a-path-name-to-an-innode"><a aria-hidden="true" class="anchor-heading" href="#conversion-of-a-path-name-to-an-innode"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>conversion of a path name to an innode</h2>
+<p><img src="/assets/images/2021-05-11-20-12-36.png"></p>
+<p>The kernel does a linear search of the directory file associated with the working mode, trying to match the path name component to a directory entry name.</p><span id="navId" data="09956453-4cbd-4f15-a4bd-b1f6c84449a4"></span>
 
                 
       </section>

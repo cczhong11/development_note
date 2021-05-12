@@ -160,7 +160,7 @@
     <meta itemprop="headline" content="Container">
     
     <meta itemprop="datePublished" content="2021-04-12T21:19:27+00:00">
-    <meta itemprop="dateModified" content="2021-04-12T21:19:27+00:00">
+    <meta itemprop="dateModified" content="2021-05-11T20:46:51+00:00">
 
     <div class="page__inner-wrap">
 
@@ -222,7 +222,15 @@
 <li>provide independent</li>
 <li>resource share.  secure problem</li>
 <li>less isolation</li>
-</ul><span id="navId" data="aca8c893-60f8-465f-bda5-31b9ae83d81a"></span>
+</ul>
+<h1 id="tupperware"><a aria-hidden="true" class="anchor-heading" href="#tupperware"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Tupperware</h1>
+<p><img src="/assets/images/2021-05-10-22-59-20.png"></p>
+<p><img src="/assets/images/2021-05-10-23-00-53.png"></p>
+<p>resource broker for source of truth for machine info. One instance of Resource Broker (RB) is deployed to each DC. RB records whether a machine in the DC is free or assigned to an entitlement</p>
+<p><img src="/assets/images/2021-05-10-23-06-16.png"></p>
+<p><img src="/assets/images/2021-05-11-20-32-16.png"></p>
+<p>Figure 4 shows an overview of Twine. The Capacity Portal allows users to request or modify entitlements, which associate capacity quotas with business units deﬁned in the service accounting hierarchy. With a granted entitlement, a user deploys jobs through the front end. The scheduler manages job and task lifecycle, e.g., orchestrating a job’s software release. If a job has a TaskController, the scheduler coordinates with the TaskController to make decisions, e.g., delaying a task restart to rebuild a lost data replica ﬁrst. The allocator assigns machines to entitlements and assigns tasks to machines. ReBalancer runs asynchronously and continuously to improve the allocator’s decisions, e.g., better balancing the utilization of CPU, power, and network. Resource Broker (RB) stores machine information and unavailability events that track hardware failures and planned maintenance. DC operators schedule planned maintenance through Ops Planner. The Health Check Service (HCS) monitors machines and updates their status in RB. The agent runs on every machine to manage tasks. Sidekick switches host proﬁles as needed. Service Resource Manager (SRM) autoscales jobs in response to load changes. Conveyor is our continuous delivery system.</p>
+<p><a href="https://www.usenix.org/system/files/osdi20-tang.pdf">reference</a></p><span id="navId" data="aca8c893-60f8-465f-bda5-31b9ae83d81a"></span>
 
                 
       </section>
