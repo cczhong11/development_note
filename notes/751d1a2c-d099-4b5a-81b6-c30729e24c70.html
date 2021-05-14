@@ -160,7 +160,7 @@
     <meta itemprop="headline" content="Cap">
     
     <meta itemprop="datePublished" content="2021-04-11T23:23:48+00:00">
-    <meta itemprop="dateModified" content="2021-04-12T20:06:50+00:00">
+    <meta itemprop="dateModified" content="2021-05-14T09:18:01+00:00">
 
     <div class="page__inner-wrap">
 
@@ -183,6 +183,12 @@
 <li>CP: commuication among server to get consistence but not availability</li>
 <li>PA: several servers but no consisitence</li>
 </ul>
+<p>Networks aren't reliable, so you'll need to support partition tolerance. You'll need to make a software tradeoff between consistency and availability.</p>
+<p>CP - consistency and partition tolerance
+Waiting for a response from the partitioned node might result in a timeout error. CP is a good choice if your business needs require atomic reads and writes.</p>
+<p>AP - availability and partition tolerance
+Responses return the most readily available version of the data available on any node, which might not be the latest. Writes might take some time to propagate when the partition is resolved.</p>
+<p>AP is a good choice if the business needs allow for eventual consistency or when the system needs to continue working despite external errors.</p>
 <p><img src="https://qph.fs.quoracdn.net/main-qimg-23a75bd8c77d030f3ca9e1fd0621c10c.webp">
 <img src="http://www.andrew.cmu.edu/course/14-736/applications/ln/dividework.jpg">
 <img src="http://www.andrew.cmu.edu/course/14-736/applications/ln/addcomm.jpg"></p><span id="navId" data="751d1a2c-d099-4b5a-81b6-c30729e24c70"></span>

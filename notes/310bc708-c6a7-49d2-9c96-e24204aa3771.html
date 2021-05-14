@@ -160,7 +160,7 @@
     <meta itemprop="headline" content="Nosql">
     
     <meta itemprop="datePublished" content="2021-03-23T22:17:48+00:00">
-    <meta itemprop="dateModified" content="2021-04-12T21:17:34+00:00">
+    <meta itemprop="dateModified" content="2021-05-13T22:06:58+00:00">
 
     <div class="page__inner-wrap">
 
@@ -202,6 +202,9 @@
 <p>Flexible Sparse &#x26; Wide Column requirements talk about capability to increase your columns as and when you need. It is suitable only in those cases where secondary index needs are less, which means you have it absolutely de-normalized. In other words all information is available to serve a specific query and does not go across multiple tables to get server specific client query.</p>
 <p>It is important to know that Cassandra is suitable with non-group by kind of models. For applications that have requirement of group-by functionality, Cassandra would not be the right system to choose. This also includes bringing in secondary indexes, which will result into overall performance of system going down.</p>
 <p> very high velocity of random read &#x26; writes &#x26; wide column requirements.</p>
+<p>与BigTable和其模仿者HBase不同，Cassandra的数据并不存储在分布式文件系统如GFS或HDFS中，而是直接存于本地。与BigTable一样，Cassandra也是日志型数据库，即把新写入的数据存储在内存的Memtable中并通过磁盘中的CommitLog来做持久化，内存填满后将数据按照key的顺序写进一个只读文件SSTable中，每次读取数据时将所有SSTable和内存中的数据进行查找和合并。这种系统的特点是写入比读取更快，因为写入一条数据是顺序计入commit log中，不需要随机读取磁盘以及搜索。</p>
+<p>集群没有master的概念，所有节点都是同样的角色，彻底避免了整个系统的单点问题导致的不稳定性，集群间的状态同步通过Gossip协议来进行P2P的通信。每个节点都把数据存储在本地，每个节点都接受来自客户端的请求。每次客户端随机选择集群中的一个节点来请求数据，对应接受请求的节点将对应的key在一致性哈希的环上定位是哪些节点应该存储这个数据，将请求转发到对应的节点上，并将对应若干节点的查询反馈返回给客户端。</p>
+<p>在一致性、可用性和分区耐受能力（CAP）的折衷问题上，Cassandra和Dynamo一样比较灵活。Cassandra的每个keyspace可配置一行数据会写入多少个节点(设这个数为N)，来保证数据不因为机器宕机或磁盘损坏而丢失数据，即保证了CAP中的P。用户在读写数据时可以指定要求成功写到多少个节点才算写入成功(设为W)，以及成功从多少个节点读取到了数据才算成功(设为R)。可推理得出，当W+R>N时，读到的数据一定是上一次写入的，即维护了强一致性，确保了CAP中的C。当W+R&#x3C;=N时，数据是最终一致性因为存在一段时间可能读到的并不是最新版的数据。当W=N或R=N时，意味着系统只要有一个节点无响应或宕机，就有一部分数据无法成功写或者读，即失去了CAP中的可用性A。因此，大多数系统中，都将N设为3，W和R设为QUORUM，即“过半数”——在N为3时QUORUM是2。</p>
 <h2 id="partition"><a aria-hidden="true" class="anchor-heading" href="#partition"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>partition</h2>
 <ul>
 <li>ring techonology.</li>
@@ -231,7 +234,7 @@
 <ul>
 <li>Write operations happens in 2 steps
 <ul>
-<li>Write to com⇒mit log in local disk of the node</li>
+<li>Write to commit log in local disk of the node</li>
 <li>Update in-memory data structure.</li>
 </ul>
 </li>
@@ -241,7 +244,14 @@
 <li>Uses Bloom- Filter (summarization of keys in file store in memory) to avoid looking up files that do not contain the key.</li>
 </ul>
 </li>
-</ul><span id="navId" data="310bc708-c6a7-49d2-9c96-e24204aa3771"></span>
+</ul>
+<h1 id="hbase"><a aria-hidden="true" class="anchor-heading" href="#hbase"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>HBase</h1>
+<p>HBase是Apache Hadoop项目的一个子项目，是Google BigTable的一个克隆，与Cassandra一样，它们都使用了BigTable的列族式的数据模型，但是：</p>
+<p>Cassandra只有一种节点，而HBase有多种不同角色，除了处理读写请求的region server之外，其架构在一套完整的HDFS分布式文件系统之上，并需要ZooKeeper来同步集群状态，部署上Cassandra更简单。
+Cassandra的数据一致性策略是可配置的，可选择是强一致性还是性能更高的最终一致性；而HBase总是强一致性的。
+Cassandra通过一致性哈希来决定一行数据存储在哪些节点，靠概率上的平均来实现负载均衡；而HBase每段数据(region)只有一个节点负责处理，由master来动态分配一个region是否大到需要拆分成两个，同时会将过热的节点上的一些region动态的分配给负载较低的节点，因此实现动态的负载均衡。
+因为每个region同时只能有一个节点处理，一旦这个节点无响应，在系统将这个节点的所有region转移到其他节点之前这些数据便无法读写，加上master也只有一个节点，备用master的恢复也需要时间，因此HBase在一定程度上有单点问题；而Cassandra无单点问题。
+Cassandra的读写性能优于HBase[17]。</p><span id="navId" data="310bc708-c6a7-49d2-9c96-e24204aa3771"></span>
 
                 
       </section>
