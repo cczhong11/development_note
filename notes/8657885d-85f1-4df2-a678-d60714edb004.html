@@ -163,7 +163,7 @@
     <meta itemprop="headline" content="Vim">
     
     <meta itemprop="datePublished" content="2021-04-16T21:13:33+00:00">
-    <meta itemprop="dateModified" content="2021-04-16T21:43:38+00:00">
+    <meta itemprop="dateModified" content="2021-09-12T17:07:43+00:00">
 
     <div class="page__inner-wrap">
 
@@ -216,12 +216,102 @@
 :s/old/new</p>
 <p>替换改行的所有old单词为new
 :s/old/new/g</p>
-<p>替换两个#之间的单词
-:#,#s/old/new/g</p>
+<p>替换两个# 之间的单词
+<code>:#,#s/old/new/g</code></p>
 <p>替换文件中所有的单词
 :%s/old/new/g</p>
 <p>每一个替换之前都需要确认的话，在命令末尾加一个 c
-:%s/old/new/gc</p><span id="navId" data="8657885d-85f1-4df2-a678-d60714edb004"></span>
+:%s/old/new/gc</p>
+<h1 id="config"><a aria-hidden="true" class="anchor-heading" href="#config"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Config</h1>
+<h2 id="basic"><a aria-hidden="true" class="anchor-heading" href="#basic"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>basic</h2>
+<ul>
+<li>filetype on  
+<ul>
+<li>" Enable type file detection. Vim will be able to try to detect the type of file in use.</li>
+</ul>
+</li>
+<li>filetype plugin on</li>
+<li>filetype indent on</li>
+<li>syntax on</li>
+<li>set number
+<ul>
+<li>show line number</li>
+</ul>
+</li>
+<li>set cursorline
+<ul>
+<li>Highlight cursor line underneath the cursor horizontally.</li>
+</ul>
+</li>
+<li>set shiftwidth=4</li>
+<li>set tabstop=4</li>
+<li>set hlsearch</li>
+<li>set incsearch
+<ul>
+<li>While searching though a file incrementally highlight matching characters as you type.</li>
+</ul>
+</li>
+<li>set showmatch
+<ul>
+<li>Show matching words during a search.</li>
+</ul>
+</li>
+<li>set history=1000
+<ul>
+<li>Set the commands to save in history default number is 20.</li>
+</ul>
+</li>
+<li>set wildmenu
+<ul>
+<li>Enable auto completion menu after pressing TAB.</li>
+</ul>
+</li>
+<li>set wildmode=list:longest</li>
+<li>set wildignore=<em>.docx,</em>.jpg,<em>.png,</em>.gif,<em>.pdf,</em>.pyc,<em>.exe,</em>.flv,<em>.img,</em>.xlsx</li>
+<li>set ttyfast</li>
+<li>set showmode</li>
+<li>set encoding=utf-8</li>
+<li></li>
+</ul>
+<h2 id="status-bar"><a aria-hidden="true" class="anchor-heading" href="#status-bar"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>status bar</h2>
+<pre><code>" STATUS LINE ------------------------------------------------------------ {{{
+
+" Clear status line when vimrc is reloaded.
+set statusline=
+
+" Status line left side.
+set statusline+=\ %F\ %M\ %Y\ %R
+
+" Use a divider to separate the left side from the right side.
+set statusline+=%=
+
+" Status line right side.
+set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+
+" Show the status on the second to last line.
+set laststatus=2
+
+" }}}
+</code></pre>
+<p>%F – Display the full path of the current file.</p>
+<p>%M – Modified flag shows if file is unsaved.</p>
+<p>%Y – Type of file in the buffer.</p>
+<p>%R – Displays the read-only flag.</p>
+<p>%b – Shows the ASCII/Unicode character under cursor.</p>
+<p>0x%B – Shows the hexadecimal character under cursor.</p>
+<p>%l – Display the row number.</p>
+<p>%c – Display the column number.</p>
+<p>%p%% – Show the cursor percentage from the top of the file.</p>
+<h2 id="key-mapping"><a aria-hidden="true" class="anchor-heading" href="#key-mapping"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>key mapping</h2>
+<p>map_mode &#x3C;what_you_type> &#x3C;what_is_executed></p>
+<p>nnoremap – Allows you to map keys in normal mode.
+inoremap – Allows you to map keys in insert mode.
+vnoremap – Allows you to map keys in visual mode.</p>
+<h2 id="use"><a aria-hidden="true" class="anchor-heading" href="#use"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>use</h2>
+<ul>
+<li>add <code>~/.vimrc</code></li>
+<li>load <code>:so %</code></li>
+</ul><span id="navId" data="8657885d-85f1-4df2-a678-d60714edb004"></span>
 
                 
       </section>
