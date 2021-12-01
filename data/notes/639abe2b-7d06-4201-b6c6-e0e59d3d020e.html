@@ -1,0 +1,40 @@
+<h1 id="rpc"><a aria-hidden="true" class="anchor-heading" href="#rpc"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Rpc</h1>
+<ol>
+<li>REMOTE PROCEDURE CALL: REPLACE COMMUNICATION VIA THE STACK WITH THE NETWORK
+<ul>
+<li>A type of client/server communication</li>
+<li>Attempts to make remote procedure calls look like local ones</li>
+</ul>
+</li>
+<li>problem:
+<ul>
+<li>Calling and called procedures run on different machines, with different address spaces</li>
+<li>Must convert to local representation of data</li>
+<li>Machines and network can fail</li>
+</ul>
+</li>
+<li>STUBS: OBTAINING TRANSPARENCY
+<ul>
+<li>Client stub
+<ul>
+<li>Marshalsargumentsintomachine-independentformat</li>
+<li>Sendsrequesttoserver</li>
+<li>Waits for response</li>
+<li>Unmarshals result and returns to caller</li>
+</ul>
+</li>
+<li>Server stub
+<ul>
+<li>Unmarshals arguments and builds stack frame </li>
+<li>Calls procedure</li>
+<li>Server stub marshals results and sends reply</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>RFC makes a user defined header to a entire empty server library and user can filled them in.</li>
+<li>写个接口让程序员调用服务器上的方法就像本地一样</li>
+<li>通过编码和解码传输参数，遇到大小端的问题的话，可以采用语言将数据包装，这样就和地址顺序无关了。</li>
+<li>存在的问题是：如果调用失败，可能是server或者网络的问题，无法排查。解决方式可以是在server保证最多一次request，出现第二次也返回第一次的reply </li>
+<li>同步方法：1. 只进行一次rpc，允行完再ack 2. 两次rpc，收到请求ack，运行完ack</li>
+</ol>

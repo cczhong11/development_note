@@ -1,0 +1,22 @@
+<h1 id="cap"><a aria-hidden="true" class="anchor-heading" href="#cap"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Cap</h1>
+<h1 id="cap-theorem-consistency-availability-partition-tolerant"><a aria-hidden="true" class="anchor-heading" href="#cap-theorem-consistency-availability-partition-tolerant"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>CAP theorem: Consistency, Availability, Partition Tolerant.</h1>
+<p>Consistency: If master says the txn committed, then it should be immediately visible on replicas. </p>
+<p>Availability: Achieving availability in a distributed system requires that the system remains operational 100% of the time. </p>
+<p>Partition TOLERANCE means tolerance to a network partition. A network partition is when two nodes can't talk to each other, but there are clients able to talk to either one or both of those nodes.</p>
+<ul>
+<li>By consistency we mean that all participating systems share the same view of the data.</li>
+<li>By <strong>Availability</strong> we mean that the system is able to <strong>respond quickly</strong> enough for the user's needs.</li>
+<li>By <strong>Partition</strong> tolerance we mean that, in the event of the failure or isolation of some participants, the other participants can continue to do whatever they can.</li>
+<li>CA : mysql</li>
+<li>CP: commuication among server to get consistence but not availability</li>
+<li>PA: several servers but no consisitence</li>
+</ul>
+<p>Networks aren't reliable, so you'll need to support partition tolerance. You'll need to make a software tradeoff between consistency and availability.</p>
+<p>CP - consistency and partition tolerance
+Waiting for a response from the partitioned node might result in a timeout error. CP is a good choice if your business needs require atomic reads and writes.</p>
+<p>AP - availability and partition tolerance
+Responses return the most readily available version of the data available on any node, which might not be the latest. Writes might take some time to propagate when the partition is resolved.</p>
+<p>AP is a good choice if the business needs allow for eventual consistency or when the system needs to continue working despite external errors.</p>
+<p><img src="https://qph.fs.quoracdn.net/main-qimg-23a75bd8c77d030f3ca9e1fd0621c10c.webp">
+<img src="http://www.andrew.cmu.edu/course/14-736/applications/ln/dividework.jpg">
+<img src="http://www.andrew.cmu.edu/course/14-736/applications/ln/addcomm.jpg"></p>

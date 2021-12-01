@@ -1,0 +1,68 @@
+<h1 id="heap"><a aria-hidden="true" class="anchor-heading" href="#heap"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Heap</h1>
+<h1 id="basic"><a aria-hidden="true" class="anchor-heading" href="#basic"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>basic</h1>
+<p>堆（英语：Heap）是计算机科学中的一种特别的完全二叉树。若是满足以下特性，即可称为堆：“给定堆中任意节点P和C，若P是C的母节点，那么P的值会小于等于（或大于等于）C的值”。若母节点的值恒小于等于子节点的值，此堆称为最小堆（min heap）；反之，若母节点的值恒大于等于子节点的值，此堆称为最大堆（max heap）。在堆中最顶端的那一个节点，称作根节点（root node），根节点本身没有母节点（parent node）</p>
+<h2 id="heap-sort"><a aria-hidden="true" class="anchor-heading" href="#heap-sort"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>heap sort</h2>
+<pre><code>procedure heapsort(a, count) is
+    input: an unordered array a of length count
+ 
+    (建立推，root是最大值)
+    heapify(a, count)
+
+    (a[0:end]是堆，end到最后是排列好的))
+    end ← count - 1
+    while end > 0 do
+        swap(a[end], a[0])
+        (heap大小减一)
+        end ← end - 1
+        (the swap ruined the heap property, so restore it)
+        siftDown(a, 0, end)
+</code></pre>
+<pre class="language-python"><code class="language-python">
+<span class="token keyword">def</span> <span class="token function">heapify</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    largest <span class="token operator">=</span> i  <span class="token comment"># Initialize largest as root</span>
+    l <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> i <span class="token operator">+</span> <span class="token number">1</span>     <span class="token comment"># left = 2*i + 1</span>
+    r <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> i <span class="token operator">+</span> <span class="token number">2</span>     <span class="token comment"># right = 2*i + 2</span>
+ 
+    <span class="token comment"># See if left child of root exists and is</span>
+    <span class="token comment"># greater than root</span>
+    <span class="token keyword">if</span> l <span class="token operator">&#x3C;</span> n <span class="token keyword">and</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span> <span class="token operator">&#x3C;</span> arr<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        largest <span class="token operator">=</span> l
+ 
+    <span class="token comment"># See if right child of root exists and is</span>
+    <span class="token comment"># greater than root</span>
+    <span class="token keyword">if</span> r <span class="token operator">&#x3C;</span> n <span class="token keyword">and</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span> <span class="token operator">&#x3C;</span> arr<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        largest <span class="token operator">=</span> r
+ 
+    <span class="token comment"># Change root, if needed</span>
+    <span class="token keyword">if</span> largest <span class="token operator">!=</span> i<span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>  <span class="token comment"># swap</span>
+ 
+        <span class="token comment"># Heapify the root.</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> largest<span class="token punctuation">)</span>
+ 
+<span class="token comment"># The main function to sort an array of given size</span>
+ 
+ 
+<span class="token keyword">def</span> <span class="token function">heapSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+ 
+    <span class="token comment"># Build a maxheap.</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">//</span><span class="token number">2</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span>
+ 
+    <span class="token comment"># One by one extract elements</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>  <span class="token comment"># swap</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+ 
+</code></pre>
+<ul>
+<li>api: heapq.heapify(x)</li>
+<li>heapq.heappop(heap)</li>
+</ul>
+<hr>
+<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
+<ul>
+<li><a href="/notes/400115e9-30f7-4a13-9776-db059bc9cd42">Algo (my_note)</a></li>
+<li><a href="/notes/33ed4a25-5fcf-4717-aabc-2351de2a64da">Sort (my_note)</a></li>
+</ul>

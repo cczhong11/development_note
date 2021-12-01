@@ -1,0 +1,23 @@
+<h1 id="mapreduce"><a aria-hidden="true" class="anchor-heading" href="#mapreduce"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Mapreduce</h1>
+<p>MapReduce is a programming model for processing large amounts of data in bulk across many machines</p>
+<p>The map and reduce functions are somewhat restricted in what they are allowed to do. They must be pure functions, which means they only use the data that is passed to them as input, they cannot perform additional database queries, and they must not have any side effects.</p>
+<ul>
+<li><strong>what</strong>: do parellel in map phase, do merge sort in sort, do linear in reducer</li>
+<li><strong>why</strong>: quick in map, slow in reduce</li>
+<li><strong>how</strong>: could do select, filter, min,max,sum, no avg, join is not a good operation in mapreduce, only in reduce phase.</li>
+<li>sort:
+<ul>
+<li>search in the final result</li>
+<li>mapper yield duplicated key and we need use sort to group them in one reducer </li>
+</ul>
+</li>
+<li><strong>problem</strong>
+<ul>
+<li>A single <strong>master</strong> process called <strong>JobTracker</strong>, which <strong>coordinates</strong> all jobs running on the cluster and <strong>assigns</strong> map and reduce tasks to run on the TaskTrackers</li>
+<li>A number of subordinate processes called <strong>TaskTrackers</strong>, which run assigned tasks and periodically report the progress to the JobTracker</li>
+<li>Hadoop was designed to run MapReduce jobs only</li>
+<li>more maps means more overhead for master to keep track of the state of computation</li>
+<li>fewer map-reduce phase</li>
+</ul>
+</li>
+</ul>

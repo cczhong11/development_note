@@ -1,0 +1,106 @@
+<h1 id="filesystem"><a aria-hidden="true" class="anchor-heading" href="#filesystem"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Filesystem</h1>
+<h1 id="file-system"><a aria-hidden="true" class="anchor-heading" href="#file-system"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>file system</h1>
+<ul>
+<li><strong>what</strong>: a file is a unit of data organized by user. a service responsible for managing files</li>
+<li><strong>why</strong>: key is robust and high-throughput</li>
+<li><strong>how</strong>: name, access, physical allocation, security and protection, resource administration.</li>
+</ul>
+<h2 id="nfs-and-afs"><a aria-hidden="true" class="anchor-heading" href="#nfs-and-afs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>NFS and AFS</h2>
+<ol>
+<li>NFS has no client caching, cliented cached anyway, central system</li>
+<li>AFS is stateful server and has cache protocol. called to have data client there is an update, their cache is invalid. Whole file semantic</li>
+<li>CODA, add replication and added weakly connected mode.</li>
+</ol>
+<h1 id="raids-and-hdfs"><a aria-hidden="true" class="anchor-heading" href="#raids-and-hdfs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>RAIDS and HDFS</h1>
+<h2 id="normal-disk"><a aria-hidden="true" class="anchor-heading" href="#normal-disk"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Normal disk</h2>
+<ul>
+<li>An error-correcting code (ECC) or forward error correction (FEC) code is a process of adding <strong>redundant</strong> data, or parity data, to a message, such that it can be recovered by a receiver even when a number of errors (up to the capability of the code being used) were introduced, either during the process of transmission, or on storage.</li>
+<li>RAM could cache the data. It will only read data from disks. If there was error, disk will return nothing.</li>
+</ul>
+<h2 id="raids"><a aria-hidden="true" class="anchor-heading" href="#raids"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>RAIDS</h2>
+<ul>
+<li><strong>what</strong>:Redundant Array of Independent Disks,combines multiple physical disk drive components into one or more logical units for the purposes of data redundancy, performance improvement, or both.</li>
+<li><strong>why</strong>: more rebust, larger volume,higher throughput</li>
+<li><strong>how</strong>:
+<ul>
+<li>RAID 0 它將兩个以上的磁盘並联起来，<strong>成为一个大容量的磁盘</strong>。在存放数据时，分段后分散儲存在这些磁盘中，因為读写時都可以并行處理，所以在所有的级别中，RAID 0的<strong>速度</strong>是最快的。no redundancy,just split into serveral disks</li>
+<li>RAID 1: mirroring,disk0=disk1,在一些多线程操作系统中能有很好的<strong>读取</strong>速度,replication，理論上读取速度等於硬盘數量的倍數，与RAID 0相同</li>
+<li>RAID 2:这是RAID 0的改良版，以汉明码（Hamming Code）的方式将数据进行编码后分割为独立的位元，并将数据分别写入硬盘中。因为在数据中加入了错误修正码（ECC，Error Correction Code），所以数据整体的容量会比原始数据大一些. log2. Have disks save error correction code for each partition.</li>
+<li>RAID3: a disk save <strong>parity</strong>. 採用Bit－interleaving（数据交错儲存）技術，它需要通过编码再将数据位元分割後分别存在硬盘中，而将同位元检查後单独存在一个硬盘中，但由于数据内的位元分散在不同的硬盘上，因此就算要读取一小段数据资料都可能需要所有的硬盘进行工作，所以这种规格比较适于读取大量数据时使用。</li>
+<li>RAID4:它与RAID 3不同的是它在分割时是以block为单位分别存在硬盘中</li>
+<li>RAID5:RAID Level 5是一种储存性能、数据安全和存储成本兼顾的存储解决方案。它使用的是Disk Striping（硬盘分割）技术。RAID 5至少需要三块硬碟，RAID 5不是对存储的数据进行备份，而是把数据和相对应的奇偶校验信息存储到组成RAID5的各个磁盘上，并且奇偶校验信息和相对应的数据分别存储於不同的磁盘上。<strong>当RAID5的一个磁盘数据发生损坏後，可以利用剩下的数据和相应的奇偶校验信息去恢复被损坏的数据</strong>。<img src="https://en.wikipedia.org/wiki/File:RAID_5.svg"></li>
+<li>RAID6:与RAID 5相比，RAID 6增加第二个独立的奇偶校验信息块</li>
+<li>RAID10 = RAID0+RAID1</li>
+</ul>
+</li>
+</ul>
+<h2 id="lustre"><a aria-hidden="true" class="anchor-heading" href="#lustre"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>LUSTRE</h2>
+<ul>
+<li><strong>what</strong>:a type of parallel distributed file system, generally used for large-scale cluster computing</li>
+<li><strong>why</strong>: used for supercomputing, network RAID</li>
+<li><strong>how</strong>:
+<ul>
+<li>Files are broken into objects, very similar to stripes. These stripes can be stored by different nodes.</li>
+<li>One or more metadata servers (MDS) nodes that has one or more metadata target (MDT) devices per Lustre filesystem that stores namespace metadata, such as filenames, directories, access permissions, and file layout(different access pattern,data is small)</li>
+<li>One or more object storage server (OSS) nodes that store file data on one or more object storage target (OST) devices.(enable either OSS talk to either OST)</li>
+<li>Client(s) that access and use the data. Lustre presents all clients with a unified namespace for all of the files and data in the filesystem</li>
+<li>high performance network to transfer data and manage network to manage data</li>
+</ul>
+</li>
+</ul>
+<h2 id="mogilefs"><a aria-hidden="true" class="anchor-heading" href="#mogilefs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>MOGILEFS</h2>
+<ul>
+<li><strong>what</strong>:distributed filesystem</li>
+<li><strong>why</strong>:no editing, whole file,fast deliver to clients</li>
+<li><strong>how</strong>:
+<ul>
+<li>replicated storage:it replicates objects across servers. The number of replicas is associated with the class of the file, so, for example, photos might have three replicas, each, but thumbnails, which can be recreated from the original photos, might only have one replica of each. this reduces the cost of the storage by allowing less expensive components.</li>
+<li>http+MySQL:MogileFS uses HTTP to server objects from each replica, as opposed to a home-grown protocol, for portability. For the same reason, it keeps its metadata in a standard MySQL database. </li>
+<li>portable</li>
+<li>no hierachy: it maintains simple namespaces, rather than directory trees,  is much simpler and more efficient than a full-blown directory system</li>
+</ul>
+</li>
+</ul>
+<h2 id="hdfs"><a aria-hidden="true" class="anchor-heading" href="#hdfs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>HDFS</h2>
+<h3 id="assumption"><a aria-hidden="true" class="anchor-heading" href="#assumption"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>assumption</h3>
+<ul>
+<li>failure is a norm, especially on datanode. It is used to handle streaming data. </li>
+<li>emphasis is on throughput not on latency</li>
+<li>large data sets</li>
+<li>simple coherency model: write once and read many</li>
+<li>moving computation is cheaper than moving data</li>
+<li>The good news is that it won't be edited in place. We'll just be collecting it, adding to it.</li>
+<li><img src="/assets/images/2021-04-12-19-59-50.png"></li>
+</ul>
+<h2 id="namenode"><a aria-hidden="true" class="anchor-heading" href="#namenode"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>namenode</h2>
+<ul>
+<li><strong>what</strong>: master-slave architecture</li>
+<li><strong>why</strong>: manage namespace as coordinator, only 1</li>
+<li><strong>how</strong>: block to DataNodes mapping</li>
+<li>data never go to namenode</li>
+<li>hierarchical name space: maybe not needed, low overhead</li>
+</ul>
+<h2 id="datanode"><a aria-hidden="true" class="anchor-heading" href="#datanode"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>datanode</h2>
+<ul>
+<li>manage storage attached to node</li>
+<li>create and delete block, replicate blocks</li>
+</ul>
+<h2 id="access-mode"><a aria-hidden="true" class="anchor-heading" href="#access-mode"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>access mode</h2>
+<ul>
+<li>read anywhere</li>
+<li>write only at end(append)</li>
+<li>no edit/random write</li>
+</ul>
+<h2 id="replication"><a aria-hidden="true" class="anchor-heading" href="#replication"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>replication</h2>
+<ul>
+<li>blocks are all same size</li>
+<li>fault tolerance</li>
+<li>namenode managed replication</li>
+<li>pipelining
+<ul>
+<li>When a client is writing data to an HDFS file, its data is first written to a local file as explained in the previous section.</li>
+<li>The <strong>first</strong> DataNode starts receiving the data in small portions (4 KB), writes each portion to its local repository and transfers that portion to the <strong>second</strong> DataNode in the list. The second DataNode, in turn starts receiving each portion of the data block, writes that portion to its repository and then flushes that portion to the <strong>third</strong> DataNode.</li>
+<li>less bandwidth and less hot-spot</li>
+</ul>
+</li>
+</ul>

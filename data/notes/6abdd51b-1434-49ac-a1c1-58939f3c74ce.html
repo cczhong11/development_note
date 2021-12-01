@@ -1,0 +1,25 @@
+<h1 id="linkedlist"><a aria-hidden="true" class="anchor-heading" href="#linkedlist"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Linkedlist</h1>
+<h1 id="basic"><a aria-hidden="true" class="anchor-heading" href="#basic"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>basic</h1>
+<ol>
+<li>Advantages: dynamic access</li>
+<li>Disadvantages: <strong>cannot random access and extra memory to save reference to next node</strong>.</li>
+<li>动态分配空间，只知道下个节点</li>
+<li>a sequence of node, each one contains object reference to next one</li>
+</ol>
+<h2 id="时间复杂度"><a aria-hidden="true" class="anchor-heading" href="#时间复杂度"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>时间复杂度</h2>
+<ul>
+<li>insert, delete O(1). </li>
+<li>search O(n)</li>
+</ul>
+<h2 id="思路"><a aria-hidden="true" class="anchor-heading" href="#思路"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>思路</h2>
+<ul>
+<li>递归<a title="Private" style="color: brown" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank">development.algo.recursive (Private)</a></li>
+<li>recursive one by one, each one could be the new linkedlist head: merge, reverse</li>
+<li>two iterates:cycle, overlapping,delete node.</li>
+<li>use dummy head to avoid checking empty: pivoting,using new node to form new list</li>
+</ul>
+<hr>
+<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
+<ul>
+<li><a href="/notes/400115e9-30f7-4a13-9776-db059bc9cd42">Algo (my_note)</a></li>
+</ul>

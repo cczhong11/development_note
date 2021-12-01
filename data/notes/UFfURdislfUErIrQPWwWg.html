@@ -1,0 +1,80 @@
+<h1 id="hugo"><a aria-hidden="true" class="anchor-heading" href="#hugo"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Hugo</h1>
+<h1 id="hugo-template"><a aria-hidden="true" class="anchor-heading" href="#hugo-template"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>hugo template</h1>
+<p>基于<a href="https://pkg.go.dev/text/template">go html template</a></p>
+<h2 id="variables"><a aria-hidden="true" class="anchor-heading" href="#variables"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>variables</h2>
+<pre class="language-go"><code class="language-go"><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">.</span>Title <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> $address <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> $address <span class="token operator">:=</span> <span class="token string">"123 Main St."</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<h2 id="functions"><a aria-hidden="true" class="anchor-heading" href="#functions"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>functions</h2>
+<pre class="language-go"><code class="language-go"><span class="token punctuation">{</span><span class="token punctuation">{</span> FUNCTION ARG1 ARG2 <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> add <span class="token number">1</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<h2 id="include"><a aria-hidden="true" class="anchor-heading" href="#include"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>include</h2>
+<pre class="language-go"><code class="language-go"><span class="token punctuation">{</span><span class="token punctuation">{</span> partial <span class="token string">"header.html"</span> <span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> template <span class="token string">"_internal/opengraph.html"</span> <span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<h2 id="logic"><a aria-hidden="true" class="anchor-heading" href="#logic"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>logic</h2>
+<pre class="language-go"><code class="language-go"><span class="token comment">// iteration</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">range</span> $array <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">&#x3C;</span><span class="token operator">!</span><span class="token operator">--</span> The <span class="token punctuation">.</span> represents an element in $array <span class="token operator">--</span><span class="token operator">></span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">range</span> $elem_val <span class="token operator">:=</span> $array <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span> $elem_val <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">range</span> $elem_index<span class="token punctuation">,</span> $elem_val <span class="token operator">:=</span> $array <span class="token punctuation">}</span><span class="token punctuation">}</span>
+   <span class="token punctuation">{</span><span class="token punctuation">{</span> $elem_index <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">--</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> $elem_val <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">range</span> $array <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token keyword">else</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">&#x3C;</span><span class="token operator">!</span><span class="token operator">--</span> This is only evaluated <span class="token keyword">if</span> $array is empty <span class="token operator">--</span><span class="token operator">></span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token comment">// condition</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> with <span class="token punctuation">.</span>Params<span class="token punctuation">.</span>title <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token operator">&#x3C;</span>h4<span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&#x3C;</span><span class="token operator">/</span>h4<span class="token operator">></span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span> with <span class="token punctuation">.</span>Param <span class="token string">"description"</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">else</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">.</span>Summary <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>isset <span class="token punctuation">.</span>Params <span class="token string">"description"</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span> index <span class="token punctuation">.</span>Params <span class="token string">"description"</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">else</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">.</span>Summary <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>and <span class="token punctuation">(</span>or <span class="token punctuation">(</span>isset <span class="token punctuation">.</span>Params <span class="token string">"title"</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>isset <span class="token punctuation">.</span>Params <span class="token string">"caption"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>isset <span class="token punctuation">.</span>Params <span class="token string">"attr"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<h2 id="pipes"><a aria-hidden="true" class="anchor-heading" href="#pipes"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>pipes</h2>
+<pre class="language-go"><code class="language-go">
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">(</span>seq <span class="token number">1</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">|</span> shuffle <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> index <span class="token punctuation">.</span>Params <span class="token string">"disqus_url"</span> <span class="token operator">|</span> html <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<h2 id="context"><a aria-hidden="true" class="anchor-heading" href="#context"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>context</h2>
+<p>The most easily overlooked concept to understand about Go Templates is that [object Object] always refers to the current context.</p>
+<p>In the top level of your template, this will be the data set made available to it.
+Inside of an iteration, however, it will have the value of the current item in the loop; i.e., [object Object] will no longer refer to the data available to the entire page.</p>
+<p><code>$</code> to access global context</p>
+<pre class="language-go"><code class="language-go"><span class="token operator">&#x3C;</span>ul<span class="token operator">></span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">range</span> <span class="token punctuation">.</span>Params<span class="token punctuation">.</span>tags <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token operator">&#x3C;</span>li<span class="token operator">></span>
+    <span class="token operator">&#x3C;</span>a href<span class="token operator">=</span><span class="token string">"/tags/{{ . | urlize }}"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&#x3C;</span><span class="token operator">/</span>a<span class="token operator">></span>
+            <span class="token operator">-</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> $<span class="token punctuation">.</span>Site<span class="token punctuation">.</span>Title <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token operator">&#x3C;</span><span class="token operator">/</span>li<span class="token operator">></span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&#x3C;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+</code></pre>
+<h2 id="whitespace"><a aria-hidden="true" class="anchor-heading" href="#whitespace"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>whitespace</h2>
+<pre class="language-go"><code class="language-go"><span class="token operator">&#x3C;</span>div<span class="token operator">></span>
+  <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">-</span> <span class="token punctuation">.</span>Title <span class="token operator">-</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token operator">&#x3C;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+<span class="token operator">&#x3C;</span>div<span class="token operator">></span>Hello<span class="token punctuation">,</span> World<span class="token operator">!</span><span class="token operator">&#x3C;</span><span class="token operator">/</span>div<span class="token operator">></span>
+</code></pre>

@@ -1,0 +1,44 @@
+<h1 id="tree"><a aria-hidden="true" class="anchor-heading" href="#tree"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Tree</h1>
+<h1 id="basic"><a aria-hidden="true" class="anchor-heading" href="#basic"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>basic</h1>
+<ul>
+<li>Root: The node at the top of the tree.</li>
+<li>Parent: When any node (except the root) has exactly one edge running upward to another node. The node above is called parent of the node.</li>
+<li>Child: Any node may have one or more lines running downward to other nodes. These nodes below the given node called its children.</li>
+<li>Leaf: A node that has no children is called a leaf. There can be only one root in a tree but there can be many leaves.</li>
+<li>Level (Height): the level of a particular node refers to how many generations the node is from the root. The root is at level 0 and its children are at level 1 and so on.</li>
+</ul>
+<h2 id="思想"><a aria-hidden="true" class="anchor-heading" href="#思想"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>思想</h2>
+<p>重点就是把握树的递归特性。题目要想办法改变成对于左右子树的子问题。binary tree: node with left and right child</p>
+<ul>
+<li>深度问题: 整棵树的深度可以看成右子树的深度与左子树的深度的最大值</li>
+<li>长度问题：左右子树最大值加上中心节点</li>
+<li>颠倒：左子树和右子树分别交换自己，最后根节点交换左右子树</li>
+<li>merge:类似链表merge</li>
+<li>判断是否相同。左右子树分别判断</li>
+<li>BST valid: 设定左右子树的上下限</li>
+<li>可以利用binary search 分解题目</li>
+</ul>
+<h2 id="遍历"><a aria-hidden="true" class="anchor-heading" href="#遍历"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>遍历</h2>
+<p>Algorithm Inorder(tree)</p>
+<ol>
+<li>Traverse the left subtree, i.e., call Inorder(left-subtree)</li>
+<li>Visit the root.</li>
+<li>Traverse the right subtree, i.e., call Inorder(right-subtree)</li>
+</ol>
+<p>Algorithm Preorder(tree)</p>
+<ol>
+<li>Visit the root.</li>
+<li>Traverse the left subtree, i.e., call Preorder(left-subtree)</li>
+<li>Traverse the right subtree, i.e., call Preorder(right-subtree) </li>
+</ol>
+<p>Algorithm Postorder(tree)</p>
+<ol>
+<li>Traverse the left subtree, i.e., call Postorder(left-subtree)</li>
+<li>Traverse the right subtree, i.e., call Postorder(right-subtree)</li>
+<li>Visit the root.</li>
+</ol>
+<hr>
+<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
+<ul>
+<li><a href="/notes/400115e9-30f7-4a13-9776-db059bc9cd42">Algo (my_note)</a></li>
+</ul>

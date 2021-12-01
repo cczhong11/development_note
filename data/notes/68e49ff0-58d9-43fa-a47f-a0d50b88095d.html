@@ -1,0 +1,49 @@
+<h1 id="process"><a aria-hidden="true" class="anchor-heading" href="#process"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Process</h1>
+<h1 id="process-1"><a aria-hidden="true" class="anchor-heading" href="#process-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>process</h1>
+<p><img src="/assets/images/2021-05-11-20-16-21.png"></p>
+<p>是执行中程序的实例，系统中的每一个程序都运行在某个进程的上下文中，上下文是由程序正确运行所需状态组成的，这个状态包括存放内存中程序的代码和数据，它的栈，通用目的寄存器的内容，程序计数器，环境变量，以及打开文件描述符的集合。每次用户通过shell输入一个可执行目标文件，shell就会创建新的进程。</p>
+<p>The classic definition of a process is an instance of a program in execution. Each program in the system runs in the context of some process.The context consists of the state that the program needs to run correctly. This state includes the program's code and data stored in memory, its stack, the contents of its general-purpose registers, its program counter, environment variables, and the set of open file descriptors.</p>
+<p>进程是一个独立的逻辑控制流，轮流使用处理器的，每个进程执行流的一部分，然后被强占（preempted）,暂时被挂起。time slicing, concurrency</p>
+<p>每个process有私有的地址空间，代码段都从0x400000开始。</p>
+<p>内核调度一个新的进程，运行之后，它就会抢占当前进程，并使用一种上下文切换机制来将控制转移到新进程中。</p>
+<p>进程控制：获取进程id。进程有三种状态：运行，停止(suspended) 收到SIGSTOP, SIGTSTP,SIGTTIN or SIGTTOU，直到收到SIGCONT继续。终止，收到终止进程的信号，从主程序返回，调用exit函数。
+进程创建用fork， 当一个进程由于某种原因终止时，内核并不是立刻把它从系统中清除，相反进程将会，被保持在一种已经终止的状态，直到被父进程回收。waitpid 等待子进程终止。进程休眠就是sleep。</p>
+<p>加载并运行程序使用execve函数。execve调用一次从不返回。加载filename之后，调用启动代码，设置栈，将控制传递给新程序的main。</p>
+<p>the typical difference is that <strong>threads</strong> (of the same process) run in a <strong>shared memory space</strong>, while processes run in separate memory spaces. thread有自己的tid，栈，sp，pc，general register and flag, <strong>the code, data and heap areas are shared</strong></p>
+<h2 id="process-control"><a aria-hidden="true" class="anchor-heading" href="#process-control"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>process control</h2>
+<ul>
+<li>run </li>
+<li>suspend: A process stops as a result of receiving a SIGSTOP, SIGTSTP, SIGTI1N, or SIGTTOU signal, and it remains stopped until it receives a SIGCONT signal, at which point it becomes running again. </li>
+<li>terminate： exit</li>
+</ul>
+<p></p><p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">Fork</span></div>
+<a href="/notes/27148b7c-1a4b-4f57-8980-48c50e158b39" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div><p>system call</p>
+<p>fork函数调用一次，返回两次，并发执行，<strong>相同但是独立的地址空间</strong>。相同代码和数据段、堆、共享库以及用户栈，共享文件，最大区别是父和子有不同的pid。</p>
+<p>对所有fork 拓扑排序，可以得到一个输出顺序。</p>
+<p>fork为当前进程调用，是内核，为新进程创建各种数据结构，并分配给他一个唯一的pid.为了给这个新进程创建虚拟内存，它创建当前进程的mm_struct, 区域结构和页表的原样副本，他将两个进程中的每个页面都标记为只读，并将两个进程中每个区域结构都标记为私有的写时复制 copy on write。</p>
+</div></div><p></p><p></p>
+<h2 id="context-switch"><a aria-hidden="true" class="anchor-heading" href="#context-switch"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>context switch</h2>
+<p><img src="/assets/images/2021-04-25-23-04-15.png"></p>
+<p>registers是唯一被所有过程共享的资源，当调用时，把所有原始值压入栈中，改变寄存器的值，在返回之前从栈中弹出旧值。</p>
+<p>It consists of the values of objects such as the general-purpose registers, the floating-point registers, the program counter, user's stack, status registers, kernel's stack, and various kernel data structures such as a page table that characterizes the address space, a process table that contains information about the current process, and a file table that contains information about the files that the process has opened.</p>
+<p>Context Switch 流程：上下文切换，第一，保存当前进程的上下文，第二，恢复某个先前被抢占的进程，被保存的上下文，第三，将控制传递给这个新恢复的进程。
+(1) saves the context of the current process, (2) restores the saved context of some previously preempted process, and (3) passes control to this newly restored process.</p>
+<p>The context is the state that the kernel needs to restart a preempted process. It consists of the values of objects such as the <strong>general-purpose registers, the floating-point registers, the program counter, user's stack, status registers, kernel's stack, and various kernel data structures such as a page table that characterizes the address space, a process table that contains information about the current process, and a file table that contains information about the files that the process has opened</strong>.</p>
+<h2 id="zombie-process"><a aria-hidden="true" class="anchor-heading" href="#zombie-process"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>zombie process</h2>
+<p>Zombie process
+what is zombie process? When does it become zombie process?</p>
+<p>当进程由于某种原因终止时，内核不会立即清除，而是保持在一种已经终止的状态直至被父进程回收，一个终止未被回收的叫zombie。用waitpid函数等待子进程终止或停止。</p>
+<p>On Unix and Unix-like computer operating systems, a zombie process or defunct process is a process that has completed execution (via the exit system call) but <strong>still has an entry in the process table</strong>: it is a process in the "Terminated state". This occurs for child processes, where the entry is still needed to allow the parent process to read its child's exit status: once the exit status is read via the wait system call, the zombie's entry is removed from the process table and it is said to be "reaped".</p>
+<hr>
+<h2 id="children"><a aria-hidden="true" class="anchor-heading" href="#children"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Children</h2>
+<ol>
+<li><a href="/notes/26c24828-9284-461c-8416-4b442d49e85e">Signal</a></li>
+</ol>

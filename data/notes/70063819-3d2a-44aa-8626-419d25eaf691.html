@@ -1,0 +1,11 @@
+<h1 id="cache"><a aria-hidden="true" class="anchor-heading" href="#cache"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Cache</h1>
+<h1 id="cache-1"><a aria-hidden="true" class="anchor-heading" href="#cache-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>cache</h1>
+<p>用(S, E, B, m)表示，m是计算机的位数，s是组的个数，E是每组E行，B是块的大小</p>
+<p><img src="/assets/images/2021-04-21-21-54-22.png"></p>
+<p>t用来找组里的哪一行</p>
+<p>s是组索引</p>
+<p>b是块偏移</p>
+<p>中位索引可以防止数据被整体换入换出</p>
+<h1 id="buffer-and-cache"><a aria-hidden="true" class="anchor-heading" href="#buffer-and-cache"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>buffer and cache</h1>
+<p><a href="https://stackoverflow.com/questions/6345020/what-is-the-difference-between-buffer-vs-cache-memory-in-linux">link</a></p>
+<p>Buffers are associated with a specific block device, and cover caching of filesystem metadata as well as tracking in-flight pages. The cache only contains parked file data. That is, the buffers remember what's in directories, what file permissions are, and keep track of what memory is being written from or read to for a particular block device. The cache only contains the contents of the files themselves.</p>

@@ -1,0 +1,38 @@
+<h1 id="udp"><a aria-hidden="true" class="anchor-heading" href="#udp"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Udp</h1>
+<h1 id="udp-1"><a aria-hidden="true" class="anchor-heading" href="#udp-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>udp</h1>
+<ul>
+<li>advantages/disadvantages
+<ul>
+<li>adv:
+<ul>
+<li>connectionless: no connection establishment, thus no additional delay</li>
+<li>fast: no handshake</li>
+<li>each segment handled independently</li>
+<li>Very simple: no state to maintain</li>
+<li>Segment header is small</li>
+</ul>
+</li>
+<li>dis
+<ul>
+<li>segments may be lost</li>
+<li>may out-of-order</li>
+<li>no congestion control</li>
+<li>There are no guarantees with UDP.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>segment format
+<ul>
+<li>source port, dest port, length(<strong>whole segment</strong> at least 8 byte(header size)), checksum, application data</li>
+</ul>
+</li>
+<li>reliability assumptions
+<ul>
+<li>Often used for <strong>streaming</strong> multimedia apps </li>
+<li>Loss tolerant</li>
+<li><strong>Rate sensitive</strong> (timeliness)</li>
+<li>Reliability can be added at app layer</li>
+</ul>
+</li>
+</ul>

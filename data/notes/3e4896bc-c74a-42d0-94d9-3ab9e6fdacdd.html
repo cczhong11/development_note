@@ -1,0 +1,16 @@
+<h1 id="partition"><a aria-hidden="true" class="anchor-heading" href="#partition"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Partition</h1>
+<ul>
+<li>NAÏVE TABLE PARTITIONING: Each node stores one and only table.</li>
+<li>HORIZONTAL PARTITIONING: Split a table's tuples into disjoint subsets. Choose column(s) that divides the database equally in terms of size, load, or usage. (Hash Partitioning, Range Partitioning)</li>
+</ul>
+<h1 id="partitioning-of-key-value-data"><a aria-hidden="true" class="anchor-heading" href="#partitioning-of-key-value-data"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Partitioning of Key-Value Data</h1>
+<p>One way of partitioning is to assign a continuous range of keys (from some mini‐mum to some maximum) to each partition. The partition boundaries might be chosen manually by an administrator, or the data‐base can choose them automatically. Within each partition, we can keep keys in sorted order. This has the advantage that range scans are easy, and you can treat the key as a concatenated index in order to fetch several related records in one query</p>
+<p>another way is to use hash of key to partition, reduce the risk of skew and hot spots. by using the hash of the key for partitioning we lose a nice property of key-range partitioning: the ability to do efficient range queries. Keys that were once adjacent are now scattered across all the partitions, so their sort order is lost</p>
+<h2 id="secondary-index"><a aria-hidden="true" class="anchor-heading" href="#secondary-index"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>secondary index</h2>
+<p><a href="/notes/a07b04cb-c859-41d5-86bd-a13ab1874a13#index table">Pattern</a></p>
+<p>Rather than each partition having its own secondary index (a local index), we can construct a global index that covers data in all partitions. The advantage of a global (term-partitioned) index over a document-partitioned index is that it can make reads more efficient: rather than doing scatter/gather over all partitions, a client only needs to make a request to the partition containing the term that it wants.</p>
+<h2 id="rebalancing"><a aria-hidden="true" class="anchor-heading" href="#rebalancing"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>rebalancing</h2>
+<p>simple solution: create many more partitions than there are nodes, and assign several partitions to each node</p>
+<p><img src="/assets/images/2021-05-11-20-57-57.png"></p>
+<h2 id="routing"><a aria-hidden="true" class="anchor-heading" href="#routing"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>routing</h2>
+<p><img src="/assets/images/2021-05-11-20-59-11.png"></p>

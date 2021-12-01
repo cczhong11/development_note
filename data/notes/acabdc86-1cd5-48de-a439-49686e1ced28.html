@@ -1,0 +1,20 @@
+<h1 id="call"><a aria-hidden="true" class="anchor-heading" href="#call"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Call</h1>
+<h1 id="system-call"><a aria-hidden="true" class="anchor-heading" href="#system-call"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>system call</h1>
+<p>In computing, a system call is the programmatic way in which a computer program requests a service from the kernel of the operating system it is executed on.</p>
+<p>流程：</p>
+<ul>
+<li>Application program makes a system call. When I write the program in ARM. I used SWI instruction. SWI means software interrupt exception. SWI will cause an interrupt. So the kernel will handle this interrupt. The handler is called SWI hander.</li>
+<li>Stack is used to pass these arguments to the function in the kernel.</li>
+<li>Each system call has a unique call number which is used by kernel to identify which system call is invoked.</li>
+<li>Now the SWI handler executes a specific instruction (int 0x80). This instruction causes the processor to switch from 'User Mode' to 'Kernel Mode'</li>
+<li>kernel invokes system_call() routine</li>
+<li>This function saves register values onto kernel stack and does some validations like verifying system call number etc.</li>
+<li>A map of system call number as key and the appropriate system call as value exists. This is called system_call_table. The handler uses this table to invoke appropriate system call service routine. It also validates the arguments if present.</li>
+<li>After proper validations, the service routine performs required actions. After all these actions, service routine returns status of execution to user mode call.</li>
+</ul>
+<hr>
+<h2 id="children"><a aria-hidden="true" class="anchor-heading" href="#children"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Children</h2>
+<ol>
+<li><a href="/notes/4c818140-47ba-4497-a484-c80748376b45">Execve</a></li>
+<li><a href="/notes/27148b7c-1a4b-4f57-8980-48c50e158b39">Fork</a></li>
+</ol>

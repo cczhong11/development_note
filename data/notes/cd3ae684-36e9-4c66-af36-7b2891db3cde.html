@@ -1,0 +1,19 @@
+<h1 id="virtualization"><a aria-hidden="true" class="anchor-heading" href="#virtualization"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Virtualization</h1>
+<h1 id="vm"><a aria-hidden="true" class="anchor-heading" href="#vm"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>VM</h1>
+<p>Virtual machines are based on computer architectures and provide functionality of a physical computer. Their implementations may involve specialized hardware, software, or a combination.</p>
+<ul>
+<li>System virtual machines (also termed full virtualization VMs) provide a substitute for a real machine. They provide functionality needed to execute entire operating systems. A <strong>hypervisor</strong> uses native execution to share and manage hardware, allowing for multiple environments which are <strong>isolated</strong> from one another, yet exist on the same physical machine. Modern hypervisors use hardware-assisted virtualization, virtualization-specific hardware, primarily from the host CPUs.</li>
+<li>Process virtual machines are designed to execute computer programs in a platform-independent environment. A process VM provides a high-level abstraction – that of a high-level programming language (compared to the low-level ISA abstraction of the system VM). Process VMs are implemented using an interpreter; performance comparable to compiled programming languages can be achieved by the use of just-in-time compilation. JVM</li>
+<li>Operating-system-level virtualization: docker.  physical server is virtualized at the operating system level, enabling multiple isolated and secure virtualized servers to run on a single physical server. The "guest" operating system environments share the same running instance of the operating system as the host system. Thus, the same operating system kernel is also used to implement the "guest" environments, and applications running in a given "guest" environment view it as a stand-alone system</li>
+</ul>
+<p>The hypervisor sits in between the physical machine and virtual machines and provides virtualization services to the virtual machines. </p>
+<h2 id="how-does-virtualization-work"><a aria-hidden="true" class="anchor-heading" href="#how-does-virtualization-work"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>How does virtualization work?</h2>
+<p>Software called hypervisors separate the physical resources from the virtual environments—the things that need those resources. Hypervisors take your physical resources and divide them up so that virtual environments can use them.</p>
+<p><img src="/assets/images/2021-05-03-15-30-39.png"></p>
+<p>Resources are partitioned as needed from the physical environment to the many virtual environments. Users interact with and run computations within the virtual environment (typically called a guest machine or virtual machine). The virtual machine functions as a single data file. And like any digital file, it can be moved from one computer to another, opened in either one, and be expected to work the same.</p>
+<p>When the virtual environment is running and a user or program issues an instruction that requires additional resources from the physical environment, the hypervisor relays the request to the physical system and caches the changes—which all happens at close to native speed (particularly if the request is sent through an open source hypervisor based on KVM, the Kernel-based Virtual Machine).</p>
+<hr>
+<h2 id="children"><a aria-hidden="true" class="anchor-heading" href="#children"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Children</h2>
+<ol>
+<li><a href="/notes/22b1f0c6-db27-4536-a72f-2f6df32d71c2">Containerization</a></li>
+</ol>

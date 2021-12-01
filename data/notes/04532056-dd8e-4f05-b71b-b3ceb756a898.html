@@ -1,0 +1,25 @@
+<h1 id="synctime"><a aria-hidden="true" class="anchor-heading" href="#synctime"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Synctime</h1>
+<ol>
+<li>SYNCHRONIZING PHYSICAL TIME: central server</li>
+<li>time server and distributed to nodes. Latency between transfer could be a problem.
+<ul>
+<li>估计来回的时间</li>
+<li>注意不要回到过去</li>
+<li>可以miss tick放慢时间</li>
+</ul>
+</li>
+<li>没有一个标准时间的话，就设立一个master询问每个client时间，average.调整时间是原来的两倍。</li>
+<li>BERKELEY ALGORITHM: server向所有人请求时间，算入RTT，average，返回client，注意drift可能是原来的两倍。</li>
+<li>logical time: 保证顺序。高时间不可能导致低时间的任务发生。</li>
+<li>LAMPORT LOGICAL TIME: happened before
+<ul>
+<li>The counter is incremented before each event.</li>
+<li>The message should carry the new (incremented) timestamp.</li>
+<li>维护全局index，不能处理接受和发送的问题</li>
+<li>If two events have no message exchange, Lamport logical time cannot tell which one happened first</li>
+<li>可能出现无法处理因果的情况</li>
+</ul>
+</li>
+<li>google truetime: compares itself with others, twice drift</li>
+<li>Cristian's Algorithm is one approach to synchronizing physical clocks using a time server.</li>
+</ol>

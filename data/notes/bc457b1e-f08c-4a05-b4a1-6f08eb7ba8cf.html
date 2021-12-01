@@ -1,0 +1,27 @@
+<h1 id="paxos"><a aria-hidden="true" class="anchor-heading" href="#paxos"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Paxos</h1>
+<h1 id="paxos-1"><a aria-hidden="true" class="anchor-heading" href="#paxos-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>paxos</h1>
+<p>A collection of process can propose values
+A consensus algorithm ensures </p>
+<ul>
+<li>
+<p>That a single proposal is chosen</p>
+</li>
+<li>
+<p>The processes can learn the proposed value </p>
+</li>
+<li>
+<p>No value is chosen if there are no proposals.</p>
+</li>
+<li>
+<p><strong>what</strong>: consensus probelm algorith.</p>
+</li>
+<li>
+<p><strong>how</strong>:</p>
+<ul>
+<li><strong>Prepare</strong>:propersor sends a Prepare message containing this <strong>proposal</strong> to a <strong>Quorum</strong> of Acceptors</li>
+<li><strong>Promise</strong>:If the proposal's number N is higher than any previous proposal number received from any Proposer by the Acceptor, then the Acceptor must return a <strong>promise</strong> to <strong>ignore</strong> all future proposals having a number less than N. If the Acceptor accepted a proposal at some point in the past, it must include the previous proposal number and previous value in its response to the Proposer.</li>
+<li><strong>Accept request</strong>:If a Proposer receives enough promises from a Quorum of Acceptors, it needs to set a value to its proposal. If any Acceptors had previously accepted any proposal, then they'll have sent their values to the Proposer, who now must set the value of its proposal to the value associated with the highest proposal number reported by the Acceptors. The Proposer sends an <strong>Accept Request message</strong> to a Quorum of Acceptors with the chosen value for its proposal.</li>
+<li><strong>Accepted</strong>:If an Acceptor receives an Accept Request message for a proposal N, it must accept it if and only if it has not already promised to only consider proposals having an identifier greater than N. In this case, it should register the corresponding value v and send an Accepted message to the Proposer and every Learner. Else, it can ignore the Accept Request.</li>
+</ul>
+</li>
+</ul>

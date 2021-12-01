@@ -1,0 +1,152 @@
+<h1 id="applicationlayer"><a aria-hidden="true" class="anchor-heading" href="#applicationlayer"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Applicationlayer</h1>
+<h1 id="application-layer"><a aria-hidden="true" class="anchor-heading" href="#application-layer"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Application layer</h1>
+<p>http/smtp/dns/voip</p>
+<p><img src="/assets/images/2021-03-25-16-43-51.png"></p>
+<h2 id="goals"><a aria-hidden="true" class="anchor-heading" href="#goals"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Goals</h2>
+<ul>
+<li>relaiable data transfer</li>
+<li>high throughput</li>
+<li>timing guarantees</li>
+</ul>
+<h2 id="http"><a aria-hidden="true" class="anchor-heading" href="#http"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>http</h2>
+<p>访问一个网址发生了什么</p>
+<ol>
+<li>
+<p>The HTTP client process initiates a TCP connection to the server <a href="http://www.someSchool.edu">www.someSchool.edu</a> on port number 80, which is the default port number for HTTP. Associated with the TCP connection, there will be a socket at the client and a socket at the server. 建立tcp</p>
+</li>
+<li>
+<p>The HTTP client sends an HTTP request message to the server via its socket. The request message includes the path name /someDepartment/home.index. (We will discuss HTTP messages in some detail below.) 发送请求</p>
+</li>
+<li>
+<p>The HTTP server process receives the request message via its socket, retrieves the object /someDepartment/home.index from its storage (RAM or disk), encapsulates the object in an HTTP response message, and sends the response message to the client via its socket. 返回请求</p>
+</li>
+<li>
+<p>The HTTP server process tells TCP to close the TCP connection. (But TCP doesn’t actually terminate the connection until it knows for sure that the client has received the response message intact.) 关闭tcp</p>
+</li>
+<li>
+<p>The HTTP client receives the response message. The TCP connection terminates. The message indicates that the encapsulated object is an HTML file. The client extracts the file from the response message, examines the HTML file, and finds references to the 10 JPEG objects. 关闭</p>
+</li>
+<li>
+<p>The first four steps are then repeated for each of the referenced JPEG objects.</p>
+</li>
+</ol>
+<p><img src="/assets/images/2021-03-14-19-59-53.png"></p>
+<h3 id="message-format"><a aria-hidden="true" class="anchor-heading" href="#message-format"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>message format</h3>
+<ul>
+<li>message format:
+<ul>
+<li>hypertext transfer protocol</li>
+<li>web's appliation layer protocol</li>
+<li>client/server model</li>
+<li>2 type: requests from client to server and responses</li>
+<li>requests and response</li>
+<li>startline:request line (Method SP Request-URI SP HTTP-Version CRLF) | status line
+<ul>
+<li>GET /index HTTP/1.1</li>
+<li>HTTP/1.1 200 OK</li>
+</ul>
+</li>
+<li>zero or more headers: provide metadata about request or response:datas/times, application info,caching control,<strong>host</strong> must on requests</li>
+<li>an empty line</li>
+<li>message body</li>
+<li>request methods:</li>
+<li>GET: retrieve an object: conditional GET/ Partial GET</li>
+<li>HEAD: retrieve metadata about object</li>
+<li>OPTIONS: request info about the capabilities</li>
+<li>POST: upload data to server</li>
+<li>status code</li>
+<li>1XX informational</li>
+<li>2XX success</li>
+<li>3XX redirection</li>
+<li>4XX client error</li>
+<li>5XX server error</li>
+<li>each request only retrieve one object</li>
+</ul>
+</li>
+</ul>
+<h3 id="persistent-http"><a aria-hidden="true" class="anchor-heading" href="#persistent-http"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>persistent http</h3>
+<ul>
+<li>persistent http
+<ul>
+<li>reuse existing transport connection,subsequent http message between same client/server sent over open connection</li>
+<li>pipelining at application protocol level</li>
+<li>without pipeline: one RTT for each referenced object <strong>RTT+transmission time(one object)</strong></li>
+<li>use pipeline: one RTT for all referenced objects</li>
+<li>reduce transport-layer connection cost</li>
+<li>reduce latency by avoid mulitple TCP slow-starts</li>
+<li>avoid bandwidth wastage and reduce all congestion</li>
+</ul>
+</li>
+</ul>
+<h3 id="cookie"><a aria-hidden="true" class="anchor-heading" href="#cookie"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>cookie</h3>
+<p><img src="/assets/images/2021-03-14-20-03-12.png"></p>
+<h2 id="dns"><a aria-hidden="true" class="anchor-heading" href="#dns"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>DNS</h2>
+<ul>
+<li>mission: A directory service for the Internet</li>
+<li>domain namespace: hierarchical structure
+<ul>
+<li>type of dns ns: root/top-level domain/ authoritative/ local</li>
+</ul>
+</li>
+</ul>
+<p><img src="/assets/images/2021-03-14-20-07-56.png"></p>
+<ul>
+<li>root server's job:
+<ul>
+<li>what <a href="http://www.library.cmu.edu">www.library.cmu.edu</a>: go to ns for .edu</li>
+<li>know top-level domain 2.3M </li>
+</ul>
+</li>
+<li>tld ns' job: ask cmu.edu ns</li>
+<li>authoritative ns: provide authoritative hostname to ip </li>
+<li>local ns: resolver: act as proxy</li>
+</ul>
+<ul>
+<li>
+<p>Load distribution across replicated servers</p>
+<ul>
+<li>A name can map to multiple hosts </li>
+<li>thus multiple addresses</li>
+<li>DNS server returns all addresses </li>
+<li>but rotates ordering</li>
+</ul>
+</li>
+<li>
+<p>Simple query and reply mechanism, same message format, Resource Record</p>
+</li>
+<li>
+<p>Runs over UDP </p>
+</li>
+<li>
+<ul>
+<li>DNS did not need tcp retransmission when lost,try another ns</li>
+</ul>
+<ul>
+<li>tcp take long set-up time, query and request time need to be short</li>
+</ul>
+</li>
+<li>
+<p>data used as Resource Record (RR) in query and reply messages:</p>
+<ul>
+<li>name(owner name), value, type, class (IN,internet), ttl</li>
+<li>A = Address </li>
+<li>ns = nameserver</li>
+<li>cname = canonical name</li>
+<li>mx = mail exchange</li>
+</ul>
+</li>
+<li>
+<p>caching: once ns learns mapping, it caches mapping, timeout after ttl</p>
+</li>
+</ul>
+<h3 id="tool"><a aria-hidden="true" class="anchor-heading" href="#tool"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>tool</h3>
+<ul>
+<li>nslookup </li>
+<li>dig</li>
+<li>whois</li>
+</ul>
+<hr>
+<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
+<ul>
+<li><a href="/notes/92917ea3-452e-48dc-875e-5cd0002041db">Network (my_note)</a></li>
+</ul>

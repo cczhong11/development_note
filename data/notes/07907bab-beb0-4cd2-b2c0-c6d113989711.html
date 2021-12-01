@@ -1,0 +1,17 @@
+<h1 id="service_mesh"><a aria-hidden="true" class="anchor-heading" href="#service_mesh"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Service_mesh</h1>
+<p><a href="https://philcalcado.com/2017/08/03/pattern_service_mesh.html">reference</a></p>
+<p>A service mesh is a dedicated infrastructure layer for handling service-to-service communication. It’s responsible for the reliable delivery of requests through the complex topology of services that comprise a modern, cloud native application. In practice, the service mesh is typically implemented as an array of lightweight network proxies that are deployed alongside application code, without the application needing to be aware.</p>
+<p><img src="/assets/images/2021-05-06-22-27-43.png"></p>
+<p>In such model, each of your services will have a companion proxy sidecar. Given that services communicate with each other only through the sidecar proxy, we end up with a deployment similar to the diagram below:</p>
+<p><img src="/assets/images/2021-05-06-22-27-11.png"></p>
+<p>下面以 Istio 为例讲解 Service Mesh 如何工作，后续文章将会详解 Istio 如何在 Kubernetes 中工作。</p>
+<ol>
+<li>Sidecar（Istio 中使用 Envoy 作为 sidecar 代理）将服务请求路由到目的地址，根据请求中的参数判断是到生产环境、测试环境还是 staging 环境中的服务（服务可能同时部署在这三个环境中），是路由到本地环境还是公有云环境？所有的这些路由信息可以动态配置，可以是全局配置也可以为某些服务单独配置。这些配置是由服务网格的控制平面推送给各个 sidecar 的，</li>
+<li>当 sidecar 确认了目的地址后，将流量发送到相应服务发现端点，在 Kubernetes 中是 service，然后 service 会将服务转发给后端的实例。</li>
+<li>Sidecar 根据它观测到最近请求的延迟时间，选择出所有应用程序的实例中响应最快的实例。</li>
+<li>Sidecar 将请求发送给该实例，同时记录响应类型和延迟数据。</li>
+<li>如果该实例挂了、不响应了或者进程不工作了，sidecar 会将把请求发送到其他实例上重试。</li>
+<li>如果该实例持续返回 error，sidecar 会将该实例从负载均衡池中移除，稍后再周期性得重试。
+7.如果请求的截止时间已过，sidecar 主动标记该请求为失败，而不是再次尝试添加负载。</li>
+<li>SIdecar 以 metric 和分布式追踪的形式捕获上述行为的各个方面，这些追踪信息将发送到集中 metric 系统。</li>
+</ol>

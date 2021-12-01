@@ -1,0 +1,61 @@
+<h1 id="container"><a aria-hidden="true" class="anchor-heading" href="#container"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Container</h1>
+<h1 id="vm-and-containers"><a aria-hidden="true" class="anchor-heading" href="#vm-and-containers"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>VM and containers</h1>
+<ul>
+<li><strong>what</strong>: a virtualized system is a <strong>mapping</strong> of its interface, and all resources visible through that interface, to the interface and resources of a real system.</li>
+<li><strong>why</strong>: 
+<ul>
+<li>provide a way of relaxing constrains and increasing flexibility</li>
+<li>advantages
+<ul>
+<li>multiple secure environment: system VM provides a sandbox isolates one system environment from others</li>
+<li>failure isolation</li>
+<li>mixed-os environment: one hardware support multiple OS concurrently</li>
+<li>better System Utilization: can be dynamically or statically re-configured for changing needs</li>
+</ul>
+</li>
+<li>properties:
+<ul>
+<li>isolation: fault, software, performance(done by scheduling)</li>
+<li>encapsulation: all VM state could be captured in a file</li>
+<li>interposition: all guest actions could be inspect, modify and deny</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>how</strong>: abstraction. provide a simplified interface to underlying resources. virtualization provides a different interface at the same level of abstraction.
+<ul>
+<li>hypervisor: a co-designed firmware-software layer,use this layer to manage the virtual machines</li>
+<li>full virtualization: provide same function as the underlying physical hardware. Allow unmodified OS to execute on VM</li>
+<li>para-virtualization: provide similar function, and modify OS to cooperate with VMM. Get lower overhead and better performance.</li>
+<li>Emulation: implement same function with different intereface and functionality</li>
+<li>system VM: vmare, process VM: jvm</li>
+<li>multiprocessor system: partition(subset of the resources)-> in space(physical), in time(logical)</li>
+<li>in DS:
+<ul>
+<li>abstract environment from resources</li>
+<li>abstract application from environment</li>
+<li>different environment no affect users</li>
+<li>migration</li>
+<li>scaling</li>
+<li>protection</li>
+<li>sharing</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="containers"><a aria-hidden="true" class="anchor-heading" href="#containers"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Containers</h2>
+<ul>
+<li>share part of OS</li>
+<li>provide independent</li>
+<li>resource share.  secure problem</li>
+<li>less isolation</li>
+</ul>
+<h1 id="tupperware"><a aria-hidden="true" class="anchor-heading" href="#tupperware"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Tupperware</h1>
+<p><img src="/assets/images/2021-05-10-22-59-20.png"></p>
+<p><img src="/assets/images/2021-05-10-23-00-53.png"></p>
+<p>resource broker for source of truth for machine info. One instance of Resource Broker (RB) is deployed to each DC. RB records whether a machine in the DC is free or assigned to an entitlement</p>
+<p><img src="/assets/images/2021-05-10-23-06-16.png"></p>
+<p><img src="/assets/images/2021-05-11-20-32-16.png"></p>
+<p>Figure 4 shows an overview of Twine. The Capacity Portal allows users to request or modify entitlements, which associate capacity quotas with business units deﬁned in the service accounting hierarchy. With a granted entitlement, a user deploys jobs through the front end. The scheduler manages job and task lifecycle, e.g., orchestrating a job’s software release. If a job has a TaskController, the scheduler coordinates with the TaskController to make decisions, e.g., delaying a task restart to rebuild a lost data replica ﬁrst. The allocator assigns machines to entitlements and assigns tasks to machines. ReBalancer runs asynchronously and continuously to improve the allocator’s decisions, e.g., better balancing the utilization of CPU, power, and network. Resource Broker (RB) stores machine information and unavailability events that track hardware failures and planned maintenance. DC operators schedule planned maintenance through Ops Planner. The Health Check Service (HCS) monitors machines and updates their status in RB. The agent runs on every machine to manage tasks. Sidekick switches host proﬁles as needed. Service Resource Manager (SRM) autoscales jobs in response to load changes. Conveyor is our continuous delivery system.</p>
+<p><a href="https://www.usenix.org/system/files/osdi20-tang.pdf">reference</a></p>

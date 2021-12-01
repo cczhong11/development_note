@@ -1,0 +1,54 @@
+<h1 id="boot"><a aria-hidden="true" class="anchor-heading" href="#boot"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Boot</h1>
+<h1 id="boot-process"><a aria-hidden="true" class="anchor-heading" href="#boot-process"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>boot process</h1>
+<p><img src="/assets/images/2021-04-05-22-42-45.png"></p>
+<p>What happened when I press the power-on button of Linux operating system, i.e., what happened during the bootstrap process of Linux?</p>
+<ol>
+<li>BIOS</li>
+</ol>
+<ul>
+<li>BIOS stands for Basic Input/output System</li>
+<li>Performs some system integrity checks</li>
+<li>Searches, loads, and executes the boot loader program.</li>
+<li>It looks for boot loader in floppy, cd-rom, or hard drive. You can press a key (typically F12 of F2, but it depends on your system) during the BIOS startup to change the boot sequence.</li>
+<li>Once the boot loader program is detected and loaded into the memory, BIOS gives the control to it. And the boot loader program is MBR, Master Boot Record.</li>
+</ul>
+<p>读取其中所存储的程序。这一程序通常知道一些直接连接在主板上的硬件(硬盘，网络接口，键盘，串口，并口)。现在大部分的BIOS允许你从软盘、光盘或者硬盘中选择一个来启动计算机。</p>
+<ol start="2">
+<li>MBR</li>
+</ol>
+<ul>
+<li>It is in the 1st sector of the bootable disk.</li>
+<li>The MBR holds the information on how the logical partitions, containing file systems, are organized on that medium.</li>
+<li>So MBR will tell computer to read boot loader from one specific partition.</li>
+<li>Typical boot loader include GRUB, LILO.
+下一步，计算机将从你所选择的存储设备中读取起始的512个字节(bytes)。如果我们从光盘启动的话，那么计算机就会读取光盘最开始的512个字节。这512个字节叫做主引导记录MBR (master boot record)。MBR会告诉电脑从该设备的某一个分区(partition)来装载引导加载程序(boot loader)。引导加载程序储存有操作系统(OS)的相关信息，比如操作系统名称，操作系统内核 (内核)所在位置等。常用的引导加载程序有GRUB和LILO。 </li>
+</ul>
+<ol start="3">
+<li>GRUB</li>
+</ol>
+<ul>
+<li>GRUB stands for Grand Unified Bootloader. It will help us load the kernel.
+GRUB displays a splash screen, waits for few seconds, if you don’t enter anything, it loads the default kernel image as specified in the grub configuration file.
+GRUB has the knowledge of the filesystem (the older Linux loader LILO didn’t understand filesystem).
+Grub configuration file is /boot/grub/grub.conf (/etc/grub.conf is a link to this). The following is sample grub.conf of CentOS.</li>
+</ul>
+<ol start="4">
+<li>Kernel</li>
+</ol>
+<ul>
+<li>Kernel executes the /sbin/init program</li>
+<li>Kernel will reserve some space for itself to run and use driver to detect computer hardware.</li>
+<li>Then it executes init. init was the 1st program to be executed by Linux Kernel, it has the process id (PID) of 1.
+如果我们加载的是Linux内核，Linux内核开始工作。内核会首先预留自己运行所需的内存空间，然后通过驱动程序(driver)检测计算机硬件。这样，操作系统就可以知道自己有哪些硬件可用。随后，内核会启动一个init进程。它是Linux系统中的1号进程(Linux系统没有0号进程)。到此，内核就完成了在计算机启动阶段的工作，交接给init来管理。</li>
+</ul>
+<ol start="5">
+<li>init process</li>
+</ol>
+<ul>
+<li>Init will run some start up scripts. For example, configure the name of the computer, configure time zone, detect the file system, mount some hard drive, configure the network, activate raid, etc.</li>
+<li>Then it will give the login dialogue box to prompt login.
+随后，init会运行一系列的初始脚本(startup scripts)，这些脚本是Linux中常见的shell scripts。这些脚本执行如下功能：</li>
+</ul>
+<p>设置计算机名称，时区，检测文件系统，挂载硬盘，清空临时文件，设置网络……
+当这些初始脚本，操作系统已经完全准备好了，只是，还没有人可以登录。init会给出登录(login)对话框，或者是图形化的登录界面。</p>
+<p>In Unix-based computer operating systems, init (short for initialization) is the first process started during booting of the computer system. Init is a daemon process that continues running until the system is shut down. It is the direct or indirect ancestor of all other processes and automatically adopts all orphaned processes. Init is started by the kernel during the booting process; a kernel panic will occur if the kernel is unable to start it. Init is typically assigned process identifier 1.</p>

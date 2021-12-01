@@ -1,0 +1,68 @@
+<h1 id="index"><a aria-hidden="true" class="anchor-heading" href="#index"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Index</h1>
+<h1 id="index-1"><a aria-hidden="true" class="anchor-heading" href="#index-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>index</h1>
+<p>In order to efficiently find the value for a particular key in the database, we need a different data structure: an index</p>
+<p>A table index is a <strong>replica of a subset</strong> of a table's columns that are organized and/or sorted for efficient access using a subset of those column</p>
+<h2 id="b-tree"><a aria-hidden="true" class="anchor-heading" href="#b-tree"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>B+ tree</h2>
+<ul>
+<li>b+ tree:
+<ul>
+<li><strong>self-balancing</strong> tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in O(log n).</li>
+<li>m-way search tree: every leaf node is at the same depth</li>
+<li>every node with m/2+1 &#x3C;= k &#x3C;= m keys, k keys, k+1 child</li>
+<li>|link(&#x3C; k )|key1|link( &#x3C; k2 )|key2|link3( >= k2)|...</li>
+<li>node is an array of key/value pairs, key is column, value differ based on whether the node is classified as inner nodes or leaf nodes.</li>
+<li>only stores values in leaf nodes. Inner nodes only guide the search process.</li>
+</ul>
+</li>
+<li>B+TREE DESIGN CHOICES
+<ul>
+<li>node size</li>
+<li>Merge Threshold : maybe delay merge operation</li>
+<li>Variable Length Keys : </li>
+<li>Non-Unique Indexes : </li>
+<li>Intra-Node Search: binary search </li>
+</ul>
+</li>
+<li>optimization:
+<ul>
+<li>prefix compression: store prefix and only store defferent substring, leaf node</li>
+<li>suffix truncation: key very different and you only need suffix to see which key to go left or right, inner node</li>
+<li>bulk insert</li>
+<li>POINTER SWIZZLING</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-index"><a aria-hidden="true" class="anchor-heading" href="#other-index"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>other index</h2>
+<ul>
+<li>skip list
+<ul>
+<li>dynamic order-preserving index use a sorted linked list</li>
+<li><strong>Multiple levels</strong> of linked lists with extra pointers that skip over intermediate nodes.</li>
+<li>To insert a new key, <strong>flip a coin</strong> to decide how many levels to add the new key into. Provides approximate O(log n) search times.</li>
+<li>First logically remove a key from the index by setting a flag to tell threads to ignore.</li>
+<li>Then physically remove the key once we know that no other thread is holding the reference.</li>
+<li>pros
+<ul>
+<li>less space</li>
+<li>no rebalance</li>
+</ul>
+</li>
+<li>cons
+<ul>
+<li>not disk friendly, reverse search not good</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>radix tree
+<ul>
+<li>Represent keys as individual digits. This allows threads to examine prefixes one-by-one instead of comparing entire key.</li>
+<li>可能的问题就是一些不好表示，比如signed int，float</li>
+</ul>
+</li>
+<li>inverted index
+<ul>
+<li>full text search index</li>
+</ul>
+</li>
+</ul>

@@ -1,0 +1,30 @@
+<h1 id="reliability"><a aria-hidden="true" class="anchor-heading" href="#reliability"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Reliability</h1>
+<h1 id="reliability-1"><a aria-hidden="true" class="anchor-heading" href="#reliability-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Reliability</h1>
+<ul>
+<li>continue to work correctly</li>
+<li>fault tolerate</li>
+</ul>
+<h2 id="hardware-faults"><a aria-hidden="true" class="anchor-heading" href="#hardware-faults"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Hardware faults</h2>
+<ul>
+<li>add redundancy
+<ul>
+<li>Disks may be set up in a RAID configuration</li>
+<li>servers may have dual power supplies and hot-swappable CPUs</li>
+<li>datacenters may have batteries and diesel generators for backup power.</li>
+<li>When one component dies, the redundant component can take its place while the broken component is replaced.</li>
+</ul>
+</li>
+</ul>
+<h2 id="software-errors"><a aria-hidden="true" class="anchor-heading" href="#software-errors"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Software errors</h2>
+<p>bug, process uses up resources, service depends on slow down, cascading failures</p>
+<ul>
+<li>carefully thinking about assumptions and interactions in the system</li>
+<li>thorough testing, process isolation</li>
+<li>allowing processes to crash and restart</li>
+<li>measuring, monitoring and analyzing system behavior in production</li>
+</ul>
+<h2 id="human-errors"><a aria-hidden="true" class="anchor-heading" href="#human-errors"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>human errors</h2>
+<p>humans are known to be unreliable.</p>
+<p>Design systems in a way that minimizes opportunities for error.</p>
+<p>Decouple the places where people make the most mistakes from the places where they can cause failures. In particular, provide fully featured non-production sandbox environments where people can explore and experiment safely, using real data, without affecting real users.</p>
+<p>Allow quick and easy recovery from human errors, to minimize the impact in the case of a failure.</p>

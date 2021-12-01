@@ -1,0 +1,47 @@
+<h1 id="containerization"><a aria-hidden="true" class="anchor-heading" href="#containerization"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Containerization</h1>
+<h1 id="containerization-1"><a aria-hidden="true" class="anchor-heading" href="#containerization-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>containerization</h1>
+<p>code developed on one machine might not work perfectly fine on any other machine because of the dependencies. This problem was solved by the containerization concept. So basically, an application that is being developed and deployed is bundled and wrapped together with all its configuration files and dependencies. This bundle is called a container. Now when you wish to run the application on another system, the container is deployed which will give a bug-free environment as all the dependencies and libraries are wrapped together. Most famous containerization environments are Docker and Kubernetes.</p>
+<h2 id="difference-between-virtualization"><a aria-hidden="true" class="anchor-heading" href="#difference-between-virtualization"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>difference between virtualization</h2>
+<p>Containers provide an isolated environment for running the application. The entire user space is explicitly dedicated to the application. Any changes made inside the container is never reflected on the host or even other containers running on the same host. Containers are an abstraction of the application layer. Each container is a different application.</p>
+<p>Whereas in Virtualization, hypervisors provide an entire virtual machine to the guest(including Kernal). Virtual machines are an abstraction of the hardware layer. Each VM is a physical machine.</p>
+<p><img src="/assets/images/2021-05-04-23-12-48.png"></p>
+<h2 id="docker"><a aria-hidden="true" class="anchor-heading" href="#docker"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>docker</h2>
+<p>Docker is a containerization platform which packages your application and all its dependencies together in the form of containers so as to ensure that your application works seamlessly in any environment, be it development, test or production. Docker containers, wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries, etc. It wraps basically anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment.</p>
+<p>Docker image is the source of Docker container. In other words, Docker images are used to create containers. When a user runs a Docker image, an instance of a container is created. These docker images can be deployed to any Docker environment.</p>
+<p>Docker Architecture consists of a Docker Engine which is a client-server application with three major components:</p>
+<ul>
+<li>A server which is a type of long-running program called a daemon process (the docker command).</li>
+<li>A REST API which specifies interfaces that programs can use to talk to the daemon and instruct it what to do.</li>
+<li>A command line interface (CLI) client (the docker command).</li>
+<li>The CLI uses the Docker REST API to control or interact with the Docker daemon through scripting or direct CLI commands. Many other Docker applications use the underlying API and CLI.</li>
+</ul>
+<p><img src="/assets/images/2021-05-04-23-13-20.png"></p>
+<p>Docker can build images automatically by reading the instructions from a file called Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build, users can create an automated build that executes several command-line instructions in succession.</p>
+<p>Docker Compose is a YAML file which contains details about the services, networks, and volumes for setting up the Docker application. So, you can use Docker Compose to create separate containers, host them and get them to communicate with each other. Each container will expose a port for communicating with other containers.</p>
+<p>Docker Swarm is native clustering for Docker. It turns a pool of Docker hosts into a single, virtual Docker host. Docker Swarm serves the standard Docker API, any tool that already communicates with a Docker daemon can use Swarm to transparently scale to multiple hosts.</p>
+<h3 id="namespace"><a aria-hidden="true" class="anchor-heading" href="#namespace"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>namespace</h3>
+<p>A namespace is one of the Linux features and an important concept of containers. Namespace adds a layer of isolation in containers. Docker provides various namespaces in order to stay portable and not affect the underlying host system. Few namespace types supported by Docker – PID, Mount, IPC, User, Network</p>
+<h3 id="interview-question"><a aria-hidden="true" class="anchor-heading" href="#interview-question"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>interview question</h3>
+<p>Will you lose your data, when a docker container exists?
+No, you won’t lose any data when Docker container exits. Any data that your application writes to the container gets preserved on the disk until you explicitly delete the container. The file system for the container persists even after the container halts.</p>
+<p>Where all do you think Docker is being used?</p>
+<p>When asked such a question, respond by talking about applications of Docker. Docker is being used in the following areas:</p>
+<p>Simplifying configuration: Docker lets you put your environment and configuration into code and deploy it.
+Code Pipeline Management: There are different systems used for development and production. As the code travels from development to testing to production, it goes through a difference in the environment. Docker helps in maintaining the code pipeline consistency.
+Developer Productivity: Using Docker for development gives us two things – We’re closer to production and development environment is built faster.
+Application Isolation: As containers are applications wrapped together with all dependencies, your apps are isolated. They can work by themselves on any hardware that supports Docker.
+Debugging Capabilities: Docker supports various debugging tools that are not specific to containers but work well with containers.
+Multi-tenancy: Docker lets you have multi-tenant applications avoiding redundancy in your codes and deployments.
+Rapid Deployment: Docker eliminates the need to boost an entire OS from scratch, reducing the deployment time.</p>
+<p>Is it a good practice to run stateful applications on Docker?
+The concept behind stateful applications is that they store their data onto the local file system. You need to decide to move the application to another machine, retrieving data becomes painful. I honestly would not prefer running stateful applications on Docker.</p>
+<p> What changes are expected in your docker compose file while moving it to production?
+These are the following changes you need make to your compose file before migrating your application to the production environment:</p>
+<p>Remove volume bindings, so the code stays inside the container and cannot be changed from outside the container.
+Binding to different ports on the host.
+Specify a restart policy
+Add extra services like log aggregator</p>
+<h2 id="kubernetes"><a aria-hidden="true" class="anchor-heading" href="#kubernetes"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Kubernetes</h2>
+<p>Kubernetes is an open-source container management (orchestration) tool. It’s container management responsibilities include container deployment, scaling &#x26; descaling of containers &#x26; container load balancing.</p>
+<p><a href="https://www.edureka.co/blog/what-is-kubernetes-container-orchestration">reference</a></p>
+<p><img src="/assets/images/2021-05-04-23-30-50.png"></p>

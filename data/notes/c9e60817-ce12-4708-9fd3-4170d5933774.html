@@ -1,0 +1,30 @@
+<h1 id="mvcc"><a aria-hidden="true" class="anchor-heading" href="#mvcc"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>MVCC</h1>
+<h1 id="multi-version-concurrency-control"><a aria-hidden="true" class="anchor-heading" href="#multi-version-concurrency-control"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Multi-Version Concurrency Control</h1>
+<p>The DBMS maintains multiple physical versions of a single logical object in the database. When a transaction writes to an object, the DBMS creates a new version of that object. When a transaction reads an object, it reads the newest version that existed when the transaction started.</p>
+<p>The key properties: Writers don’t block the readers. Readers don’t block the writers. Read-only transactions can read a consistent snapshot without acquiring locks. Timestamps are used to determine visibility. It supports time-travel queries. </p>
+<p>Version storage will help DBMS decide how to store different physical versions of a logical object. The DBMS uses the tuple’s pointer field to create a version chain per logical tuple. Indexes always point to the head of the chain. A thread traverses chain until you find the version thats visible to you. </p>
+<ul>
+<li>Append-Only Storage – New versions are appended to the same table space.
+<ul>
+<li>Oldest-To-Newest (O2N): Append new version to end of chain, look-ups require entire chain traversal.</li>
+<li>Newest-To-Oldest (N2O): Head of chain is newest, look-ups are quick, but indexes need to be up- dated every version.</li>
+</ul>
+</li>
+<li>Time-Travel Storage – Old versions are copied to separate table space.</li>
+<li>Delta Storage – The original values of the modified attributes are copied into a separate delta record space.</li>
+</ul>
+<p>Garbage Collection: The DBMS needs to remove reclaimable physical versions from the database over time. </p>
+<ul>
+<li>Tuple Level Garbage Collection – Find old versions by examining tuples directly
+<ul>
+<li>Background Vacuuming: Separate threads periodically scan the table and look for reclaimable ver- sions, works with any version storage scheme.</li>
+<li>Cooperative Cleaning: Worker threads identify reclaimable versions as they traverse version chain. Only works with O2N.</li>
+</ul>
+</li>
+<li>Transaction Level – Each transaction keeps track of its own read/write set. When a transaction completes, the garbage collector can use that to identify what tuples to reclaim.</li>
+</ul>
+<p>Index Management: All primary key (pkey) indexes always point to version chain head. </p>
+<ul>
+<li>Logical Pointers – Use a fixed identifier per tuple that does not change. Requires an extra indirection layer that maps the logical id to the physical location of the tuple</li>
+<li>Physical Pointers – Use the physical address to the version chain head</li>
+</ul>

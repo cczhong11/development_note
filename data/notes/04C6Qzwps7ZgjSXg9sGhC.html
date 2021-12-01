@@ -1,0 +1,214 @@
+<h1 id="zsh"><a aria-hidden="true" class="anchor-heading" href="#zsh"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Zsh</h1>
+<h1 id="install"><a aria-hidden="true" class="anchor-heading" href="#install"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>install</h1>
+<pre><code>brew install zsh
+</code></pre>
+<p>oh-my-zsh</p>
+<pre><code>wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+</code></pre>
+<h2 id="themes"><a aria-hidden="true" class="anchor-heading" href="#themes"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>themes</h2>
+<p>clone到  ~/.oh-my-zsh/themes
+修改<code>~/.zshrc</code> ZSH_THEME=" "</p>
+<ul>
+<li>git clone --depth=1 <a href="https://github.com/romkatv/powerlevel10k.git">https://github.com/romkatv/powerlevel10k.git</a> <span class="math math-inline"><span class="katex-error" title="ParseError: KaTeX parse error: Expected &#x27;}&#x27;, got &#x27;EOF&#x27; at end of input: {ZSH_CUSTOM:-" style="color:#cc0000">{ZSH_CUSTOM:-</span></span>HOME/.oh-my-zsh/custom}/themes/powerlevel10k</li>
+<li>powerlevel10k/powerlevel10k</li>
+</ul>
+<h2 id="plugin"><a aria-hidden="true" class="anchor-heading" href="#plugin"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>plugin</h2>
+<ul>
+<li>autojump 
+<ul>
+<li>brew install autojump</li>
+</ul>
+</li>
+<li>zsh-autosuggestions
+<ul>
+<li>git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions</li>
+</ul>
+</li>
+<li>zsh-syntax-highlighting
+<ul>
+<li>git clone <a href="https://github.com/zsh-users/zsh-syntax-highlighting.git">https://github.com/zsh-users/zsh-syntax-highlighting.git</a> ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting</li>
+</ul>
+</li>
+<li>bat
+<ul>
+<li>add syntax in cat</li>
+</ul>
+</li>
+<li>sudo
+<ul>
+<li>type esc esc twice to add sudo</li>
+</ul>
+</li>
+</ul>
+<h2 id="tip"><a aria-hidden="true" class="anchor-heading" href="#tip"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>tip</h2>
+<ul>
+<li>在当前目录下输入 .. 或 ... ，或直接输入当前目录名都可以跳转，你甚至不再需要输入 cd 命令了。</li>
+<li>目录浏览和跳转：输入 d，即可列出你在这个会话里访问的目录列表，输入列表前的序号，即可直接跳转。</li>
+<li>命令参数补全。键入 kill <tab> 就会列出所有的进程名和对应的进程号</tab></li>
+<li>通配符搜索：ls -l <strong>/*.sh，可以递归显示当前目录下的 shell 文件，文件少时可以代替 find。使用 </strong>/ 来递归搜索</li>
+<li>zsh_stats: Get a list of the top 20 commands and how many times they have been run.</li>
+<li>take: Create a new directory and change to it, will create intermediate directories as required.</li>
+<li>x / extract: Extract an archive (supported types: tar.{bz2,gz,xz,lzma}, bz2, rar, gz, tar, tbz2, tgz, zip, Z, 7z).</li>
+<li>osx</li>
+</ul>
+<h2 id="alias"><a aria-hidden="true" class="anchor-heading" href="#alias"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>alias</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Flag</th><th>Description</th></tr></thead><tbody><tr><td>L</td><td>print each alias in the form of calls to alias</td></tr><tr><td>g</td><td>list or define global aliases</td></tr><tr><td>m</td><td>print aliases matching specified pattern</td></tr><tr><td>r</td><td>list or define regular aliases</td></tr><tr><td>s</td><td>list or define suffix aliases</td></tr></tbody></table>
+<h2 id="directory"><a aria-hidden="true" class="anchor-heading" href="#directory"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Directory</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Flag</th><th>Description</th></tr></thead><tbody><tr><td>..</td><td>cd ..</td></tr><tr><td>...</td><td>cd ../..</td></tr><tr><td>....</td><td>cd ../../..</td></tr><tr><td>.....</td><td>cd ../../../..</td></tr><tr><td>/</td><td>cd /</td></tr><tr><td>~</td><td>cd ~</td></tr><tr><td>md</td><td>mkdir -p</td></tr><tr><td>rd</td><td>rmdir</td></tr><tr><td>d</td><td>dirs -v (lists last used directories)</td></tr></tbody></table>
+<h2 id="osx"><a aria-hidden="true" class="anchor-heading" href="#osx"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>osx</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Flag</th><th>Description</th></tr></thead><tbody><tr><td>tab</td><td>Open the current directory in a new tab</td></tr><tr><td>split_tab</td><td>Split the current terminal tab horizontally</td></tr><tr><td>vsplit_tab</td><td>Split the current terminal tab vertically</td></tr><tr><td>ofd</td><td>Open the current directory in a Finder window</td></tr><tr><td>pfd</td><td>Return the path of the frontmost Finder window</td></tr><tr><td>pfs</td><td>Return the current Finder selection</td></tr><tr><td>cdf</td><td>cd to the current Finder directory</td></tr><tr><td>pushdf</td><td>pushd to the current Finder directory</td></tr><tr><td>pxd</td><td>Return the current Xcode project directory</td></tr><tr><td>cdx</td><td>cd to the current Xcode project directory</td></tr><tr><td>quick-look</td><td>Quick-Look a specified file</td></tr><tr><td>man-preview</td><td>Open a specified man page in Preview app</td></tr><tr><td>showfiles</td><td>Show hidden files in Finder</td></tr><tr><td>hidefiles</td><td>Hide the hidden files in Finder</td></tr><tr><td>itunes</td><td>DEPRECATED. Use music from macOS Catalina on</td></tr><tr><td>music</td><td>Control Apple Music. Use music -h for usage details</td></tr><tr><td>spotify</td><td>Control Spotify and search by artist, album, track…</td></tr><tr><td>rmdsstore</td><td>Remove .DS_Store files recursively in a directory</td></tr></tbody></table>

@@ -1,0 +1,13 @@
+<h1 id="code_deployment"><a aria-hidden="true" class="anchor-heading" href="#code_deployment"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Code_deployment</h1>
+<h1 id="continous-www-push"><a aria-hidden="true" class="anchor-heading" href="#continous-www-push"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>continous www push</h1>
+<ul>
+<li>Check out trunk	--	&#x3C;0:01	check out the most current trunk revision in WWW. </li>
+<li>Build	&#x3C;0:01	0:35	Once we have a version locked in, we kick off an asynchronous test run, and start doing a build. A build in this context is taking the PHP files in the repo and turning it into packages that we will actually ship to web servers. This can fail in many ways, from Hack failures, to static resources errors, to other random stuff.</li>
+<li>Test	0:10	0:15	The actual work here usually finishes while the build step is running. If any test failed, we consider the step failed.</li>
+<li>Try Acquiring Deploy Lock	0:35	&#x3C;0:01	We don't want to push if someone hit the stop button, nor do we want multiple pushes back to back to back, so if any build is currently beyond this step (pushing or waiting), we'll mark the push phases as SKIPPED and end the push instance.</li>
+<li>Push Trunkstable/c1	0:35	0:20	This basically does a twdeploy push_job which will push trunkstable. See the Tupperware UI for a list of these jobs. We do this rollout in a staged fashion. Each individual server is down for under 5 minutes.</li>
+<li>Push C2	1:10	0:30	Now we'll do tupperware push_job to push these jobs. This will be hit by 1% (soon 2%) of users, so we have a system called Presholds which may pause the push if some metrics look bad enough (logspew, fatals, latency, servers not coming back up). If enough jobs get paused in this way, we'll revert c2 and fail the push.</li>
+<li>Verify C2	1:40	0:25	Now we wait again. This time we want employees and alerts to have a chance to notice c2 is broken. At the end of this 15 minute window we check for any alerts with the <code>blocks_c3_push</code> tag. If any are found we'll fail the job.</li>
+<li>Push C3	1:50	0:30	This behaves exactly like pushing c2, it also has presholds. Naturally there are different Tupperware jobs.</li>
+<li>Done	2:20	--	Once this finishes, we're done and another build can try and grab the deploy lock!</li>
+</ul>

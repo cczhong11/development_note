@@ -1,0 +1,30 @@
+<h1 id="basic"><a aria-hidden="true" class="anchor-heading" href="#basic"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Basic</h1>
+<h1 id="classical-non-distributed-concurrency-control"><a aria-hidden="true" class="anchor-heading" href="#classical-non-distributed-concurrency-control"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Classical Non-Distributed Concurrency Control</h1>
+<h2 id="spin-lock"><a aria-hidden="true" class="anchor-heading" href="#spin-lock"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>spin-lock</h2>
+<ul>
+<li><strong>what</strong>:Atomic compare-and-swap/test-and-set instructions</li>
+<li><strong>why</strong>: easy</li>
+<li><strong>how</strong>: Requires locking memory bus on multi-core/multi-processor</li>
+<li><strong>problem</strong>:Busy wait not good for high contention. busy-waiting, busy-looping or spinning is a technique in which a process repeatedly checks to see if a condition is true, such as whether keyboard input or a lock is available.</li>
+</ul>
+<h2 id="mutex"><a aria-hidden="true" class="anchor-heading" href="#mutex"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>mutex</h2>
+<ul>
+<li><strong>what</strong>:Semaphores, At-Most-N policies,Mutual Exclusion</li>
+<li><strong>why</strong>:Conceptually,manages a pool of resources.</li>
+<li><strong>how</strong>:
+<ul>
+<li>P operation: Wait for resource to be available (lock s-=1)</li>
+<li>V operation: Make resource available (unlock s+=1)</li>
+<li>Deschedule (move to blocked queue) blocked thread or process </li>
+<li>Reschedule (move to ready queue) when resource available</li>
+<li>初始s=1，s不会是负值</li>
+</ul>
+</li>
+</ul>
+<h2 id="condition-variables"><a aria-hidden="true" class="anchor-heading" href="#condition-variables"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>CONDITION VARIABLES</h2>
+<p>Event based </p>
+<ul>
+<li>Wait – always waits. No predicate</li>
+<li>Signal – Wake up a waiter</li>
+<li>Broadcast – Wake up all waiters.</li>
+</ul>

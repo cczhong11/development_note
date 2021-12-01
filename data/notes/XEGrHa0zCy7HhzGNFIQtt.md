@@ -1,0 +1,51 @@
+
+Iron Rule of Tomassi #1
+
+Frame is everything. Always be aware of the subconscious balance of whose frame in which you are operating. Always control the Frame, but resist giving the impression that you are.
+
+Iron Rule of Tomassi # 2
+
+NEVER, under pain of death, honestly or dishonestly reveal the number of women you’ve slept with or explain any detail of your sexual experiences with them to a current lover.
+
+Iron Rule of Tomassi #3
+
+Any woman who makes you wait for sex, or by her actions implies she is making you wait for sex; the sex is NEVER worth the wait.
+
+性是永远不值得等待的。
+
+性爱是双方自发的化学反应，而不是一个谈判的过程。
+舒适感来自于熟悉感和可预测性；这些都是明显的反诱惑的影响因素。虽然在人际关系中，舒适有它自己的优点，但它不是真正的、热情的性欲的基础。
+
+Iron Rule of Tomassi #4
+
+NEVER under any circumstance live with a woman you aren’t married to or are not planning to marry in within 6 months.
+
+Iron Rule of Tomassi #5
+
+NEVER allow a woman to be in control of the birth.
+
+Iron Rule of Tomassi #6
+
+Women are utterly incapable of loving a man in the way that a man expects to be loved.
+
+In its simplicity this speaks volumes about the condition of Men. It accurately expresses a pervasive nihilism that Men must either confront and accept, or be driven insane in denial for the rest of their lives when they fail to come to terms with the disillusionment.
+
+Women are incapable of loving men in a way that a man idealizes is possible, in a way he thinks she should be capable of.
+
+关于男人是否能确定女人什么时候不爱他的原始问题，比她所意识到的要深得多。我认为男人在服用蓝色药丸的日子里所经历的很多事情--沮丧、愤怒、否认、被剥夺，感觉他被卖给了一个幻想，而没有一个女人能做到这一点--所有这些都植根于一个基本信念，即某个女人，任何女人，在那里知道他需要如何被爱，他所要做的就是找到她，并体现出他被告知她会在他找到时对他的期望。所以他找到了一个女人，她说并向他表明她爱他，但不是以他脑海中一直以来的方式。她的爱是基于亢奋的资格和表现，而且比他被引导去相信，或说服自己，他们之间的爱应该是有条件的。她的爱似乎是两面派的，模棱两可的，而且与他长久以来被教导的，当他找到一个女人时，她会如何爱他相比，似乎太容易失去。因此，他花了他一夫一妻制的努力来 "建立他们的关系"，使她按照他的概念来爱他，但这从未发生。这是一场无休止的追逐，维持她的感情，遵从她的爱情观，同时偶尔努力吸引她进入他的爱情观。不断地安抚她以维持她的爱，与他希望被爱的需求感相冲突，这是一个超常的灾难配方，所以当她失去对他的爱时，他根本不知道她不再爱他。然后他的逻辑反应是重拾他们刚在一起时她对他的爱的旧条件，但现在这些都不起作用，因为它们是基于义务，而不是真正的欲望。爱，就像欲望一样，是不能谈判的。
+
+爱，就像欲望一样，只有在不被胁迫和没有义务的情况下才是合法的。男人相信为爱而爱，女人则是机会主义的爱。这并不是说两者都认同无条件的爱，而是两个性别对爱的条件不同。
+
+Iron Rule of Tomassi #7
+
+It is always time and effort better spent developing new, fresh, prospective women than it will ever be in attempting to reconstruct a failed relationship. Never root through the trash once the garbage has been dragged to the curb. You get messy, your neighbors see you do it, and what you thought was worth digging for is never as valuable as you thought it was.
+
+Iron Rule of Tomassi #8
+
+Always let a woman figure out why she wont ƒuck you, never do it for her.
+
+An integral part of maintaining the feminine imperative as the societal imperative involves keeping women as the primary sexual selectors. As I’ve detailed in many prior comments and posts, this means that a woman’s sexual strategy necessitates that she be in as optimized a condition as her capacity (attractiveness) allows for her to choose from the best males available to satisfy that strategy.
+
+Iron Rule of Tomassi #9
+
+Never Self-Deprecate under any circumstance. This is a Kiss of Death that you self-initiate and is the antithesis of the Prize Mentality. Once you’ve accepted yourself and presented yourself as a “complete douche” there’s no going back to confidence with a woman. Never appeal to a woman’s sympathies. Her sympathies are given by her own volition, never when they are begged for — women despise the obligation of sympathy. Nothing kills arousal like pity. Even if you don’t seriously consider yourself pathetic, it never serves your best interest to paint yourself as pathetic. Self-Depreciation is a misguided tool for the AFC, and not something that would even occur to an Alpha.

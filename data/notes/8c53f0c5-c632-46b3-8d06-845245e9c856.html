@@ -1,0 +1,137 @@
+<h1 id="linklayer"><a aria-hidden="true" class="anchor-heading" href="#linklayer"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Linklayer</h1>
+<h1 id="data-link-layer"><a aria-hidden="true" class="anchor-heading" href="#data-link-layer"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>data link layer</h1>
+<p>ethernet, wifi, fiber, telephony</p>
+<p>transfer frames: ethernet, PPP, MAC address (add size, error correction codes)</p>
+<ul>
+<li>Inserts framing info to denote frame boundaries</li>
+<li>Inserts control, addressing and error correction info in header</li>
+<li>Detects transmission errors on link. May retransmit frames</li>
+<li>Activation, maintenance, &#x26; deactivation of link connection</li>
+</ul>
+<p><img src="/assets/images/2021-03-25-15-55-22.png">
+<img src="/assets/images/2021-03-25-15-56-16.png"></p>
+<p><img src="/assets/images/2021-03-25-15-58-20.png"></p>
+<ul>
+<li>mission: transfer frames from one node, over a link</li>
+<li>scope: Service received from physical layer is the ability to move a bit across the link
+<ul>
+<li>A packet is transferred by different link protocols over different links</li>
+<li>Each data link protocol provides different services</li>
+</ul>
+</li>
+<li>addressing mechanism:MAC</li>
+<li>data types : frame</li>
+<li>responsibilities/services
+<pre><code>- Framing:  encapsulate datagram into frame, adding header, trailer; identify source, destination with addresses • Different from IP 
+</code></pre>
+addresses!!
+<pre><code>- Link access: use medium access control (MAC) protocol
+- Error Detection
+- Error Correction
+- Reliable Delivery: critical for wireless links ➙ high error rates
+</code></pre>
+</li>
+</ul>
+<h2 id="csmacd"><a aria-hidden="true" class="anchor-heading" href="#csmacd"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>CSMA/CD</h2>
+<ul>
+<li>Carrier Sense: Listen before talking Multiple Access: Broadcast Medium</li>
+<li>Collision Detection: Listen as you talk. If you hear someone else, be quiet</li>
+<li>Capturing a Channel: If no other station initiates transmission during this period, sender has captured the channel. t = tprop</li>
+<li><strong>Ethernet</strong> is the most famous example</li>
+<li>Before transmitting, listen</li>
+<li>If channel is sensed idle, send the frame </li>
+<li>Else, defer transmission a random time</li>
+<li>If collision is detected, abort transmission </li>
+<li>reduces channel wastage</li>
+<li><strong>Min transmission time must be long enough for collisions to propagate</strong></li>
+<li>Length of the packet >= 2 <em> Tp </em> Bandwidth of the link worst case</li>
+</ul>
+<h2 id="arp"><a aria-hidden="true" class="anchor-heading" href="#arp"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>ARP</h2>
+<ul>
+<li>mission: Translate a network-layer address (IP) to a link-layer address (MAC), Similar to DNS</li>
+<li>frame fields:
+<ul>
+<li>Sender Ethernet and IP address</li>
+<li>Target Ethernet and IP address</li>
+</ul>
+</li>
+<li>transmission mechanism
+<ul>
+<li>Sent in an Ethernet frame to a broadcast address</li>
+<li>ARP Reply takes the same form</li>
+<li>broadcast request, if some one know, reply</li>
+<li>if in another subnet, sent datagram to router </li>
+</ul>
+</li>
+<li>caching
+<ul>
+<li>Each Ethernet adapter uses a table to keep track of known mappings between IP addresses and Ethernet MAC Addrs</li>
+<li>When given IP address, ARP looks in ARP table and returns corresponding MAC address
+<ul>
+<li>If IP not in table, queue frame and broadcast ARP request</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>security
+<ul>
+<li>ARP frames are not authenticateds</li>
+<li>May be spoofed by a malicious entity</li>
+<li>May be proxied by design</li>
+</ul>
+</li>
+<li>gratuitous use
+<ul>
+<li>ARP can be an “announcement” protocol</li>
+<li>Can send an ARP frame just to update other node’s ARP tables</li>
+<li>Set target address and sender address to the same value</li>
+</ul>
+</li>
+</ul>
+<h2 id="csmaca"><a aria-hidden="true" class="anchor-heading" href="#csmaca"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>csma/ca</h2>
+<ul>
+<li>CSMA / Collision Avoidance</li>
+<li>
+<ol>
+<li>Listen for a specified time (DIFS) If medium is not free:</li>
+</ol>
+<ul>
+<li>
+<ol>
+<li>Exponential Backoff (下次请求的时间)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>If medium is free:
+<ul>
+<li>Transmit entire frame</li>
+<li>Await ACK frame （AP send ACK to sender）</li>
+<li>If no ACK, then Exponential Backoff</li>
+</ul>
+</li>
+<li>ACK
+<ul>
+<li>protects against bit errors</li>
+<li>Receiver only sends ACK if frame passes CRC</li>
+</ul>
+</li>
+<li>Exponential Backoff
+<ul>
+<li>Each node chooses a random number </li>
+<li>Max size increases from round to round</li>
+<li>Can be modeled as a counter (wait time)
+<ul>
+<li>Decremented during any idle time</li>
+<li>Put on hold if another node transmits and for a short time afterwards (SIFS)</li>
+<li>When zero, the counting station may transmit</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
+<ul>
+<li><a href="/notes/92917ea3-452e-48dc-875e-5cd0002041db">Network (my_note)</a></li>
+</ul>

@@ -1,0 +1,28 @@
+<h1 id="spark"><a aria-hidden="true" class="anchor-heading" href="#spark"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Spark</h1>
+<ul>
+<li>key point: efficient
+<ul>
+<li>general execution graphs</li>
+<li>in-memory storage</li>
+</ul>
+</li>
+<li>Resilient Distributed Datasets
+<ul>
+<li>Collections of objects spread across a cluster, stored in RAM or on disk</li>
+<li>build through parallel transformation</li>
+<li>automatically rebuild on failure </li>
+<li>It track lineage information that can be used to efficiently recompute lost data</li>
+</ul>
+</li>
+<li>DAG scheduler(Directed Acyclic Graph)
+<ul>
+<li>job: one action for RDD</li>
+<li>stage: split in shuffle for job</li>
+<li>task: real task in executor</li>
+<li>DAG in Apache Spark is a set of Vertices and Edges, where vertices represent the RDDs and the edges represent the Operation to be applied on RDD.</li>
+<li>know the dependency for different RDD</li>
+<li>In this way, the execution plan is optimized, e.g. to minimize shuffling data around. </li>
+<li><img src="https://img-blog.csdn.net/20170427180924863?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTU2NDE3Mg==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast"></li>
+</ul>
+</li>
+</ul>

@@ -1,0 +1,47 @@
+<h1 id="concurrency"><a aria-hidden="true" class="anchor-heading" href="#concurrency"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Concurrency</h1>
+<h1 id="并发编程"><a aria-hidden="true" class="anchor-heading" href="#并发编程"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>并发编程</h1>
+<ul>
+<li>进程: 独立虚拟地址空间</li>
+<li>i/o多路复用: 一个进程的上下文显示调度他们自己的逻辑流</li>
+<li>线程：运行在单一进程上下文的逻辑流，由内核控制</li>
+</ul>
+<h2 id="进程"><a aria-hidden="true" class="anchor-heading" href="#进程"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>进程</h2>
+<ul>
+<li>fork, exec, waitpid</li>
+<li>共享文件表，不共享用户地址空间，共享状态信息变得困难</li>
+</ul>
+<h2 id="io多路复用"><a aria-hidden="true" class="anchor-heading" href="#io多路复用"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>I/O多路复用</h2>
+<p>使用select函数，要求内核挂起进程，只有在一个或多个I/O事件发生后才将控制返回给应用程序。</p>
+<p>用作event-driven程序的基础。</p>
+<p>客户端池:</p>
+<ul>
+<li>优点：不需要切换上下文</li>
+<li>缺点：编码复杂</li>
+</ul>
+<h2 id="thread"><a aria-hidden="true" class="anchor-heading" href="#thread"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>thread</h2>
+<p>有自己的thread id, stack, PC, registers</p>
+<p>共享进程的整个虚拟地址空间。</p>
+<p>线程之间对等，无父子关系，切换上下文快。</p>
+<p>pthread api</p>
+<ul>
+<li>
+<p>pthread_create</p>
+</li>
+<li>
+<p>pthread_exit</p>
+</li>
+<li>
+<p>pthread_join ：回收，阻塞，直到tid终止</p>
+</li>
+<li>
+<p>pthread_detach: 不被其他回收，在终止时被系统回收</p>
+</li>
+<li>
+<p>共享变量</p>
+<ul>
+<li>全局变量：任何线程都可以访问</li>
+<li>本地自动变量：无static,只在自己的thread里</li>
+<li>本地静态：线程共享，在vm里只有一个</li>
+</ul>
+</li>
+</ul>

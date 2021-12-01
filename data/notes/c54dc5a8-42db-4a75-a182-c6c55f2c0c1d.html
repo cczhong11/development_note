@@ -1,0 +1,24 @@
+<h1 id="lsm"><a aria-hidden="true" class="anchor-heading" href="#lsm"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>LSM</h1>
+<h2 id="lsm-1"><a aria-hidden="true" class="anchor-heading" href="#lsm-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>LSM</h2>
+<p><a href="http://www.benstopford.com/2015/02/14/log-structured-merge-trees/">http://www.benstopford.com/2015/02/14/log-structured-merge-trees/</a></p>
+<ol>
+<li>idea: collect and batch updates in memory. 放满buffer再写入。删除的时候先放到tombstone里，再删除。</li>
+<li>merge 的想法：使用bloom filter在query的时候可以知道这个文件会不会在里面。在merge update可以prune tree。在merge的时候删tombstone。</li>
+<li>LSMT，memory里的数据结构是C0，disk里的是C1
+<ol>
+<li>fill memory</li>
+<li>spill to disk. use SSTables(连续key value pair) and SSIndexes(key index pair) support random access </li>
+<li>Index and bloom filter in memory</li>
+<li>merge perform comaction</li>
+<li>write-ahead logs to aid recovery</li>
+<li>C0 is smaller and entirely resident in memory, whereas C1 is resident on disk. New records are inserted into the memory-resident C0 component. If the insertion causes the C0 component to exceed a certain size threshold, a contiguous segment of entries is removed from C0 and merged into C1 on disk.</li>
+</ol>
+</li>
+</ol>
+<p><a href="http://distributeddatastore.blogspot.com/2013/08/cassandra-sstable-storage-format.html">http://distributeddatastore.blogspot.com/2013/08/cassandra-sstable-storage-format.html</a>)</p>
+<h2 id="bloom-filter"><a aria-hidden="true" class="anchor-heading" href="#bloom-filter"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Bloom Filter</h2>
+<ul>
+<li><strong>what</strong>: one bit per hash function consumed per key. ignore collision. use bit to reprensent exist or not.</li>
+<li><strong>why</strong>: secondary storage is slow to search and access</li>
+<li><strong>whow</strong>: use k hash function for the item and get k array, set these all in 1 and when we query this item, we will check all k array result</li>
+</ul>

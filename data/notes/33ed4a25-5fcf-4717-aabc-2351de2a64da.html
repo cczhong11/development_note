@@ -1,0 +1,107 @@
+<h1 id="sort"><a aria-hidden="true" class="anchor-heading" href="#sort"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Sort</h1>
+<h1 id="merge-sort"><a aria-hidden="true" class="anchor-heading" href="#merge-sort"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>merge sort</h1>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">:</span>
+ 
+         <span class="token comment"># Finding the mid of the array</span>
+        mid <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">//</span><span class="token number">2</span>
+ 
+        <span class="token comment"># Dividing the array elements</span>
+        L <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span>
+ 
+        <span class="token comment"># into 2 halves</span>
+        R <span class="token operator">=</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span>
+ 
+        <span class="token comment"># Sorting the first half</span>
+        mergeSort<span class="token punctuation">(</span>L<span class="token punctuation">)</span>
+ 
+        <span class="token comment"># Sorting the second half</span>
+        mergeSort<span class="token punctuation">(</span>R<span class="token punctuation">)</span>
+ 
+        i <span class="token operator">=</span> j <span class="token operator">=</span> k <span class="token operator">=</span> <span class="token number">0</span>
+ 
+        <span class="token comment"># Copy data to temp arrays L[] and R[]</span>
+        <span class="token keyword">while</span> i <span class="token operator">&#x3C;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span> <span class="token keyword">and</span> j <span class="token operator">&#x3C;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&#x3C;</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                i <span class="token operator">+=</span> <span class="token number">1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+                j <span class="token operator">+=</span> <span class="token number">1</span>
+            k <span class="token operator">+=</span> <span class="token number">1</span>
+ 
+        <span class="token comment"># Checking if any element was left</span>
+        <span class="token keyword">while</span> i <span class="token operator">&#x3C;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>L<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> L<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            i <span class="token operator">+=</span> <span class="token number">1</span>
+            k <span class="token operator">+=</span> <span class="token number">1</span>
+ 
+        <span class="token keyword">while</span> j <span class="token operator">&#x3C;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>R<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            arr<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> R<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+            j <span class="token operator">+=</span> <span class="token number">1</span>
+            k <span class="token operator">+=</span> <span class="token number">1</span>
+</code></pre>
+<h1 id="quick-sort"><a aria-hidden="true" class="anchor-heading" href="#quick-sort"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>quick sort</h1>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">partition</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> low<span class="token punctuation">,</span> high<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    i <span class="token operator">=</span> <span class="token punctuation">(</span>low<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>         <span class="token comment"># index of smaller element </span>
+    pivot <span class="token operator">=</span> arr<span class="token punctuation">[</span>high<span class="token punctuation">]</span>     <span class="token comment"># pivot </span>
+  
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>low<span class="token punctuation">,</span> high<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+  
+        <span class="token comment"># If current element is smaller than or </span>
+        <span class="token comment"># equal to pivot </span>
+        <span class="token keyword">if</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&#x3C;=</span> pivot<span class="token punctuation">:</span> 
+  
+            <span class="token comment"># increment index of smaller element </span>
+            i <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span>
+            arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> 
+  
+    arr<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>high<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>high<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> 
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> 
+  
+<span class="token comment"># The main function that implements QuickSort </span>
+<span class="token comment"># arr[] --> Array to be sorted, </span>
+<span class="token comment"># low  --> Starting index, </span>
+<span class="token comment"># high  --> Ending index </span>
+  
+<span class="token comment"># Function to do Quick sort </span>
+  
+  
+<span class="token keyword">def</span> <span class="token function">quickSort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> low<span class="token punctuation">,</span> high<span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span> 
+        <span class="token keyword">return</span> arr 
+    <span class="token keyword">if</span> low <span class="token operator">&#x3C;</span> high<span class="token punctuation">:</span> 
+  
+        <span class="token comment"># pi is partitioning index, arr[p] is now </span>
+        <span class="token comment"># at right place </span>
+        pi <span class="token operator">=</span> partition<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> low<span class="token punctuation">,</span> high<span class="token punctuation">)</span> 
+  
+        <span class="token comment"># Separately sort elements before </span>
+        <span class="token comment"># partition and after partition </span>
+        quickSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> low<span class="token punctuation">,</span> pi<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> 
+        quickSort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> pi<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> high<span class="token punctuation">)</span> 
+</code></pre>
+<h1 id="heap-sort"><a aria-hidden="true" class="anchor-heading" href="#heap-sort"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>heap sort</h1>
+<p></p><p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">Heap</span></div>
+<a href="/notes/6b58aa5b-3039-44b3-8aee-20469ed20d10" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div><p>Start anchor heap sort not found</p>
+</div></div><p></p><p></p>
+<h1 id="拓扑排序"><a aria-hidden="true" class="anchor-heading" href="#拓扑排序"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>拓扑排序</h1>
+<p>有向图，是将G中所有顶点排成一个线性序列，使得图中任意一对顶点u和v，若边(u,v)∈E(G)，则u在线性序列中出现在v之前。</p>
+<ul>
+<li>选择一个入度为0的顶点并输出之；</li>
+<li>从图中删除此顶点及其所有出边；</li>
+<li>找下一个入度为0的点</li>
+</ul>
+<hr>
+<h2 id="backlinks"><a aria-hidden="true" class="anchor-heading" href="#backlinks"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backlinks</h2>
+<ul>
+<li><a href="/notes/400115e9-30f7-4a13-9776-db059bc9cd42">Algo (my_note)</a></li>
+</ul>
