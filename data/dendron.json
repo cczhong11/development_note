@@ -1,35 +1,8 @@
 {
-  "version": 4,
-  "useFMTitle": true,
-  "useNoteTitleForLink": true,
-  "mermaid": true,
-  "useKatex": true,
+  "version": 5,
   "dev": {
     "previewV2Enabled": false,
     "enablePreviewV2": true
-  },
-  "site": {
-    "copyAssets": true,
-    "siteHierarchies": [
-      "development",
-      "life"
-    ],
-    "siteRootDir": "docs",
-    "usePrettyRefs": true,
-    "title": "my_note",
-    "siteUrl": "https://notes.tczhong.com",
-    "description": "Personal knowledge space",
-    "siteLastModified": true,
-    "gh_edit_branch": "main",
-    "usePrettyLinks": true,
-    "siteNotesDir": "notes",
-    "siteFaviconPath": "favicon.ico",
-    "gh_edit_link": true,
-    "gh_edit_link_text": "Edit this page on GitHub",
-    "gh_root": "docs/",
-    "gh_edit_view_mode": "edit",
-    "writeStubs": true,
-    "siteIndex": "development"
   },
   "commands": {
     "lookup": {
@@ -37,7 +10,9 @@
         "selectionMode": "extract",
         "confirmVaultOnCreate": false,
         "leaveTrace": false,
-        "bubbleUpCreateNew": true
+        "bubbleUpCreateNew": true,
+        "fuzzThreshold": 0.2,
+        "vaultSelectionModeOnCreate": "smart"
       }
     },
     "insertNote": {
@@ -50,10 +25,11 @@
     "insertNoteIndex": {
       "enableMarker": false
     },
-    "randomNote": {}
+    "randomNote": {},
+    "copyNoteLink": {}
   },
   "workspace": {
-    "dendronVersion": "0.70.0",
+    "dendronVersion": "0.85.0",
     "vaults": [
       {
         "fsPath": "repos/dendron-aws-vault",
@@ -112,13 +88,49 @@
       },
       "todoIntegration": false,
       "createTaskSelectionType": "selection2link"
-    }
+    },
+    "enableEditorDecorations": true
   },
   "preview": {
     "enableFMTitle": true,
     "enableNoteTitleForLink": true,
     "enableMermaid": true,
     "enablePrettyRefs": true,
-    "enableKatex": true
+    "enableKatex": true,
+    "enableFrontmatterTags": true,
+    "enableHashesForFMTags": false,
+    "automaticallyShowPreview": false
+  },
+  "publishing": {
+    "enableFMTitle": true,
+    "enableNoteTitleForLink": true,
+    "enableMermaid": true,
+    "enablePrettyRefs": true,
+    "enableKatex": true,
+    "copyAssets": true,
+    "siteHierarchies": [
+      "development",
+      "life"
+    ],
+    "enableSiteLastModified": true,
+    "siteRootDir": "docs",
+    "siteUrl": "https://notes.tczhong.com",
+    "enableFrontmatterTags": true,
+    "enableHashesForFMTags": false,
+    "enableRandomlyColoredTags": true,
+    "writeStubs": false,
+    "seo": {
+      "title": "my_note",
+      "description": "Personal knowledge space"
+    },
+    "github": {
+      "enableEditLink": true,
+      "editLinkText": "Edit this page on GitHub",
+      "editBranch": "main",
+      "editViewMode": "tree"
+    },
+    "enablePrettyLinks": true,
+    "siteFaviconPath": "favicon.ico",
+    "siteIndex": "development"
   }
 }
