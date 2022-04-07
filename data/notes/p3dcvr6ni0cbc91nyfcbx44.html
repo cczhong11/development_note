@@ -1,0 +1,20 @@
+<h1 id="cgroup"><a aria-hidden="true" class="anchor-heading" href="#cgroup"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Cgroup</h1>
+<p>A control group (cgroup) is a Linux kernel feature that limits, accounts for, and <strong>isolates the resource usage</strong> (CPU, memory, disk I/O, network, and so on) of a collection of processes.</p>
+<p>Cgroups provide the following features:</p>
+<ul>
+<li>Resource limits – You can configure a cgroup to limit how much of a particular resource (memory or CPU, for example) <strong>a process can use</strong>.</li>
+<li>Prioritization – You can control how much of a resource (CPU, disk, or network) a process can use compared to processes in another cgroup when there is resource contention.</li>
+<li>Accounting – Resource limits are monitored and reported at the cgroup level.</li>
+<li>Control – You can change the status (frozen, stopped, or restarted) of all processes in a cgroup with a single command.</li>
+</ul>
+<h1 id="how-to-configure"><a aria-hidden="true" class="anchor-heading" href="#how-to-configure"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>how to configure</h1>
+<p>The following command creates a v1 cgroup (you can tell by pathname format) called foo and sets the memory limit for it to 50,000,000 bytes (50 MB).</p>
+<pre><code>root # mkdir -p /sys/fs/cgroup/memory/foo
+root # echo 50000000 > /sys/fs/cgroup/memory/foo/memory.limit_in_bytes
+</code></pre>
+<p>I start test.sh in the background and its PID is reported as 2428. The script produces its output and then I assign the process to the cgroup by piping its PID into the cgroup file /sys/fs/cgroup/memory/foo/cgroup.procs.</p>
+<pre><code>root # ./test.sh &#x26;
+[1] 2428
+root # cgroup testing tool
+root # echo 2428 > /sys/fs/cgroup/memory/foo/cgroup.procs
+</code></pre>

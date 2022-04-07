@@ -1,0 +1,10 @@
+<h1 id="malloc"><a aria-hidden="true" class="anchor-heading" href="#malloc"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Malloc</h1>
+<p>When user space applications call malloc(), that call isn't implemented in the kernel. Instead, it's a library call (implemented glibc or similar).</p>
+<p>The short version is that the malloc implementation in glibc either obtains memory from the brk()/sbrk() system call or anonymous memory via mmap(). This gives glibc a big contiguous (regarding virtual memory addresses) chunk of memory, which the malloc implementation further slices and dices in smaller chunks and hands out to your application.</p>
+<p>Here's a small malloc implementation that'll give you the idea, along with many, many links.</p>
+<p>Note that nothing cares about physical memory yet -- that's handled by the kernel virtual memory system when the process data segment is altered via brk()/sbrk() or mmap(), and when the memory is referenced (by a read or write to the memory).</p>
+<p>To summarize:</p>
+<p>malloc() will search its managed pieces of memory to see if there's a piece of unused memory that satisfy the allocation requirements.
+Failing that, malloc() will try to extend the process data segment(via sbrk()/brk() or in some cases mmap()). sbrk() ends up in the kernel.
+The brk()/sbrk() calls in the kernel adjust some of the offsets in the struct mm_struct of the process, so the process data segment will be larger. At first, there will be no physical memory mapped to the additional virtual addresses which extending the data segment gave.
+When that unmapped memory is first touched (likely a read/write by the malloc implementation) a fault handler will kick in and trap down to the kernel, where the kernel will assign physical memory to the unmapped memory.</p>
