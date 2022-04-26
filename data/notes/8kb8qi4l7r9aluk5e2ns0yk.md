@@ -1,0 +1,117 @@
+
+空闲内存。 对比大多数其他操作系统，在Linux中不应该只关注空闲（free）内存的值。正如在1.2.2节讲述的，Linux内核分配大部分未使用的内存作为文件系统缓存，所以从已使用的（used）内存中减去缓冲（buffer）和缓存（cache）的内存数量，来确定（有效的）空闲（free）内存。
+
+□　使用的swap。 这个值描述了已使用的swap空间的数量。正如1.2.2节中描述的，swap空间的使用只能告诉你Linux管理内存真的有效。Swap In/Out是一个识别内存瓶颈的可靠手段。在一段持续的时间内每秒200到300以上的分页值，表明可能有内存瓶颈。
+
+□　缓冲与缓存。 缓冲被分配作为文件系统和块设备缓存。
+
+□　Slab。 其描述了内核使用的内存数。注意内核的分页不能移出到磁盘。
+
+□　活跃与非活跃内存。 关于活跃使用的系统内存信息。非活跃内存可能是kswapd守护进程swap out到磁盘的候选者。
+
+
+## free -m
+
+```
+$ free -m
+             total       used       free     shared    buffers     cached
+Mem:        245998      24545     221453         83         59        541
+-/+ buffers/cache:      23944     222053
+Swap:            0          0          0
+```
+
+The right two columns show:
+buffers: **For the buffer cache, used for block device I/O.**
+cached: **For the page cache, used by file systems**.
+We just want to check that these aren’t near-zero in size, which can lead to higher disk I/O (confirm using iostat), and worse performance. The above example looks fine, with many Mbytes in each.
+The “-/+ buffers/cache” provides less confusing values for used and free memory. Linux uses free memory for the caches, but can reclaim it quickly if applications need it. So in a way the cached memory should be included in the free memory column, which this line does. There’s even a website, linuxatemyram, about this confusion.
+It can be additionally confusing if ZFS on Linux is used, as we do for some services, as ZFS has its own file system cache that isn’t reflected properly by the free -m columns. It can appear that the system is low on free memory, when that memory is in fact available for use from the ZFS cache as needed.
+
+free命令可以显示系统中空闲物理内存总量、已使用物理内存总量、swap空间、内核使用的缓冲和缓存信息
+
+## vmstat
+
+
+```
+$ vmstat 1
+procs ---------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+34  0    0 200889792  73708 591828    0    0     0     5    6   10 96  1  3  0  0
+32  0    0 200889920  73708 591860    0    0     0   592 13284 4282 98  1  1  0  0
+32  0    0 200890112  73708 591860    0    0     0     0 9501 2154 99  1  0  0  0
+32  0    0 200889568  73712 591856    0    0     0    48 11900 2459 99  0  0  0  0
+32  0    0 200890208  73712 591860    0    0     0     0 15898 4840 98  1  1  0  0
+```
+
+Short for virtual memory stat, vmstat(8) is a commonly available tool (first created for BSD decades ago). It prints a summary of key server statistics on each line.
+
+vmstat was run with an argument of 1, **to print one second summaries**. The first line of output (in this version of vmstat) has some columns that show the average since boot, instead of the previous second. For now, skip the first line, unless you want to learn and remember which column is which.
+Columns to check:
+r: **Number of processes running on CPU and waiting for a turn.** This provides a better signal than load averages for determining CPU saturation, as it does not include I/O. To interpret: an “r” value greater than the CPU count is saturation.
+free: **Free memory in kilobytes.** If there are too many digits to count, you have enough free memory. The “free -m” command, included as command 7, better explains the state of free memory.
+si, so: Swap-ins and swap-outs. **If these are non-zero, you’re out of memory**.
+us, sy, id, wa, st: These are breakdowns of CPU time, on average across all CPUs. **They are user time, system time (kernel), idle, wait I/O, and stolen time** (by other guests, or with Xen, the guest’s own isolated driver domain).
+The CPU time breakdowns will confirm if the CPUs are busy, by adding user + system time. A constant degree of wait I/O points to a disk bottleneck; this is where the CPUs are idle, because tasks are blocked waiting for pending disk I/O. You can treat wait I/O as another form of CPU idle, one that gives a clue as to why they are idle.
+System time is necessary for I/O processing. A high system time average, over 20%, can be interesting to explore further: perhaps the kernel is processing the I/O inefficiently.
+In the above example, CPU time is almost entirely in user-level, pointing to application level usage instead. The CPUs are also well over 90% utilized on average. This isn’t necessarily a problem; check for the degree of saturation using the “r” column.
+
+vmstat用来报告关于进程、内存、分页、块IO、中断、CPU活动的信息。vmstat命令显示平均数据或实际样本。通过给vmstat命令提供一个采样频率和采样次数可启用采样模式。
+
+## pmap
+
+命令用来报告一个进程或多个进程的内存映射。可以使用这个工具确定系统是如何为服务器上的进程分配内存的。
+
+□　Mapped，进程中用于映射到文件的内存总量。
+
+□　writable/private，进程私有地址空间的数量。
+
+□　shared，进程共享给其他进程的地址空间数量。
+
+# how
+
+## 页面调度（Paging）和交换（swapping）指标
+在Linux及所有类UNIX操作系统中，页面调度和swaping是不同的。页面调度移动个别分页到磁盘上的swap空间；交换是一个较大的操作，在这个过程中移动一个进程的整个地址空间到swap空间。
+
+交换可以有两种原因：
+
+□　一个进程进入睡眠模式。这是通常发生的，因为进程依赖于交互式的操作，编辑器、shell、数据输入应用程序花费大部分时间来等待用户输入。在这段时间里，它们是非活跃的。
+
+□　一个进程表现不佳。当空闲内存分页的数量低于规定的最低额度的时候，页面调度可能是一个严重的性能问题，因为页面调度机制是无法处理物理内存分页的请求的，并且swap机制被调用释放更多的分页。这显著增加了到磁盘的I/O，并很快就会降低服务器的性能。
+
+如果总是有页面调度到磁盘（高分页移出率），可以考虑增加更多的内存。然而，系统具有较低的分页移出率，可能不会影响性能。
+
+## 性能调整选项
+如果认为存在一个内存瓶颈，可考虑执行下面其中一个或多个操作：
+
+□　调整swap空间，使用bigpages、hugetlb共享内存。
+
+□　增加或减少分页的大小。
+
+□　改进活跃和非活跃内存的处理。
+
+□　调整分页移出率。
+
+□　限制服务器上每个用户的资源使用。
+
+□　停止不需要的服务。
+
+□　增加内存。
+
+## 处理内存不足（Out-of-Memory）和OOM killer
+
+当一个次要页错误（minor page fault）发生，但是又没有空闲的分页可使用时，内核将尝试回收内存来满足请求。如果不能及时回收充足的内存，将会出现内存不足（Out-of-Memory）的情况。
+
+默认情况下，系统会调用OOM Killer（Out-of-Memory Killer）选择杀死一个或多个进程来释放内存，以满足请求。
+
+作为另一种代替，将sysctl vm.panic_on_oom设置为1而不是0。
+
+注意： 一旦系统已经出现内存不足的情况，就没有更合理的选项进行恢复了。杀掉进程释放内存，放弃和杀掉系统，死锁都是可能的选择。通常情况下，如果有可能的话，最好避免让系统进入内存不足的情况。
+
+为了确定OOM killer应该杀死哪个进程，内核为每个进程保持一个运行的不良分数（badness score），可在/proc/<PID>/oom_score中查看它。
+
+具有较高分数的进程最有可能被OOM killer杀掉。
+
+使用许多因素来计算这个分数：虚拟内存大小（不是RSS size）、进程包括所有子进程积累的虚拟内存大小、nice值（正数的nice值得到一个较高的分数）、总共运行时间（较长的总共运行时间会减少分数）、运行的用户（root进程得到轻微的保护），如果进程直接对硬件进行访问分数会降低。
+
+可以使用调整参数/proc/PID/oom_adj来手工调整oom_score。oom_adj的值从-17到15。0意味着不改变（默认），-17意味着免疫（不能杀掉），任何其他值将被用来修改oom_score，通过使用2^oom_adj乘以oom_score，使用这种方式给你的进程设置一个正数oom_adj将更有可能被杀掉。当设置一个负数的值时会有较小机会被内核终结。
+
