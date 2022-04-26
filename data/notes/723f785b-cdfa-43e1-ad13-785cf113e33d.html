@@ -7,6 +7,7 @@
 heap同样也是一个大小可变的区域，当程序员从heap中请求内存（malloc()）时，heap就会扩大，当这些内存被释放后（free()），heap就会缩小。
 stack和heap都是可伸缩的区域，它们处于整个地址空间中的相对位置：stack会向下扩展（由高地址到低地址），而heap则会向上扩展（由低地址到高地址）。它们都是可以自由增长的区域，只是增长的方向刚好相反。操作系统只需要检查这两个区域不会出现重叠的情况，这是它们主要的使用限制。</p>
 <p><img src="/assets/images/2021-04-05-23-02-01.png"></p>
+<p>一个分页（page）是物理内存（page frame）或虚拟内存中一组连续线性地址。Linux内核以内存页为单位处理内存。一个内存页通常是4KB大小。当一个进程请求一定数量内存页的时候，如果有有效的内存页，Linux内核立刻将它们分配给进程。否则，需要从一些其他的进程或分页缓存中得到。内核知道有多少内存页是有效的，并且也知道它们在什么位置。</p>
 <h1 id="virtaul-memory"><a aria-hidden="true" class="anchor-heading" href="#virtaul-memory"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>virtaul memory</h1>
 <p>The virtual memory abstracts the details of physical memory from the application software, allows to keep only needed information in the physical memory (demand paging) and provides a mechanism for the protection and controlled sharing of data between processes.</p>
 <p>虚拟内存提供三个重要的能力，第一个把主存看作一个存储在磁盘上地址空间的高速缓存，在主存中只保存活动区域，并根据需要在磁盘和主存之间来回传送数据，通过这种方式高效的使用的主存，第二点，他为每个进程提供了一致的地址空间，从而简化了内存管理，第三它保护了每个进程地址空间，不被其他进程破坏。</p>
@@ -91,6 +92,7 @@ The mapping between virtual address and physical address.</p>
 <strong>Children</strong>
 <ol>
 <li><a href="/notes/p3dcvr6ni0cbc91nyfcbx44">Cgroup</a></li>
+<li><a href="/notes/3ew9mzm73l52kzqv1br8eoi">Linux</a></li>
 <li><a href="/notes/5gw8x11hav645ffpa7e22if">Malloc</a></li>
 <li><a href="/notes/da2027b2-1ea8-4a4a-a888-daa28f712b47">Namespace</a></li>
 <li><a href="/notes/c8sb1oqdoihtxu2qu5iglvd">Overcommit</a></li>

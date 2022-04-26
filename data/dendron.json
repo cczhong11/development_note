@@ -29,7 +29,7 @@
     "copyNoteLink": {}
   },
   "workspace": {
-    "dendronVersion": "0.85.0",
+    "dendronVersion": "0.90.0",
     "vaults": [
       {
         "fsPath": "repos/dendron-aws-vault",
@@ -89,7 +89,8 @@
       "todoIntegration": false,
       "createTaskSelectionType": "selection2link"
     },
-    "enableEditorDecorations": true
+    "enableEditorDecorations": true,
+    "enableFullHierarchyNoteTitle": false
   },
   "preview": {
     "enableFMTitle": true,

@@ -6,11 +6,16 @@
 <p>进程是一个独立的逻辑控制流，轮流使用处理器的，每个进程执行流的一部分，然后被强占（preempted）,暂时被挂起。time slicing, concurrency</p>
 <p>每个process有私有的地址空间，代码段都从0x400000开始。</p>
 <p>内核调度一个新的进程，运行之后，它就会抢占当前进程，并使用一种上下文切换机制来将控制转移到新进程中。</p>
-<p>进程控制：获取进程id。进程有三种状态：运行，停止(suspended) 收到SIGSTOP, SIGTSTP,SIGTTIN or SIGTTOU，直到收到SIGCONT继续。终止，收到终止进程的信号，从主程序返回，调用exit函数。
-进程创建用fork， 当一个进程由于某种原因终止时，内核并不是立刻把它从系统中清除，相反进程将会，被保持在一种已经终止的状态，直到被父进程回收。waitpid 等待子进程终止。进程休眠就是sleep。</p>
 <p>加载并运行程序使用execve函数。execve调用一次从不返回。加载filename之后，调用启动代码，设置栈，将控制传递给新程序的main。</p>
 <p>the typical difference is that <strong>threads</strong> (of the same process) run in a <strong>shared memory space</strong>, while processes run in separate memory spaces. thread有自己的tid，栈，sp，pc，general register and flag, <strong>the code, data and heap areas are shared</strong></p>
+<p><img src="/assets/images/2022-04-19-19-44-28.png"></p>
+<h2 id="struct"><a aria-hidden="true" class="anchor-heading" href="#struct"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>struct</h2>
+<p>在Linux操作系统上运行的所有进程都是通过task_struct结构来管理的，其也被称为“进程描述符”。一个进程描述符包含了单个进程在运行期间所有必要的信息，比如进程标识、进程的属性、构建进程的资源等。如果知道进程的结构，就能了解进程的执行对性能的重要性。</p>
+<p><img src="/assets/images/2022-04-19-19-32-18.png"></p>
+<p><img src="/assets/images/2022-04-19-19-48-42.png"></p>
 <h2 id="process-control"><a aria-hidden="true" class="anchor-heading" href="#process-control"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>process control</h2>
+<p>进程控制：获取进程id。进程有三种状态：运行，停止(suspended) 收到SIGSTOP, SIGTSTP,SIGTTIN or SIGTTOU，直到收到SIGCONT继续。终止，收到终止进程的信号，从主程序返回，调用exit函数。
+进程创建用fork， 当一个进程由于某种原因终止时，内核并不是立刻把它从系统中清除，相反进程将会，被保持在一种已经终止的状态，直到被父进程回收。waitpid 等待子进程终止。进程休眠就是sleep。</p>
 <ul>
 <li>run </li>
 <li>suspend: A process stops as a result of receiving a SIGSTOP, SIGTSTP, SIGTI1N, or SIGTTOU signal, and it remains stopped until it receives a SIGCONT signal, at which point it becomes running again. </li>
@@ -29,6 +34,8 @@
 <p>fork函数调用一次，返回两次，并发执行，<strong>相同但是独立的地址空间</strong>。相同代码和数据段、堆、共享库以及用户栈，共享文件，最大区别是父和子有不同的pid。</p>
 <p>对所有fork 拓扑排序，可以得到一个输出顺序。</p>
 <p>fork为当前进程调用，是内核，为新进程创建各种数据结构，并分配给他一个唯一的pid.为了给这个新进程创建虚拟内存，它创建当前进程的mm_struct, 区域结构和页表的原样副本，他将两个进程中的每个页面都标记为只读，并将两个进程中每个区域结构都标记为私有的写时复制 copy on write。</p>
+<p>Copy-on-write or COW: when a write request is made, the data are copied into a new storage area, and then the original data are modified.</p>
+<p><img src="/assets/images/2022-04-19-19-34-30.png"></p>
 </div></div><p></p><p></p>
 <h2 id="context-switch"><a aria-hidden="true" class="anchor-heading" href="#context-switch"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>context switch</h2>
 <p><img src="/assets/images/2021-04-25-23-04-15.png"></p>
@@ -37,6 +44,7 @@
 <p>Context Switch 流程：上下文切换，第一，保存当前进程的上下文，第二，恢复某个先前被抢占的进程，被保存的上下文，第三，将控制传递给这个新恢复的进程。
 (1) saves the context of the current process, (2) restores the saved context of some previously preempted process, and (3) passes control to this newly restored process.</p>
 <p>The context is the state that the kernel needs to restart a preempted process. It consists of the values of objects such as the <strong>general-purpose registers, the floating-point registers, the program counter, user's stack, status registers, kernel's stack, and various kernel data structures such as a page table that characterizes the address space, a process table that contains information about the current process, and a file table that contains information about the files that the process has opened</strong>.</p>
+<p><img src="/assets/images/2022-04-19-19-47-02.png"></p>
 <h2 id="zombie-process"><a aria-hidden="true" class="anchor-heading" href="#zombie-process"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>zombie process</h2>
 <p>Zombie process
 what is zombie process? When does it become zombie process?</p>

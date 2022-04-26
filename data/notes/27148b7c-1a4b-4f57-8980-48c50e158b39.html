@@ -3,6 +3,8 @@
 <p>fork函数调用一次，返回两次，并发执行，<strong>相同但是独立的地址空间</strong>。相同代码和数据段、堆、共享库以及用户栈，共享文件，最大区别是父和子有不同的pid。</p>
 <p>对所有fork 拓扑排序，可以得到一个输出顺序。</p>
 <p>fork为当前进程调用，是内核，为新进程创建各种数据结构，并分配给他一个唯一的pid.为了给这个新进程创建虚拟内存，它创建当前进程的mm_struct, 区域结构和页表的原样副本，他将两个进程中的每个页面都标记为只读，并将两个进程中每个区域结构都标记为私有的写时复制 copy on write。</p>
+<p>Copy-on-write or COW: when a write request is made, the data are copied into a new storage area, and then the original data are modified.</p>
+<p><img src="/assets/images/2022-04-19-19-34-30.png"></p>
 <hr>
 <strong>Backlinks</strong>
 <ul>
