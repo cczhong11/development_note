@@ -1,11 +1,11 @@
-<h1 id="containerization"><a aria-hidden="true" class="anchor-heading" href="#containerization"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Containerization</h1>
-<h1 id="containerization-1"><a aria-hidden="true" class="anchor-heading" href="#containerization-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>containerization</h1>
+<h1 id="containerization"><a aria-hidden="true" class="anchor-heading icon-link" href="#containerization"></a>Containerization</h1>
+<h1 id="containerization-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#containerization-1"></a>containerization</h1>
 <p>code developed on one machine might not work perfectly fine on any other machine because of the dependencies. This problem was solved by the containerization concept. So basically, an application that is being developed and deployed is bundled and wrapped together with all its configuration files and dependencies. This bundle is called a container. Now when you wish to run the application on another system, the container is deployed which will give a bug-free environment as all the dependencies and libraries are wrapped together. Most famous containerization environments are Docker and Kubernetes.</p>
-<h2 id="difference-between-virtualization"><a aria-hidden="true" class="anchor-heading" href="#difference-between-virtualization"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>difference between virtualization</h2>
+<h2 id="difference-between-virtualization"><a aria-hidden="true" class="anchor-heading icon-link" href="#difference-between-virtualization"></a>difference between virtualization</h2>
 <p>Containers provide an isolated environment for running the application. The entire user space is explicitly dedicated to the application. Any changes made inside the container is never reflected on the host or even other containers running on the same host. Containers are an abstraction of the application layer. Each container is a different application.</p>
 <p>Whereas in Virtualization, hypervisors provide an entire virtual machine to the guest(including Kernal). Virtual machines are an abstraction of the hardware layer. Each VM is a physical machine.</p>
 <p><img src="/assets/images/2021-05-04-23-12-48.png"></p>
-<h2 id="docker"><a aria-hidden="true" class="anchor-heading" href="#docker"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>docker</h2>
+<h2 id="docker"><a aria-hidden="true" class="anchor-heading icon-link" href="#docker"></a>docker</h2>
 <p>Docker is a containerization platform which packages your application and all its dependencies together in the form of containers so as to ensure that your application works seamlessly in any environment, be it development, test or production. Docker containers, wrap a piece of software in a complete filesystem that contains everything needed to run: code, runtime, system tools, system libraries, etc. It wraps basically anything that can be installed on a server. This guarantees that the software will always run the same, regardless of its environment.</p>
 <p>Docker image is the source of Docker container. In other words, Docker images are used to create containers. When a user runs a Docker image, an instance of a container is created. These docker images can be deployed to any Docker environment.</p>
 <p>Docker Architecture consists of a Docker Engine which is a client-server application with three major components:</p>
@@ -19,9 +19,9 @@
 <p>Docker can build images automatically by reading the instructions from a file called Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build, users can create an automated build that executes several command-line instructions in succession.</p>
 <p>Docker Compose is a YAML file which contains details about the services, networks, and volumes for setting up the Docker application. So, you can use Docker Compose to create separate containers, host them and get them to communicate with each other. Each container will expose a port for communicating with other containers.</p>
 <p>Docker Swarm is native clustering for Docker. It turns a pool of Docker hosts into a single, virtual Docker host. Docker Swarm serves the standard Docker API, any tool that already communicates with a Docker daemon can use Swarm to transparently scale to multiple hosts.</p>
-<h3 id="namespace"><a aria-hidden="true" class="anchor-heading" href="#namespace"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>namespace</h3>
+<h3 id="namespace"><a aria-hidden="true" class="anchor-heading icon-link" href="#namespace"></a>namespace</h3>
 <p>A namespace is one of the Linux features and an important concept of containers. Namespace adds a layer of isolation in containers. Docker provides various namespaces in order to stay portable and not affect the underlying host system. Few namespace types supported by Docker – PID, Mount, IPC, User, Network</p>
-<h3 id="interview-question"><a aria-hidden="true" class="anchor-heading" href="#interview-question"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>interview question</h3>
+<h3 id="interview-question"><a aria-hidden="true" class="anchor-heading icon-link" href="#interview-question"></a>interview question</h3>
 <p>Will you lose your data, when a docker container exists?
 No, you won’t lose any data when Docker container exits. Any data that your application writes to the container gets preserved on the disk until you explicitly delete the container. The file system for the container persists even after the container halts.</p>
 <p>Where all do you think Docker is being used?</p>
@@ -41,7 +41,7 @@ These are the following changes you need make to your compose file before migrat
 Binding to different ports on the host.
 Specify a restart policy
 Add extra services like log aggregator</p>
-<h2 id="kubernetes"><a aria-hidden="true" class="anchor-heading" href="#kubernetes"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Kubernetes</h2>
+<h2 id="kubernetes"><a aria-hidden="true" class="anchor-heading icon-link" href="#kubernetes"></a>Kubernetes</h2>
 <p>Kubernetes is an open-source container management (orchestration) tool. It’s container management responsibilities include container deployment, scaling &#x26; descaling of containers &#x26; container load balancing.</p>
 <p><a href="https://www.edureka.co/blog/what-is-kubernetes-container-orchestration">reference</a></p>
 <p><img src="/assets/images/2021-05-04-23-30-50.png"></p>

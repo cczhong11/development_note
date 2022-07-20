@@ -1,4 +1,4 @@
-<h1 id="cpu"><a aria-hidden="true" class="anchor-heading" href="#cpu"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Cpu</h1>
+<h1 id="cpu"><a aria-hidden="true" class="anchor-heading icon-link" href="#cpu"></a>Cpu</h1>
 <p>□　CPU使用率。 这可能是最直接的指标。它描述了每个处理器的整体使用率。如果在一段持续时间内CPU的使用率超过80％，则处理器可能有瓶颈。</p>
 <p>□　用户进程消耗CPU的时间。 描述了CPU花费在用户进程的百分比，包括nice time。较高值的user time通常是有利的，因为，在这种情况下，系统在执行实际的工作。</p>
 <p>□　内核操作消耗CPU的时间。 其描述了CPU花费在内核操作的百分比，包括IRQ和softirq时间。较高和持续的system time值可以指出在网络和驱动程序堆栈中你的瓶颈。一个系统通常应保持花在内核操作上的时间尽可能的少。</p>
@@ -13,7 +13,7 @@
 <p>□　阻塞的进程。 不被执行的进程数，因为它们要等待I/O操作结束。阻塞的进程数能反映出是否有I/O瓶颈。</p>
 <p>□　上下文切换。 在系统上发生线程之间切换的数量。大量上下文切换如果与大量中断相关，则可能是驱动程序或应用程序出现问题的信号。上下文切换通常是不利的，因为每一次上下文切换都会导致CPU缓存被刷新，但是有些上下文切换是必要的。参考1.1.5节的内容。</p>
 <p>□　中断。 中断包含硬中断与软中断。硬中断对系统性能有更加不利的影响。较高的中断值表明可能有软件瓶颈，可能是在内核中，也可能是一个驱动程序出现瓶颈。记住，中断还包括CPU时钟引起的中断。参考1.1.6节的内容。</p>
-<h2 id="uptime"><a aria-hidden="true" class="anchor-heading" href="#uptime"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>uptime</h2>
+<h2 id="uptime"><a aria-hidden="true" class="anchor-heading icon-link" href="#uptime"></a>uptime</h2>
 <pre><code>$ uptime 
 23:51:26 up 21:31, 1 user, load average: 30.02, 26.43, 19.02
 </code></pre>
@@ -22,7 +22,7 @@ The <strong>three numbers are exponentially damped moving sum averages with a 1 
 In the example above, the load averages show a recent increase, hitting 30 for the 1 minute value, compared to 19 for the 15 minute value. That the numbers are this large means a lot of something: probably CPU demand; vmstat or mpstat will confirm, which are commands 3 and 4 in this sequence.</p>
 <p>系统平均负载是可运行状态进程或不可中断状态进程的平均数。处在可运行状态的进程要么是正在使用CPU，要么是等待使用CPU。处在不可中断状态的进程正在等待一些I/O访问，例如等待磁盘。平均值有3个时间间隔。因为系统中CPU的数量、平均负载不是规范化的，所以，平均负载为1意味着一个单CPU系统始终是有负载的，在一个4核CPU系统上则意味着它有75％的空闲时间。</p>
 <p>平均负载最佳值为1，这意味着每个进程都能立刻访问CPU，并且没有丢失CPU周期。对于单（核）处理器工作站，1或2是可以接受的，而在多处理器服务器上你可能会看到8到10的数字（单核CPU负载是2，4核CPU负载可能是8）。</p>
-<h2 id="ps"><a aria-hidden="true" class="anchor-heading" href="#ps"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>ps</h2>
+<h2 id="ps"><a aria-hidden="true" class="anchor-heading icon-link" href="#ps"></a>ps</h2>
 <p>ps显示有关选择的活跃进程的信息。ps命令提供当前已存在进程的列表。top命令动态显示进程信息，但是ps命令可以以静态方式提供更详细的信息。</p>
 <p>ps aux</p>
 <p>　-A，选择所有进程，与-e相同。</p>
@@ -36,7 +36,7 @@ In the example above, the load averages show a recent increase, hitting 30 for t
 <p>□　r，限制只选择正在运行的进程。</p>
 <p>□　X，此选项使得ps列出你拥有的所有进程，或当与a选项一起使用时列出所有进程。</p>
 <p>□　--deselect，选择除满足指定条件以外的所有进程。（否定选择）与-N相同。</p>
-<h2 id="mpstat"><a aria-hidden="true" class="anchor-heading" href="#mpstat"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>mpstat</h2>
+<h2 id="mpstat"><a aria-hidden="true" class="anchor-heading icon-link" href="#mpstat"></a>mpstat</h2>
 <p>mpstat命令用来报告在多处理器服务器上每个可用CPU的相关统计数据（如图2-8所示）</p>
 <p><img src="/assets/images/2022-04-19-20-34-14.png"></p>
 <p>interval参数指定每次报告之间的时间间隔，以秒为单位。值为0（或没有参数）表明报告自系统启动以来的处理器统计数据。count参数如果不设置为0则可以和interval参数结合使用。count的值决定了间隔秒数生成报告的次数。如果只指定interval参数，没有count参数，那么mpstat命令将不断地生成报告。</p>
@@ -52,7 +52,7 @@ Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015  _x86_64_ (32 CPU)
 [...]
 </code></pre>
 <p>This command prints CPU time breakdowns per CPU, which can be used to <strong>check for an imbalance</strong>. A single hot CPU can be evidence of a single-threaded application.</p>
-<h2 id="strace"><a aria-hidden="true" class="anchor-heading" href="#strace"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>strace</h2>
+<h2 id="strace"><a aria-hidden="true" class="anchor-heading icon-link" href="#strace"></a>strace</h2>
 <p>strace用来跟踪系统调用和信号。strace是一个很有用的诊断、指导和调试的工具。系统管理员可以很方便地使用它来诊断和解决程序出现的问题，因为可以在不需要重新编译的情况下来跟踪它们。最简单的情况就是使用strace运行指定的命令，直到命令结束。它拦截并记录进程执行的系统调用和进程接收的信号。每个系统调用的名称、参数和返回值都将被显示在标准错误输出中或可以通过-o选项指定到文件。</p>
 <p>trace system calls and signals</p>
 <p>跟踪的每一行包含系统调用的名称，其次是括号中的参数，还有返回值。下面是cat命令的跟踪例子：</p>
@@ -117,9 +117,9 @@ exit_group(0)　　　　　　　　　 =?
 0.00	0.000000	0	1		arch_prctl
 ------	-----------	-----------	---------	---------	----------------
 </code></pre>
-<h2 id="ltrace"><a aria-hidden="true" class="anchor-heading" href="#ltrace"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>ltrace</h2>
+<h2 id="ltrace"><a aria-hidden="true" class="anchor-heading icon-link" href="#ltrace"></a>ltrace</h2>
 <p>ltrace是一个库调用跟踪程序，其可以通过ltrace简单运行指定命令直到它退出。它截取和记录执行进程所进行的动态库调用，和进程接收的信号。它也可以截取和显示程序执行的系统调用。它的使用与strace非常类似。ltrace显示调用函数的参数和系统调用。要确定每个函数有什么样的参数，它需要函数原型的外部声明。这些都被存储在被称为原型库的文件中，这些文件的语法细节参考ltrace.conf(5)。参见PROTOTYPE LIBRARY DISCOVERY章节学习ltrace如何找到原型库。</p>
-<h1 id="how"><a aria-hidden="true" class="anchor-heading" href="#how"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>how</h1>
+<h1 id="how"><a aria-hidden="true" class="anchor-heading icon-link" href="#how"></a>how</h1>
 <p>第一步是确认系统性能问题是CPU引起的，而不是其他子系统。如果处理器是服务器的瓶颈，那么采取一些行动来提高性能，其中包括：</p>
 <p>□　使用ps -ef命令来确认后台没有运行不必要的程序。如果发现这样的程序，停止它们并使用cron来安排它们在非高峰时段运行。</p>
 <p>□　使用top识别非关键性CPU密集型程序，并使用renice修改它们的优先级。

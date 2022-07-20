@@ -1,10 +1,10 @@
-<h1 id="linux"><a aria-hidden="true" class="anchor-heading" href="#linux"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Linux</h1>
+<h1 id="linux"><a aria-hidden="true" class="anchor-heading icon-link" href="#linux"></a>Linux</h1>
 <p><img src="/assets/images/2022-04-19-19-52-20.png"></p>
 <p>应用程序通常不直接向磁盘子系统写入，而是向高速缓存（cache）或者缓冲区（buffer）写入。当时间片到达时，或者一个文件的大小超出缓冲缓存时，内核线程pdflush/Per-BDI flush会将缓存／缓冲中的数据刷新到磁盘中。</p>
-<h1 id="伙伴系统buddy-system"><a aria-hidden="true" class="anchor-heading" href="#伙伴系统buddy-system"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>伙伴系统（buddy system）</h1>
+<h1 id="伙伴系统buddy-system"><a aria-hidden="true" class="anchor-heading icon-link" href="#伙伴系统buddy-system"></a>伙伴系统（buddy system）</h1>
 <p>Linux内核使用一种被称为伙伴系统（buddy system）的机制来维护它的空闲分页。伙伴系统维护空闲分页，并尝试给分页分配请求分配分页。它试图保持内存区域是连续的。如果不考虑分散的小分页，这可能会导致内存碎片，并会导致更加难以在连续的区域中分配一个很大的分页。它也可能导致低效的内存使用和性能下降。</p>
 <p>当分配分页失败时，会进行分页回收。</p>
 <p><img src="/assets/images/2022-04-19-19-54-11.png"></p>
-<h1 id="分页回收"><a aria-hidden="true" class="anchor-heading" href="#分页回收"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>分页回收</h1>
+<h1 id="分页回收"><a aria-hidden="true" class="anchor-heading icon-link" href="#分页回收"></a>分页回收</h1>
 <p>当一个进程请求映射一定数量分页的时候，如果没有有效的分页，Linux内核将尝试释放一定数量的分页（这是之前使用但是不再使用且基于某些原因仍被标记为活跃的分页），然后将这些分页分配给新的请求内存的进程。这个过程被称为分页回收（page reclaiming）。内核线程kswapd和内核函数try_to_free_page()负责分页回收。</p>
 <p>kswapd在任务中通常处于可中断睡眠状态，当区域中的空闲分页低于一个阀值时它被称为伙伴系统。基于最近最少使用（Least Recently Used, LRU）原则，它试图找到候选分页并将其取出作为活跃分页。最近最少使用的分页被首先释放。活跃列表和非活跃列表用于维护候选分页。kswapd扫描活跃列表，并检查最近使用的分页，将最近没有使用的分页放入非活跃列表中。可以通过vmstat -a 命令查看活跃和非活跃的内存有多少。</p>

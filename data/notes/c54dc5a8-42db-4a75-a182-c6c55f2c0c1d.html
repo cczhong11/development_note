@@ -1,5 +1,5 @@
-<h1 id="lsm"><a aria-hidden="true" class="anchor-heading" href="#lsm"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>LSM</h1>
-<h2 id="lsm-1"><a aria-hidden="true" class="anchor-heading" href="#lsm-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>LSM</h2>
+<h1 id="lsm"><a aria-hidden="true" class="anchor-heading icon-link" href="#lsm"></a>LSM</h1>
+<h2 id="lsm-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#lsm-1"></a>LSM</h2>
 <p><a href="http://www.benstopford.com/2015/02/14/log-structured-merge-trees/">http://www.benstopford.com/2015/02/14/log-structured-merge-trees/</a></p>
 <ol>
 <li>idea: collect and batch updates in memory. 放满buffer再写入。删除的时候先放到tombstone里，再删除。</li>
@@ -16,7 +16,7 @@
 </li>
 </ol>
 <p><a href="http://distributeddatastore.blogspot.com/2013/08/cassandra-sstable-storage-format.html">http://distributeddatastore.blogspot.com/2013/08/cassandra-sstable-storage-format.html</a>)</p>
-<h2 id="bloom-filter"><a aria-hidden="true" class="anchor-heading" href="#bloom-filter"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Bloom Filter</h2>
+<h2 id="bloom-filter"><a aria-hidden="true" class="anchor-heading icon-link" href="#bloom-filter"></a>Bloom Filter</h2>
 <ul>
 <li><strong>what</strong>: one bit per hash function consumed per key. ignore collision. use bit to reprensent exist or not.</li>
 <li><strong>why</strong>: secondary storage is slow to search and access</li>

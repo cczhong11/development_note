@@ -1,5 +1,5 @@
-<h1 id="tmux"><a aria-hidden="true" class="anchor-heading" href="#tmux"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Tmux</h1>
-<h1 id="basic-concept"><a aria-hidden="true" class="anchor-heading" href="#basic-concept"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>basic concept</h1>
+<h1 id="tmux"><a aria-hidden="true" class="anchor-heading icon-link" href="#tmux"></a>Tmux</h1>
+<h1 id="basic-concept"><a aria-hidden="true" class="anchor-heading icon-link" href="#basic-concept"></a>basic concept</h1>
 <p>在Tmux逻辑中，需要分清楚Server > Session > Window > Pane这个大小和层级顺序是极其重要的，直接关系到工作效率：</p>
 <ul>
 <li>Server：是整个tmux的后台服务。有时候更改配置不生效，就要使用tmux kill-server来重启tmux。</li>
@@ -7,7 +7,7 @@
 <li>Window：相当于一个工作区，包含很多分屏，可以针对每种任务分一个Window。如下载一个Window，编程一个window。</li>
 <li>Pane：是在Window里面的小分屏。最常用也最好用</li>
 </ul>
-<h1 id="common-command"><a aria-hidden="true" class="anchor-heading" href="#common-command"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>common command</h1>
+<h1 id="common-command"><a aria-hidden="true" class="anchor-heading icon-link" href="#common-command"></a>common command</h1>
 <pre class="language-bash"><code class="language-bash">
 <span class="token comment">#启动新session：</span>
 $ tmux <span class="token punctuation">[</span>new -s 会话名 -n 窗口名<span class="token punctuation">]</span>
@@ -36,7 +36,7 @@ $ tmux info
 <span class="token comment"># 重新加载当前的 Tmux 配置</span>
 $ tmux source-file ~/.tmux.conf
 </code></pre>
-<h2 id="system"><a aria-hidden="true" class="anchor-heading" href="#system"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>system</h2>
+<h2 id="system"><a aria-hidden="true" class="anchor-heading icon-link" href="#system"></a>system</h2>
 
 
 
@@ -98,7 +98,7 @@ $ tmux source-file ~/.tmux.conf
 
 
 <table><thead><tr><th>前缀</th><th>指令</th><th>描述</th></tr></thead><tbody><tr><td>Ctrl+b</td><td>?</td><td>显示快捷键帮助文档</td></tr><tr><td>Ctrl+b</td><td>d</td><td>断开当前会话</td></tr><tr><td>Ctrl+b</td><td>D</td><td>选择要断开的会话</td></tr><tr><td>Ctrl+b</td><td>Ctrl+z</td><td>挂起当前会话</td></tr><tr><td>Ctrl+b</td><td>r</td><td>强制重载当前会话</td></tr><tr><td>Ctrl+b</td><td>s</td><td>显示会话列表用于选择并切换</td></tr><tr><td>Ctrl+b</td><td>:</td><td>进入命令行模式，此时可直接输入ls等命令</td></tr><tr><td>Ctrl+b</td><td>[</td><td>进入复制模式，按q退出</td></tr><tr><td>Ctrl+b</td><td>]</td><td>粘贴复制模式中复制的文本</td></tr><tr><td>Ctrl+b</td><td>~</td><td>列出提示信息缓存</td></tr></tbody></table>
-<h2 id="window"><a aria-hidden="true" class="anchor-heading" href="#window"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>window</h2>
+<h2 id="window"><a aria-hidden="true" class="anchor-heading icon-link" href="#window"></a>window</h2>
 
 
 
@@ -155,7 +155,7 @@ $ tmux source-file ~/.tmux.conf
 
 
 <table><thead><tr><th>前缀</th><th>指令</th><th>描述</th></tr></thead><tbody><tr><td>Ctrl+b</td><td>c</td><td>新建窗口</td></tr><tr><td>Ctrl+b</td><td>&#x26;</td><td>关闭当前窗口</td></tr><tr><td>Ctrl+b</td><td>0~9</td><td>切换到指定窗口</td></tr><tr><td>Ctrl+b</td><td>p</td><td>切换到上一窗口</td></tr><tr><td>Ctrl+b</td><td>n</td><td>切换到下一窗口</td></tr><tr><td>Ctrl+b</td><td>w</td><td>打开窗口列表，用于且切换窗口</td></tr><tr><td>Ctrl+b</td><td>,</td><td>重命名当前窗口</td></tr><tr><td>Ctrl+b</td><td>.</td><td>修改当前窗口编号（适用于窗口重新排序）</td></tr><tr><td>Ctrl+b</td><td>f</td><td>快速定位到窗口（输入关键字匹配窗口名称）</td></tr></tbody></table>
-<h2 id="panel"><a aria-hidden="true" class="anchor-heading" href="#panel"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>panel</h2>
+<h2 id="panel"><a aria-hidden="true" class="anchor-heading icon-link" href="#panel"></a>panel</h2>
 
 
 
@@ -247,7 +247,7 @@ $ tmux source-file ~/.tmux.conf
 
 
 <table><thead><tr><th>前缀</th><th>指令</th><th>描述</th></tr></thead><tbody><tr><td>Ctrl+b</td><td>"</td><td>当前面板上下一分为二，下侧新建面板</td></tr><tr><td>Ctrl+b</td><td>%</td><td>当前面板左右一分为二，右侧新建面板</td></tr><tr><td>Ctrl+b</td><td>x</td><td>关闭当前面板（关闭前需输入y or n确认）</td></tr><tr><td>Ctrl+b</td><td>z</td><td>最大化当前面板，再重复一次按键后恢复正常（v1.8版本新增）</td></tr><tr><td>Ctrl+b</td><td>!</td><td>将当前面板移动到新的窗口打开（原窗口中存在两个及以上面板有效）</td></tr><tr><td>Ctrl+b</td><td>;</td><td>切换到最后一次使用的面板</td></tr><tr><td>Ctrl+b</td><td>q</td><td>显示面板编号，在编号消失前输入对应的数字可切换到相应的面板</td></tr><tr><td>Ctrl+b</td><td>{</td><td>向前置换当前面板</td></tr><tr><td>Ctrl+b</td><td>}</td><td>向后置换当前面板</td></tr><tr><td>Ctrl+b</td><td>Ctrl+o</td><td>顺时针旋转当前窗口中的所有面板</td></tr><tr><td>Ctrl+b</td><td>方向键</td><td>移动光标切换面板</td></tr><tr><td>Ctrl+b</td><td>o</td><td>选择下一面板</td></tr><tr><td>Ctrl+b</td><td>空格键</td><td>在自带的面板布局中循环切换</td></tr><tr><td>Ctrl+b</td><td>Alt+方向键</td><td>以5个单元格为单位调整当前面板边缘</td></tr><tr><td>Ctrl+b</td><td>Ctrl+方向键</td><td>以1个单元格为单位调整当前面板边缘（Mac下</td></tr><tr><td>Ctrl+b</td><td>t</td><td>显示时钟</td></tr></tbody></table>
-<h1 id="config"><a aria-hidden="true" class="anchor-heading" href="#config"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>config</h1>
+<h1 id="config"><a aria-hidden="true" class="anchor-heading icon-link" href="#config"></a>config</h1>
 <ul>
 <li>set-option -g mouse on
 <ul>
@@ -287,11 +287,11 @@ bind -r ^l resizep -R 10 # to the right (prefix Ctrl+l)
 set -g prefix2 C-a                        # GNU-Screen compatible prefix
 bind C-a send-prefix -2
 </code></pre>
-<h1 id="good-one"><a aria-hidden="true" class="anchor-heading" href="#good-one"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>good one</h1>
+<h1 id="good-one"><a aria-hidden="true" class="anchor-heading icon-link" href="#good-one"></a>good one</h1>
 <ul>
 <li><a href="https://github.com/gpakosz/.tmux">https://github.com/gpakosz/.tmux</a></li>
 </ul>
-<h1 id="save-tmux-session"><a aria-hidden="true" class="anchor-heading" href="#save-tmux-session"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>save tmux session</h1>
+<h1 id="save-tmux-session"><a aria-hidden="true" class="anchor-heading icon-link" href="#save-tmux-session"></a>save tmux session</h1>
 <ul>
 <li><a href="https://github.com/tmux-plugins/tmux-continuum">https://github.com/tmux-plugins/tmux-continuum</a></li>
 </ul>

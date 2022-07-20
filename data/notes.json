@@ -14,8 +14,8 @@
       "title": "This page has not yet sprouted",
       "schemaStub": false,
       "type": "note",
-      "updated": 1649304458899,
-      "created": 1649304458899,
+      "updated": 1658334156332,
+      "created": 1658334156332,
       "desc": "",
       "links": [],
       "anchors": {},
@@ -193,7 +193,9 @@
         "OFi7hM5EYDLGlvf2dyZGl",
         "Y1aRDPU4bGFcubpnaynLS",
         "QRQthtddnBxcNOqbau0C4",
+        "xmk017F0rwFfHeOgGDKl0",
         "5b984740-f1d4-4e7b-bd92-ceb2ec59f7f5",
+        "5wzt941ydetyc54osbd9sod",
         "a3243522-7cfb-4f23-8383-650e08f56186",
         "80691453-c8cd-448c-b3bd-4c58fa1c470b",
         "2b3acd33-5cae-41eb-9647-f69ca0fd04ab",
@@ -202,9 +204,9 @@
         "efxujPMmo91nKhmMDwmxy",
         "pM7z7xLUf6hSNwawvfTSO",
         "c2644f8b-dfac-433a-9cff-af811875b7e0",
-        "nssfyjyrp783cdgdid7819h",
-        "dhjmze0nl3yhsz66txo75ri",
-        "mnvwlw2x1fvzeaaamz053oc"
+        "34yq46ldeg0emfno6w6u27t",
+        "8ylvzumzzp6ib88b6gnhriv",
+        "j8el2mp5zathqqm766ytt2f"
       ],
       "data": {},
       "custom": {
@@ -212,7 +214,7 @@
       },
       "contentHash": "5c4315b6180dbb7a27044e87a1901e4e"
     },
-    "mnvwlw2x1fvzeaaamz053oc": {
+    "j8el2mp5zathqqm766ytt2f": {
       "fname": "life.writing",
       "stub": true,
       "vault": {
@@ -225,9 +227,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1649221394352,
-      "created": 1649221394352,
-      "id": "mnvwlw2x1fvzeaaamz053oc",
+      "updated": 1658332301122,
+      "created": 1658332301122,
+      "id": "j8el2mp5zathqqm766ytt2f",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -320,12 +322,12 @@
         "63emh1k1uteiqzlglsxwl3u",
         "yx4kmycbe4lzn8zkulcjo3e",
         "qfsp5k83n3u47hth8prrrov",
-        "vwbigcwuqij5b3hw5mdq4iu"
+        "tv7m26d041wtgddolfga548"
       ],
-      "parent": "mnvwlw2x1fvzeaaamz053oc",
+      "parent": "j8el2mp5zathqqm766ytt2f",
       "data": {}
     },
-    "vwbigcwuqij5b3hw5mdq4iu": {
+    "tv7m26d041wtgddolfga548": {
       "fname": "life.writing.story.design",
       "stub": true,
       "vault": {
@@ -338,9 +340,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1649221394369,
-      "created": 1649221394369,
-      "id": "vwbigcwuqij5b3hw5mdq4iu",
+      "updated": 1658332301152,
+      "created": 1658332301152,
+      "id": "tv7m26d041wtgddolfga548",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -414,7 +416,7 @@
         }
       },
       "children": [],
-      "parent": "vwbigcwuqij5b3hw5mdq4iu",
+      "parent": "tv7m26d041wtgddolfga548",
       "data": {}
     },
     "wmhk77yy3v4c8wogb201iq3": {
@@ -481,7 +483,7 @@
       "children": [
         "zq686hwcumiquip2433r3p5"
       ],
-      "parent": "vwbigcwuqij5b3hw5mdq4iu",
+      "parent": "tv7m26d041wtgddolfga548",
       "data": {}
     },
     "zq686hwcumiquip2433r3p5": {
@@ -538,7 +540,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "vwbigcwuqij5b3hw5mdq4iu",
+      "parent": "tv7m26d041wtgddolfga548",
       "data": {}
     },
     "achxo6xzn8kyishgu1kce4z": {
@@ -611,7 +613,7 @@
         }
       },
       "children": [],
-      "parent": "vwbigcwuqij5b3hw5mdq4iu",
+      "parent": "tv7m26d041wtgddolfga548",
       "data": {}
     },
     "pq368bf5ierte3p2bcefiuc": {
@@ -635,7 +637,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "vwbigcwuqij5b3hw5mdq4iu",
+      "parent": "tv7m26d041wtgddolfga548",
       "data": {}
     },
     "ufvynh5wr6yhoxmorns1rso": {
@@ -659,7 +661,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "vwbigcwuqij5b3hw5mdq4iu",
+      "parent": "tv7m26d041wtgddolfga548",
       "data": {}
     },
     "c78qkw80cv9o79l6c607b0w": {
@@ -724,7 +726,7 @@
         }
       },
       "children": [],
-      "parent": "vwbigcwuqij5b3hw5mdq4iu",
+      "parent": "tv7m26d041wtgddolfga548",
       "data": {}
     },
     "g5npb5f4sl5zfjpb3j64x07": {
@@ -781,7 +783,7 @@
         }
       },
       "children": [],
-      "parent": "vwbigcwuqij5b3hw5mdq4iu",
+      "parent": "tv7m26d041wtgddolfga548",
       "data": {}
     },
     "c4nnfu48qwfp3kxvk1sq6z4": {
@@ -870,7 +872,7 @@
         }
       },
       "children": [],
-      "parent": "vwbigcwuqij5b3hw5mdq4iu",
+      "parent": "tv7m26d041wtgddolfga548",
       "data": {}
     },
     "u37slyp3dulk4qv5mgtkhuc": {
@@ -919,7 +921,7 @@
         }
       },
       "children": [],
-      "parent": "vwbigcwuqij5b3hw5mdq4iu",
+      "parent": "tv7m26d041wtgddolfga548",
       "data": {}
     },
     "qfsp5k83n3u47hth8prrrov": {
@@ -1086,7 +1088,7 @@
       "parent": "fbi82trqnupon50qxb8kpc0",
       "data": {}
     },
-    "dhjmze0nl3yhsz66txo75ri": {
+    "8ylvzumzzp6ib88b6gnhriv": {
       "fname": "life.video",
       "stub": true,
       "vault": {
@@ -1099,9 +1101,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1649221394351,
-      "created": 1649221394351,
-      "id": "dhjmze0nl3yhsz66txo75ri",
+      "updated": 1658332301121,
+      "created": 1658332301121,
+      "id": "8ylvzumzzp6ib88b6gnhriv",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -1109,6 +1111,7 @@
         "gzwwj8ci3gdodc6qu1af3mk",
         "bga0xfve56yaj1x4zvlmnx1",
         "6028sqbc59bqa4l1fykw5aq",
+        "m3kwcjprhci38ajsgahc019",
         "3rl410b385v6iwt41mx0g1s"
       ],
       "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
@@ -1169,14 +1172,79 @@
         }
       },
       "children": [],
-      "parent": "dhjmze0nl3yhsz66txo75ri",
+      "parent": "8ylvzumzzp6ib88b6gnhriv",
+      "data": {}
+    },
+    "m3kwcjprhci38ajsgahc019": {
+      "id": "m3kwcjprhci38ajsgahc019",
+      "title": "Shots",
+      "desc": "",
+      "updated": 1657600238423,
+      "created": 1657246557164,
+      "custom": {},
+      "fname": "life.video.shots",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "a22ea4eec6bd67df762f6a892b918539",
+      "links": [],
+      "anchors": {
+        "广角": {
+          "type": "header",
+          "text": "广角",
+          "value": "广角",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "tip": {
+          "type": "header",
+          "text": "tip",
+          "value": "tip",
+          "line": 12,
+          "column": 0,
+          "depth": 2
+        },
+        "中焦": {
+          "type": "header",
+          "text": "中焦",
+          "value": "中焦",
+          "line": 16,
+          "column": 0,
+          "depth": 1
+        },
+        "长焦": {
+          "type": "header",
+          "text": "长焦",
+          "value": "长焦",
+          "line": 20,
+          "column": 0,
+          "depth": 1
+        },
+        "tip-1": {
+          "type": "header",
+          "text": "tip",
+          "value": "tip-1",
+          "line": 24,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "8ylvzumzzp6ib88b6gnhriv",
       "data": {}
     },
     "6028sqbc59bqa4l1fykw5aq": {
       "id": "6028sqbc59bqa4l1fykw5aq",
       "title": "Idea",
       "desc": "",
-      "updated": 1647923075861,
+      "updated": 1657246512343,
       "created": 1647920377213,
       "custom": {},
       "fname": "life.video.idea",
@@ -1189,7 +1257,7 @@
         },
         "name": "my_note"
       },
-      "contentHash": "0a3e61f53a0fe09720c39c32f1a90366",
+      "contentHash": "118a8ca0d43d548bc085c2891614f8c4",
       "links": [],
       "anchors": {
         "爆款五要素": {
@@ -1239,10 +1307,18 @@
           "line": 53,
           "column": 0,
           "depth": 2
+        },
+        "casey": {
+          "type": "header",
+          "text": "casey",
+          "value": "casey",
+          "line": 62,
+          "column": 0,
+          "depth": 1
         }
       },
       "children": [],
-      "parent": "dhjmze0nl3yhsz66txo75ri",
+      "parent": "8ylvzumzzp6ib88b6gnhriv",
       "data": {}
     },
     "bga0xfve56yaj1x4zvlmnx1": {
@@ -1291,14 +1367,14 @@
         }
       },
       "children": [],
-      "parent": "dhjmze0nl3yhsz66txo75ri",
+      "parent": "8ylvzumzzp6ib88b6gnhriv",
       "data": {}
     },
     "gzwwj8ci3gdodc6qu1af3mk": {
       "id": "gzwwj8ci3gdodc6qu1af3mk",
       "title": "Edit",
       "desc": "",
-      "updated": 1646977998334,
+      "updated": 1654146342678,
       "created": 1646977913017,
       "custom": {},
       "fname": "life.video.edit",
@@ -1311,7 +1387,7 @@
         },
         "name": "my_note"
       },
-      "contentHash": "cc806c53398df0e4838d9ddb44ba1f25",
+      "contentHash": "acca99dc7d9a4fe48912222b8a6178c6",
       "links": [],
       "anchors": {
         "蒙太奇理论": {
@@ -1353,13 +1429,140 @@
           "line": 24,
           "column": 0,
           "depth": 2
+        },
+        "三点编辑": {
+          "type": "header",
+          "text": "三点编辑",
+          "value": "三点编辑",
+          "line": 28,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [
+        "olrqkhl2ej6obm3hr5gvkz0",
+        "fa57ea7fb86qripe0suvytd"
+      ],
+      "parent": "8ylvzumzzp6ib88b6gnhriv",
+      "data": {}
+    },
+    "fa57ea7fb86qripe0suvytd": {
+      "id": "fa57ea7fb86qripe0suvytd",
+      "title": "Pr",
+      "desc": "",
+      "updated": 1654146454164,
+      "created": 1651807858099,
+      "custom": {},
+      "fname": "life.video.edit.pr",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "599946f10aca1adc2f4b29b8bdbb3588",
+      "links": [],
+      "anchors": {
+        "快捷键": {
+          "type": "header",
+          "text": "快捷键",
+          "value": "快捷键",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "fast-idea": {
+          "type": "header",
+          "text": "fast idea",
+          "value": "fast-idea",
+          "line": 27,
+          "column": 0,
+          "depth": 1
+        },
+        "自动化序列": {
+          "type": "header",
+          "text": "自动化序列",
+          "value": "自动化序列",
+          "line": 33,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [
+        "4i6n4j6eftw9emjq33qwmkl"
+      ],
+      "parent": "gzwwj8ci3gdodc6qu1af3mk",
+      "data": {}
+    },
+    "4i6n4j6eftw9emjq33qwmkl": {
+      "id": "4i6n4j6eftw9emjq33qwmkl",
+      "title": "Effect",
+      "desc": "",
+      "updated": 1651945346082,
+      "created": 1651940994662,
+      "custom": {},
+      "fname": "life.video.edit.pr.effect",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "d1ade304e34dddc27683340192030e9e",
+      "links": [],
+      "anchors": {
+        "presets": {
+          "type": "header",
+          "text": "presets",
+          "value": "presets",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "视频效果": {
+          "type": "header",
+          "text": "视频效果",
+          "value": "视频效果",
+          "line": 12,
+          "column": 0,
+          "depth": 1
         }
       },
       "children": [],
-      "parent": "dhjmze0nl3yhsz66txo75ri",
+      "parent": "fa57ea7fb86qripe0suvytd",
       "data": {}
     },
-    "nssfyjyrp783cdgdid7819h": {
+    "olrqkhl2ej6obm3hr5gvkz0": {
+      "id": "olrqkhl2ej6obm3hr5gvkz0",
+      "title": "Music",
+      "desc": "",
+      "updated": 1658211399260,
+      "created": 1657246775294,
+      "custom": {},
+      "fname": "life.video.edit.music",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "790f43269625b7faf57a46974a5dc6ea",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "gzwwj8ci3gdodc6qu1af3mk",
+      "data": {}
+    },
+    "34yq46ldeg0emfno6w6u27t": {
       "fname": "life.travel",
       "stub": true,
       "vault": {
@@ -1372,9 +1575,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1649221394350,
-      "created": 1649221394350,
-      "id": "nssfyjyrp783cdgdid7819h",
+      "updated": 1658332301120,
+      "created": 1658332301120,
+      "id": "34yq46ldeg0emfno6w6u27t",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -1634,7 +1837,7 @@
       "fname": "life.travel.coupon",
       "updated": 1639078764579,
       "created": 1639078561400,
-      "parent": "nssfyjyrp783cdgdid7819h",
+      "parent": "34yq46ldeg0emfno6w6u27t",
       "children": [],
       "data": {},
       "contentHash": "7d983cc50cec637bc4fc44f1c401e25b",
@@ -2276,8 +2479,7 @@
       "created": 1638343421107,
       "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
       "children": [
-        "70c88d2b-d21e-44ac-991d-c4319139063b",
-        "xmk017F0rwFfHeOgGDKl0"
+        "70c88d2b-d21e-44ac-991d-c4319139063b"
       ],
       "data": {},
       "contentHash": "8f0325e13fffb2b414e2e4108671353a",
@@ -2285,66 +2487,6 @@
       "custom": {
         "stub": true
       }
-    },
-    "xmk017F0rwFfHeOgGDKl0": {
-      "id": "xmk017F0rwFfHeOgGDKl0",
-      "title": "Knowledge_management",
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "type": "note",
-      "desc": "",
-      "links": [],
-      "anchors": {
-        "para": {
-          "type": "header",
-          "text": "P.A.R.A",
-          "value": "para",
-          "line": 8,
-          "column": 0
-        },
-        "project": {
-          "type": "header",
-          "text": "project",
-          "value": "project",
-          "line": 26,
-          "column": 0
-        },
-        "area": {
-          "type": "header",
-          "text": "area",
-          "value": "area",
-          "line": 31,
-          "column": 0
-        },
-        "resource": {
-          "type": "header",
-          "text": "resource",
-          "value": "resource",
-          "line": 43,
-          "column": 0
-        },
-        "自己的已知存储内容": {
-          "type": "header",
-          "text": "自己的已知存储内容",
-          "value": "自己的已知存储内容",
-          "line": 55,
-          "column": 0
-        }
-      },
-      "fname": "life.skill.knowledge_management",
-      "updated": 1638253837154,
-      "created": 1637085993496,
-      "parent": "t6FtizmnRVRxEt2FIszWk",
-      "children": [],
-      "data": {},
-      "contentHash": "19ba008ba73b0f91443f4f411012dcfc",
-      "custom": {}
     },
     "70c88d2b-d21e-44ac-991d-c4319139063b": {
       "id": "70c88d2b-d21e-44ac-991d-c4319139063b",
@@ -2870,6 +3012,7 @@
         "BQmq6Xj2kOu9bhqTVwFJj",
         "ejqCSht8Qvbb3Euy0XgPt",
         "dNl9psZGxzu07ha7zdElW",
+        "0889c7pcdqs5394bssjzg8p",
         "tgNOu6kw5EHmQyCg3ItNo",
         "zafuujz2pnw26sb652yzzk8"
       ],
@@ -3008,6 +3151,30 @@
       "data": {},
       "contentHash": "eeb44587d6b6e8e53fbc6276f8641a4a",
       "custom": {}
+    },
+    "0889c7pcdqs5394bssjzg8p": {
+      "id": "0889c7pcdqs5394bssjzg8p",
+      "title": "Travel",
+      "desc": "",
+      "updated": 1654145628137,
+      "created": 1654145627009,
+      "custom": {},
+      "fname": "life.photo.travel",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "4b8e5ef35cfe9c4c07c505e4c8e7701c",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "2b3acd33-5cae-41eb-9647-f69ca0fd04ab",
+      "data": {}
     },
     "dNl9psZGxzu07ha7zdElW": {
       "id": "dNl9psZGxzu07ha7zdElW",
@@ -3361,6 +3528,12 @@
     "2rf6NjVLNLkD3wHZ1omcV": {
       "id": "2rf6NjVLNLkD3wHZ1omcV",
       "title": "Focus",
+      "desc": "",
+      "updated": 1654145783772,
+      "created": 1629871751661,
+      "custom": {},
+      "fname": "life.photo.focus",
+      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -3369,53 +3542,63 @@
         },
         "name": "my_note"
       },
-      "type": "note",
-      "desc": "",
+      "contentHash": "e2da2a40dbbcaba1033443d5b45719f1",
       "links": [],
       "anchors": {
         "光圈": {
           "type": "header",
+          "text": "光圈",
           "value": "光圈",
           "line": 8,
-          "column": 0
+          "column": 0,
+          "depth": 1
         },
         "对焦": {
           "type": "header",
+          "text": "对焦",
           "value": "对焦",
           "line": 16,
-          "column": 0
+          "column": 0,
+          "depth": 1
         },
         "iphone": {
           "type": "header",
+          "text": "iphone",
           "value": "iphone",
-          "line": 23,
-          "column": 0
+          "line": 24,
+          "column": 0,
+          "depth": 2
         },
         "摄影室灯光": {
           "type": "header",
+          "text": "摄影室灯光",
           "value": "摄影室灯光",
-          "line": 28,
-          "column": 0
+          "line": 29,
+          "column": 0,
+          "depth": 3
         },
         "轮廓光": {
           "type": "header",
+          "text": "轮廓光",
           "value": "轮廓光",
-          "line": 32,
-          "column": 0
+          "line": 33,
+          "column": 0,
+          "depth": 3
         }
       },
-      "fname": "life.photo.focus",
-      "updated": 1629957633784,
-      "created": 1629871751661,
-      "parent": "2b3acd33-5cae-41eb-9647-f69ca0fd04ab",
       "children": [],
-      "data": {},
-      "contentHash": "4f2d382b91761f2645f3f9e21ad23eae",
-      "custom": {}
+      "parent": "2b3acd33-5cae-41eb-9647-f69ca0fd04ab",
+      "data": {}
     },
     "oAfnHr7BiAFsNgXWSpkJO": {
       "id": "oAfnHr7BiAFsNgXWSpkJO",
       "title": "Exposure",
+      "desc": "",
+      "updated": 1654145748784,
+      "created": 1629871716196,
+      "custom": {},
+      "fname": "life.photo.exposure",
+      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -3424,35 +3607,47 @@
         },
         "name": "my_note"
       },
-      "type": "note",
-      "desc": "",
+      "contentHash": "5d82595d69bea393049c8559ec5122ab",
       "links": [],
       "anchors": {
         "原理": {
           "type": "header",
+          "text": "原理",
           "value": "原理",
           "line": 10,
-          "column": 0
+          "column": 0,
+          "depth": 1
         },
         "iphone-拍摄": {
           "type": "header",
+          "text": "iphone 拍摄",
           "value": "iphone-拍摄",
           "line": 21,
-          "column": 0
+          "column": 0,
+          "depth": 2
+        },
+        "直方图": {
+          "type": "header",
+          "text": "直方图",
+          "value": "直方图",
+          "line": 32,
+          "column": 0,
+          "depth": 2
         }
       },
-      "fname": "life.photo.exposure",
-      "updated": 1629957478063,
-      "created": 1629871716196,
-      "parent": "2b3acd33-5cae-41eb-9647-f69ca0fd04ab",
       "children": [],
-      "data": {},
-      "contentHash": "daafee953abe85e5f3df557818a19c7c",
-      "custom": {}
+      "parent": "2b3acd33-5cae-41eb-9647-f69ca0fd04ab",
+      "data": {}
     },
     "dQ7LzamBvvzyPTelGfLTQ": {
       "id": "dQ7LzamBvvzyPTelGfLTQ",
       "title": "Composition",
+      "desc": "",
+      "updated": 1654145907297,
+      "created": 1629871421592,
+      "custom": {},
+      "fname": "life.photo.composition",
+      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -3461,91 +3656,109 @@
         },
         "name": "my_note"
       },
-      "type": "note",
-      "desc": "",
+      "contentHash": "9e0b7b566e146942dfe34869e93f44ea",
       "links": [],
       "anchors": {
         "三分法": {
           "type": "header",
+          "text": "三分法",
           "value": "三分法",
-          "line": 22,
-          "column": 0
+          "line": 23,
+          "column": 0,
+          "depth": 2
         },
         "居中": {
           "type": "header",
+          "text": "居中",
           "value": "居中",
-          "line": 28,
-          "column": 0
+          "line": 29,
+          "column": 0,
+          "depth": 3
         },
         "对称": {
           "type": "header",
+          "text": "对称",
           "value": "对称",
-          "line": 33,
-          "column": 0
+          "line": 34,
+          "column": 0,
+          "depth": 3
         },
         "镜面对称": {
           "type": "header",
+          "text": "镜面对称",
           "value": "镜面对称",
-          "line": 37,
-          "column": 0
+          "line": 38,
+          "column": 0,
+          "depth": 4
         },
         "元素对称": {
           "type": "header",
+          "text": "元素对称",
           "value": "元素对称",
-          "line": 43,
-          "column": 0
+          "line": 44,
+          "column": 0,
+          "depth": 4
         },
         "黄金螺旋": {
           "type": "header",
+          "text": "黄金螺旋",
           "value": "黄金螺旋",
-          "line": 51,
-          "column": 0
+          "line": 52,
+          "column": 0,
+          "depth": 3
         },
         "引导线构图": {
           "type": "header",
+          "text": "引导线构图",
           "value": "引导线构图",
-          "line": 56,
-          "column": 0
+          "line": 57,
+          "column": 0,
+          "depth": 2
         },
         "前景": {
           "type": "header",
+          "text": "前景",
           "value": "前景",
-          "line": 69,
-          "column": 0
+          "line": 70,
+          "column": 0,
+          "depth": 2
         },
         "寻找画框": {
           "type": "header",
+          "text": "寻找画框",
           "value": "寻找画框",
-          "line": 81,
-          "column": 0
+          "line": 82,
+          "column": 0,
+          "depth": 2
         },
         "质感构图": {
           "type": "header",
+          "text": "质感构图",
           "value": "质感构图",
-          "line": 85,
-          "column": 0
+          "line": 86,
+          "column": 0,
+          "depth": 3
         },
         "重复构图": {
           "type": "header",
+          "text": "重复构图",
           "value": "重复构图",
-          "line": 89,
-          "column": 0
+          "line": 90,
+          "column": 0,
+          "depth": 3
         },
         "拍人": {
           "type": "header",
+          "text": "拍人",
           "value": "拍人",
-          "line": 93,
-          "column": 0
+          "line": 94,
+          "column": 0,
+          "depth": 1
         }
       },
-      "fname": "life.photo.composition",
-      "updated": 1631255483628,
-      "created": 1629871421592,
-      "parent": "2b3acd33-5cae-41eb-9647-f69ca0fd04ab",
       "children": [],
-      "data": {},
-      "contentHash": "2a54a9b1b7d6229573e576e8fe43375b",
-      "custom": {}
+      "parent": "2b3acd33-5cae-41eb-9647-f69ca0fd04ab",
+      "data": {}
     },
     "0r4QKxyIWL9REKPXRyoL3": {
       "id": "0r4QKxyIWL9REKPXRyoL3",
@@ -3656,6 +3869,30 @@
       "data": {},
       "custom": {},
       "contentHash": "a3c4b447c5741b5eab20094eafa172df"
+    },
+    "5wzt941ydetyc54osbd9sod": {
+      "id": "5wzt941ydetyc54osbd9sod",
+      "title": "Me",
+      "desc": "",
+      "updated": 1657517915046,
+      "created": 1657517901920,
+      "custom": {},
+      "fname": "life.me",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "c8647c4e505b7ff32150ebd9f3cba73f",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
+      "data": {}
     },
     "5b984740-f1d4-4e7b-bd92-ceb2ec59f7f5": {
       "id": "5b984740-f1d4-4e7b-bd92-ceb2ec59f7f5",
@@ -5332,6 +5569,354 @@
       "custom": {},
       "contentHash": "c0dfd25c76664dd3a6a91128caaabe17"
     },
+    "xmk017F0rwFfHeOgGDKl0": {
+      "id": "xmk017F0rwFfHeOgGDKl0",
+      "title": "Knowledge",
+      "desc": "",
+      "updated": 1656515694806,
+      "created": 1637085993496,
+      "custom": {},
+      "fname": "life.knowledge",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "3e1d8c8ab2f17beb33dec4cb3560d3a1",
+      "links": [],
+      "anchors": {
+        "知识结构": {
+          "type": "header",
+          "text": "知识结构",
+          "value": "知识结构",
+          "line": 9,
+          "column": 0,
+          "depth": 1
+        },
+        "人性与社会的知识与经验": {
+          "type": "header",
+          "text": "人性与社会的知识与经验",
+          "value": "人性与社会的知识与经验",
+          "line": 22,
+          "column": 0,
+          "depth": 2
+        },
+        "身体": {
+          "type": "header",
+          "text": "身体",
+          "value": "身体",
+          "line": 30,
+          "column": 0,
+          "depth": 3
+        },
+        "权力": {
+          "type": "header",
+          "text": "权力",
+          "value": "权力",
+          "line": 36,
+          "column": 0,
+          "depth": 3
+        },
+        "财富": {
+          "type": "header",
+          "text": "财富",
+          "value": "财富",
+          "line": 44,
+          "column": 0,
+          "depth": 3
+        },
+        "繁衍": {
+          "type": "header",
+          "text": "繁衍",
+          "value": "繁衍",
+          "line": 54,
+          "column": 0,
+          "depth": 3
+        },
+        "人性": {
+          "type": "header",
+          "text": "人性",
+          "value": "人性",
+          "line": 66,
+          "column": 0,
+          "depth": 3
+        },
+        "人格": {
+          "type": "header",
+          "text": "人格",
+          "value": "人格",
+          "line": 78,
+          "column": 0,
+          "depth": 3
+        },
+        "提升思维质量的工具": {
+          "type": "header",
+          "text": "提升思维质量的工具",
+          "value": "提升思维质量的工具",
+          "line": 86,
+          "column": 0,
+          "depth": 2
+        },
+        "创造性思维": {
+          "type": "header",
+          "text": "创造性思维",
+          "value": "创造性思维",
+          "line": 96,
+          "column": 0,
+          "depth": 3
+        },
+        "批判性思维": {
+          "type": "header",
+          "text": "批判性思维",
+          "value": "批判性思维",
+          "line": 104,
+          "column": 0,
+          "depth": 3
+        },
+        "有效推理": {
+          "type": "header",
+          "text": "有效推理",
+          "value": "有效推理",
+          "line": 112,
+          "column": 0,
+          "depth": 3
+        },
+        "甄别谬误": {
+          "type": "header",
+          "text": "甄别谬误",
+          "value": "甄别谬误",
+          "line": 118,
+          "column": 0,
+          "depth": 3
+        },
+        "维度思考法": {
+          "type": "header",
+          "text": "维度思考法",
+          "value": "维度思考法",
+          "line": 124,
+          "column": 0,
+          "depth": 3
+        },
+        "目标规划": {
+          "type": "header",
+          "text": "目标规划",
+          "value": "目标规划",
+          "line": 150,
+          "column": 0,
+          "depth": 2
+        },
+        "目标设定": {
+          "type": "header",
+          "text": "目标设定",
+          "value": "目标设定",
+          "line": 154,
+          "column": 0,
+          "depth": 3
+        },
+        "目标执行实现": {
+          "type": "header",
+          "text": "目标执行实现",
+          "value": "目标执行实现",
+          "line": 169,
+          "column": 0,
+          "depth": 3
+        },
+        "决策的方法": {
+          "type": "header",
+          "text": "决策的方法",
+          "value": "决策的方法",
+          "line": 184,
+          "column": 0,
+          "depth": 2
+        },
+        "决策流程与方法": {
+          "type": "header",
+          "text": "决策流程与方法",
+          "value": "决策流程与方法",
+          "line": 185,
+          "column": 0,
+          "depth": 3
+        },
+        "决策依据的质量": {
+          "type": "header",
+          "text": "决策依据的质量",
+          "value": "决策依据的质量",
+          "line": 191,
+          "column": 0,
+          "depth": 3
+        },
+        "理解与洞悉": {
+          "type": "header",
+          "text": "理解与洞悉",
+          "value": "理解与洞悉",
+          "line": 203,
+          "column": 0,
+          "depth": 3
+        },
+        "理解与洞悉方法建议": {
+          "type": "header",
+          "text": "理解与洞悉方法建议",
+          "value": "理解与洞悉方法建议",
+          "line": 215,
+          "column": 0,
+          "depth": 3
+        },
+        "处理关系": {
+          "type": "header",
+          "text": "处理关系",
+          "value": "处理关系",
+          "line": 227,
+          "column": 0,
+          "depth": 2
+        },
+        "亲密关系": {
+          "type": "header",
+          "text": "亲密关系",
+          "value": "亲密关系",
+          "line": 231,
+          "column": 0,
+          "depth": 3
+        },
+        "功利关系": {
+          "type": "header",
+          "text": "功利关系",
+          "value": "功利关系",
+          "line": 240,
+          "column": 0,
+          "depth": 3
+        },
+        "抵抗挫折和照顾自己心灵": {
+          "type": "header",
+          "text": "抵抗挫折和照顾自己心灵",
+          "value": "抵抗挫折和照顾自己心灵",
+          "line": 254,
+          "column": 0,
+          "depth": 2
+        },
+        "研究自己": {
+          "type": "header",
+          "text": "研究自己",
+          "value": "研究自己",
+          "line": 256,
+          "column": 0,
+          "depth": 3
+        },
+        "毫不犹豫的接纳自己": {
+          "type": "header",
+          "text": "毫不犹豫的接纳自己",
+          "value": "毫不犹豫的接纳自己",
+          "line": 260,
+          "column": 0,
+          "depth": 3
+        },
+        "从道德观价值观和人生观研究自己": {
+          "type": "header",
+          "text": "从道德观，价值观，和人生观研究自己",
+          "value": "从道德观价值观和人生观研究自己",
+          "line": 268,
+          "column": 0,
+          "depth": 3
+        },
+        "原生家庭": {
+          "type": "header",
+          "text": "原生家庭",
+          "value": "原生家庭",
+          "line": 274,
+          "column": 0,
+          "depth": 3
+        },
+        "自信": {
+          "type": "header",
+          "text": "自信",
+          "value": "自信",
+          "line": 278,
+          "column": 0,
+          "depth": 3
+        },
+        "情绪自我安抚": {
+          "type": "header",
+          "text": "情绪自我安抚",
+          "value": "情绪自我安抚",
+          "line": 286,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [
+        "u83g0kt3rchaix33arpd2lk"
+      ],
+      "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
+      "data": {}
+    },
+    "u83g0kt3rchaix33arpd2lk": {
+      "id": "u83g0kt3rchaix33arpd2lk",
+      "title": "Management",
+      "desc": "",
+      "updated": 1656514477799,
+      "created": 1656514453717,
+      "custom": {},
+      "fname": "life.knowledge.management",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "f69d27a3fc9c9306aa65d2e46f052213",
+      "links": [],
+      "anchors": {
+        "para": {
+          "type": "header",
+          "text": "P.A.R.A",
+          "value": "para",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "project": {
+          "type": "header",
+          "text": "project",
+          "value": "project",
+          "line": 27,
+          "column": 0,
+          "depth": 1
+        },
+        "area": {
+          "type": "header",
+          "text": "area",
+          "value": "area",
+          "line": 32,
+          "column": 0,
+          "depth": 1
+        },
+        "resource": {
+          "type": "header",
+          "text": "resource",
+          "value": "resource",
+          "line": 44,
+          "column": 0,
+          "depth": 1
+        },
+        "自己的已知存储内容": {
+          "type": "header",
+          "text": "自己的已知存储内容",
+          "value": "自己的已知存储内容",
+          "line": 56,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "xmk017F0rwFfHeOgGDKl0",
+      "data": {}
+    },
     "QRQthtddnBxcNOqbau0C4": {
       "id": "QRQthtddnBxcNOqbau0C4",
       "title": "House",
@@ -5388,6 +5973,12 @@
     "Y1aRDPU4bGFcubpnaynLS": {
       "id": "Y1aRDPU4bGFcubpnaynLS",
       "title": "Health",
+      "desc": "",
+      "updated": 1638343421092,
+      "created": 1638343421092,
+      "custom": {},
+      "fname": "life.health",
+      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -5396,25 +5987,19 @@
         },
         "name": "my_note"
       },
-      "type": "note",
-      "desc": "",
+      "contentHash": "368ff810f2d02d8038ac781e84a3e468",
       "links": [],
       "anchors": {},
-      "fname": "life.health",
-      "updated": 1638343421092,
-      "created": 1638343421092,
-      "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
       "children": [
+        "kl77p9gkbl310ua06diybb2",
         "tkYuL7paBtqT05tBEDQmm",
+        "o6kyklnhlqc1qsrw5u6lfkp",
+        "4hgksl8sihdekt5d4rv2b2k",
         "5c6ae8bc-d364-43ae-a783-305978c37e83",
         "55c14887-0236-476f-9fca-d8d02ddd1984"
       ],
-      "data": {},
-      "contentHash": "d3bd83eb42f824e97113ac4ab8f380ea",
-      "stub": true,
-      "custom": {
-        "stub": true
-      }
+      "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
+      "data": {}
     },
     "55c14887-0236-476f-9fca-d8d02ddd1984": {
       "id": "55c14887-0236-476f-9fca-d8d02ddd1984",
@@ -5472,6 +6057,130 @@
       "contentHash": "004cf4c3aaba5044383764614d438b6d",
       "custom": {}
     },
+    "4hgksl8sihdekt5d4rv2b2k": {
+      "id": "4hgksl8sihdekt5d4rv2b2k",
+      "title": "Sleep",
+      "desc": "",
+      "updated": 1657517092263,
+      "created": 1657516612286,
+      "custom": {},
+      "fname": "life.health.sleep",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "b25d77ccf9afc95c19feb6eb2266e05e",
+      "links": [],
+      "anchors": {
+        "怎样早睡": {
+          "type": "header",
+          "text": "怎样早睡",
+          "value": "怎样早睡",
+          "line": 22,
+          "column": 0,
+          "depth": 2
+        },
+        "熬夜危害": {
+          "type": "header",
+          "text": "熬夜危害",
+          "value": "熬夜危害",
+          "line": 37,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "Y1aRDPU4bGFcubpnaynLS",
+      "data": {}
+    },
+    "o6kyklnhlqc1qsrw5u6lfkp": {
+      "fname": "life.health.run",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "title": "Run",
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1658332363800,
+      "created": 1658332363800,
+      "id": "o6kyklnhlqc1qsrw5u6lfkp",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "lbeesbvqgsuq5hanlptopi5"
+      ],
+      "parent": "Y1aRDPU4bGFcubpnaynLS",
+      "data": {},
+      "contentHash": "e24fd47282f0531243f9b8bb3f0a3580"
+    },
+    "lbeesbvqgsuq5hanlptopi5": {
+      "id": "lbeesbvqgsuq5hanlptopi5",
+      "title": "Pain",
+      "desc": "",
+      "updated": 1658334072254,
+      "created": 1658332369896,
+      "custom": {},
+      "fname": "life.health.run.pain",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "cf4ed875e6b640aafa83625a61855838",
+      "links": [],
+      "anchors": {
+        "髂胫束综合症": {
+          "type": "header",
+          "text": "髂胫束综合症",
+          "value": "髂胫束综合症",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "why": {
+          "type": "header",
+          "text": "why",
+          "value": "why",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "如何缓解": {
+          "type": "header",
+          "text": "如何缓解",
+          "value": "如何缓解",
+          "line": 26,
+          "column": 0,
+          "depth": 2
+        },
+        "如何拉伸": {
+          "type": "header",
+          "text": "如何拉伸",
+          "value": "如何拉伸",
+          "line": 39,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "o6kyklnhlqc1qsrw5u6lfkp",
+      "data": {}
+    },
     "tkYuL7paBtqT05tBEDQmm": {
       "id": "tkYuL7paBtqT05tBEDQmm",
       "title": "Mindfulness",
@@ -5503,6 +6212,55 @@
       "data": {},
       "contentHash": "5dcdc306e1d5b5a5058d795bb6ec0c0e",
       "custom": {}
+    },
+    "kl77p9gkbl310ua06diybb2": {
+      "id": "kl77p9gkbl310ua06diybb2",
+      "title": "Body",
+      "desc": "",
+      "updated": 1657516087497,
+      "created": 1657515519552,
+      "custom": {},
+      "fname": "life.health.body",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "bd975f7fa346a022328f1b362cf5b156",
+      "links": [],
+      "anchors": {
+        "正确的姿势": {
+          "type": "header",
+          "text": "正确的姿势",
+          "value": "正确的姿势",
+          "line": 9,
+          "column": 0,
+          "depth": 1
+        },
+        "久坐": {
+          "type": "header",
+          "text": "久坐",
+          "value": "久坐",
+          "line": 18,
+          "column": 0,
+          "depth": 2
+        },
+        "锻炼方法": {
+          "type": "header",
+          "text": "锻炼方法",
+          "value": "锻炼方法",
+          "line": 31,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "Y1aRDPU4bGFcubpnaynLS",
+      "data": {}
     },
     "OFi7hM5EYDLGlvf2dyZGl": {
       "id": "OFi7hM5EYDLGlvf2dyZGl",
@@ -6404,7 +7162,8 @@
         "baa39444-0da9-4c55-8df7-2a6f8f787fa4",
         "62daf50d-a39e-463f-aabd-be53790281fd",
         "3524d0a7-be73-45d6-847e-c970f5c1c760",
-        "eac0f243-05b3-4b95-bec3-848e33edbc40"
+        "eac0f243-05b3-4b95-bec3-848e33edbc40",
+        "774ndd6du53l5k1awv074r0"
       ],
       "data": {},
       "custom": {
@@ -6412,6 +7171,82 @@
         "permalink": "/"
       },
       "contentHash": "38357962f5a50c6fd7d318dfa66bea90"
+    },
+    "774ndd6du53l5k1awv074r0": {
+      "fname": "development.lang",
+      "stub": true,
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1658332301089,
+      "created": 1658332301089,
+      "id": "774ndd6du53l5k1awv074r0",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "y34388pjs6xngmwpr0iwqz7"
+      ],
+      "parent": "0f1b48c7-3a25-4016-83a5-15864d7803ad",
+      "data": {},
+      "title": "Lang"
+    },
+    "y34388pjs6xngmwpr0iwqz7": {
+      "id": "y34388pjs6xngmwpr0iwqz7",
+      "title": "Python",
+      "desc": "",
+      "updated": 1650062856946,
+      "created": 1650062849494,
+      "custom": {},
+      "fname": "development.lang.python",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "11026e75693f70e068da29598d65535c",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "albrvvfr3tsfsy8xh1pmpw4"
+      ],
+      "parent": "774ndd6du53l5k1awv074r0",
+      "data": {}
+    },
+    "albrvvfr3tsfsy8xh1pmpw4": {
+      "id": "albrvvfr3tsfsy8xh1pmpw4",
+      "title": "Test",
+      "desc": "",
+      "updated": 1650062861219,
+      "created": 1650062859763,
+      "custom": {},
+      "fname": "development.lang.python.test",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "cee1266ebd5842d683d142cb2105b6ba",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "y34388pjs6xngmwpr0iwqz7",
+      "data": {}
     },
     "eac0f243-05b3-4b95-bec3-848e33edbc40": {
       "id": "eac0f243-05b3-4b95-bec3-848e33edbc40",
@@ -7050,11 +7885,62 @@
         "fd1119d4-0dd2-4f17-bcfa-2018e269d7cc",
         "da63a48e-f890-48b0-b051-d4e545a0e1ba",
         "3a5260a3-2387-484f-a8ad-e072c37424dd",
-        "cd3ae684-36e9-4c66-af36-7b2891db3cde"
+        "cd3ae684-36e9-4c66-af36-7b2891db3cde",
+        "4ozgig2lin3jnty17vg55ml"
       ],
       "data": {},
       "custom": {},
       "contentHash": "eb615e5a54b0ca33416275965b2d8364"
+    },
+    "4ozgig2lin3jnty17vg55ml": {
+      "fname": "development.system.linux",
+      "stub": true,
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1658332301136,
+      "created": 1658332301136,
+      "id": "4ozgig2lin3jnty17vg55ml",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "ih22j0towuos88dob7tzlr8"
+      ],
+      "parent": "62daf50d-a39e-463f-aabd-be53790281fd",
+      "data": {},
+      "title": "Linux"
+    },
+    "ih22j0towuos88dob7tzlr8": {
+      "id": "ih22j0towuos88dob7tzlr8",
+      "title": "Philosophy",
+      "desc": "",
+      "updated": 1650420001746,
+      "created": 1650419881234,
+      "custom": {},
+      "fname": "development.system.linux.philosophy",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "3e80a652c8858da88c65847fb9bb42d7",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "4ozgig2lin3jnty17vg55ml",
+      "data": {}
     },
     "cd3ae684-36e9-4c66-af36-7b2891db3cde": {
       "id": "cd3ae684-36e9-4c66-af36-7b2891db3cde",
@@ -7306,6 +8192,12 @@
     "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d": {
       "id": "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
       "title": "Performance",
+      "desc": "",
+      "updated": 1650426662077,
+      "created": 1620084110638,
+      "custom": {},
+      "fname": "development.system.performance",
+      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -7314,91 +8206,286 @@
         },
         "name": "my_note"
       },
-      "type": "note",
-      "desc": "",
+      "contentHash": "38447129fe2b058cec660db0cfb0e025",
       "links": [],
       "anchors": {
-        "1-uptime": {
-          "type": "header",
-          "value": "1-uptime",
-          "line": 11,
-          "column": 0
-        },
         "2-dmesg--tail": {
           "type": "header",
+          "text": "2. dmesg | tail",
           "value": "2-dmesg--tail",
-          "line": 22,
-          "column": 0
-        },
-        "3-vmstat-1": {
-          "type": "header",
-          "value": "3-vmstat-1",
-          "line": 40,
-          "column": 0
-        },
-        "4-mpstat--p-all-1": {
-          "type": "header",
-          "value": "4-mpstat--p-all-1",
-          "line": 65,
-          "column": 0
+          "line": 12,
+          "column": 0,
+          "depth": 2
         },
         "5-pidstat-1": {
           "type": "header",
+          "text": "5. pidstat 1",
           "value": "5-pidstat-1",
-          "line": 82,
-          "column": 0
-        },
-        "6-iostat--xz-1": {
-          "type": "header",
-          "value": "6-iostat--xz-1",
-          "line": 107,
-          "column": 0
-        },
-        "7-free--m": {
-          "type": "header",
-          "value": "7-free--m",
-          "line": 133,
-          "column": 0
+          "line": 31,
+          "column": 0,
+          "depth": 2
         },
         "8-sar--n-dev-1": {
           "type": "header",
+          "text": "8. sar -n DEV 1",
           "value": "8-sar--n-dev-1",
-          "line": 150,
-          "column": 0
+          "line": 58,
+          "column": 0,
+          "depth": 2
         },
         "9-sar--n-tcpetcp-1": {
           "type": "header",
+          "text": "9. sar -n TCP,ETCP 1",
           "value": "9-sar--n-tcpetcp-1",
-          "line": 172,
-          "column": 0
+          "line": 95,
+          "column": 0,
+          "depth": 2
         },
         "10-top": {
           "type": "header",
+          "text": "10. top",
           "value": "10-top",
-          "line": 199,
-          "column": 0
-        },
-        "strace": {
-          "type": "header",
-          "value": "strace",
-          "line": 226,
-          "column": 0
+          "line": 122,
+          "column": 0,
+          "depth": 2
         },
         "iotop": {
           "type": "header",
+          "text": "iotop",
           "value": "iotop",
-          "line": 230,
-          "column": 0
+          "line": 157,
+          "column": 0,
+          "depth": 2
         }
       },
-      "fname": "development.system.performance",
-      "updated": 1620948525539,
-      "created": 1620084110638,
+      "children": [
+        "43tt3cu4upgvik6no0gnoe8",
+        "n4d5go9nvueh0hq6ixszeh4",
+        "8kb8qi4l7r9aluk5e2ns0yk",
+        "qxx7j7hdjn2r4oki5wkgzj2"
+      ],
       "parent": "62daf50d-a39e-463f-aabd-be53790281fd",
-      "children": [],
-      "data": {},
+      "data": {}
+    },
+    "qxx7j7hdjn2r4oki5wkgzj2": {
+      "id": "qxx7j7hdjn2r4oki5wkgzj2",
+      "title": "Network",
+      "desc": "",
+      "updated": 1650426129591,
+      "created": 1650424057180,
       "custom": {},
-      "contentHash": "78fb154cf7428a69a9bfffe0f5a2dc2d"
+      "fname": "development.system.performance.network",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "d4fd18be76b03032eed5bef720b8750f",
+      "links": [],
+      "anchors": {
+        "netstatss": {
+          "type": "header",
+          "text": "netstat、ss",
+          "value": "netstatss",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
+      "data": {}
+    },
+    "8kb8qi4l7r9aluk5e2ns0yk": {
+      "id": "8kb8qi4l7r9aluk5e2ns0yk",
+      "title": "Memory",
+      "desc": "",
+      "updated": 1650427189078,
+      "created": 1650424023098,
+      "custom": {},
+      "fname": "development.system.performance.memory",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "926a8c4039ed53c5ff81dbea54b75c59",
+      "links": [],
+      "anchors": {
+        "free--m": {
+          "type": "header",
+          "text": "free -m",
+          "value": "free--m",
+          "line": 19,
+          "column": 0,
+          "depth": 2
+        },
+        "vmstat": {
+          "type": "header",
+          "text": "vmstat",
+          "value": "vmstat",
+          "line": 38,
+          "column": 0,
+          "depth": 2
+        },
+        "pmap": {
+          "type": "header",
+          "text": "pmap",
+          "value": "pmap",
+          "line": 66,
+          "column": 0,
+          "depth": 2
+        },
+        "how": {
+          "type": "header",
+          "text": "how",
+          "value": "how",
+          "line": 76,
+          "column": 0,
+          "depth": 1
+        },
+        "页面调度paging和交换swapping指标": {
+          "type": "header",
+          "text": "页面调度（Paging）和交换（swapping）指标",
+          "value": "页面调度paging和交换swapping指标",
+          "line": 78,
+          "column": 0,
+          "depth": 2
+        },
+        "性能调整选项": {
+          "type": "header",
+          "text": "性能调整选项",
+          "value": "性能调整选项",
+          "line": 89,
+          "column": 0,
+          "depth": 2
+        },
+        "处理内存不足out-of-memory和oom-killer": {
+          "type": "header",
+          "text": "处理内存不足（Out-of-Memory）和OOM killer",
+          "value": "处理内存不足out-of-memory和oom-killer",
+          "line": 106,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
+      "data": {}
+    },
+    "n4d5go9nvueh0hq6ixszeh4": {
+      "id": "n4d5go9nvueh0hq6ixszeh4",
+      "title": "Io",
+      "desc": "",
+      "updated": 1650425979767,
+      "created": 1650424039040,
+      "custom": {},
+      "fname": "development.system.performance.io",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "0f8a4aa23f0afce1171c312e0eff0773",
+      "links": [],
+      "anchors": {
+        "6-iostat--xz-1": {
+          "type": "header",
+          "text": "6. iostat -xz 1",
+          "value": "6-iostat--xz-1",
+          "line": 16,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
+      "data": {}
+    },
+    "43tt3cu4upgvik6no0gnoe8": {
+      "id": "43tt3cu4upgvik6no0gnoe8",
+      "title": "Cpu",
+      "desc": "",
+      "updated": 1650426950391,
+      "created": 1650423968533,
+      "custom": {},
+      "fname": "development.system.performance.cpu",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "75cb0e2bfea282c95f405dd15bb745ed",
+      "links": [],
+      "anchors": {
+        "uptime": {
+          "type": "header",
+          "text": "uptime",
+          "value": "uptime",
+          "line": 36,
+          "column": 0,
+          "depth": 2
+        },
+        "ps": {
+          "type": "header",
+          "text": "ps",
+          "value": "ps",
+          "line": 53,
+          "column": 0,
+          "depth": 2
+        },
+        "mpstat": {
+          "type": "header",
+          "text": "mpstat",
+          "value": "mpstat",
+          "line": 81,
+          "column": 0,
+          "depth": 2
+        },
+        "strace": {
+          "type": "header",
+          "text": "strace",
+          "value": "strace",
+          "line": 105,
+          "column": 0,
+          "depth": 2
+        },
+        "ltrace": {
+          "type": "header",
+          "text": "ltrace",
+          "value": "ltrace",
+          "line": 178,
+          "column": 0,
+          "depth": 2
+        },
+        "how": {
+          "type": "header",
+          "text": "how",
+          "value": "how",
+          "line": 182,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
+      "data": {}
     },
     "224538e6-32bf-473e-8dee-23a0a079f48a": {
       "id": "224538e6-32bf-473e-8dee-23a0a079f48a",
@@ -7571,10 +8658,45 @@
       "updated": 1620791771392,
       "created": 1620080210690,
       "parent": "62daf50d-a39e-463f-aabd-be53790281fd",
-      "children": [],
+      "children": [
+        "q5vgjkobycnonv4tbi6xz23"
+      ],
       "data": {},
       "custom": {},
       "contentHash": "2fd595333427c87ebf577744860fc75e"
+    },
+    "q5vgjkobycnonv4tbi6xz23": {
+      "id": "q5vgjkobycnonv4tbi6xz23",
+      "title": "Linux",
+      "desc": "",
+      "updated": 1650423776282,
+      "created": 1650423490666,
+      "custom": {},
+      "fname": "development.system.file_system.linux",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "c7d7ff94e0816417aef541985f85800a",
+      "links": [],
+      "anchors": {
+        "ext2": {
+          "type": "header",
+          "text": "ext2",
+          "value": "ext2",
+          "line": 12,
+          "column": 0,
+          "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "09956453-4cbd-4f15-a4bd-b1f6c84449a4",
+      "data": {}
     },
     "a072f1a5-d9ec-4e89-a252-24c945125dc0": {
       "id": "a072f1a5-d9ec-4e89-a252-24c945125dc0",
@@ -10534,6 +11656,12 @@
     "13736958-e07c-45ce-a85d-d47c6990c994": {
       "id": "13736958-e07c-45ce-a85d-d47c6990c994",
       "title": "CDN",
+      "desc": "",
+      "updated": 1650423634989,
+      "created": 1616563080983,
+      "custom": {},
+      "fname": "development.database.cdn",
+      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -10542,25 +11670,21 @@
         },
         "name": "my_note"
       },
-      "type": "note",
-      "desc": "",
+      "contentHash": "60445127e71611fa94bcf5c85a9c9591",
       "links": [],
       "anchors": {
         "real-life": {
           "type": "header",
+          "text": "real life",
           "value": "real-life",
-          "line": 30,
-          "column": 0
+          "line": 28,
+          "column": 0,
+          "depth": 2
         }
       },
-      "fname": "development.database.cdn",
-      "updated": 1625088574660,
-      "created": 1616563080983,
-      "parent": "a40ef849-d301-4d74-a778-e6d9469dfb5d",
       "children": [],
-      "data": {},
-      "contentHash": "913815f498d68a11ea3b4ed9e86383af",
-      "custom": {}
+      "parent": "a40ef849-d301-4d74-a778-e6d9469dfb5d",
+      "data": {}
     },
     "b975629e-1af6-4118-a568-b2404da1b7fd": {
       "id": "b975629e-1af6-4118-a568-b2404da1b7fd",
@@ -10899,6 +12023,12 @@
     "68e49ff0-58d9-43fa-a47f-a0d50b88095d": {
       "id": "68e49ff0-58d9-43fa-a47f-a0d50b88095d",
       "title": "Process",
+      "desc": "",
+      "updated": 1650422923002,
+      "created": 1617687631906,
+      "custom": {},
+      "fname": "development.computer.multitask.process",
+      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -10907,8 +12037,7 @@
         },
         "name": "my_note"
       },
-      "type": "note",
-      "desc": "",
+      "contentHash": "168518da54e8fdd0de75cc913608ef11",
       "links": [
         {
           "type": "ref",
@@ -10920,14 +12049,14 @@
           "value": "development.computer.call.fork",
           "position": {
             "start": {
-              "line": 30,
+              "line": 40,
               "column": 1,
-              "offset": 1587
+              "offset": 1864
             },
             "end": {
-              "line": 30,
+              "line": 40,
               "column": 54,
-              "offset": 1640
+              "offset": 1917
             },
             "indent": []
           },
@@ -10941,39 +12070,50 @@
       "anchors": {
         "process": {
           "type": "header",
+          "text": "process",
           "value": "process",
           "line": 8,
-          "column": 0
+          "column": 0,
+          "depth": 1
+        },
+        "struct": {
+          "type": "header",
+          "text": "struct",
+          "value": "struct",
+          "line": 29,
+          "column": 0,
+          "depth": 2
         },
         "process-control": {
           "type": "header",
+          "text": "process control",
           "value": "process-control",
-          "line": 30,
-          "column": 0
+          "line": 36,
+          "column": 0,
+          "depth": 2
         },
         "context-switch": {
           "type": "header",
+          "text": "context switch",
           "value": "context-switch",
-          "line": 37,
-          "column": 0
+          "line": 47,
+          "column": 0,
+          "depth": 2
         },
         "zombie-process": {
           "type": "header",
+          "text": "zombie process",
           "value": "zombie-process",
-          "line": 50,
-          "column": 0
+          "line": 61,
+          "column": 0,
+          "depth": 2
         }
       },
-      "fname": "development.computer.multitask.process",
-      "updated": 1620789384661,
-      "created": 1617687631906,
-      "parent": "5d880b52-6a1f-48fd-b059-7b2e32c601c2",
       "children": [
         "26c24828-9284-461c-8416-4b442d49e85e"
       ],
-      "data": {},
-      "custom": {},
-      "contentHash": "6fc9fa8ab34981eb087e00d01c2b6e90"
+      "parent": "5d880b52-6a1f-48fd-b059-7b2e32c601c2",
+      "data": {}
     },
     "26c24828-9284-461c-8416-4b442d49e85e": {
       "id": "26c24828-9284-461c-8416-4b442d49e85e",
@@ -11010,7 +12150,7 @@
       "id": "723f785b-cdfa-43e1-ad13-785cf113e33d",
       "title": "Memory",
       "desc": "",
-      "updated": 1649304280842,
+      "updated": 1650423039792,
       "created": 1617687471994,
       "custom": {},
       "fname": "development.computer.memory",
@@ -11023,7 +12163,7 @@
         },
         "name": "my_note"
       },
-      "contentHash": "3a678856d3fe27f5a1212a1d34a2a45e",
+      "contentHash": "f4abcc0e201775ca6aa7e6a9aa241db6",
       "links": [],
       "anchors": {
         "phycical-memory": {
@@ -11038,7 +12178,7 @@
           "type": "header",
           "text": "virtaul memory",
           "value": "virtaul-memory",
-          "line": 23,
+          "line": 29,
           "column": 0,
           "depth": 1
         },
@@ -11046,7 +12186,7 @@
           "type": "header",
           "text": "VSZ - Virtual Set Size",
           "value": "vsz---virtual-set-size",
-          "line": 32,
+          "line": 38,
           "column": 0,
           "depth": 2
         },
@@ -11054,7 +12194,7 @@
           "type": "header",
           "text": "RSS - Resident Set Size",
           "value": "rss---resident-set-size",
-          "line": 36,
+          "line": 42,
           "column": 0,
           "depth": 2
         },
@@ -11062,7 +12202,7 @@
           "type": "header",
           "text": "缓存的工具",
           "value": "缓存的工具",
-          "line": 40,
+          "line": 46,
           "column": 0,
           "depth": 2
         },
@@ -11070,7 +12210,7 @@
           "type": "header",
           "text": "swap",
           "value": "swap",
-          "line": 68,
+          "line": 74,
           "column": 0,
           "depth": 3
         },
@@ -11078,7 +12218,7 @@
           "type": "header",
           "text": "内存管理",
           "value": "内存管理",
-          "line": 83,
+          "line": 89,
           "column": 0,
           "depth": 2
         },
@@ -11086,7 +12226,7 @@
           "type": "header",
           "text": "内存保护",
           "value": "内存保护",
-          "line": 89,
+          "line": 95,
           "column": 0,
           "depth": 2
         },
@@ -11094,7 +12234,7 @@
           "type": "header",
           "text": "地址翻译 mmu",
           "value": "地址翻译-mmu",
-          "line": 93,
+          "line": 99,
           "column": 0,
           "depth": 2
         },
@@ -11102,7 +12242,7 @@
           "type": "header",
           "text": "TLB",
           "value": "tlb",
-          "line": 103,
+          "line": 109,
           "column": 0,
           "depth": 2
         },
@@ -11110,7 +12250,7 @@
           "type": "header",
           "text": "multi-level page table",
           "value": "multi-level-page-table",
-          "line": 111,
+          "line": 117,
           "column": 0,
           "depth": 2
         },
@@ -11118,7 +12258,7 @@
           "type": "header",
           "text": "os",
           "value": "os",
-          "line": 115,
+          "line": 121,
           "column": 0,
           "depth": 2
         },
@@ -11126,7 +12266,7 @@
           "type": "header",
           "text": "heap",
           "value": "heap",
-          "line": 122,
+          "line": 128,
           "column": 0,
           "depth": 3
         },
@@ -11134,13 +12274,14 @@
           "type": "header",
           "text": "垃圾收集",
           "value": "垃圾收集",
-          "line": 131,
+          "line": 137,
           "column": 0,
           "depth": 3
         }
       },
       "children": [
         "p3dcvr6ni0cbc91nyfcbx44",
+        "3ew9mzm73l52kzqv1br8eoi",
         "5gw8x11hav645ffpa7e22if",
         "da2027b2-1ea8-4a4a-a888-daa28f712b47",
         "c8sb1oqdoihtxu2qu5iglvd",
@@ -11267,6 +12408,47 @@
       "contentHash": "9f584cd28b2e2726d01675cb42947bc6",
       "links": [],
       "anchors": {},
+      "children": [],
+      "parent": "723f785b-cdfa-43e1-ad13-785cf113e33d",
+      "data": {}
+    },
+    "3ew9mzm73l52kzqv1br8eoi": {
+      "id": "3ew9mzm73l52kzqv1br8eoi",
+      "title": "Linux",
+      "desc": "",
+      "updated": 1650423316830,
+      "created": 1650423129402,
+      "custom": {},
+      "fname": "development.computer.memory.linux",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "faa75ffc3b471860db442624ffce9972",
+      "links": [],
+      "anchors": {
+        "伙伴系统buddy-system": {
+          "type": "header",
+          "text": "伙伴系统（buddy system）",
+          "value": "伙伴系统buddy-system",
+          "line": 11,
+          "column": 0,
+          "depth": 1
+        },
+        "分页回收": {
+          "type": "header",
+          "text": "分页回收",
+          "value": "分页回收",
+          "line": 19,
+          "column": 0,
+          "depth": 1
+        }
+      },
       "children": [],
       "parent": "723f785b-cdfa-43e1-ad13-785cf113e33d",
       "data": {}
@@ -11499,6 +12681,12 @@
     "27148b7c-1a4b-4f57-8980-48c50e158b39": {
       "id": "27148b7c-1a4b-4f57-8980-48c50e158b39",
       "title": "Fork",
+      "desc": "",
+      "updated": 1650422590219,
+      "created": 1617688119223,
+      "custom": {},
+      "fname": "development.computer.call.fork",
+      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -11507,8 +12695,7 @@
         },
         "name": "my_note"
       },
-      "type": "note",
-      "desc": "",
+      "contentHash": "bcaf3c8bf2cd27894f8d08f3a54ff200",
       "links": [
         {
           "from": {
@@ -11518,14 +12705,14 @@
           "type": "backlink",
           "position": {
             "start": {
-              "line": 30,
+              "line": 40,
               "column": 1,
-              "offset": 1587
+              "offset": 1864
             },
             "end": {
-              "line": 30,
+              "line": 40,
               "column": 54,
-              "offset": 1640
+              "offset": 1917
             },
             "indent": []
           },
@@ -11533,14 +12720,9 @@
         }
       ],
       "anchors": {},
-      "fname": "development.computer.call.fork",
-      "updated": 1619417463900,
-      "created": 1617688119223,
-      "parent": "acabdc86-1cd5-48de-a439-49686e1ced28",
       "children": [],
-      "data": {},
-      "custom": {},
-      "contentHash": "8e64522f3a504a0d050e19fad25ce6c3"
+      "parent": "acabdc86-1cd5-48de-a439-49686e1ced28",
+      "data": {}
     },
     "4c818140-47ba-4497-a484-c80748376b45": {
       "id": "4c818140-47ba-4497-a484-c80748376b45",
@@ -13722,7 +14904,8 @@
         "baa39444-0da9-4c55-8df7-2a6f8f787fa4",
         "62daf50d-a39e-463f-aabd-be53790281fd",
         "3524d0a7-be73-45d6-847e-c970f5c1c760",
-        "eac0f243-05b3-4b95-bec3-848e33edbc40"
+        "eac0f243-05b3-4b95-bec3-848e33edbc40",
+        "774ndd6du53l5k1awv074r0"
       ],
       "data": {},
       "custom": {
@@ -13902,7 +15085,9 @@
         "OFi7hM5EYDLGlvf2dyZGl",
         "Y1aRDPU4bGFcubpnaynLS",
         "QRQthtddnBxcNOqbau0C4",
+        "xmk017F0rwFfHeOgGDKl0",
         "5b984740-f1d4-4e7b-bd92-ceb2ec59f7f5",
+        "5wzt941ydetyc54osbd9sod",
         "a3243522-7cfb-4f23-8383-650e08f56186",
         "80691453-c8cd-448c-b3bd-4c58fa1c470b",
         "2b3acd33-5cae-41eb-9647-f69ca0fd04ab",
@@ -13911,9 +15096,9 @@
         "efxujPMmo91nKhmMDwmxy",
         "pM7z7xLUf6hSNwawvfTSO",
         "c2644f8b-dfac-433a-9cff-af811875b7e0",
-        "nssfyjyrp783cdgdid7819h",
-        "dhjmze0nl3yhsz66txo75ri",
-        "mnvwlw2x1fvzeaaamz053oc"
+        "34yq46ldeg0emfno6w6u27t",
+        "8ylvzumzzp6ib88b6gnhriv",
+        "j8el2mp5zathqqm766ytt2f"
       ],
       "data": {},
       "custom": {
@@ -13977,7 +15162,8 @@
       "baa39444-0da9-4c55-8df7-2a6f8f787fa4",
       "62daf50d-a39e-463f-aabd-be53790281fd",
       "3524d0a7-be73-45d6-847e-c970f5c1c760",
-      "eac0f243-05b3-4b95-bec3-848e33edbc40"
+      "eac0f243-05b3-4b95-bec3-848e33edbc40",
+      "774ndd6du53l5k1awv074r0"
     ],
     "data": {},
     "custom": {

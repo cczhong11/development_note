@@ -1,5 +1,5 @@
-<h1 id="replication"><a aria-hidden="true" class="anchor-heading" href="#replication"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Replication</h1>
-<h1 id="leaders-and-followers"><a aria-hidden="true" class="anchor-heading" href="#leaders-and-followers"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>leaders and followers</h1>
+<h1 id="replication"><a aria-hidden="true" class="anchor-heading icon-link" href="#replication"></a>Replication</h1>
+<h1 id="leaders-and-followers"><a aria-hidden="true" class="anchor-heading icon-link" href="#leaders-and-followers"></a>leaders and followers</h1>
 <p>Every write to the database needs to be processed by every replica; otherwise, the rep‐licas would no longer contain the same data. The most common solution for this is called leader-based replication</p>
 <p><img src="/assets/images/2021-05-11-21-10-46.png"></p>
 <p>An important detail of a replicated system is whether the replication happens syn‐chronously or asynchronous</p>
@@ -9,14 +9,14 @@
 The leader must block all writes and wait until the synchronous replica is available again.</p>
 <p>In practice, if you enable syn‐chronous replication on a database, it usually means that one of the followers is syn‐chronous, and the others are asynchronous. If the synchronous follower becomes unavailable or slow, one of the asynchronous followers is made synchronous. This guarantees that you have an up-to-date copy of the data on at least two nodes. This configuration is sometimes also called semi-synchronous.</p>
 <p>leader-based replication is configured to be completely asynchronous. In this case, if the leader fails and is not recoverable, any writes that have not yet been repli‐cated to followers are lost. This means that a write is not guaranteed to be durable, even if it has been confirmed to the client. However, a fully asynchronous configura‐tion has the advantage that the leader can continue processing writes, even if all of its followers have fallen behind.</p>
-<h2 id="setting-up-new-followers"><a aria-hidden="true" class="anchor-heading" href="#setting-up-new-followers"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Setting Up New Followers</h2>
+<h2 id="setting-up-new-followers"><a aria-hidden="true" class="anchor-heading icon-link" href="#setting-up-new-followers"></a>Setting Up New Followers</h2>
 <ul>
 <li>Take a consistent snapshot of the leader’s database at some point in time</li>
 <li>Copy the snapshot to the new follower node.</li>
 <li>The follower connects to the leader and requests all the data changes that have happened since the snapshot was taken</li>
 <li>When the follower has processed the backlog of data changes since the snapshot, we say it has caught up. It can now continue to process data changes from the leader as they happen.</li>
 </ul>
-<h2 id="fail-over"><a aria-hidden="true" class="anchor-heading" href="#fail-over"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>fail-over</h2>
+<h2 id="fail-over"><a aria-hidden="true" class="anchor-heading icon-link" href="#fail-over"></a>fail-over</h2>
 <p>follower</p>
 <p>On its local disk, each follower keeps a log of the data changes it has received from the leader. If a follower crashes and is restarted, or if the network between the leader and the follower is temporarily interrupted, the follower can recover quite easily: from its log, it knows the last transaction that was processed before the fault occurred</p>
 <p>leader</p>
@@ -25,11 +25,11 @@ The leader must block all writes and wait until the synchronous replica is avail
 <li>Choosing a new leader. This could be done through an election process (where the leader is chosen by a majority of the remaining replicas), or a new leader could be appointed by a previously elected controller node. The best candidate for leadership is usually the replica with the most up-to-date data changes from the old leader</li>
 <li>Reconfiguring the system to use the new leader. Clients now need to send their write requests to the new leader</li>
 </ul>
-<h1 id="implementation-of-replication-logs"><a aria-hidden="true" class="anchor-heading" href="#implementation-of-replication-logs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Implementation of Replication Logs</h1>
-<h2 id="write-ahead-log-wal-shipping"><a aria-hidden="true" class="anchor-heading" href="#write-ahead-log-wal-shipping"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Write-ahead log (WAL) shipping</h2>
+<h1 id="implementation-of-replication-logs"><a aria-hidden="true" class="anchor-heading icon-link" href="#implementation-of-replication-logs"></a>Implementation of Replication Logs</h1>
+<h2 id="write-ahead-log-wal-shipping"><a aria-hidden="true" class="anchor-heading icon-link" href="#write-ahead-log-wal-shipping"></a>Write-ahead log (WAL) shipping</h2>
 <p>the log is an append-only sequence of bytes containing all writes to the database. We can use the exact same log to build a replica on another node: besides writing the log to disk, the leader also sends it across the network to its followers.</p>
 <p>. The main disadvantage is that the log describes the data on a very low level: a WAL con‐tains details of which bytes were changed in which disk blocks. This makes replica‐tion closely coupled to the storage engine. If the database changes its storage format from one version to another, it is typically not possible to run different versions of the database software on the leader and the followers.</p>
-<h2 id="logical-row-based-log-replication"><a aria-hidden="true" class="anchor-heading" href="#logical-row-based-log-replication"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Logical (row-based) log replication</h2>
+<h2 id="logical-row-based-log-replication"><a aria-hidden="true" class="anchor-heading icon-link" href="#logical-row-based-log-replication"></a>Logical (row-based) log replication</h2>
 <p>An alternative is to use different log formats for replication and for the storage engine, which allows the replication log to be decoupled from the storage engine internals. This kind of replication log is called a logical log, to distinguish it from the storage engine’s (physical) data representation.</p>
 <p>A logical log for a relational database is usually a sequence of records describing writes to database tables at the granularity of a row: </p>
 <p>• For an inserted row, the log contains the new values of all columns.

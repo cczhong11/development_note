@@ -1,10 +1,10 @@
-<h1 id="memory"><a aria-hidden="true" class="anchor-heading" href="#memory"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Memory</h1>
+<h1 id="memory"><a aria-hidden="true" class="anchor-heading icon-link" href="#memory"></a>Memory</h1>
 <p>空闲内存。 对比大多数其他操作系统，在Linux中不应该只关注空闲（free）内存的值。正如在1.2.2节讲述的，Linux内核分配大部分未使用的内存作为文件系统缓存，所以从已使用的（used）内存中减去缓冲（buffer）和缓存（cache）的内存数量，来确定（有效的）空闲（free）内存。</p>
 <p>□　使用的swap。 这个值描述了已使用的swap空间的数量。正如1.2.2节中描述的，swap空间的使用只能告诉你Linux管理内存真的有效。Swap In/Out是一个识别内存瓶颈的可靠手段。在一段持续的时间内每秒200到300以上的分页值，表明可能有内存瓶颈。</p>
 <p>□　缓冲与缓存。 缓冲被分配作为文件系统和块设备缓存。</p>
 <p>□　Slab。 其描述了内核使用的内存数。注意内核的分页不能移出到磁盘。</p>
 <p>□　活跃与非活跃内存。 关于活跃使用的系统内存信息。非活跃内存可能是kswapd守护进程swap out到磁盘的候选者。</p>
-<h2 id="free--m"><a aria-hidden="true" class="anchor-heading" href="#free--m"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>free -m</h2>
+<h2 id="free--m"><a aria-hidden="true" class="anchor-heading icon-link" href="#free--m"></a>free -m</h2>
 <pre><code>$ free -m
              total       used       free     shared    buffers     cached
 Mem:        245998      24545     221453         83         59        541
@@ -18,7 +18,7 @@ We just want to check that these aren’t near-zero in size, which can lead to h
 The “-/+ buffers/cache” provides less confusing values for used and free memory. Linux uses free memory for the caches, but can reclaim it quickly if applications need it. So in a way the cached memory should be included in the free memory column, which this line does. There’s even a website, linuxatemyram, about this confusion.
 It can be additionally confusing if ZFS on Linux is used, as we do for some services, as ZFS has its own file system cache that isn’t reflected properly by the free -m columns. It can appear that the system is low on free memory, when that memory is in fact available for use from the ZFS cache as needed.</p>
 <p>free命令可以显示系统中空闲物理内存总量、已使用物理内存总量、swap空间、内核使用的缓冲和缓存信息</p>
-<h2 id="vmstat"><a aria-hidden="true" class="anchor-heading" href="#vmstat"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>vmstat</h2>
+<h2 id="vmstat"><a aria-hidden="true" class="anchor-heading icon-link" href="#vmstat"></a>vmstat</h2>
 <pre><code>$ vmstat 1
 procs ---------memory---------- ---swap-- -----io---- -system-- ------cpu-----
  r  b swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
@@ -39,19 +39,19 @@ The CPU time breakdowns will confirm if the CPUs are busy, by adding user + syst
 System time is necessary for I/O processing. A high system time average, over 20%, can be interesting to explore further: perhaps the kernel is processing the I/O inefficiently.
 In the above example, CPU time is almost entirely in user-level, pointing to application level usage instead. The CPUs are also well over 90% utilized on average. This isn’t necessarily a problem; check for the degree of saturation using the “r” column.</p>
 <p>vmstat用来报告关于进程、内存、分页、块IO、中断、CPU活动的信息。vmstat命令显示平均数据或实际样本。通过给vmstat命令提供一个采样频率和采样次数可启用采样模式。</p>
-<h2 id="pmap"><a aria-hidden="true" class="anchor-heading" href="#pmap"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>pmap</h2>
+<h2 id="pmap"><a aria-hidden="true" class="anchor-heading icon-link" href="#pmap"></a>pmap</h2>
 <p>命令用来报告一个进程或多个进程的内存映射。可以使用这个工具确定系统是如何为服务器上的进程分配内存的。</p>
 <p>□　Mapped，进程中用于映射到文件的内存总量。</p>
 <p>□　writable/private，进程私有地址空间的数量。</p>
 <p>□　shared，进程共享给其他进程的地址空间数量。</p>
-<h1 id="how"><a aria-hidden="true" class="anchor-heading" href="#how"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>how</h1>
-<h2 id="页面调度paging和交换swapping指标"><a aria-hidden="true" class="anchor-heading" href="#页面调度paging和交换swapping指标"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>页面调度（Paging）和交换（swapping）指标</h2>
+<h1 id="how"><a aria-hidden="true" class="anchor-heading icon-link" href="#how"></a>how</h1>
+<h2 id="页面调度paging和交换swapping指标"><a aria-hidden="true" class="anchor-heading icon-link" href="#页面调度paging和交换swapping指标"></a>页面调度（Paging）和交换（swapping）指标</h2>
 <p>在Linux及所有类UNIX操作系统中，页面调度和swaping是不同的。页面调度移动个别分页到磁盘上的swap空间；交换是一个较大的操作，在这个过程中移动一个进程的整个地址空间到swap空间。</p>
 <p>交换可以有两种原因：</p>
 <p>□　一个进程进入睡眠模式。这是通常发生的，因为进程依赖于交互式的操作，编辑器、shell、数据输入应用程序花费大部分时间来等待用户输入。在这段时间里，它们是非活跃的。</p>
 <p>□　一个进程表现不佳。当空闲内存分页的数量低于规定的最低额度的时候，页面调度可能是一个严重的性能问题，因为页面调度机制是无法处理物理内存分页的请求的，并且swap机制被调用释放更多的分页。这显著增加了到磁盘的I/O，并很快就会降低服务器的性能。</p>
 <p>如果总是有页面调度到磁盘（高分页移出率），可以考虑增加更多的内存。然而，系统具有较低的分页移出率，可能不会影响性能。</p>
-<h2 id="性能调整选项"><a aria-hidden="true" class="anchor-heading" href="#性能调整选项"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>性能调整选项</h2>
+<h2 id="性能调整选项"><a aria-hidden="true" class="anchor-heading icon-link" href="#性能调整选项"></a>性能调整选项</h2>
 <p>如果认为存在一个内存瓶颈，可考虑执行下面其中一个或多个操作：</p>
 <p>□　调整swap空间，使用bigpages、hugetlb共享内存。</p>
 <p>□　增加或减少分页的大小。</p>
@@ -60,7 +60,7 @@ In the above example, CPU time is almost entirely in user-level, pointing to app
 <p>□　限制服务器上每个用户的资源使用。</p>
 <p>□　停止不需要的服务。</p>
 <p>□　增加内存。</p>
-<h2 id="处理内存不足out-of-memory和oom-killer"><a aria-hidden="true" class="anchor-heading" href="#处理内存不足out-of-memory和oom-killer"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>处理内存不足（Out-of-Memory）和OOM killer</h2>
+<h2 id="处理内存不足out-of-memory和oom-killer"><a aria-hidden="true" class="anchor-heading icon-link" href="#处理内存不足out-of-memory和oom-killer"></a>处理内存不足（Out-of-Memory）和OOM killer</h2>
 <p>当一个次要页错误（minor page fault）发生，但是又没有空闲的分页可使用时，内核将尝试回收内存来满足请求。如果不能及时回收充足的内存，将会出现内存不足（Out-of-Memory）的情况。</p>
 <p>默认情况下，系统会调用OOM Killer（Out-of-Memory Killer）选择杀死一个或多个进程来释放内存，以满足请求。</p>
 <p>作为另一种代替，将sysctl vm.panic_on_oom设置为1而不是0。</p>

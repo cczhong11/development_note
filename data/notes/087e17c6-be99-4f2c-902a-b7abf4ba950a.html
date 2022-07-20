@@ -1,15 +1,15 @@
-<h1 id="2pc"><a aria-hidden="true" class="anchor-heading" href="#2pc"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>2PC</h1>
-<h1 id="2-phase-commit"><a aria-hidden="true" class="anchor-heading" href="#2-phase-commit"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>2 phase commit</h1>
+<h1 id="2pc"><a aria-hidden="true" class="anchor-heading icon-link" href="#2pc"></a>2PC</h1>
+<h1 id="2-phase-commit"><a aria-hidden="true" class="anchor-heading icon-link" href="#2-phase-commit"></a>2 phase commit</h1>
 <p>In two-phase commit, phase 1 is prepare, when receive commit request, it sends two all participants Ready? And wait for ok back. Then phase 2 is commit and wait for OK, then send SUCCESS to application server. If there is ABORT, it will send back to application server with ABORT and send ABORT to participants in phase 2. </p>
 <p>The improvement is using Early Prepare Voting(using when it is the last one, return the result is the transaction result), Early Acknowledgement After Prepare (If all votes to commit a ten, it can send acknowledgement to client before phase 2 finishes). Two-Phase Commit will block if coordinator fails after the prepare message is sent, until coordinator recovers.</p>
-<h2 id="pharse1"><a aria-hidden="true" class="anchor-heading" href="#pharse1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>pharse1</h2>
-<h3 id="coordinator"><a aria-hidden="true" class="anchor-heading" href="#coordinator"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Coordinator</h3>
+<h2 id="pharse1"><a aria-hidden="true" class="anchor-heading icon-link" href="#pharse1"></a>pharse1</h2>
+<h3 id="coordinator"><a aria-hidden="true" class="anchor-heading icon-link" href="#coordinator"></a>Coordinator</h3>
 <ul>
 <li>Precommit (write to log and.or atomic storage)</li>
 <li>Send request to all participants</li>
 <li>Coordinator blocks waiting for ALL replies</li>
 </ul>
-<h3 id="participant"><a aria-hidden="true" class="anchor-heading" href="#participant"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Participant</h3>
+<h3 id="participant"><a aria-hidden="true" class="anchor-heading icon-link" href="#participant"></a>Participant</h3>
 <ul>
 <li>Wait for request</li>
 <li>Upon request, if ready:
@@ -24,14 +24,14 @@
 </ul>
 </li>
 </ul>
-<h2 id="pharse2"><a aria-hidden="true" class="anchor-heading" href="#pharse2"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>pharse2</h2>
-<h3 id="coordinator-1"><a aria-hidden="true" class="anchor-heading" href="#coordinator-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Coordinator</h3>
+<h2 id="pharse2"><a aria-hidden="true" class="anchor-heading icon-link" href="#pharse2"></a>pharse2</h2>
+<h3 id="coordinator-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#coordinator-1"></a>Coordinator</h3>
 <ul>
 <li>This is the point of no return!</li>
 <li>If all participants voted YES then send commit to each participant </li>
 <li>Otherwise send ABORT to each participant</li>
 </ul>
-<h3 id="participant-1"><a aria-hidden="true" class="anchor-heading" href="#participant-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Participant</h3>
+<h3 id="participant-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#participant-1"></a>Participant</h3>
 <p>Wait for "the word" from the coordinator</p>
 <ul>
 <li>If COMMIT, then COMMIT (transaction becomes visible)</li>

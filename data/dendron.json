@@ -26,10 +26,11 @@
       "enableMarker": false
     },
     "randomNote": {},
-    "copyNoteLink": {}
+    "copyNoteLink": {},
+    "templateHierarchy": "template"
   },
   "workspace": {
-    "dendronVersion": "0.85.0",
+    "dendronVersion": "0.90.0",
     "vaults": [
       {
         "fsPath": "repos/dendron-aws-vault",
@@ -55,7 +56,8 @@
       "addBehavior": "asOwnDomain"
     },
     "graph": {
-      "zoomSpeed": 1
+      "zoomSpeed": 1,
+      "createStub": false
     },
     "enableAutoCreateOnDefinition": false,
     "enableXVaultWikiLink": false,
@@ -87,9 +89,16 @@
         "L": "low"
       },
       "todoIntegration": false,
-      "createTaskSelectionType": "selection2link"
+      "createTaskSelectionType": "selection2link",
+      "taskCompleteStatus": [
+        "done",
+        "x"
+      ]
     },
-    "enableEditorDecorations": true
+    "enableEditorDecorations": true,
+    "enableHandlebarTemplates": true,
+    "enableFullHierarchyNoteTitle": false,
+    "enableSmartRefs": false
   },
   "preview": {
     "enableFMTitle": true,
@@ -130,6 +139,7 @@
       "editViewMode": "tree"
     },
     "enablePrettyLinks": true,
+    "enableTaskNotes": true,
     "siteFaviconPath": "favicon.ico",
     "siteIndex": "development"
   }

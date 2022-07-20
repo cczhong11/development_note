@@ -1,5 +1,5 @@
-<h1 id="bp"><a aria-hidden="true" class="anchor-heading" href="#bp"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Bp</h1>
-<h1 id="blueprint"><a aria-hidden="true" class="anchor-heading" href="#blueprint"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>blueprint</h1>
+<h1 id="bp"><a aria-hidden="true" class="anchor-heading icon-link" href="#bp"></a>Bp</h1>
+<h1 id="blueprint"><a aria-hidden="true" class="anchor-heading icon-link" href="#blueprint"></a>blueprint</h1>
 <p>Ads ranking model development can be represented by an execution graph. Blueprint is a solution to describe and execute such an execution graph.</p>
 <p><img src="/assets/images/2021-06-25-08-02-43.png"></p>
 <p><img src="/assets/images/2021-08-18-13-35-10.png"></p>
@@ -7,9 +7,9 @@
 <p><img src="/assets/images/2021-08-18-13-38-43.png"></p>
 <p>goal</p>
 <p><img src="/assets/images/2021-08-18-13-40-31.png"></p>
-<h2 id="ir"><a aria-hidden="true" class="anchor-heading" href="#ir"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>IR</h2>
+<h2 id="ir"><a aria-hidden="true" class="anchor-heading icon-link" href="#ir"></a>IR</h2>
 <p>Execution graph is represented by a data structure which we call “Intermediate Representation” or IR. IR is in JSON format.</p>
-<h2 id="module"><a aria-hidden="true" class="anchor-heading" href="#module"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Module</h2>
+<h2 id="module"><a aria-hidden="true" class="anchor-heading icon-link" href="#module"></a>Module</h2>
 <p>When implementing the function execute in GMBModule, we write normal Python code, which describes what execute does.</p>
 <pre><code>class GMBModule(BaseModule):
     @gmb_executor_method()
@@ -20,7 +20,7 @@
 <li>When execution_mode = IR_GENERATION: calling execute(params=...) generates an IR which encodes the fact that the function execute will be called with params remotely later.</li>
 <li>When execution_mode = IR_EXECUTION: calling execute(params=...) executes process(params)</li>
 </ul>
-<h3 id="edge-between-module"><a aria-hidden="true" class="anchor-heading" href="#edge-between-module"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>edge between module</h3>
+<h3 id="edge-between-module"><a aria-hidden="true" class="anchor-heading icon-link" href="#edge-between-module"></a>edge between module</h3>
 <pre><code>module_a = GMBModule()
 module_b = GMBModule2()
 module_a.execute()
@@ -28,10 +28,10 @@ module_b.set_params(params=module_a.get_result())
 module_b.execute()
 result = module_b.get_result()
 </code></pre>
-<h2 id="core"><a aria-hidden="true" class="anchor-heading" href="#core"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>core</h2>
+<h2 id="core"><a aria-hidden="true" class="anchor-heading icon-link" href="#core"></a>core</h2>
 <p><img src="/assets/images/2021-08-18-13-53-29.png"></p>
-<h2 id="bps"><a aria-hidden="true" class="anchor-heading" href="#bps"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>BPS</h2>
+<h2 id="bps"><a aria-hidden="true" class="anchor-heading icon-link" href="#bps"></a>BPS</h2>
 <p><img src="/assets/images/2021-08-18-13-52-15.png"></p>
 <p><img src="/assets/images/2021-08-18-13-57-03.png"></p>
-<h2 id="air"><a aria-hidden="true" class="anchor-heading" href="#air"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>AIR</h2>
+<h2 id="air"><a aria-hidden="true" class="anchor-heading icon-link" href="#air"></a>AIR</h2>
 <p><img src="/assets/images/2021-08-18-14-02-44.png"></p>

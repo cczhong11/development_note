@@ -1,12 +1,12 @@
-<h1 id="pattern"><a aria-hidden="true" class="anchor-heading" href="#pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Pattern</h1>
+<h1 id="pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#pattern"></a>Pattern</h1>
 <p><a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/category/design-implementation">reference</a></p>
-<h1 id="ambassador"><a aria-hidden="true" class="anchor-heading" href="#ambassador"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Ambassador</h1>
+<h1 id="ambassador"><a aria-hidden="true" class="anchor-heading icon-link" href="#ambassador"></a>Ambassador</h1>
 <p>Create helper services that send network requests on behalf of a consumer service or application. An ambassador service can be thought of as an out-of-process proxy that is co-located with the client.</p>
 <p>This pattern can be useful for offloading common client connectivity tasks such as monitoring, logging, routing, security (such as TLS), and resiliency patterns in a language agnostic way. It is often used with legacy applications, or other applications that are difficult to modify, in order to extend their networking capabilities. It can also enable a specialized team to implement those features.</p>
 <p>Put client frameworks and libraries into an external process that acts as a proxy between your application and external services. Deploy the proxy on the same host environment as your application to allow control over routing, resiliency, security features, and to avoid any host-related access restrictions. You can also use the ambassador pattern to standardize and extend instrumentation. The proxy can monitor performance metrics such as latency or resource usage, and this monitoring happens in the same host environment as the application.</p>
 <p><img src="/assets/images/2021-05-09-23-18-43.png"></p>
 <p><img src="/assets/images/2021-05-10-21-02-50.png"></p>
-<h1 id="anti-corruption-layer-pattern"><a aria-hidden="true" class="anchor-heading" href="#anti-corruption-layer-pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Anti-Corruption Layer pattern</h1>
+<h1 id="anti-corruption-layer-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#anti-corruption-layer-pattern"></a>Anti-Corruption Layer pattern</h1>
 <p>This layer translates requests that one subsystem makes to the other subsystem. Use this pattern to ensure that an application's design is not limited by dependencies on outside subsystems. </p>
 <p>Isolate the different subsystems by placing an anti-corruption layer between them. This layer translates communications between the two systems, allowing one system to remain unchanged while the other can avoid compromising its design and technological approach.</p>
 <p><img src="/assets/images/2021-05-10-21-04-52.png"></p>
@@ -15,23 +15,23 @@
 <li>A migration is planned to happen over multiple stages, but integration between new and legacy systems needs to be maintained.</li>
 <li>Two or more subsystems have different semantics, but still need to communicate.</li>
 </ul>
-<h1 id="backends-for-frontends-pattern"><a aria-hidden="true" class="anchor-heading" href="#backends-for-frontends-pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Backends for Frontends pattern</h1>
+<h1 id="backends-for-frontends-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#backends-for-frontends-pattern"></a>Backends for Frontends pattern</h1>
 <p>Create separate backend services to be consumed by specific frontend applications or interfaces. </p>
 <p><img src="/assets/images/2021-05-10-21-16-24.png"></p>
 <p>Because each backend is specific to one interface, it can be optimized for that interface. As a result, it will be smaller, less complex, and likely faster than a generic backend that tries to satisfy the requirements for all interfaces. Each interface team has autonomy to control their own backend and doesn't rely on a centralized backend development team. This gives the interface team flexibility in language selection, release cadence, prioritization of workload, and feature integration in their backend.</p>
-<h1 id="compute-resource-consolidation-pattern"><a aria-hidden="true" class="anchor-heading" href="#compute-resource-consolidation-pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Compute Resource Consolidation pattern</h1>
+<h1 id="compute-resource-consolidation-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#compute-resource-consolidation-pattern"></a>Compute Resource Consolidation pattern</h1>
 <p>onsolidate multiple tasks or operations into a single computational unit. This can increase compute resource utilization, and reduce the costs and management overhead associated with performing compute processing in cloud-hosted applications.</p>
 <p>Tasks can be grouped according to criteria based on the features provided by the environment and the costs associated with these features. A common approach is to look for tasks that have a similar profile concerning their scalability, lifetime, and processing requirements. Grouping these together allows them to scale as a unit. The elasticity provided by many cloud environments enables additional instances of a computational unit to be started and stopped according to the workload.</p>
-<h1 id="external-configuration-store-pattern"><a aria-hidden="true" class="anchor-heading" href="#external-configuration-store-pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>External Configuration Store pattern</h1>
+<h1 id="external-configuration-store-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#external-configuration-store-pattern"></a>External Configuration Store pattern</h1>
 <p>Move configuration information out of the application deployment package to a centralized location. This can provide opportunities for easier management and control of configuration data, and for sharing configuration data across applications and application instances.</p>
 <p>Store the configuration information in external storage, and provide an interface that can be used to quickly and efficiently read and update configuration settings. The type of external store depends on the hosting and runtime environment of the application. In a cloud-hosted scenario it's typically a cloud-based storage service, but could be a hosted database or other system.</p>
 <p>The backing store you choose for configuration information should have an interface that provides consistent and easy-to-use access. It should expose the information in a correctly typed and structured format. The implementation might also need to authorize users’ access in order to protect configuration data, and be flexible enough to allow storage of multiple versions of the configuration</p>
 <p><img src="/assets/images/2021-05-10-21-22-53.png"></p>
-<h1 id="gateway-aggregation-pattern"><a aria-hidden="true" class="anchor-heading" href="#gateway-aggregation-pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Gateway Aggregation pattern</h1>
+<h1 id="gateway-aggregation-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#gateway-aggregation-pattern"></a>Gateway Aggregation pattern</h1>
 <p>Use a gateway to aggregate multiple individual requests into a single request. This pattern is useful when a client must make multiple calls to different backend systems to perform an operation.</p>
 <p><img src="/assets/images/2021-05-10-21-24-17.png"></p>
 <p>This pattern can reduce the number of requests that the application makes to backend services, and improve application performance over high-latency networks.</p>
-<h1 id="gateway-offloading-pattern"><a aria-hidden="true" class="anchor-heading" href="#gateway-offloading-pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Gateway Offloading pattern</h1>
+<h1 id="gateway-offloading-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#gateway-offloading-pattern"></a>Gateway Offloading pattern</h1>
 <p>Offload shared or specialized service functionality to a gateway proxy. This pattern can simplify application development by moving shared service functionality, such as the use of SSL certificates, from other parts of the application into the gateway.</p>
 <p>Offload some features into a gateway, particularly cross-cutting concerns such as certificate management, authentication, SSL termination, monitoring, protocol translation, or throttling.</p>
 <p>The following diagram shows a gateway that terminates inbound SSL connections. It requests data on behalf of the original requestor from any HTTP server upstream of the gateway.</p>
@@ -47,11 +47,11 @@
 <p>Provide some consistency for request and response logging and monitoring. Even if a service is not correctly instrumented, the gateway can be configured to ensure a minimum level of monitoring and logging.</p>
 </li>
 </ul>
-<h1 id="gateway-routing-pattern"><a aria-hidden="true" class="anchor-heading" href="#gateway-routing-pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Gateway Routing pattern</h1>
+<h1 id="gateway-routing-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#gateway-routing-pattern"></a>Gateway Routing pattern</h1>
 <p>Route requests to multiple services using a single endpoint. This pattern is useful when you wish to expose multiple services on a single endpoint and route to the appropriate service based on the request.</p>
 <p><img src="/assets/images/2021-05-10-21-30-11.png"></p>
 <p>With this pattern, the client application only needs to know about and communicate with a single endpoint. If a service is consolidated or decomposed, the client does not necessarily require updating. It can continue making requests to the gateway, and only the routing changes.</p>
-<h1 id="leader-election-pattern"><a aria-hidden="true" class="anchor-heading" href="#leader-election-pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Leader Election pattern</h1>
+<h1 id="leader-election-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#leader-election-pattern"></a>Leader Election pattern</h1>
 <p>Coordinate the actions performed by a collection of collaborating instances in a distributed application by electing one instance as the leader that assumes responsibility for managing the others. This can help to ensure that instances don't conflict with each other, cause contention for shared resources, or inadvertently interfere with the work that other instances are performing.</p>
 <p>The system must provide a robust mechanism for selecting the leader. This method has to cope with events such as network outages or process failures. In many solutions, the subordinate task instances monitor the leader through some type of heartbeat method, or by polling. If the designated leader terminates unexpectedly, or a network failure makes the leader unavailable to the subordinate task instances, it's necessary for them to elect a new leader.</p>
 <p>There are several strategies for electing a leader among a set of tasks in a distributed environment, including:</p>
@@ -60,12 +60,12 @@
 <li>Racing to acquire a shared, distributed mutex. The first task instance that acquires the mutex is the leader. However, the system must ensure that, if the leader terminates or becomes disconnected from the rest of the system, the mutex is released to allow another task instance to become the leader.</li>
 <li>Implementing one of the common leader election algorithms such as the Bully Algorithm or the Ring Algorithm. These algorithms assume that each candidate in the election has a unique ID, and that it can communicate with the other candidates reliably.</li>
 </ul>
-<h1 id="pipes-and-filters-pattern"><a aria-hidden="true" class="anchor-heading" href="#pipes-and-filters-pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Pipes and Filters pattern</h1>
+<h1 id="pipes-and-filters-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#pipes-and-filters-pattern"></a>Pipes and Filters pattern</h1>
 <p>Decompose a task that performs complex processing into a series of separate elements that can be reused. This can improve performance, scalability, and reusability by allowing task elements that perform the processing to be deployed and scaled independently.</p>
 <p>Break down the processing required for each stream into a set of separate components (or filters), each performing a single task. By standardizing the format of the data that each component receives and sends, these filters can be combined together into a pipeline. </p>
 <p><img src="/assets/images/2021-05-10-21-37-14.png"></p>
 <p><img src="/assets/images/2021-05-10-21-37-40.png"></p>
-<h1 id="sidecar-pattern"><a aria-hidden="true" class="anchor-heading" href="#sidecar-pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Sidecar pattern</h1>
+<h1 id="sidecar-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#sidecar-pattern"></a>Sidecar pattern</h1>
 <p>Deploy components of an application into a separate process or container to provide isolation and encapsulation. This pattern can also enable applications to be composed of heterogeneous components and technologies.</p>
 <p><img src="/assets/images/2021-05-10-22-12-00.png"></p>
 <p>Advantages of using a sidecar pattern include:</p>

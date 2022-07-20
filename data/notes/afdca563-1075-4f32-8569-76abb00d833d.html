@@ -1,5 +1,5 @@
-<h1 id="pattern"><a aria-hidden="true" class="anchor-heading" href="#pattern"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Pattern</h1>
-<h1 id="asynchronous-request-reply"><a aria-hidden="true" class="anchor-heading" href="#asynchronous-request-reply"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Asynchronous Request-Reply</h1>
+<h1 id="pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#pattern"></a>Pattern</h1>
+<h1 id="asynchronous-request-reply"><a aria-hidden="true" class="anchor-heading icon-link" href="#asynchronous-request-reply"></a>Asynchronous Request-Reply</h1>
 <p>Decouple backend processing from a frontend host, where backend processing needs to be asynchronous, but the frontend still needs a clear response.</p>
 <p>One solution to this problem is to use HTTP polling. Polling is useful to client-side code, as it can be hard to provide call-back endpoints or use long running connections. Even when callbacks are possible, the extra libraries and services that are required can sometimes add too much extra complexity.</p>
 <ul>
@@ -15,15 +15,15 @@
 <li>The client fetches the resource at the specified URL.</li>
 </ul>
 <p><img src="/assets/images/2021-05-10-22-21-54.png"></p>
-<h1 id="claim-check"><a aria-hidden="true" class="anchor-heading" href="#claim-check"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Claim Check</h1>
+<h1 id="claim-check"><a aria-hidden="true" class="anchor-heading icon-link" href="#claim-check"></a>Claim Check</h1>
 <p>Split a large message into a claim check and a payload. Send the claim check to the messaging platform and store the payload to an external service. This pattern allows large messages to be processed, while protecting the message bus and the client from being overwhelmed or slowed down. This pattern also helps to reduce costs, as storage is usually cheaper than resource units used by the messaging platform.</p>
 <p><img src="/assets/images/2021-05-10-22-26-15.png"></p>
 <p>Store the entire message payload into an external service, such as a database. Get the reference to the stored payload, and send just that reference to the message bus. The reference acts like a claim check used to retrieve a piece of luggage, hence the name of the pattern. Clients interested in processing that specific message can use the obtained reference to retrieve the payload, if needed.</p>
-<h1 id="choreography"><a aria-hidden="true" class="anchor-heading" href="#choreography"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Choreography</h1>
+<h1 id="choreography"><a aria-hidden="true" class="anchor-heading icon-link" href="#choreography"></a>Choreography</h1>
 <p>Have each component of the system participate in the decision-making process about the workflow of a business transaction, instead of relying on a central point of control.</p>
 <p><img src="/assets/images/2021-05-10-22-27-37.png"></p>
 <p>A client request publishes messages to a message queue. As messages arrive, they are pushed to subscribers, or services, interested in that message. Each subscribed service does their operation as indicated by the message and responds to the message queue with success or failure of the operation. In case of success, the service can push a message back to the same queue or a different message queue so that another service can continue the workflow if needed. If an operation fails, the message bus can retry that operation.</p>
-<h1 id="competing-consumers"><a aria-hidden="true" class="anchor-heading" href="#competing-consumers"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Competing Consumers</h1>
+<h1 id="competing-consumers"><a aria-hidden="true" class="anchor-heading icon-link" href="#competing-consumers"></a>Competing Consumers</h1>
 <p>Enable multiple concurrent consumers to process messages received on the same messaging channel. This enables a system to process multiple messages concurrently to optimize throughput, to improve scalability and availability, and to balance the workload.</p>
 <p><img src="/assets/images/2021-05-10-22-30-54.png"></p>
 <p>The application posts requests in the form of messages to the queue, and the consumer service instances receive messages from the queue and process them. This approach enables the same pool of consumer service instances to handle messages from any instance of the application.</p>
@@ -33,17 +33,17 @@
 <p>It doesn't require complex coordination between the consumers, or between the producer and the consumer instances. The message queue ensures that each message is delivered at least once.</p>
 <p>It's scalable. The system can dynamically increase or decrease the number of instances of the consumer service as the volume of messages fluctuates.</p>
 <p>It can improve resiliency if the message queue provides transactional read operations. If a consumer service instance reads and processes the message as part of a transactional operation, and the consumer service instance fails, this pattern can ensure that the message will be returned to the queue to be picked up and handled by another instance of the consumer service.</p>
-<h1 id="priority-queue"><a aria-hidden="true" class="anchor-heading" href="#priority-queue"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Priority Queue</h1>
+<h1 id="priority-queue"><a aria-hidden="true" class="anchor-heading icon-link" href="#priority-queue"></a>Priority Queue</h1>
 <p>Prioritize requests sent to services so that requests with a higher priority are received and processed more quickly than those with a lower priority. This pattern is useful in applications that offer different service level guarantees to individual clients.</p>
 <p><img src="/assets/images/2021-05-10-22-33-12.png"></p>
 <p>A queue is usually a first-in, first-out (FIFO) structure, and consumers typically receive messages in the same order that they were posted to the queue. However, some message queues support priority messaging. The application posting a message can assign a priority and the messages in the queue are automatically reordered so that those with a higher priority will be received before those with a lower priority</p>
-<h1 id="publisher-subscriber"><a aria-hidden="true" class="anchor-heading" href="#publisher-subscriber"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Publisher-Subscriber</h1>
+<h1 id="publisher-subscriber"><a aria-hidden="true" class="anchor-heading icon-link" href="#publisher-subscriber"></a>Publisher-Subscriber</h1>
 <p>Enable an application to announce events to multiple interested consumers asynchronously, without coupling the senders to the receivers.</p>
 <p><img src="/assets/images/2021-05-10-22-34-05.png"></p>
-<h1 id="queue-based-load-leveling"><a aria-hidden="true" class="anchor-heading" href="#queue-based-load-leveling"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Queue-Based Load Leveling</h1>
+<h1 id="queue-based-load-leveling"><a aria-hidden="true" class="anchor-heading icon-link" href="#queue-based-load-leveling"></a>Queue-Based Load Leveling</h1>
 <p>Use a queue that acts as a buffer between a task and a service it invokes in order to smooth intermittent heavy loads that can cause the service to fail or the task to time out. This can help to minimize the impact of peaks in demand on availability and responsiveness for both the task and the service.</p>
 <p><img src="/assets/images/2021-05-10-22-35-25.png"></p>
-<h1 id="scheduler-agent-supervisor"><a aria-hidden="true" class="anchor-heading" href="#scheduler-agent-supervisor"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Scheduler Agent Supervisor</h1>
+<h1 id="scheduler-agent-supervisor"><a aria-hidden="true" class="anchor-heading icon-link" href="#scheduler-agent-supervisor"></a>Scheduler Agent Supervisor</h1>
 <p>Coordinate a set of distributed actions as a single operation. If any of the actions fail, try to handle the failures transparently, or else undo the work that was performed, so the entire operation succeeds or fails as a whole. This can add resiliency to a distributed system, by enabling it to recover and retry actions that fail due to transient exceptions, long-lasting faults, and process failures.</p>
 <p><img src="/assets/images/2021-05-10-22-36-25.png"></p>
 <ul>
@@ -52,7 +52,7 @@
 <li>The Supervisor monitors the status of the steps in the task being performed by the Scheduler. It runs periodically (the frequency will be system-specific), and examines the status of steps maintained by the Scheduler. If it detects any that have timed out or failed, it arranges for the appropriate Agent to recover the step or execute the appropriate remedial action</li>
 </ul>
 <p><img src="/assets/images/2021-05-10-22-37-41.png"></p>
-<h1 id="sequential-convoy"><a aria-hidden="true" class="anchor-heading" href="#sequential-convoy"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Sequential Convoy</h1>
+<h1 id="sequential-convoy"><a aria-hidden="true" class="anchor-heading icon-link" href="#sequential-convoy"></a>Sequential Convoy</h1>
 <p>Process a set of related messages in a defined order, without blocking processing of other groups of messages.</p>
 <p>Push related messages into categories within the queuing system, and have the queue listeners lock and pull only from one category, one message at a time.</p>
 <p><img src="/assets/images/2021-05-10-22-38-54.png"></p>

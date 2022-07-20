@@ -1,11 +1,11 @@
-<h1 id="exception_handle"><a aria-hidden="true" class="anchor-heading" href="#exception_handle"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Exception_handle</h1>
-<h1 id="exception"><a aria-hidden="true" class="anchor-heading" href="#exception"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>exception</h1>
+<h1 id="exception_handle"><a aria-hidden="true" class="anchor-heading icon-link" href="#exception_handle"></a>Exception_handle</h1>
+<h1 id="exception"><a aria-hidden="true" class="anchor-heading icon-link" href="#exception"></a>exception</h1>
 <p>在控制流中的突变，用来响应处理器状态中的变化。</p>
 <p>当有事件(event),通过一张异常表的跳转表，进行了一个间接过程调用（异常），到一个专门设计用来处理这类事件的子程序（exception handler)</p>
 <p><img src="/assets/images/2021-04-25-22-27-49.png"></p>
 <p>每种异常有一个异常号，到跳转表。</p>
 <p>与过程调用不同，压入栈的可能是当前指令或下一条指令。如果控制从用户->内核，项目压到内核栈而不是用户栈。</p>
-<h2 id="几种exception"><a aria-hidden="true" class="anchor-heading" href="#几种exception"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>几种exception</h2>
+<h2 id="几种exception"><a aria-hidden="true" class="anchor-heading icon-link" href="#几种exception"></a>几种exception</h2>
 <ul>
 <li>interrupt: 由I/O 设备信号，异步。I/O 将某个引脚电位拉高，cpu执行完发现电位上升，执行中断放异常号到总线</li>
 <li>trap：将控制返回下一条，同步，提供用户与内核的系统调用。</li>

@@ -1,5 +1,5 @@
-<h1 id="tcp"><a aria-hidden="true" class="anchor-heading" href="#tcp"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Tcp</h1>
-<h1 id="tcp-1"><a aria-hidden="true" class="anchor-heading" href="#tcp-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>TCP</h1>
+<h1 id="tcp"><a aria-hidden="true" class="anchor-heading icon-link" href="#tcp"></a>Tcp</h1>
+<h1 id="tcp-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#tcp-1"></a>TCP</h1>
 <ul>
 <li>point-to-point / reliable / in-order byte stream / pipelined: sliding windows</li>
 <li>full duplex data: bi-directional data flow</li>
@@ -8,7 +8,7 @@
 <li>Flow Control</li>
 <li>Congestion Control</li>
 </ul>
-<h2 id="connection-and-tear-down"><a aria-hidden="true" class="anchor-heading" href="#connection-and-tear-down"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>connection and tear down</h2>
+<h2 id="connection-and-tear-down"><a aria-hidden="true" class="anchor-heading icon-link" href="#connection-and-tear-down"></a>connection and tear down</h2>
 <ul>
 <li>establish: setup state before exchanging data segements
 <ul>
@@ -25,14 +25,14 @@
 <li>step2: server responds with ACK and closed, send FIN</li>
 <li>step3: client receives FIN, replies with ACK , wait </li>
 <li>why? possible ACK lost</li>
-<li>Client may open the same connection again (same pair of port <a title="Private" style="color: brown" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank">#s (Private)</a>) </li>
+<li>Client may open the same connection again (same pair of port <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">#s (Private)</a>) </li>
 <li>then Receives FIN from earlier incarnation of connection</li>
 <li>so Immediately initiate closing of the later incarnation</li>
 <li>Step 4: server receives ACK, closes connection</li>
 </ul>
 </li>
 </ul>
-<h2 id="rdt"><a aria-hidden="true" class="anchor-heading" href="#rdt"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>RDT</h2>
+<h2 id="rdt"><a aria-hidden="true" class="anchor-heading icon-link" href="#rdt"></a>RDT</h2>
 <ul>
 <li>TCP creates RDT service on top of IP’s unreliable service
 <ul>
@@ -95,10 +95,10 @@
 </div>
 <div id="portal-parent-anchor" class="portal-parent" markdown="1">
 <div class="portal-parent-fader-top"></div>
-<div class="portal-parent-fader-bottom"></div><h1 id="rdt-1"><a aria-hidden="true" class="anchor-heading" href="#rdt-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>RDT</h1>
-<h2 id="possible-failure"><a aria-hidden="true" class="anchor-heading" href="#possible-failure"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>possible failure</h2>
+<div class="portal-parent-fader-bottom"></div><h1 id="rdt-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#rdt-1"></a>RDT</h1>
+<h2 id="possible-failure"><a aria-hidden="true" class="anchor-heading icon-link" href="#possible-failure"></a>possible failure</h2>
 <p>bit-errors, lossy, duplicate delivery , out-of-order delivery</p>
-<h2 id="methods"><a aria-hidden="true" class="anchor-heading" href="#methods"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>methods</h2>
+<h2 id="methods"><a aria-hidden="true" class="anchor-heading icon-link" href="#methods"></a>methods</h2>
 <ul>
 <li>checksums: bit error </li>
 <li>receiver feedback: bit error, ACK/NACK， Cumulative acknowledgments(I have received all packets with sequence numbers up to but not including sn.) allow acknowledgment of numerous packets at a time. They can be useful in pipelined protocols. 可能lost</li>
@@ -107,8 +107,8 @@
 <li>timer expiration: Segment or receiver feedback is lost (sender: Resends a packet after a timer fires. Sends a new packet after an acknowledgment (positive) arrives.)</li>
 <li>window:Control sending of multiple segments, allow for reuse of sequence numbers, also allow for pipeling segments</li>
 </ul>
-<h2 id="protocols"><a aria-hidden="true" class="anchor-heading" href="#protocols"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>protocols</h2>
-<h3 id="stop-n-wait"><a aria-hidden="true" class="anchor-heading" href="#stop-n-wait"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Stop-n-Wait</h3>
+<h2 id="protocols"><a aria-hidden="true" class="anchor-heading icon-link" href="#protocols"></a>protocols</h2>
+<h3 id="stop-n-wait"><a aria-hidden="true" class="anchor-heading icon-link" href="#stop-n-wait"></a>Stop-n-Wait</h3>
 <ul>
 <li>Simplest Protocol that will handle bit errors and segment loss
 <ul>
@@ -122,7 +122,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="go-back-n"><a aria-hidden="true" class="anchor-heading" href="#go-back-n"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Go Back N</h2>
+<h2 id="go-back-n"><a aria-hidden="true" class="anchor-heading icon-link" href="#go-back-n"></a>Go Back N</h2>
 <ul>
 <li>sliding window: A mechanism to control multiple, in-flight segments without overwhelming receiver, Sender is allowed to transmit N segments without waiting for an ACK</li>
 <li>“window” of up to N, consecutive unACKed segments allowed</li>
@@ -145,20 +145,20 @@
 </li>
 <li>A single segment error can cause many segments to be retransmitted</li>
 </ul>
-<h2 id="selective-repeat"><a aria-hidden="true" class="anchor-heading" href="#selective-repeat"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Selective Repeat</h2>
+<h2 id="selective-repeat"><a aria-hidden="true" class="anchor-heading icon-link" href="#selective-repeat"></a>Selective Repeat</h2>
 <ul>
 <li>Receiver individually ACKs all correctly received segments</li>
 <li>Buffers segs for eventual in-order delivery</li>
 <li>Sender only resends segments for which ACK not received</li>
 <li>Sets timer for each segment</li>
-<li>Sender window of N consecutive seq<a title="Private" style="color: brown" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank">#s (Private)</a></li>
+<li>Sender window of N consecutive seq#s</li>
 <li>Limits seq # s of sent, but unACKed segs</li>
 <li><img src="/assets/images/2021-04-03-23-12-02.png"></li>
 <li>issues: both side have varying view, receiver window移动了，但是发送端没收到ack， 会重传。</li>
 <li>sequence number的space至少是2^k 个，k是window的大小</li>
 </ul>
 </div></div><p></p><p></p>
-<h2 id="flow-control"><a aria-hidden="true" class="anchor-heading" href="#flow-control"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Flow control</h2>
+<h2 id="flow-control"><a aria-hidden="true" class="anchor-heading icon-link" href="#flow-control"></a>Flow control</h2>
 <ul>
 <li>
 <p>mission: Sender won’t overflow the <strong>receiver’s buffer</strong> by transmitting too much, too fast</p>

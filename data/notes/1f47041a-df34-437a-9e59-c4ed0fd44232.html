@@ -1,23 +1,23 @@
-<h1 id="filesystem"><a aria-hidden="true" class="anchor-heading" href="#filesystem"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Filesystem</h1>
-<h1 id="file-system"><a aria-hidden="true" class="anchor-heading" href="#file-system"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>file system</h1>
+<h1 id="filesystem"><a aria-hidden="true" class="anchor-heading icon-link" href="#filesystem"></a>Filesystem</h1>
+<h1 id="file-system"><a aria-hidden="true" class="anchor-heading icon-link" href="#file-system"></a>file system</h1>
 <ul>
 <li><strong>what</strong>: a file is a unit of data organized by user. a service responsible for managing files</li>
 <li><strong>why</strong>: key is robust and high-throughput</li>
 <li><strong>how</strong>: name, access, physical allocation, security and protection, resource administration.</li>
 </ul>
-<h2 id="nfs-and-afs"><a aria-hidden="true" class="anchor-heading" href="#nfs-and-afs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>NFS and AFS</h2>
+<h2 id="nfs-and-afs"><a aria-hidden="true" class="anchor-heading icon-link" href="#nfs-and-afs"></a>NFS and AFS</h2>
 <ol>
 <li>NFS has no client caching, cliented cached anyway, central system</li>
 <li>AFS is stateful server and has cache protocol. called to have data client there is an update, their cache is invalid. Whole file semantic</li>
 <li>CODA, add replication and added weakly connected mode.</li>
 </ol>
-<h1 id="raids-and-hdfs"><a aria-hidden="true" class="anchor-heading" href="#raids-and-hdfs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>RAIDS and HDFS</h1>
-<h2 id="normal-disk"><a aria-hidden="true" class="anchor-heading" href="#normal-disk"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Normal disk</h2>
+<h1 id="raids-and-hdfs"><a aria-hidden="true" class="anchor-heading icon-link" href="#raids-and-hdfs"></a>RAIDS and HDFS</h1>
+<h2 id="normal-disk"><a aria-hidden="true" class="anchor-heading icon-link" href="#normal-disk"></a>Normal disk</h2>
 <ul>
 <li>An error-correcting code (ECC) or forward error correction (FEC) code is a process of adding <strong>redundant</strong> data, or parity data, to a message, such that it can be recovered by a receiver even when a number of errors (up to the capability of the code being used) were introduced, either during the process of transmission, or on storage.</li>
 <li>RAM could cache the data. It will only read data from disks. If there was error, disk will return nothing.</li>
 </ul>
-<h2 id="raids"><a aria-hidden="true" class="anchor-heading" href="#raids"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>RAIDS</h2>
+<h2 id="raids"><a aria-hidden="true" class="anchor-heading icon-link" href="#raids"></a>RAIDS</h2>
 <ul>
 <li><strong>what</strong>:Redundant Array of Independent Disks,combines multiple physical disk drive components into one or more logical units for the purposes of data redundancy, performance improvement, or both.</li>
 <li><strong>why</strong>: more rebust, larger volume,higher throughput</li>
@@ -34,7 +34,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="lustre"><a aria-hidden="true" class="anchor-heading" href="#lustre"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>LUSTRE</h2>
+<h2 id="lustre"><a aria-hidden="true" class="anchor-heading icon-link" href="#lustre"></a>LUSTRE</h2>
 <ul>
 <li><strong>what</strong>:a type of parallel distributed file system, generally used for large-scale cluster computing</li>
 <li><strong>why</strong>: used for supercomputing, network RAID</li>
@@ -48,7 +48,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="mogilefs"><a aria-hidden="true" class="anchor-heading" href="#mogilefs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>MOGILEFS</h2>
+<h2 id="mogilefs"><a aria-hidden="true" class="anchor-heading icon-link" href="#mogilefs"></a>MOGILEFS</h2>
 <ul>
 <li><strong>what</strong>:distributed filesystem</li>
 <li><strong>why</strong>:no editing, whole file,fast deliver to clients</li>
@@ -61,8 +61,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="hdfs"><a aria-hidden="true" class="anchor-heading" href="#hdfs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>HDFS</h2>
-<h3 id="assumption"><a aria-hidden="true" class="anchor-heading" href="#assumption"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>assumption</h3>
+<h2 id="hdfs"><a aria-hidden="true" class="anchor-heading icon-link" href="#hdfs"></a>HDFS</h2>
+<h3 id="assumption"><a aria-hidden="true" class="anchor-heading icon-link" href="#assumption"></a>assumption</h3>
 <ul>
 <li>failure is a norm, especially on datanode. It is used to handle streaming data. </li>
 <li>emphasis is on throughput not on latency</li>
@@ -72,7 +72,7 @@
 <li>The good news is that it won't be edited in place. We'll just be collecting it, adding to it.</li>
 <li><img src="/assets/images/2021-04-12-19-59-50.png"></li>
 </ul>
-<h2 id="namenode"><a aria-hidden="true" class="anchor-heading" href="#namenode"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>namenode</h2>
+<h2 id="namenode"><a aria-hidden="true" class="anchor-heading icon-link" href="#namenode"></a>namenode</h2>
 <ul>
 <li><strong>what</strong>: master-slave architecture</li>
 <li><strong>why</strong>: manage namespace as coordinator, only 1</li>
@@ -80,18 +80,18 @@
 <li>data never go to namenode</li>
 <li>hierarchical name space: maybe not needed, low overhead</li>
 </ul>
-<h2 id="datanode"><a aria-hidden="true" class="anchor-heading" href="#datanode"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>datanode</h2>
+<h2 id="datanode"><a aria-hidden="true" class="anchor-heading icon-link" href="#datanode"></a>datanode</h2>
 <ul>
 <li>manage storage attached to node</li>
 <li>create and delete block, replicate blocks</li>
 </ul>
-<h2 id="access-mode"><a aria-hidden="true" class="anchor-heading" href="#access-mode"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>access mode</h2>
+<h2 id="access-mode"><a aria-hidden="true" class="anchor-heading icon-link" href="#access-mode"></a>access mode</h2>
 <ul>
 <li>read anywhere</li>
 <li>write only at end(append)</li>
 <li>no edit/random write</li>
 </ul>
-<h2 id="replication"><a aria-hidden="true" class="anchor-heading" href="#replication"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>replication</h2>
+<h2 id="replication"><a aria-hidden="true" class="anchor-heading icon-link" href="#replication"></a>replication</h2>
 <ul>
 <li>blocks are all same size</li>
 <li>fault tolerance</li>
