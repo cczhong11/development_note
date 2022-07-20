@@ -14,8 +14,8 @@
       "title": "This page has not yet sprouted",
       "schemaStub": false,
       "type": "note",
-      "updated": 1650943363244,
-      "created": 1650943363244,
+      "updated": 1649304458899,
+      "created": 1649304458899,
       "desc": "",
       "links": [],
       "anchors": {},
@@ -202,9 +202,9 @@
         "efxujPMmo91nKhmMDwmxy",
         "pM7z7xLUf6hSNwawvfTSO",
         "c2644f8b-dfac-433a-9cff-af811875b7e0",
-        "tmqxy7x192hwv2hjtnyp5bd",
-        "4ihta49lqsquux74tm2y4lv",
-        "1wn19kvgpm2dtwzqvr2m8xs"
+        "nssfyjyrp783cdgdid7819h",
+        "dhjmze0nl3yhsz66txo75ri",
+        "mnvwlw2x1fvzeaaamz053oc"
       ],
       "data": {},
       "custom": {
@@ -212,7 +212,7 @@
       },
       "contentHash": "5c4315b6180dbb7a27044e87a1901e4e"
     },
-    "1wn19kvgpm2dtwzqvr2m8xs": {
+    "mnvwlw2x1fvzeaaamz053oc": {
       "fname": "life.writing",
       "stub": true,
       "vault": {
@@ -225,9 +225,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1650419863320,
-      "created": 1650419863320,
-      "id": "1wn19kvgpm2dtwzqvr2m8xs",
+      "updated": 1649221394352,
+      "created": 1649221394352,
+      "id": "mnvwlw2x1fvzeaaamz053oc",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -320,12 +320,12 @@
         "63emh1k1uteiqzlglsxwl3u",
         "yx4kmycbe4lzn8zkulcjo3e",
         "qfsp5k83n3u47hth8prrrov",
-        "plbdleljcbiwalflebyq611"
+        "vwbigcwuqij5b3hw5mdq4iu"
       ],
-      "parent": "1wn19kvgpm2dtwzqvr2m8xs",
+      "parent": "mnvwlw2x1fvzeaaamz053oc",
       "data": {}
     },
-    "plbdleljcbiwalflebyq611": {
+    "vwbigcwuqij5b3hw5mdq4iu": {
       "fname": "life.writing.story.design",
       "stub": true,
       "vault": {
@@ -338,9 +338,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1650419863370,
-      "created": 1650419863370,
-      "id": "plbdleljcbiwalflebyq611",
+      "updated": 1649221394369,
+      "created": 1649221394369,
+      "id": "vwbigcwuqij5b3hw5mdq4iu",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -414,7 +414,7 @@
         }
       },
       "children": [],
-      "parent": "plbdleljcbiwalflebyq611",
+      "parent": "vwbigcwuqij5b3hw5mdq4iu",
       "data": {}
     },
     "wmhk77yy3v4c8wogb201iq3": {
@@ -481,7 +481,7 @@
       "children": [
         "zq686hwcumiquip2433r3p5"
       ],
-      "parent": "plbdleljcbiwalflebyq611",
+      "parent": "vwbigcwuqij5b3hw5mdq4iu",
       "data": {}
     },
     "zq686hwcumiquip2433r3p5": {
@@ -538,7 +538,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "plbdleljcbiwalflebyq611",
+      "parent": "vwbigcwuqij5b3hw5mdq4iu",
       "data": {}
     },
     "achxo6xzn8kyishgu1kce4z": {
@@ -611,7 +611,7 @@
         }
       },
       "children": [],
-      "parent": "plbdleljcbiwalflebyq611",
+      "parent": "vwbigcwuqij5b3hw5mdq4iu",
       "data": {}
     },
     "pq368bf5ierte3p2bcefiuc": {
@@ -635,7 +635,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "plbdleljcbiwalflebyq611",
+      "parent": "vwbigcwuqij5b3hw5mdq4iu",
       "data": {}
     },
     "ufvynh5wr6yhoxmorns1rso": {
@@ -659,7 +659,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "plbdleljcbiwalflebyq611",
+      "parent": "vwbigcwuqij5b3hw5mdq4iu",
       "data": {}
     },
     "c78qkw80cv9o79l6c607b0w": {
@@ -724,7 +724,7 @@
         }
       },
       "children": [],
-      "parent": "plbdleljcbiwalflebyq611",
+      "parent": "vwbigcwuqij5b3hw5mdq4iu",
       "data": {}
     },
     "g5npb5f4sl5zfjpb3j64x07": {
@@ -781,7 +781,7 @@
         }
       },
       "children": [],
-      "parent": "plbdleljcbiwalflebyq611",
+      "parent": "vwbigcwuqij5b3hw5mdq4iu",
       "data": {}
     },
     "c4nnfu48qwfp3kxvk1sq6z4": {
@@ -870,7 +870,7 @@
         }
       },
       "children": [],
-      "parent": "plbdleljcbiwalflebyq611",
+      "parent": "vwbigcwuqij5b3hw5mdq4iu",
       "data": {}
     },
     "u37slyp3dulk4qv5mgtkhuc": {
@@ -919,7 +919,7 @@
         }
       },
       "children": [],
-      "parent": "plbdleljcbiwalflebyq611",
+      "parent": "vwbigcwuqij5b3hw5mdq4iu",
       "data": {}
     },
     "qfsp5k83n3u47hth8prrrov": {
@@ -1086,7 +1086,7 @@
       "parent": "fbi82trqnupon50qxb8kpc0",
       "data": {}
     },
-    "4ihta49lqsquux74tm2y4lv": {
+    "dhjmze0nl3yhsz66txo75ri": {
       "fname": "life.video",
       "stub": true,
       "vault": {
@@ -1099,9 +1099,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1650419863317,
-      "created": 1650419863317,
-      "id": "4ihta49lqsquux74tm2y4lv",
+      "updated": 1649221394351,
+      "created": 1649221394351,
+      "id": "dhjmze0nl3yhsz66txo75ri",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -1169,7 +1169,7 @@
         }
       },
       "children": [],
-      "parent": "4ihta49lqsquux74tm2y4lv",
+      "parent": "dhjmze0nl3yhsz66txo75ri",
       "data": {}
     },
     "6028sqbc59bqa4l1fykw5aq": {
@@ -1242,7 +1242,7 @@
         }
       },
       "children": [],
-      "parent": "4ihta49lqsquux74tm2y4lv",
+      "parent": "dhjmze0nl3yhsz66txo75ri",
       "data": {}
     },
     "bga0xfve56yaj1x4zvlmnx1": {
@@ -1291,7 +1291,7 @@
         }
       },
       "children": [],
-      "parent": "4ihta49lqsquux74tm2y4lv",
+      "parent": "dhjmze0nl3yhsz66txo75ri",
       "data": {}
     },
     "gzwwj8ci3gdodc6qu1af3mk": {
@@ -1356,10 +1356,10 @@
         }
       },
       "children": [],
-      "parent": "4ihta49lqsquux74tm2y4lv",
+      "parent": "dhjmze0nl3yhsz66txo75ri",
       "data": {}
     },
-    "tmqxy7x192hwv2hjtnyp5bd": {
+    "nssfyjyrp783cdgdid7819h": {
       "fname": "life.travel",
       "stub": true,
       "vault": {
@@ -1372,9 +1372,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1650419863317,
-      "created": 1650419863317,
-      "id": "tmqxy7x192hwv2hjtnyp5bd",
+      "updated": 1649221394350,
+      "created": 1649221394350,
+      "id": "nssfyjyrp783cdgdid7819h",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -1634,7 +1634,7 @@
       "fname": "life.travel.coupon",
       "updated": 1639078764579,
       "created": 1639078561400,
-      "parent": "tmqxy7x192hwv2hjtnyp5bd",
+      "parent": "nssfyjyrp783cdgdid7819h",
       "children": [],
       "data": {},
       "contentHash": "7d983cc50cec637bc4fc44f1c401e25b",
@@ -6404,8 +6404,7 @@
         "baa39444-0da9-4c55-8df7-2a6f8f787fa4",
         "62daf50d-a39e-463f-aabd-be53790281fd",
         "3524d0a7-be73-45d6-847e-c970f5c1c760",
-        "eac0f243-05b3-4b95-bec3-848e33edbc40",
-        "ocei7tftc6l4ea0165ee8rx"
+        "eac0f243-05b3-4b95-bec3-848e33edbc40"
       ],
       "data": {},
       "custom": {
@@ -6413,82 +6412,6 @@
         "permalink": "/"
       },
       "contentHash": "38357962f5a50c6fd7d318dfa66bea90"
-    },
-    "ocei7tftc6l4ea0165ee8rx": {
-      "fname": "development.lang",
-      "stub": true,
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "schemaStub": false,
-      "type": "note",
-      "updated": 1650419863231,
-      "created": 1650419863231,
-      "id": "ocei7tftc6l4ea0165ee8rx",
-      "desc": "",
-      "links": [],
-      "anchors": {},
-      "children": [
-        "y34388pjs6xngmwpr0iwqz7"
-      ],
-      "parent": "0f1b48c7-3a25-4016-83a5-15864d7803ad",
-      "data": {},
-      "title": "Lang"
-    },
-    "y34388pjs6xngmwpr0iwqz7": {
-      "id": "y34388pjs6xngmwpr0iwqz7",
-      "title": "Python",
-      "desc": "",
-      "updated": 1650062856946,
-      "created": 1650062849494,
-      "custom": {},
-      "fname": "development.lang.python",
-      "type": "note",
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "contentHash": "11026e75693f70e068da29598d65535c",
-      "links": [],
-      "anchors": {},
-      "children": [
-        "albrvvfr3tsfsy8xh1pmpw4"
-      ],
-      "parent": "ocei7tftc6l4ea0165ee8rx",
-      "data": {}
-    },
-    "albrvvfr3tsfsy8xh1pmpw4": {
-      "id": "albrvvfr3tsfsy8xh1pmpw4",
-      "title": "Test",
-      "desc": "",
-      "updated": 1650062861219,
-      "created": 1650062859763,
-      "custom": {},
-      "fname": "development.lang.python.test",
-      "type": "note",
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "contentHash": "cee1266ebd5842d683d142cb2105b6ba",
-      "links": [],
-      "anchors": {},
-      "children": [],
-      "parent": "y34388pjs6xngmwpr0iwqz7",
-      "data": {}
     },
     "eac0f243-05b3-4b95-bec3-848e33edbc40": {
       "id": "eac0f243-05b3-4b95-bec3-848e33edbc40",
@@ -7121,7 +7044,6 @@
         "29d090f8-75e0-4755-911f-d09996ce472c",
         "a072f1a5-d9ec-4e89-a252-24c945125dc0",
         "09956453-4cbd-4f15-a4bd-b1f6c84449a4",
-        "nfompwrizwoq37o9zqh9bqm",
         "5951e17d-d4f0-4d40-bdb5-84637fd9ab53",
         "224538e6-32bf-473e-8dee-23a0a079f48a",
         "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
@@ -7384,12 +7306,6 @@
     "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d": {
       "id": "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
       "title": "Performance",
-      "desc": "",
-      "updated": 1650426662077,
-      "created": 1620084110638,
-      "custom": {},
-      "fname": "development.system.performance",
-      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -7398,286 +7314,91 @@
         },
         "name": "my_note"
       },
-      "contentHash": "38447129fe2b058cec660db0cfb0e025",
+      "type": "note",
+      "desc": "",
       "links": [],
       "anchors": {
+        "1-uptime": {
+          "type": "header",
+          "value": "1-uptime",
+          "line": 11,
+          "column": 0
+        },
         "2-dmesg--tail": {
           "type": "header",
-          "text": "2. dmesg | tail",
           "value": "2-dmesg--tail",
-          "line": 12,
-          "column": 0,
-          "depth": 2
+          "line": 22,
+          "column": 0
+        },
+        "3-vmstat-1": {
+          "type": "header",
+          "value": "3-vmstat-1",
+          "line": 40,
+          "column": 0
+        },
+        "4-mpstat--p-all-1": {
+          "type": "header",
+          "value": "4-mpstat--p-all-1",
+          "line": 65,
+          "column": 0
         },
         "5-pidstat-1": {
           "type": "header",
-          "text": "5. pidstat 1",
           "value": "5-pidstat-1",
-          "line": 31,
-          "column": 0,
-          "depth": 2
+          "line": 82,
+          "column": 0
+        },
+        "6-iostat--xz-1": {
+          "type": "header",
+          "value": "6-iostat--xz-1",
+          "line": 107,
+          "column": 0
+        },
+        "7-free--m": {
+          "type": "header",
+          "value": "7-free--m",
+          "line": 133,
+          "column": 0
         },
         "8-sar--n-dev-1": {
           "type": "header",
-          "text": "8. sar -n DEV 1",
           "value": "8-sar--n-dev-1",
-          "line": 58,
-          "column": 0,
-          "depth": 2
+          "line": 150,
+          "column": 0
         },
         "9-sar--n-tcpetcp-1": {
           "type": "header",
-          "text": "9. sar -n TCP,ETCP 1",
           "value": "9-sar--n-tcpetcp-1",
-          "line": 95,
-          "column": 0,
-          "depth": 2
+          "line": 172,
+          "column": 0
         },
         "10-top": {
           "type": "header",
-          "text": "10. top",
           "value": "10-top",
-          "line": 122,
-          "column": 0,
-          "depth": 2
-        },
-        "iotop": {
-          "type": "header",
-          "text": "iotop",
-          "value": "iotop",
-          "line": 157,
-          "column": 0,
-          "depth": 2
-        }
-      },
-      "children": [
-        "43tt3cu4upgvik6no0gnoe8",
-        "n4d5go9nvueh0hq6ixszeh4",
-        "8kb8qi4l7r9aluk5e2ns0yk",
-        "qxx7j7hdjn2r4oki5wkgzj2"
-      ],
-      "parent": "62daf50d-a39e-463f-aabd-be53790281fd",
-      "data": {}
-    },
-    "qxx7j7hdjn2r4oki5wkgzj2": {
-      "id": "qxx7j7hdjn2r4oki5wkgzj2",
-      "title": "Network",
-      "desc": "",
-      "updated": 1650426129591,
-      "created": 1650424057180,
-      "custom": {},
-      "fname": "development.system.performance.network",
-      "type": "note",
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "contentHash": "d4fd18be76b03032eed5bef720b8750f",
-      "links": [],
-      "anchors": {
-        "netstatss": {
-          "type": "header",
-          "text": "netstat、ss",
-          "value": "netstatss",
-          "line": 20,
-          "column": 0,
-          "depth": 2
-        }
-      },
-      "children": [],
-      "parent": "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
-      "data": {}
-    },
-    "8kb8qi4l7r9aluk5e2ns0yk": {
-      "id": "8kb8qi4l7r9aluk5e2ns0yk",
-      "title": "Memory",
-      "desc": "",
-      "updated": 1650427189078,
-      "created": 1650424023098,
-      "custom": {},
-      "fname": "development.system.performance.memory",
-      "type": "note",
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "contentHash": "926a8c4039ed53c5ff81dbea54b75c59",
-      "links": [],
-      "anchors": {
-        "free--m": {
-          "type": "header",
-          "text": "free -m",
-          "value": "free--m",
-          "line": 19,
-          "column": 0,
-          "depth": 2
-        },
-        "vmstat": {
-          "type": "header",
-          "text": "vmstat",
-          "value": "vmstat",
-          "line": 38,
-          "column": 0,
-          "depth": 2
-        },
-        "pmap": {
-          "type": "header",
-          "text": "pmap",
-          "value": "pmap",
-          "line": 66,
-          "column": 0,
-          "depth": 2
-        },
-        "how": {
-          "type": "header",
-          "text": "how",
-          "value": "how",
-          "line": 76,
-          "column": 0,
-          "depth": 1
-        },
-        "页面调度paging和交换swapping指标": {
-          "type": "header",
-          "text": "页面调度（Paging）和交换（swapping）指标",
-          "value": "页面调度paging和交换swapping指标",
-          "line": 78,
-          "column": 0,
-          "depth": 2
-        },
-        "性能调整选项": {
-          "type": "header",
-          "text": "性能调整选项",
-          "value": "性能调整选项",
-          "line": 89,
-          "column": 0,
-          "depth": 2
-        },
-        "处理内存不足out-of-memory和oom-killer": {
-          "type": "header",
-          "text": "处理内存不足（Out-of-Memory）和OOM killer",
-          "value": "处理内存不足out-of-memory和oom-killer",
-          "line": 106,
-          "column": 0,
-          "depth": 2
-        }
-      },
-      "children": [],
-      "parent": "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
-      "data": {}
-    },
-    "n4d5go9nvueh0hq6ixszeh4": {
-      "id": "n4d5go9nvueh0hq6ixszeh4",
-      "title": "Io",
-      "desc": "",
-      "updated": 1650425979767,
-      "created": 1650424039040,
-      "custom": {},
-      "fname": "development.system.performance.io",
-      "type": "note",
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "contentHash": "0f8a4aa23f0afce1171c312e0eff0773",
-      "links": [],
-      "anchors": {
-        "6-iostat--xz-1": {
-          "type": "header",
-          "text": "6. iostat -xz 1",
-          "value": "6-iostat--xz-1",
-          "line": 16,
-          "column": 0,
-          "depth": 2
-        }
-      },
-      "children": [],
-      "parent": "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
-      "data": {}
-    },
-    "43tt3cu4upgvik6no0gnoe8": {
-      "id": "43tt3cu4upgvik6no0gnoe8",
-      "title": "Cpu",
-      "desc": "",
-      "updated": 1650426950391,
-      "created": 1650423968533,
-      "custom": {},
-      "fname": "development.system.performance.cpu",
-      "type": "note",
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "contentHash": "75cb0e2bfea282c95f405dd15bb745ed",
-      "links": [],
-      "anchors": {
-        "uptime": {
-          "type": "header",
-          "text": "uptime",
-          "value": "uptime",
-          "line": 36,
-          "column": 0,
-          "depth": 2
-        },
-        "ps": {
-          "type": "header",
-          "text": "ps",
-          "value": "ps",
-          "line": 53,
-          "column": 0,
-          "depth": 2
-        },
-        "mpstat": {
-          "type": "header",
-          "text": "mpstat",
-          "value": "mpstat",
-          "line": 81,
-          "column": 0,
-          "depth": 2
+          "line": 199,
+          "column": 0
         },
         "strace": {
           "type": "header",
-          "text": "strace",
           "value": "strace",
-          "line": 105,
-          "column": 0,
-          "depth": 2
+          "line": 226,
+          "column": 0
         },
-        "ltrace": {
+        "iotop": {
           "type": "header",
-          "text": "ltrace",
-          "value": "ltrace",
-          "line": 178,
-          "column": 0,
-          "depth": 2
-        },
-        "how": {
-          "type": "header",
-          "text": "how",
-          "value": "how",
-          "line": 182,
-          "column": 0,
-          "depth": 1
+          "value": "iotop",
+          "line": 230,
+          "column": 0
         }
       },
+      "fname": "development.system.performance",
+      "updated": 1620948525539,
+      "created": 1620084110638,
+      "parent": "62daf50d-a39e-463f-aabd-be53790281fd",
       "children": [],
-      "parent": "7ce478ac-4713-40e9-b8dd-1a45bc1c7f9d",
-      "data": {}
+      "data": {},
+      "custom": {},
+      "contentHash": "78fb154cf7428a69a9bfffe0f5a2dc2d"
     },
     "224538e6-32bf-473e-8dee-23a0a079f48a": {
       "id": "224538e6-32bf-473e-8dee-23a0a079f48a",
@@ -7765,56 +7486,6 @@
       "custom": {},
       "contentHash": "c9db6f1fa857008ea7b40d9c21da31be"
     },
-    "nfompwrizwoq37o9zqh9bqm": {
-      "fname": "development.system.linux",
-      "stub": true,
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "schemaStub": false,
-      "type": "note",
-      "updated": 1650419881323,
-      "created": 1650419881323,
-      "id": "nfompwrizwoq37o9zqh9bqm",
-      "desc": "",
-      "links": [],
-      "anchors": {},
-      "children": [
-        "ih22j0towuos88dob7tzlr8"
-      ],
-      "parent": "62daf50d-a39e-463f-aabd-be53790281fd",
-      "data": {},
-      "title": "Linux"
-    },
-    "ih22j0towuos88dob7tzlr8": {
-      "id": "ih22j0towuos88dob7tzlr8",
-      "title": "Philosophy",
-      "desc": "",
-      "updated": 1650420001746,
-      "created": 1650419881234,
-      "custom": {},
-      "fname": "development.system.linux.philosophy",
-      "type": "note",
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "contentHash": "3e80a652c8858da88c65847fb9bb42d7",
-      "links": [],
-      "anchors": {},
-      "children": [],
-      "parent": "nfompwrizwoq37o9zqh9bqm",
-      "data": {}
-    },
     "09956453-4cbd-4f15-a4bd-b1f6c84449a4": {
       "id": "09956453-4cbd-4f15-a4bd-b1f6c84449a4",
       "title": "File_system",
@@ -7852,7 +7523,6 @@
             "indent": []
           },
           "xvault": true,
-          "sameFile": false,
           "to": {
             "fname": "development.computer.io",
             "vaultName": "my_note"
@@ -7862,96 +7532,49 @@
       "anchors": {
         "file-system": {
           "type": "header",
-          "text": "file system",
           "value": "file-system",
           "line": 14,
-          "column": 0,
-          "depth": 1
+          "column": 0
         },
         "inode": {
           "type": "header",
-          "text": "inode",
           "value": "inode",
           "line": 26,
-          "column": 0,
-          "depth": 2
+          "column": 0
         },
         "structure-of-a-regular-file": {
           "type": "header",
-          "text": "STRUCTURE OF A REGULAR FILE",
           "value": "structure-of-a-regular-file",
           "line": 39,
-          "column": 0,
-          "depth": 2
+          "column": 0
         },
         "directories": {
           "type": "header",
-          "text": "directories",
           "value": "directories",
           "line": 49,
-          "column": 0,
-          "depth": 2
+          "column": 0
         },
         "ls": {
           "type": "header",
-          "text": "ls",
           "value": "ls",
           "line": 55,
-          "column": 0,
-          "depth": 2
+          "column": 0
         },
         "conversion-of-a-path-name-to-an-innode": {
           "type": "header",
-          "text": "conversion of a path name to an innode",
           "value": "conversion-of-a-path-name-to-an-innode",
           "line": 70,
-          "column": 0,
-          "depth": 2
+          "column": 0
         }
       },
       "fname": "development.system.file_system",
       "updated": 1620791771392,
       "created": 1620080210690,
       "parent": "62daf50d-a39e-463f-aabd-be53790281fd",
-      "children": [
-        "q5vgjkobycnonv4tbi6xz23"
-      ],
+      "children": [],
       "data": {},
       "custom": {},
       "contentHash": "2fd595333427c87ebf577744860fc75e"
-    },
-    "q5vgjkobycnonv4tbi6xz23": {
-      "id": "q5vgjkobycnonv4tbi6xz23",
-      "title": "Linux",
-      "desc": "",
-      "updated": 1650423776282,
-      "created": 1650423490666,
-      "custom": {},
-      "fname": "development.system.file_system.linux",
-      "type": "note",
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "contentHash": "c7d7ff94e0816417aef541985f85800a",
-      "links": [],
-      "anchors": {
-        "ext2": {
-          "type": "header",
-          "text": "ext2",
-          "value": "ext2",
-          "line": 12,
-          "column": 0,
-          "depth": 1
-        }
-      },
-      "children": [],
-      "parent": "09956453-4cbd-4f15-a4bd-b1f6c84449a4",
-      "data": {}
     },
     "a072f1a5-d9ec-4e89-a252-24c945125dc0": {
       "id": "a072f1a5-d9ec-4e89-a252-24c945125dc0",
@@ -10911,12 +10534,6 @@
     "13736958-e07c-45ce-a85d-d47c6990c994": {
       "id": "13736958-e07c-45ce-a85d-d47c6990c994",
       "title": "CDN",
-      "desc": "",
-      "updated": 1650423634989,
-      "created": 1616563080983,
-      "custom": {},
-      "fname": "development.database.cdn",
-      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -10925,21 +10542,25 @@
         },
         "name": "my_note"
       },
-      "contentHash": "60445127e71611fa94bcf5c85a9c9591",
+      "type": "note",
+      "desc": "",
       "links": [],
       "anchors": {
         "real-life": {
           "type": "header",
-          "text": "real life",
           "value": "real-life",
-          "line": 28,
-          "column": 0,
-          "depth": 2
+          "line": 30,
+          "column": 0
         }
       },
-      "children": [],
+      "fname": "development.database.cdn",
+      "updated": 1625088574660,
+      "created": 1616563080983,
       "parent": "a40ef849-d301-4d74-a778-e6d9469dfb5d",
-      "data": {}
+      "children": [],
+      "data": {},
+      "contentHash": "913815f498d68a11ea3b4ed9e86383af",
+      "custom": {}
     },
     "b975629e-1af6-4118-a568-b2404da1b7fd": {
       "id": "b975629e-1af6-4118-a568-b2404da1b7fd",
@@ -11278,12 +10899,6 @@
     "68e49ff0-58d9-43fa-a47f-a0d50b88095d": {
       "id": "68e49ff0-58d9-43fa-a47f-a0d50b88095d",
       "title": "Process",
-      "desc": "",
-      "updated": 1650422923002,
-      "created": 1617687631906,
-      "custom": {},
-      "fname": "development.computer.multitask.process",
-      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -11292,7 +10907,8 @@
         },
         "name": "my_note"
       },
-      "contentHash": "168518da54e8fdd0de75cc913608ef11",
+      "type": "note",
+      "desc": "",
       "links": [
         {
           "type": "ref",
@@ -11304,14 +10920,14 @@
           "value": "development.computer.call.fork",
           "position": {
             "start": {
-              "line": 40,
+              "line": 30,
               "column": 1,
-              "offset": 1864
+              "offset": 1587
             },
             "end": {
-              "line": 40,
+              "line": 30,
               "column": 54,
-              "offset": 1917
+              "offset": 1640
             },
             "indent": []
           },
@@ -11325,50 +10941,39 @@
       "anchors": {
         "process": {
           "type": "header",
-          "text": "process",
           "value": "process",
           "line": 8,
-          "column": 0,
-          "depth": 1
-        },
-        "struct": {
-          "type": "header",
-          "text": "struct",
-          "value": "struct",
-          "line": 29,
-          "column": 0,
-          "depth": 2
+          "column": 0
         },
         "process-control": {
           "type": "header",
-          "text": "process control",
           "value": "process-control",
-          "line": 36,
-          "column": 0,
-          "depth": 2
+          "line": 30,
+          "column": 0
         },
         "context-switch": {
           "type": "header",
-          "text": "context switch",
           "value": "context-switch",
-          "line": 47,
-          "column": 0,
-          "depth": 2
+          "line": 37,
+          "column": 0
         },
         "zombie-process": {
           "type": "header",
-          "text": "zombie process",
           "value": "zombie-process",
-          "line": 61,
-          "column": 0,
-          "depth": 2
+          "line": 50,
+          "column": 0
         }
       },
+      "fname": "development.computer.multitask.process",
+      "updated": 1620789384661,
+      "created": 1617687631906,
+      "parent": "5d880b52-6a1f-48fd-b059-7b2e32c601c2",
       "children": [
         "26c24828-9284-461c-8416-4b442d49e85e"
       ],
-      "parent": "5d880b52-6a1f-48fd-b059-7b2e32c601c2",
-      "data": {}
+      "data": {},
+      "custom": {},
+      "contentHash": "6fc9fa8ab34981eb087e00d01c2b6e90"
     },
     "26c24828-9284-461c-8416-4b442d49e85e": {
       "id": "26c24828-9284-461c-8416-4b442d49e85e",
@@ -11405,7 +11010,7 @@
       "id": "723f785b-cdfa-43e1-ad13-785cf113e33d",
       "title": "Memory",
       "desc": "",
-      "updated": 1650423039792,
+      "updated": 1649304280842,
       "created": 1617687471994,
       "custom": {},
       "fname": "development.computer.memory",
@@ -11418,7 +11023,7 @@
         },
         "name": "my_note"
       },
-      "contentHash": "f4abcc0e201775ca6aa7e6a9aa241db6",
+      "contentHash": "3a678856d3fe27f5a1212a1d34a2a45e",
       "links": [],
       "anchors": {
         "phycical-memory": {
@@ -11433,7 +11038,7 @@
           "type": "header",
           "text": "virtaul memory",
           "value": "virtaul-memory",
-          "line": 29,
+          "line": 23,
           "column": 0,
           "depth": 1
         },
@@ -11441,7 +11046,7 @@
           "type": "header",
           "text": "VSZ - Virtual Set Size",
           "value": "vsz---virtual-set-size",
-          "line": 38,
+          "line": 32,
           "column": 0,
           "depth": 2
         },
@@ -11449,7 +11054,7 @@
           "type": "header",
           "text": "RSS - Resident Set Size",
           "value": "rss---resident-set-size",
-          "line": 42,
+          "line": 36,
           "column": 0,
           "depth": 2
         },
@@ -11457,7 +11062,7 @@
           "type": "header",
           "text": "缓存的工具",
           "value": "缓存的工具",
-          "line": 46,
+          "line": 40,
           "column": 0,
           "depth": 2
         },
@@ -11465,7 +11070,7 @@
           "type": "header",
           "text": "swap",
           "value": "swap",
-          "line": 74,
+          "line": 68,
           "column": 0,
           "depth": 3
         },
@@ -11473,7 +11078,7 @@
           "type": "header",
           "text": "内存管理",
           "value": "内存管理",
-          "line": 89,
+          "line": 83,
           "column": 0,
           "depth": 2
         },
@@ -11481,7 +11086,7 @@
           "type": "header",
           "text": "内存保护",
           "value": "内存保护",
-          "line": 95,
+          "line": 89,
           "column": 0,
           "depth": 2
         },
@@ -11489,7 +11094,7 @@
           "type": "header",
           "text": "地址翻译 mmu",
           "value": "地址翻译-mmu",
-          "line": 99,
+          "line": 93,
           "column": 0,
           "depth": 2
         },
@@ -11497,7 +11102,7 @@
           "type": "header",
           "text": "TLB",
           "value": "tlb",
-          "line": 109,
+          "line": 103,
           "column": 0,
           "depth": 2
         },
@@ -11505,7 +11110,7 @@
           "type": "header",
           "text": "multi-level page table",
           "value": "multi-level-page-table",
-          "line": 117,
+          "line": 111,
           "column": 0,
           "depth": 2
         },
@@ -11513,7 +11118,7 @@
           "type": "header",
           "text": "os",
           "value": "os",
-          "line": 121,
+          "line": 115,
           "column": 0,
           "depth": 2
         },
@@ -11521,7 +11126,7 @@
           "type": "header",
           "text": "heap",
           "value": "heap",
-          "line": 128,
+          "line": 122,
           "column": 0,
           "depth": 3
         },
@@ -11529,14 +11134,13 @@
           "type": "header",
           "text": "垃圾收集",
           "value": "垃圾收集",
-          "line": 137,
+          "line": 131,
           "column": 0,
           "depth": 3
         }
       },
       "children": [
         "p3dcvr6ni0cbc91nyfcbx44",
-        "3ew9mzm73l52kzqv1br8eoi",
         "5gw8x11hav645ffpa7e22if",
         "da2027b2-1ea8-4a4a-a888-daa28f712b47",
         "c8sb1oqdoihtxu2qu5iglvd",
@@ -11663,47 +11267,6 @@
       "contentHash": "9f584cd28b2e2726d01675cb42947bc6",
       "links": [],
       "anchors": {},
-      "children": [],
-      "parent": "723f785b-cdfa-43e1-ad13-785cf113e33d",
-      "data": {}
-    },
-    "3ew9mzm73l52kzqv1br8eoi": {
-      "id": "3ew9mzm73l52kzqv1br8eoi",
-      "title": "Linux",
-      "desc": "",
-      "updated": 1650423316830,
-      "created": 1650423129402,
-      "custom": {},
-      "fname": "development.computer.memory.linux",
-      "type": "note",
-      "vault": {
-        "fsPath": "repos/dendron-aws-vault",
-        "remote": {
-          "type": "git",
-          "url": "https://github.com/cczhong11/my_note.git"
-        },
-        "name": "my_note"
-      },
-      "contentHash": "faa75ffc3b471860db442624ffce9972",
-      "links": [],
-      "anchors": {
-        "伙伴系统buddy-system": {
-          "type": "header",
-          "text": "伙伴系统（buddy system）",
-          "value": "伙伴系统buddy-system",
-          "line": 11,
-          "column": 0,
-          "depth": 1
-        },
-        "分页回收": {
-          "type": "header",
-          "text": "分页回收",
-          "value": "分页回收",
-          "line": 19,
-          "column": 0,
-          "depth": 1
-        }
-      },
       "children": [],
       "parent": "723f785b-cdfa-43e1-ad13-785cf113e33d",
       "data": {}
@@ -11936,12 +11499,6 @@
     "27148b7c-1a4b-4f57-8980-48c50e158b39": {
       "id": "27148b7c-1a4b-4f57-8980-48c50e158b39",
       "title": "Fork",
-      "desc": "",
-      "updated": 1650422590219,
-      "created": 1617688119223,
-      "custom": {},
-      "fname": "development.computer.call.fork",
-      "type": "note",
       "vault": {
         "fsPath": "repos/dendron-aws-vault",
         "remote": {
@@ -11950,7 +11507,8 @@
         },
         "name": "my_note"
       },
-      "contentHash": "bcaf3c8bf2cd27894f8d08f3a54ff200",
+      "type": "note",
+      "desc": "",
       "links": [
         {
           "from": {
@@ -11975,9 +11533,14 @@
         }
       ],
       "anchors": {},
-      "children": [],
+      "fname": "development.computer.call.fork",
+      "updated": 1619417463900,
+      "created": 1617688119223,
       "parent": "acabdc86-1cd5-48de-a439-49686e1ced28",
-      "data": {}
+      "children": [],
+      "data": {},
+      "custom": {},
+      "contentHash": "8e64522f3a504a0d050e19fad25ce6c3"
     },
     "4c818140-47ba-4497-a484-c80748376b45": {
       "id": "4c818140-47ba-4497-a484-c80748376b45",
@@ -14159,8 +13722,7 @@
         "baa39444-0da9-4c55-8df7-2a6f8f787fa4",
         "62daf50d-a39e-463f-aabd-be53790281fd",
         "3524d0a7-be73-45d6-847e-c970f5c1c760",
-        "eac0f243-05b3-4b95-bec3-848e33edbc40",
-        "ocei7tftc6l4ea0165ee8rx"
+        "eac0f243-05b3-4b95-bec3-848e33edbc40"
       ],
       "data": {},
       "custom": {
@@ -14349,9 +13911,9 @@
         "efxujPMmo91nKhmMDwmxy",
         "pM7z7xLUf6hSNwawvfTSO",
         "c2644f8b-dfac-433a-9cff-af811875b7e0",
-        "tmqxy7x192hwv2hjtnyp5bd",
-        "4ihta49lqsquux74tm2y4lv",
-        "1wn19kvgpm2dtwzqvr2m8xs"
+        "nssfyjyrp783cdgdid7819h",
+        "dhjmze0nl3yhsz66txo75ri",
+        "mnvwlw2x1fvzeaaamz053oc"
       ],
       "data": {},
       "custom": {
@@ -14415,8 +13977,7 @@
       "baa39444-0da9-4c55-8df7-2a6f8f787fa4",
       "62daf50d-a39e-463f-aabd-be53790281fd",
       "3524d0a7-be73-45d6-847e-c970f5c1c760",
-      "eac0f243-05b3-4b95-bec3-848e33edbc40",
-      "ocei7tftc6l4ea0165ee8rx"
+      "eac0f243-05b3-4b95-bec3-848e33edbc40"
     ],
     "data": {},
     "custom": {

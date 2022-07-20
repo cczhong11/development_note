@@ -1,6 +1,13 @@
 <h1 id="performance"><a aria-hidden="true" class="anchor-heading" href="#performance"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Performance</h1>
 <p><img src="/assets/images/2021-05-03-16-22-48.png">
 <a href="http://www.brendangregg.com/linuxperf.html">reference</a></p>
+<h2 id="1-uptime"><a aria-hidden="true" class="anchor-heading" href="#1-uptime"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>1. uptime</h2>
+<pre><code>$ uptime 
+23:51:26 up 21:31, 1 user, load average: 30.02, 26.43, 19.02
+</code></pre>
+<p>This is a quick way to view the load averages, which indicate the number of tasks (processes) wanting to run. On Linux systems, these numbers include processes wanting to run on CPU, as well as processes blocked in uninterruptible I/O (usually disk I/O). This gives a high level idea of resource load (or demand), but can’t be properly understood without other tools. Worth a quick look only.
+The <strong>three numbers are exponentially damped moving sum averages with a 1 minute, 5 minute, and 15 minute constant</strong>. The three numbers give us some idea of how load is changing over time. For example, if you’ve been asked to check a problem server, and the 1 minute value is much lower than the 15 minute value, then you might have logged in too late and missed the issue.
+In the example above, the load averages show a recent increase, hitting 30 for the 1 minute value, compared to 19 for the 15 minute value. That the numbers are this large means a lot of something: probably CPU demand; vmstat or mpstat will confirm, which are commands 3 and 4 in this sequence.</p>
 <h2 id="2-dmesg--tail"><a aria-hidden="true" class="anchor-heading" href="#2-dmesg--tail"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>2. dmesg | tail</h2>
 <pre><code>$ dmesg | tail
 [1880957.563150] perl invoked oom-killer: gfp_mask=0x280da, order=0, oom_score_adj=0
@@ -12,6 +19,39 @@
 <p>This views the last 10 system messages, if there are any. <strong>Look for errors that can cause performance issues</strong>. The example above includes the oom-killer, and TCP dropping a request.
 Don’t miss this step! dmesg is always worth checking.</p>
 <p>kernel会将开机信息存储在ring buffer中.您若是开机时来不及查看信息，可利用dmesg来查看。开机信息亦保存在/var/log目录中，名称为dmesg的文件里。</p>
+<h2 id="3-vmstat-1"><a aria-hidden="true" class="anchor-heading" href="#3-vmstat-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>3. vmstat 1</h2>
+<pre><code>$ vmstat 1
+procs ---------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+34  0    0 200889792  73708 591828    0    0     0     5    6   10 96  1  3  0  0
+32  0    0 200889920  73708 591860    0    0     0   592 13284 4282 98  1  1  0  0
+32  0    0 200890112  73708 591860    0    0     0     0 9501 2154 99  1  0  0  0
+32  0    0 200889568  73712 591856    0    0     0    48 11900 2459 99  0  0  0  0
+32  0    0 200890208  73712 591860    0    0     0     0 15898 4840 98  1  1  0  0
+</code></pre>
+<p>Short for virtual memory stat, vmstat(8) is a commonly available tool (first created for BSD decades ago). It prints a summary of key server statistics on each line.</p>
+<p>vmstat was run with an argument of 1, <strong>to print one second summaries</strong>. The first line of output (in this version of vmstat) has some columns that show the average since boot, instead of the previous second. For now, skip the first line, unless you want to learn and remember which column is which.
+Columns to check:
+r: <strong>Number of processes running on CPU and waiting for a turn.</strong> This provides a better signal than load averages for determining CPU saturation, as it does not include I/O. To interpret: an “r” value greater than the CPU count is saturation.
+free: <strong>Free memory in kilobytes.</strong> If there are too many digits to count, you have enough free memory. The “free -m” command, included as command 7, better explains the state of free memory.
+si, so: Swap-ins and swap-outs. <strong>If these are non-zero, you’re out of memory</strong>.
+us, sy, id, wa, st: These are breakdowns of CPU time, on average across all CPUs. <strong>They are user time, system time (kernel), idle, wait I/O, and stolen time</strong> (by other guests, or with Xen, the guest’s own isolated driver domain).
+The CPU time breakdowns will confirm if the CPUs are busy, by adding user + system time. A constant degree of wait I/O points to a disk bottleneck; this is where the CPUs are idle, because tasks are blocked waiting for pending disk I/O. You can treat wait I/O as another form of CPU idle, one that gives a clue as to why they are idle.
+System time is necessary for I/O processing. A high system time average, over 20%, can be interesting to explore further: perhaps the kernel is processing the I/O inefficiently.
+In the above example, CPU time is almost entirely in user-level, pointing to application level usage instead. The CPUs are also well over 90% utilized on average. This isn’t necessarily a problem; check for the degree of saturation using the “r” column.</p>
+<h2 id="4-mpstat--p-all-1"><a aria-hidden="true" class="anchor-heading" href="#4-mpstat--p-all-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>4. mpstat -P ALL 1</h2>
+<pre><code>$ mpstat -P ALL 1
+Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015  _x86_64_ (32 CPU)
+
+07:38:49 PM  CPU   %usr  %nice   %sys %iowait   %irq  %soft  %steal  %guest  %gnice  %idle
+07:38:50 PM  all  98.47   0.00   0.75    0.00   0.00   0.00    0.00    0.00    0.00   0.78
+07:38:50 PM    0  96.04   0.00   2.97    0.00   0.00   0.00    0.00    0.00    0.00   0.99
+07:38:50 PM    1  97.00   0.00   1.00    0.00   0.00   0.00    0.00    0.00    0.00   2.00
+07:38:50 PM    2  98.00   0.00   1.00    0.00   0.00   0.00    0.00    0.00    0.00   1.00
+07:38:50 PM    3  96.97   0.00   0.00    0.00   0.00   0.00    0.00    0.00    0.00   3.03
+[...]
+</code></pre>
+<p>This command prints CPU time breakdowns per CPU, which can be used to <strong>check for an imbalance</strong>. A single hot CPU can be evidence of a single-threaded application.</p>
 <h2 id="5-pidstat-1"><a aria-hidden="true" class="anchor-heading" href="#5-pidstat-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>5. pidstat 1</h2>
 <pre><code>$ pidstat 1
 Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015    _x86_64_    (32 CPU)
@@ -33,17 +73,43 @@ Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015    _x86_64_    (32 CPU
 </code></pre>
 <p>Pidstat is a little like top’s per-process summary, but prints a rolling summary instead of clearing the screen. This can be useful for watching patterns over time, and also recording what you saw (copy-n-paste) into a record of your investigation.
 The above example identifies two java processes as responsible for consuming CPU. The %CPU column is the total across all CPUs; 1591% shows that that java processes is consuming almost 16 CPUs.</p>
-<h2 id="8-sar--n-dev-1"><a aria-hidden="true" class="anchor-heading" href="#8-sar--n-dev-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>8. sar -n DEV 1</h2>
-<p>sar命令用于收集、报告、保存系统活动信息。sar工具是sysstat软件包的一部分。</p>
-<p>使用cron开启自动化记录报告的示例：</p>
-<pre><code>[root@zyg ～]# cat /etc/cron.d/sysstat
-# Run system activity accounting tool every 10 minutes
-*/10 * * * * root /usr/lib64/sa/sa1 -S DISK 1 1
-# 0 * * * * root /usr/lib64/sa/sa1 -S DISK 600 6 &#x26;
-# Generate a daily summary of process accounting at 23:53
-53 23 * * * root /usr/lib64/sa/sa2 -A
+<h2 id="6-iostat--xz-1"><a aria-hidden="true" class="anchor-heading" href="#6-iostat--xz-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>6. iostat -xz 1</h2>
+<pre><code>$ iostat -xz 1
+Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015  _x86_64_ (32 CPU)
+
+avg-cpu:  %user   %nice %system %iowait  %steal   %idle
+          73.96    0.00    3.73    0.03    0.06   22.21
+
+Device:   rrqm/s   wrqm/s     r/s     w/s    rkB/s    wkB/s avgrq-sz avgqu-sz   await r_await w_await  svctm  %util
+xvda        0.00     0.23    0.21    0.18     4.52     2.08    34.37     0.00    9.98   13.80    5.42   2.44   0.09
+xvdb        0.01     0.00    1.02    8.94   127.97   598.53   145.79     0.00    0.43    1.78    0.28   0.25   0.25
+xvdc        0.01     0.00    1.02    8.86   127.79   595.94   146.50     0.00    0.45    1.82    0.30   0.27   0.26
+dm-0        0.00     0.00    0.69    2.32    10.47    31.69    28.01     0.01    3.23    0.71    3.98   0.13   0.04
+dm-1        0.00     0.00    0.00    0.94     0.01     3.78     8.00     0.33  345.84    0.04  346.81   0.01   0.00
+dm-2        0.00     0.00    0.09    0.07     1.35     0.36    22.50     0.00    2.55    0.23    5.62   1.78   0.03
+[...]
 </code></pre>
-<p>sa1命令用来将二进制数据收集和存储到/var/log/sa/sadd文件，dd参数表示当前天的日期。</p>
+<p>This is a great tool for understanding <strong>block devices</strong> (disks), both the workload applied and the resulting performance. Look for:
+r/s, w/s, rkB/s, wkB/s: These are the delivered reads, writes, read Kbytes, and write Kbytes per second to the device. Use these for workload characterization. <strong>A performance problem may simply be due to an excessive load applied.</strong>
+await: The average time for the I/O in milliseconds. This is the time that the application suffers, as it includes both time queued and time being serviced. <strong>Larger than expected average times can be an indicator of device saturation, or device problems.</strong>
+avgqu-sz: The average number of requests issued to the device. Values greater than 1 can be evidence of saturation (although devices can typically operate on requests in parallel, especially virtual devices which front multiple back-end disks.)
+%util: Device utilization. This is really a busy percent, showing the time each second that the device was doing work. Values greater than 60% typically lead to poor performance (which should be seen in await), although it depends on the device. Values close to 100% usually indicate saturation.
+If the storage device is a logical disk device fronting many back-end disks, then 100% utilization may just mean that some I/O is being processed 100% of the time, however, the back-end disks may be far from saturated, and may be able to handle much more work.
+Bear in mind that poor performing disk I/O isn’t necessarily an application issue. Many techniques are typically used to perform I/O asynchronously, so that the application doesn’t block and suffer the latency directly (e.g., read-ahead for reads, and buffering for writes).</p>
+<h2 id="7-free--m"><a aria-hidden="true" class="anchor-heading" href="#7-free--m"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>7. free -m</h2>
+<pre><code>$ free -m
+             total       used       free     shared    buffers     cached
+Mem:        245998      24545     221453         83         59        541
+-/+ buffers/cache:      23944     222053
+Swap:            0          0          0
+</code></pre>
+<p>The right two columns show:
+buffers: <strong>For the buffer cache, used for block device I/O.</strong>
+cached: <strong>For the page cache, used by file systems</strong>.
+We just want to check that these aren’t near-zero in size, which can lead to higher disk I/O (confirm using iostat), and worse performance. The above example looks fine, with many Mbytes in each.
+The “-/+ buffers/cache” provides less confusing values for used and free memory. Linux uses free memory for the caches, but can reclaim it quickly if applications need it. So in a way the cached memory should be included in the free memory column, which this line does. There’s even a website, linuxatemyram, about this confusion.
+It can be additionally confusing if ZFS on Linux is used, as we do for some services, as ZFS has its own file system cache that isn’t reflected properly by the free -m columns. It can appear that the system is low on free memory, when that memory is in fact available for use from the ZFS cache as needed.</p>
+<h2 id="8-sar--n-dev-1"><a aria-hidden="true" class="anchor-heading" href="#8-sar--n-dev-1"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>8. sar -n DEV 1</h2>
 <pre><code>$ sar -n DEV 1
 Linux 3.13.0-49-generic (titanclusters-xxxxx)  07/14/2015     _x86_64_    (32 CPU)
 
@@ -105,16 +171,6 @@ KiB Swap:        0 total,        0 used,        0 free.   554208 cached Mem
      8 root      20   0       0      0      0 S   0.0  0.0   2:38.05 rcu_sched
 </code></pre>
 <p>The top command includes many of the metrics we checked earlier. It can be handy to run it to see if anything looks wildly different from the earlier commands, which would indicate that load is variable.</p>
-<p><img src="/assets/images/2022-04-19-20-20-34.png"></p>
-<p><img src="/assets/images/2022-04-19-20-20-53.png"></p>
-<p><img src="/assets/images/2022-04-19-20-21-07.png"></p>
-<p><img src="/assets/images/2022-04-19-20-21-14.png"></p>
+<h2 id="strace"><a aria-hidden="true" class="anchor-heading" href="#strace"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>strace</h2>
+<p> trace system calls and signals</p>
 <h2 id="iotop"><a aria-hidden="true" class="anchor-heading" href="#iotop"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>iotop</h2>
-<hr>
-<strong>Children</strong>
-<ol>
-<li><a href="/notes/43tt3cu4upgvik6no0gnoe8">Cpu</a></li>
-<li><a href="/notes/n4d5go9nvueh0hq6ixszeh4">Io</a></li>
-<li><a href="/notes/8kb8qi4l7r9aluk5e2ns0yk">Memory</a></li>
-<li><a href="/notes/qxx7j7hdjn2r4oki5wkgzj2">Network</a></li>
-</ol>
