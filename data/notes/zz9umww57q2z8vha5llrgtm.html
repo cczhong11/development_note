@@ -1,0 +1,35 @@
+<h1 id="published">Published<a aria-hidden="true" class="anchor-heading icon-link" href="#published"></a></h1>
+<h1 id="swift中的published属性包装器">Swift中的<code>@Published</code>属性包装器<a aria-hidden="true" class="anchor-heading icon-link" href="#swift中的published属性包装器"></a></h1>
+<h2 id="概念">概念<a aria-hidden="true" class="anchor-heading icon-link" href="#概念"></a></h2>
+<p>在Swift的Combine框架中，<code>@Published</code>是一个属性包装器，用于创建可被观察的对象属性。当这个属性的值改变时，它会自动通知所有订阅者。</p>
+<h2 id="作用">作用<a aria-hidden="true" class="anchor-heading icon-link" href="#作用"></a></h2>
+<ul>
+<li><strong>数据绑定</strong>: <code>@Published</code>属性用于数据绑定，特别是在SwiftUI中，它允许视图自动更新以响应数据模型的变化。</li>
+<li><strong>简化状态管理</strong>: 在复杂的应用中，<code>@Published</code>属性帮助管理和传播状态变化，简化了状态管理的复杂性。</li>
+</ul>
+<h2 id="使用published">使用<code>@Published</code><a aria-hidden="true" class="anchor-heading icon-link" href="#使用published"></a></h2>
+<h3 id="1-定义published属性">1. 定义<code>@Published</code>属性<a aria-hidden="true" class="anchor-heading icon-link" href="#1-定义published属性"></a></h3>
+<p>在类中定义一个<code>@Published</code>属性。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">class</span> <span class="token class-name">MyModel</span><span class="token punctuation">:</span> <span class="token class-name">ObservableObject</span> <span class="token punctuation">{</span>
+    <span class="token attribute atrule">@Published</span> <span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>在这个例子中，<code>count</code>是一个<code>@Published</code>属性。当它的值改变时，所有订阅这个<code>MyModel</code>对象的视图将自动更新。</p>
+<h3 id="2-观察published属性的变化">2. 观察<code>@Published</code>属性的变化<a aria-hidden="true" class="anchor-heading icon-link" href="#2-观察published属性的变化"></a></h3>
+<p>可以使用Combine的<code>Publisher</code>来订阅<code>@Published</code>属性的变化。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">let</span> model <span class="token operator">=</span> <span class="token class-name">MyModel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+model<span class="token punctuation">.</span>$count
+    <span class="token punctuation">.</span>sink <span class="token punctuation">{</span> newValue <span class="token keyword">in</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Count updated to </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">newValue</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">.</span><span class="token function">store</span><span class="token punctuation">(</span><span class="token keyword">in</span><span class="token punctuation">:</span> <span class="token operator">&#x26;</span>subscriptions<span class="token punctuation">)</span>
+</code></pre>
+<p>在这个例子中，每当<code>count</code>值改变时，新的值会被打印出来。</p>
+<h2 id="注意事项">注意事项<a aria-hidden="true" class="anchor-heading icon-link" href="#注意事项"></a></h2>
+<ul>
+<li><code>@Published</code>需要与Combine框架一起使用。</li>
+<li>适用于需要反应式编程的场景，如在SwiftUI中自动更新UI。</li>
+<li>它仅适用于类（<code>class</code>），不适用于结构体（<code>struct</code>）或枚举（<code>enum</code>）。</li>
+</ul>
+<h2 id="总结">总结<a aria-hidden="true" class="anchor-heading icon-link" href="#总结"></a></h2>
+<p><code>@Published</code>属性包装器是Swift中实现反应式编程的关键工具之一，特别是在使用SwiftUI构建用户界面时。它允许开发者以声明式的方式连接UI与数据模型，简化了视图更新和状态管理的过程。</p>

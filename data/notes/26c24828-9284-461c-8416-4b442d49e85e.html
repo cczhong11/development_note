@@ -1,5 +1,5 @@
-<h1 id="signal"><a aria-hidden="true" class="anchor-heading icon-link" href="#signal"></a>Signal</h1>
-<h1 id="signal-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#signal-1"></a>signal</h1>
+<h1 id="signal">Signal<a aria-hidden="true" class="anchor-heading icon-link" href="#signal"></a></h1>
+<h1 id="signal-1">signal<a aria-hidden="true" class="anchor-heading icon-link" href="#signal-1"></a></h1>
 <p><img src="/assets/images/2021-04-25-23-16-50.png"></p>
 <p><strong>信号允许进程和内核中断其他进程</strong>，一个信号就是一条消息，他通知进程系统中发生了一个某种类型的事件。ctrl+c 是sigint， 终止信号是sigkill，ctrlz是 sigtstp。 发送信号可以用kill函数以及内核检测到一个系统事件。sigkill和sigstop不能捕捉，忽略和修改默认行为。</p>
 <p>信号处理程序，任何进程只能收到一个信号，并处理一个信号，如果一个进程有一个带出的信号，但是有其他的信号要被接收，都不会排队等待而简单的被抛弃。临时阻塞信号可以用sigprocmask。</p>

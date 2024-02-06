@@ -1,25 +1,25 @@
-<h1 id="voting"><a aria-hidden="true" class="anchor-heading icon-link" href="#voting"></a>Voting</h1>
-<h2 id="多个server的选举策略"><a aria-hidden="true" class="anchor-heading icon-link" href="#多个server的选举策略"></a>多个server的选举策略</h2>
+<h1 id="voting">Voting<a aria-hidden="true" class="anchor-heading icon-link" href="#voting"></a></h1>
+<h2 id="多个server的选举策略">多个server的选举策略<a aria-hidden="true" class="anchor-heading icon-link" href="#多个server的选举策略"></a></h2>
 <p>difference between cs:</p>
 <ul>
 <li>other do not need to know who enter cs. election need other know who is coordinator.</li>
 <li>fault tolerance is primary consideration in election.</li>
 </ul>
-<h3 id="bully-algorithm"><a aria-hidden="true" class="anchor-heading icon-link" href="#bully-algorithm"></a>bully algorithm</h3>
+<h3 id="bully-algorithm">bully algorithm<a aria-hidden="true" class="anchor-heading icon-link" href="#bully-algorithm"></a></h3>
 <ul>
 <li>what: use highest number as coordinator.</li>
 <li>why: easy</li>
 <li>how: when coordinator dies, send election to high number, if not recieve ack, it become coo and send to others. </li>
 <li>problem: assumption is not realible(network is ok and we could know who dies accurately). failure need detect accurately.</li>
 </ul>
-<h3 id="invitation-algorithm"><a aria-hidden="true" class="anchor-heading icon-link" href="#invitation-algorithm"></a>invitation algorithm</h3>
+<h3 id="invitation-algorithm">invitation algorithm<a aria-hidden="true" class="anchor-heading icon-link" href="#invitation-algorithm"></a></h3>
 <ul>
 <li>what: form group to elect one and create a large one.</li>
 <li>why: communication failure and high latency. use partition to handle is the best way.</li>
 <li>how: merge them partition into group. choose one in partition and merge with another and get one.</li>
 <li>problem: state is not consistence among group.</li>
 </ul>
-<h3 id="ring-election"><a aria-hidden="true" class="anchor-heading icon-link" href="#ring-election"></a>ring election</h3>
+<h3 id="ring-election">ring election<a aria-hidden="true" class="anchor-heading icon-link" href="#ring-election"></a></h3>
 <ul>
 <li>what:非同步算法。find cooridator die, send election around ring, every one add itself in the message. assume highest is new and everyone get message again remove itself.</li>
 <li>why: good at high contention, and less messge</li>

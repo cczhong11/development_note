@@ -1,0 +1,7 @@
+<h1 id="dropbox">Dropbox<a aria-hidden="true" class="anchor-heading icon-link" href="#dropbox"></a></h1>
+<p>dropbox的auth 流程比较麻烦。</p>
+<ol>
+<li><a href="https://www.dropbox.com/oauth2/authorize?client_id=%5Bclint_id%5D&#x26;response_type=code&#x26;token_access_type=offline">https://www.dropbox.com/oauth2/authorize?client_id=[clint_id]&#x26;response_type=code&#x26;token_access_type=offline</a> 拿到access token</li>
+<li><a href="https://api.dropboxapi.com/oauth2/token">https://api.dropboxapi.com/oauth2/token</a> 拿到refresh token</li>
+<li>在python client里用app key ， app secret， refresh token 拿到access token</li>
+</ol>

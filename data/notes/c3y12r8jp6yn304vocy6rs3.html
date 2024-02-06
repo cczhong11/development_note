@@ -1,0 +1,47 @@
+<h1 id="data_leakage">Data_leakage<a aria-hidden="true" class="anchor-heading icon-link" href="#data_leakage"></a></h1>
+<h1 id="数据泄漏问题">数据泄漏问题<a aria-hidden="true" class="anchor-heading icon-link" href="#数据泄漏问题"></a></h1>
+<p>数据泄漏是指在训练数据中不慎泄露了与测试数据相关的规律，可能导致模型过拟合，无法准确反映实际情况。</p>
+<h2 id="常见原因">常见原因<a aria-hidden="true" class="anchor-heading icon-link" href="#常见原因"></a></h2>
+<ol>
+<li>
+<p><strong>时间相关数据的随机分割</strong>：</p>
+<ul>
+<li>应按时间顺序分割数据，以捕捉每天的规律。</li>
+<li>随机分割可能导致测试结果可预测。</li>
+</ul>
+</li>
+<li>
+<p><strong>在数据分割前进行尺度缩放</strong>：</p>
+<ul>
+<li>这可能导致整体数据的平均值和标准差泄露到训练集。</li>
+</ul>
+</li>
+<li>
+<p><strong>使用所有数据的统计值补齐数据</strong>：</p>
+<ul>
+<li>这也会导致数据泄漏。</li>
+</ul>
+</li>
+<li>
+<p><strong>未正确处理数据的重复性</strong>：</p>
+<ul>
+<li>分割时可能导致数据集中大量重复，尤其是当数据高度相关但被分割到不同组时。</li>
+</ul>
+</li>
+</ol>
+<h2 id="检测方法">检测方法<a aria-hidden="true" class="anchor-heading icon-link" href="#检测方法"></a></h2>
+<ul>
+<li>
+<p><strong>关注特征的重要性</strong>：</p>
+<ul>
+<li>如果某特征非常重要，可能存在数据泄漏。</li>
+<li>特征重要性显示每个特征对模型性能的影响。</li>
+</ul>
+</li>
+<li>
+<p><strong>检查特征覆盖率</strong>：</p>
+<ul>
+<li>观察特征在所有数据中的占比。</li>
+</ul>
+</li>
+</ul>

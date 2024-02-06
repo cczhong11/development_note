@@ -1,0 +1,19 @@
+<h1 id="xiaoaigpt">Xiaoaigpt<a aria-hidden="true" class="anchor-heading icon-link" href="#xiaoaigpt"></a></h1>
+<h1 id="xiaoaigpt-1">Xiaoaigpt<a aria-hidden="true" class="anchor-heading icon-link" href="#xiaoaigpt-1"></a></h1>
+<p>使用xiaoai 和gpt相结合做的。</p>
+<h2 id="source-code">source code<a aria-hidden="true" class="anchor-heading icon-link" href="#source-code"></a></h2>
+<p><a href="https://github.com/cczhong11/xiaogpt.git">https://github.com/cczhong11/xiaogpt.git</a></p>
+<h2 id="set-up">set up<a aria-hidden="true" class="anchor-heading icon-link" href="#set-up"></a></h2>
+<ol>
+<li>use docker</li>
+<li><code>sudo docker build -t tczhong24/xiaogpt .</code></li>
+<li><code>sudo docker run tczhong24/xiaogpt --config=/app/xiaogpt.config --use_chatgpt_api --use_command</code></li>
+</ol>
+<h2 id="rerun-every-20-minutes-script">rerun every 20 minutes script<a aria-hidden="true" class="anchor-heading icon-link" href="#rerun-every-20-minutes-script"></a></h2>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token assign-left variable">CONTAINER_NAME</span><span class="token operator">=</span><span class="token string">"6639477c3c3c"</span>
+
+<span class="token function">sudo</span> <span class="token function">docker</span> stop <span class="token variable">$CONTAINER_NAME</span>
+<span class="token function">sudo</span> <span class="token function">docker</span> start <span class="token variable">$CONTAINER_NAME</span>
+</code></pre>
+<p>add to sudo crontab</p>

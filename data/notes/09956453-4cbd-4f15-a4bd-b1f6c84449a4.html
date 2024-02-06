@@ -1,8 +1,8 @@
-<h1 id="file_system"><a aria-hidden="true" class="anchor-heading icon-link" href="#file_system"></a>File_system</h1>
+<h1 id="file_system">File_system<a aria-hidden="true" class="anchor-heading icon-link" href="#file_system"></a></h1>
 <p><a href="/notes/b1e1dad4-5179-4629-af74-208cef96a55e">Io</a></p>
 <p>the in-memory data structure vnode is just an inode cache that stores information about the file(typically inode stores in the disk) so that it can be accessed more quickly.</p>
 <p><img src="/assets/images/2021-05-11-19-41-30.png"></p>
-<h1 id="file-system"><a aria-hidden="true" class="anchor-heading icon-link" href="#file-system"></a>file system</h1>
+<h1 id="file-system">file system<a aria-hidden="true" class="anchor-heading icon-link" href="#file-system"></a></h1>
 <p><img src="/assets/images/2021-05-11-19-43-14.png"></p>
 <ul>
 <li>
@@ -18,7 +18,7 @@
 <p>The data blocks start at the end of the Mode list and contain file data and administrative data. An allocated data block can belong to one and only one file in the file system.</p>
 </li>
 </ul>
-<h2 id="inode"><a aria-hidden="true" class="anchor-heading icon-link" href="#inode"></a>inode</h2>
+<h2 id="inode">inode<a aria-hidden="true" class="anchor-heading icon-link" href="#inode"></a></h2>
 <p>Modes exist in a static form on disk, and the kernel reads them into an in-core mode to manipulate them. Disk modes consist of the following fields</p>
 <ul>
 <li>file owner identifier</li>
@@ -30,15 +30,15 @@
 <li>file size</li>
 <li>no path</li>
 </ul>
-<h2 id="structure-of-a-regular-file"><a aria-hidden="true" class="anchor-heading icon-link" href="#structure-of-a-regular-file"></a>STRUCTURE OF A REGULAR FILE</h2>
+<h2 id="structure-of-a-regular-file">STRUCTURE OF A REGULAR FILE<a aria-hidden="true" class="anchor-heading icon-link" href="#structure-of-a-regular-file"></a></h2>
 <p>the Mode contains the table of contents to locate a file's data on disk. Since each block on a disk is addressable by number, the table of contents consists of a set of disk block numbers.</p>
 <p>For greater flexibility, the kernel allocates file space one block at a time and allows the data in a file to be spread throughout the file system.</p>
 <p>To access the data via the indirect block, the kernel must read the indirect block, find the appropriate direct block entry, and then read the direct block to find the data.</p>
 <p><img src="/assets/images/2021-05-11-19-58-08.png"></p>
-<h2 id="directories"><a aria-hidden="true" class="anchor-heading icon-link" href="#directories"></a>directories</h2>
+<h2 id="directories">directories<a aria-hidden="true" class="anchor-heading icon-link" href="#directories"></a></h2>
 <p>A directory is a file whose data is a sequence of entries, each consisting of an mode number and the name of a file contained in the directory.</p>
 <p><img src="/assets/images/2021-05-11-20-05-57.png"></p>
-<h2 id="ls"><a aria-hidden="true" class="anchor-heading icon-link" href="#ls"></a>ls</h2>
+<h2 id="ls">ls<a aria-hidden="true" class="anchor-heading icon-link" href="#ls"></a></h2>
 <pre><code>-rwxrw-r--    10    root   root 2048    Jan 13 07:11 afile.exe
 ?UUUGGGOOOS   00  UUUUUU GGGGGG ####    ^-- date stamp and file name are obvious ;-)
 ^ ^  ^  ^ ^    ^      ^      ^    ^
@@ -50,7 +50,7 @@
 | \--\--\----------------------------- Read, Write and Special access modes for [U]ser, [G]roup, and [O]thers (everyone else)
 \------------------------------------- File type flag
 </code></pre>
-<h2 id="conversion-of-a-path-name-to-an-innode"><a aria-hidden="true" class="anchor-heading icon-link" href="#conversion-of-a-path-name-to-an-innode"></a>conversion of a path name to an innode</h2>
+<h2 id="conversion-of-a-path-name-to-an-innode">conversion of a path name to an innode<a aria-hidden="true" class="anchor-heading icon-link" href="#conversion-of-a-path-name-to-an-innode"></a></h2>
 <p><img src="/assets/images/2021-05-11-20-12-36.png"></p>
 <p>The kernel does a linear search of the directory file associated with the working mode, trying to match the path name component to a directory entry name.</p>
 <hr>

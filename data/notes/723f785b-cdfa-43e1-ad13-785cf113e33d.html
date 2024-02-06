@@ -1,6 +1,6 @@
-<h1 id="memory"><a aria-hidden="true" class="anchor-heading icon-link" href="#memory"></a>Memory</h1>
+<h1 id="memory">Memory<a aria-hidden="true" class="anchor-heading icon-link" href="#memory"></a></h1>
 <p><a href="https://gywbd.github.io/posts/2016/1/segmentation-fault.html">reference</a></p>
-<h1 id="phycical-memory"><a aria-hidden="true" class="anchor-heading icon-link" href="#phycical-memory"></a>phycical memory</h1>
+<h1 id="phycical-memory">phycical memory<a aria-hidden="true" class="anchor-heading icon-link" href="#phycical-memory"></a></h1>
 <p>stack（栈）是一块用于保存函数调用信息——传递的参数、每个函数的本地变量的内存区域</p>
 <p>heap（堆）是一块程序可以任意使用的内存区域，程序员有完全自由的权限对这个区域进行任何想要的操作</p>
 <p>stack部分的大小在程序运行过程中是可变的。当函数调用发生时，stack就会扩大，当函数调用结束时：之前扩大的stack就会缩小为调用之前的样子
@@ -8,15 +8,15 @@ heap同样也是一个大小可变的区域，当程序员从heap中请求内存
 stack和heap都是可伸缩的区域，它们处于整个地址空间中的相对位置：stack会向下扩展（由高地址到低地址），而heap则会向上扩展（由低地址到高地址）。它们都是可以自由增长的区域，只是增长的方向刚好相反。操作系统只需要检查这两个区域不会出现重叠的情况，这是它们主要的使用限制。</p>
 <p><img src="/assets/images/2021-04-05-23-02-01.png"></p>
 <p>一个分页（page）是物理内存（page frame）或虚拟内存中一组连续线性地址。Linux内核以内存页为单位处理内存。一个内存页通常是4KB大小。当一个进程请求一定数量内存页的时候，如果有有效的内存页，Linux内核立刻将它们分配给进程。否则，需要从一些其他的进程或分页缓存中得到。内核知道有多少内存页是有效的，并且也知道它们在什么位置。</p>
-<h1 id="virtaul-memory"><a aria-hidden="true" class="anchor-heading icon-link" href="#virtaul-memory"></a>virtaul memory</h1>
+<h1 id="virtaul-memory">virtaul memory<a aria-hidden="true" class="anchor-heading icon-link" href="#virtaul-memory"></a></h1>
 <p>The virtual memory abstracts the details of physical memory from the application software, allows to keep only needed information in the physical memory (demand paging) and provides a mechanism for the protection and controlled sharing of data between processes.</p>
 <p>虚拟内存提供三个重要的能力，第一个把主存看作一个存储在磁盘上地址空间的高速缓存，在主存中只保存活动区域，并根据需要在磁盘和主存之间来回传送数据，通过这种方式高效的使用的主存，第二点，他为每个进程提供了一致的地址空间，从而简化了内存管理，第三它保护了每个进程地址空间，不被其他进程破坏。</p>
 <p>虚拟内存其实是在磁盘上，需要用的时候放到主存里。每个虚拟地址指向一个PTE, 包含有效位以及物理页号或者磁盘地址。缓存不命中是缺页，调用缺页异常处理程序，选择一个页面换成需要的页面。之后重新启动缺页异常的指令。重新地址翻译。可以利用TLB加速地址翻译或者使用多级页表。</p>
-<h2 id="vsz---virtual-set-size"><a aria-hidden="true" class="anchor-heading icon-link" href="#vsz---virtual-set-size"></a>VSZ - Virtual Set Size</h2>
+<h2 id="vsz---virtual-set-size">VSZ - Virtual Set Size<a aria-hidden="true" class="anchor-heading icon-link" href="#vsz---virtual-set-size"></a></h2>
 <p>The Virtual Set Size is a memory size assigned to a process ( program ) during the initial execution. The Virtual Set Size memory is simply a number of how much memory a process has available for its execution.</p>
-<h2 id="rss---resident-set-size"><a aria-hidden="true" class="anchor-heading icon-link" href="#rss---resident-set-size"></a>RSS - Resident Set Size</h2>
+<h2 id="rss---resident-set-size">RSS - Resident Set Size<a aria-hidden="true" class="anchor-heading icon-link" href="#rss---resident-set-size"></a></h2>
 <p>As opposed to VSZ ( Virtual Set Size ), RSS is a memory currently used by a process. This is a actual number in kilobytes of how much RAM the current process is using.</p>
-<h2 id="缓存的工具"><a aria-hidden="true" class="anchor-heading icon-link" href="#缓存的工具"></a>缓存的工具</h2>
+<h2 id="缓存的工具">缓存的工具<a aria-hidden="true" class="anchor-heading icon-link" href="#缓存的工具"></a></h2>
 <p>每个字节有唯一的虚拟地址。</p>
 <p>virutal page有三种类型</p>
 <ul>
@@ -34,7 +34,7 @@ write back: The data is updated only in the cache and updated into the memory in
 <p>页命中：如果有效，可以获得物理地址</p>
 <p>缺页：page fault，调用内核缺页处理程序。程序选择一个牺牲页，修改DRAM，把磁盘里的VP复制到DRAM，重新启动缺页的指令，把导致缺页的虚拟地址重新发到MMU，命中。</p>
 <p>The activity of transferring a page between disk and memorf is known as swapping or paging. Pages are swapped in (paged in) from disk to DRAM, anct swapped out (paged out) from DRAM to disk</p>
-<h3 id="swap"><a aria-hidden="true" class="anchor-heading icon-link" href="#swap"></a>swap</h3>
+<h3 id="swap">swap<a aria-hidden="true" class="anchor-heading icon-link" href="#swap"></a></h3>
 <ul>
 <li>
 <p>What is swap, when will it be used?
@@ -54,37 +54,37 @@ Swap space is located on hard drives, which have a slower access time than physi
 </p>
 </li>
 </ul>
-<h2 id="内存管理"><a aria-hidden="true" class="anchor-heading icon-link" href="#内存管理"></a>内存管理</h2>
+<h2 id="内存管理">内存管理<a aria-hidden="true" class="anchor-heading icon-link" href="#内存管理"></a></h2>
 <p>不同进程里的VP可以共享一个PP。简化linking，loading，share，内存分配</p>
 <p>两个进程将私有对象映射到它们的虚拟内存的不同区域，但是共享这个对象，统一个物理副本，对于每个应设是有对象的进程，相应的所有区域的业表条目都被标记为只读，并且区域结构被标记为私有的写时复制。只要没有进程，试图修改他们自己的私有区域，他们就可以继续共享物理内存对象的一个单独副本，但是只要有一个进程，试图写私有区域内的某个页面，他就会复制一个新的，在那个里面写。</p>
-<h2 id="内存保护"><a aria-hidden="true" class="anchor-heading icon-link" href="#内存保护"></a>内存保护</h2>
+<h2 id="内存保护">内存保护<a aria-hidden="true" class="anchor-heading icon-link" href="#内存保护"></a></h2>
 <p>在page table有许可位，判定这个page的访问权限。</p>
-<h2 id="地址翻译-mmu"><a aria-hidden="true" class="anchor-heading icon-link" href="#地址翻译-mmu"></a>地址翻译 mmu</h2>
+<h2 id="地址翻译-mmu">地址翻译 mmu<a aria-hidden="true" class="anchor-heading icon-link" href="#地址翻译-mmu"></a></h2>
 <p>MMU memory management unit.
 The mapping between virtual address and physical address.</p>
 <p><img src="/assets/images/2021-04-05-22-38-37.png"></p>
 <p>当一个用户级进程想访问一些内存，它会产生一个访问请求，MMU会把请求的虚拟地址转换为对应的物理内存地址。但是如果这个地址访问存在错误：转换后的物理地址超出了物理段的界限，或者违反了段保护权限（例如请求向只读段中写入数据），此时默认情况下操作系统会产生一个表示需要进行错误处理的信号：SIGSEGV，对这个信号的默认处理行为（default handler）是杀死（kill）这个进程，并且输出一个消息：“Segmentation fault”。</p>
 <p><img src="/assets/images/2021-05-03-19-35-51.png"></p>
-<h2 id="tlb"><a aria-hidden="true" class="anchor-heading icon-link" href="#tlb"></a>TLB</h2>
+<h2 id="tlb">TLB<a aria-hidden="true" class="anchor-heading icon-link" href="#tlb"></a></h2>
 <p>快速重编址缓冲器（Translation-lookaside Buffer : TLB）</p>
 <p>在每次虚拟内存访问时都会使用MMU，它会先从地址中提取出VPN，然后根据这个VPN查找TLB中是否有对应的VPN。如果命中（hit），它会直接返回TLB中记录的对应的物理地址，完成它的使命。如果没有命中（miss），那么它会查找进程的页表，如果对这个物理地址的访问是合法的，那么它会更新TLB，那么之后再访问这个虚拟地址，就会命中了。</p>
 <p><img src="/assets/images/2021-05-03-19-36-10.png"></p>
-<h2 id="multi-level-page-table"><a aria-hidden="true" class="anchor-heading icon-link" href="#multi-level-page-table"></a>multi-level page table</h2>
+<h2 id="multi-level-page-table">multi-level page table<a aria-hidden="true" class="anchor-heading icon-link" href="#multi-level-page-table"></a></h2>
 <p><img src="/assets/images/2021-05-03-19-42-35.png"></p>
-<h2 id="os"><a aria-hidden="true" class="anchor-heading icon-link" href="#os"></a>os</h2>
+<h2 id="os">os<a aria-hidden="true" class="anchor-heading icon-link" href="#os"></a></h2>
 <ul>
 <li>不同进程共享同一个物理page</li>
 <li>写时复制，一开始指向同一个，改变一个的时候copy另一个</li>
 </ul>
 <p><img src="/asets/images/2021-05-03-19-46-33.png"></p>
-<h3 id="heap"><a aria-hidden="true" class="anchor-heading icon-link" href="#heap"></a>heap</h3>
+<h3 id="heap">heap<a aria-hidden="true" class="anchor-heading icon-link" href="#heap"></a></h3>
 <p><img src="/assets/images/2021-05-03-19-47-09.png"></p>
 <ul>
 <li>malloc</li>
 <li>free</li>
 </ul>
 <p>在头部和尾部都有a/f表示 上一个/下一个是不是allocate，常数时间合并空闲块</p>
-<h3 id="垃圾收集"><a aria-hidden="true" class="anchor-heading icon-link" href="#垃圾收集"></a>垃圾收集</h3>
+<h3 id="垃圾收集">垃圾收集<a aria-hidden="true" class="anchor-heading icon-link" href="#垃圾收集"></a></h3>
 <p>A garbage collector is a dynamic storage allocator that automatically frees allocated blocks that are no longer needed by the program.</p>
 <p>有一些根节点可以到达堆节点</p>
 <p><img src="/assets/images/2021-05-03-19-50-10.png"></p>

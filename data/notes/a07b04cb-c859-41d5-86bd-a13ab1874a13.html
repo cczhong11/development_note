@@ -1,12 +1,12 @@
-<h1 id="pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#pattern"></a>Pattern</h1>
-<h1 id="cache-aside-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#cache-aside-pattern"></a>cache-aside pattern</h1>
+<h1 id="pattern">Pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#pattern"></a></h1>
+<h1 id="cache-aside-pattern">cache-aside pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#cache-aside-pattern"></a></h1>
 <p>Load data on demand into a cache from a data store. This can improve performance and also helps to maintain consistency between data held in the cache and data in the underlying data store.</p>
 <p>Many commercial caching systems provide read-through and write-through/write-behind operations. In these systems, an application retrieves data by referencing the cache. If the data isn't in the cache, it's retrieved from the data store and added to the cache. Any modifications to data held in the cache are automatically written back to the data store as well.</p>
 <p>For caches that don't provide this functionality, it's the responsibility of the applications that use the cache to maintain the data.</p>
 <p>An application can emulate the functionality of read-through caching by implementing the cache-aside strategy. This strategy loads data into the cache on demand. The figure illustrates using the Cache-Aside pattern to store data in the cache.</p>
 <p><img src="/assets/images/2021-05-09-22-49-50.png"></p>
 <p><a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/cache-aside">reference</a></p>
-<h1 id="command-and-query-responsibility-segregation-cqrs-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#command-and-query-responsibility-segregation-cqrs-pattern"></a>Command and Query Responsibility Segregation (CQRS) pattern</h1>
+<h1 id="command-and-query-responsibility-segregation-cqrs-pattern">Command and Query Responsibility Segregation (CQRS) pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#command-and-query-responsibility-segregation-cqrs-pattern"></a></h1>
 <p>The Command and Query Responsibility Segregation (CQRS) pattern separates read and update operations for a data store. Implementing CQRS in your application can maximize its performance, scalability, and security. The flexibility created by migrating to CQRS allows a system to better evolve over time and prevents update commands from causing merge conflicts at the domain level.</p>
 <p><img src="/assets/images/2021-05-09-22-51-59.png"></p>
 <ul>
@@ -14,11 +14,11 @@
 <li>Commands may be placed on a queue for asynchronous processing, rather than being processed synchronously.</li>
 <li>Queries never modify the database. A query returns a DTO that does not encapsulate any domain knowledge.</li>
 </ul>
-<h1 id="event-sourcing-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#event-sourcing-pattern"></a>Event Sourcing pattern</h1>
+<h1 id="event-sourcing-pattern">Event Sourcing pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#event-sourcing-pattern"></a></h1>
 <p>Instead of storing just the current state of the data in a domain, use an append-only store to record the full series of actions taken on that data. The store acts as the system of record and can be used to materialize the domain objects. This can simplify tasks in complex domains, by avoiding the need to synchronize the data model and the business domain, while improving performance, scalability, and responsiveness. It can also provide consistency for transactional data, and maintain full audit trails and history that can enable compensating actions.</p>
 <p>The Event Sourcing pattern defines an approach to handling operations on data that's driven by a sequence of events, each of which is recorded in an append-only store. Application code sends a series of events that imperatively describe each action that has occurred on the data to the event store, where they're persisted. Each event represents a set of changes to the data </p>
 <p><img src="/assets/images/2021-05-09-22-54-18.png"></p>
-<h1 id="index-table"><a aria-hidden="true" class="anchor-heading icon-link" href="#index-table"></a>Index Table</h1>
+<h1 id="index-table">Index Table<a aria-hidden="true" class="anchor-heading icon-link" href="#index-table"></a></h1>
 <p>Create indexes over the fields in data stores that are frequently referenced by queries. This pattern can improve query performance by allowing applications to more quickly locate the data to retrieve from a data store.</p>
 <p>If the data store doesn't support secondary indexes, you can emulate them manually by creating your own index tables. An index table organizes the data by a specified key. Three strategies are commonly used for structuring an index table, depending on the number of secondary indexes that are required and the nature of the queries that an application performs.</p>
 <p>The first strategy is to duplicate the data in each index table but organize it by different keys (complete denormalization). The next figure shows index tables that organize the same customer information by Town and LastName.</p>
@@ -27,7 +27,7 @@
 <p><img src="/assets/images/2021-05-09-22-58-20.png"></p>
 <p>The third strategy is to create partially normalized index tables organized by different keys that duplicate frequently retrieved fields. Reference the fact table to access less frequently accessed fields. The next figure shows how commonly accessed data is duplicated in each index table.</p>
 <p><img src="/assets/images/2021-05-09-22-58-32.png"></p>
-<h1 id="materialized-view-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#materialized-view-pattern"></a>Materialized View pattern</h1>
+<h1 id="materialized-view-pattern">Materialized View pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#materialized-view-pattern"></a></h1>
 <p>Generate prepopulated views over the data in one or more data stores when the data isn't ideally formatted for required query operations. This can help support efficient querying and data extraction, and improve application performance.</p>
 <p><img src="/assets/images/2021-05-09-22-59-51.png"></p>
 <ul>
@@ -39,9 +39,9 @@
 <li>Bridging different data stores, to take advantage of their individual capabilities. For example, using a cloud store that's efficient for writing as the reference data store, and a relational database that offers good query and read performance to hold the materialized views.</li>
 <li>When using microservices, you are recommended to keep them loosely coupled, including their data storage. Thefore, materialized views can help you consolidate data from your services. If materialized views are not appropiate in your microservices architecture or specific scenario, please consider having well-defined boundaries that align to domain driven design (DDD) and aggregate their data when requested.</li>
 </ul>
-<h1 id="sharding-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#sharding-pattern"></a>Sharding pattern</h1>
+<h1 id="sharding-pattern">Sharding pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#sharding-pattern"></a></h1>
 <p>Divide a data store into a set of horizontal partitions or shards. This can improve scalability when storing and accessing large volumes of data.</p>
-<h2 id="sharding-strategies"><a aria-hidden="true" class="anchor-heading icon-link" href="#sharding-strategies"></a>Sharding strategies</h2>
+<h2 id="sharding-strategies">Sharding strategies<a aria-hidden="true" class="anchor-heading icon-link" href="#sharding-strategies"></a></h2>
 <p>The Lookup strategy. In this strategy the sharding logic implements a map that routes a request for data to the shard that contains that data using the shard key. </p>
 <p><img src="/assets/images/2021-05-09-23-07-49.png"></p>
 <p>The Range strategy.</p>
@@ -49,9 +49,9 @@
 <p><img src="/assets/images/2021-05-09-23-08-04.png"></p>
 <p>The Hash strategy. The purpose of this strategy is to reduce the chance of hotspots </p>
 <p><img src="/assets/images/2021-05-09-23-11-52.png"></p>
-<h1 id="static-content-hosting-patter"><a aria-hidden="true" class="anchor-heading icon-link" href="#static-content-hosting-patter"></a>Static Content Hosting patter</h1>
+<h1 id="static-content-hosting-patter">Static Content Hosting patter<a aria-hidden="true" class="anchor-heading icon-link" href="#static-content-hosting-patter"></a></h1>
 <p>Deploy static content to a cloud-based storage service that can deliver them directly to the client. This can reduce the need for potentially expensive compute instances.</p>
-<h1 id="valet-key-pattern"><a aria-hidden="true" class="anchor-heading icon-link" href="#valet-key-pattern"></a>Valet Key pattern</h1>
+<h1 id="valet-key-pattern">Valet Key pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#valet-key-pattern"></a></h1>
 <p>Use a token that provides clients with restricted direct access to a specific resource, in order to offload data transfer from the application. This is particularly useful in applications that use cloud-hosted storage systems or queues, and can minimize cost and maximize scalability and performance.</p>
 <p>You need to resolve the problem of controlling access to a data store where the store can't manage authentication and authorization of clients. One typical solution is to restrict access to the data store’s public connection and provide the client with a key or token that the data store can validate.</p>
 <p>The client uses this token to access a specific resource in the data store for only a specific period, and with specific restrictions on access permissions, as shown in the figure. After the specified period, the key becomes invalid and won't allow access to the resource.</p>

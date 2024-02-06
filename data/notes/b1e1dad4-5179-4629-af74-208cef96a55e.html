@@ -1,22 +1,22 @@
-<h1 id="io"><a aria-hidden="true" class="anchor-heading icon-link" href="#io"></a>Io</h1>
-<h1 id="file"><a aria-hidden="true" class="anchor-heading icon-link" href="#file"></a>file</h1>
+<h1 id="io">Io<a aria-hidden="true" class="anchor-heading icon-link" href="#io"></a></h1>
+<h1 id="file">file<a aria-hidden="true" class="anchor-heading icon-link" href="#file"></a></h1>
 <p>file是一个m个字节的序列。所以I/O设备被模型化为文件，输入输出变成读和写。</p>
-<h2 id="打开文件"><a aria-hidden="true" class="anchor-heading icon-link" href="#打开文件"></a>打开文件</h2>
+<h2 id="打开文件">打开文件<a aria-hidden="true" class="anchor-heading icon-link" href="#打开文件"></a></h2>
 <p>app通过要求内核打开相应文件，访问一个I/O设备，内核返回一个小的非负整数，叫做描述符。内核记录有关这个文件的信息，app只记住这个描述符。</p>
 <p>创建进程都有三个打开的文件，stdin，stdout，stderr。</p>
 <p>改变当前文件位置，对于每个打开的文件，内核保持一个文件位置k，是从文件开始的字节偏移量。通过seek设置当前位置k。</p>
-<h2 id="读写文件"><a aria-hidden="true" class="anchor-heading icon-link" href="#读写文件"></a>读写文件</h2>
+<h2 id="读写文件">读写文件<a aria-hidden="true" class="anchor-heading icon-link" href="#读写文件"></a></h2>
 <ul>
 <li>读：从文件复制n>0到内存，从当前位置k增加到k+n，当到末尾，触发EOF</li>
 <li>写：从内存复制到n>0到一个文件，从k开始</li>
 </ul>
-<h1 id="file-type"><a aria-hidden="true" class="anchor-heading icon-link" href="#file-type"></a>file type</h1>
+<h1 id="file-type">file type<a aria-hidden="true" class="anchor-heading icon-link" href="#file-type"></a></h1>
 <ul>
 <li>regular file: text and binary</li>
 <li>directory: 包含一组link的文件，将filename link to one file。至少包括“.” and “..”</li>
 <li>socket: 与另一个进程进行网络通讯</li>
 </ul>
-<h1 id="数据结构"><a aria-hidden="true" class="anchor-heading icon-link" href="#数据结构"></a>数据结构</h1>
+<h1 id="数据结构">数据结构<a aria-hidden="true" class="anchor-heading icon-link" href="#数据结构"></a></h1>
 <p><img src="/assets/images/2021-05-03-19-57-58.png"></p>
 <ul>
 <li>描述符表： 每个进程独立</li>
@@ -25,7 +25,7 @@
 </ul>
 <p>for fork</p>
 <p><img src="/assets/images/2021-05-03-20-05-52.png"></p>
-<h2 id="重定向"><a aria-hidden="true" class="anchor-heading icon-link" href="#重定向"></a>重定向</h2>
+<h2 id="重定向">重定向<a aria-hidden="true" class="anchor-heading icon-link" href="#重定向"></a></h2>
 <p>dup2 复制oldfd到newfd，删除老的file table item，新的reference count+=1，老的v-node删除</p>
 <hr>
 <strong>Backlinks</strong>

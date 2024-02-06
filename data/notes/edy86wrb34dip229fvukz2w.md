@@ -1,0 +1,93 @@
+
+```
+#@title ## 8.1. Upload Config
+from huggingface_hub import login
+from huggingface_hub import HfApi
+from huggingface_hub.utils import validate_repo_id, HfHubHTTPError
+
+#@markdown Login to Huggingface Hub 
+#@markdown > Get **your** huggingface `WRITE` token [here](https://huggingface.co/settings/tokens)
+write_token = "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" #@param {type:"string"}
+login(write_token, add_to_git_credential=True)
+
+api = HfApi()
+user = api.whoami(write_token)
+
+#@markdown Fill this if you want to upload to your organization, or just leave it empty.
+
+orgs_name = "" #@param{type:"string"}
+
+#@markdown If your model/dataset repo didn't exist, it will automatically create your repo.
+model_name = "cczhong/chinese-alpaca-plus-lora-7b-merged-ggml-4b" #@param{type:"string"}
+#dataset_name = "your-dataset-name" #@param{type:"string"}
+make_this_model_private = False #@param{type:"boolean"}
+model_repo=model_name
+
+if model_name:
+  try:
+      validate_repo_id(model_repo)
+      api.create_repo(repo_id=model_repo, 
+                      private=make_this_model_private)
+      print("Model Repo didn't exists, creating repo")
+      print("Model Repo: ",model_repo,"created!\n")
+
+  except HfHubHTTPError as e:
+      print(f"Model Repo: {model_repo} exists, skipping create repo\n")
+
+
+from huggingface_hub import HfApi
+from pathlib import Path
+%store -r
+
+api = HfApi()
+commit_message = "add new model" #@param {type :"string"}
+model_path = "/home/ubuntu/llama.cpp/zh-models/alpaca-combined"
+if not commit_message:
+  commit_message = "feat: upload "+project_name+" lora model"
+path_in_repo = None
+def upload_model(model_paths, is_folder :bool, is_config :bool):
+  path_obj = Path(model_paths)
+  trained_model = path_obj.parts[-1]
+  
+  if path_in_repo:
+    trained_model = path_in_repo
+  
+  if is_config:
+    trained_model = f"{project_name}_config"
+
+  if is_folder:
+    print(f"Uploading {trained_model} to https://huggingface.co/"+model_repo)
+    print(f"Please wait...")
+    
+    api.upload_folder(
+        folder_path=model_paths,
+        path_in_repo=trained_model,
+        repo_id=model_repo,
+        commit_message=commit_message,
+        ignore_patterns=".ipynb_checkpoints"
+        )
+    print(f"Upload success, located at https://huggingface.co/"+model_repo+"/tree/main\n")
+  else: 
+    print(f"Uploading {trained_model} to https://huggingface.co/"+model_repo)
+    print(f"Please wait...")
+            
+    api.upload_file(
+        path_or_fileobj=model_paths,
+        path_in_repo=trained_model,
+        repo_id=model_repo,
+        commit_message=commit_message,
+        )
+        
+    print(f"Upload success, located at https://huggingface.co/"+model_repo+"/blob/main/"+trained_model+"\n")
+      
+def upload():
+    if model_path.endswith((".ckpt", ".safetensors", ".pt")):
+      upload_model(model_path, False, False)
+    else:
+      upload_model(model_path, True, False)
+
+    #if config_path:
+    #  upload_model(config_path, True, True)
+
+upload()
+```

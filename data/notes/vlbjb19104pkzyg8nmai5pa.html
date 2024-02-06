@@ -1,0 +1,36 @@
+<h1 id="machine_memory">machine_memory<a aria-hidden="true" class="anchor-heading icon-link" href="#machine_memory"></a></h1>
+<ol>
+<li>
+<p>模型加载：将模型参数移动到GPU，当前内存使用量为模型的大小。</p>
+</li>
+<li>
+<p>前向传播：输入通过模型并存储中间输出（激活）。存储这些激活占用了记忆体。</p>
+</li>
+<li>
+<p>反向传播：计算从网络末端到开始的梯度，并在进行时丢弃前向激活，因为我们有了一致的出价，当前内存使用量为模型加梯度的大小。</p>
+</li>
+<li>
+<p>优化器步骤：更新参数并保留运行中的梯度估计，如一阶和二阶动量。这将占用模型大小的两倍内存对于使用动量的Adam优化器，对于使用一个动量的RMSprop，以及对于不使用动量的SGD，占用等同于模型大小的内存。</p>
+</li>
+<li>
+<p>后续迭代：梯度计算后，优化器采取了一步，梯度和梯度动量仍然存在。所以你在未来迭代中的最大内存使用量将是模型+激活+梯度+梯度动量。</p>
+</li>
+</ol>
+<p>model+activation+gradient+gradient momentum</p>
+<p>计算</p>
+<p>max memory consumption = m+ f <em> batch_size </em> b + d <em> g + o </em> m</p>
+<p>m 是模型占用的内存。</p>
+<p>f 是单个数据样本前向传递所消耗的内存。
+batch_size 是批量大小。</p>
+<p>b 是训练过程中使用的精度因子（如果使用混合精度训练，则为0.5；如果使用全精度训练，则为1）。</p>
+<p>d 是分布式训练的因子（如果在一个GPU上训练，则为1；如果在多个GPU上训练，则为2）。</p>
+<p>g 是梯度占用的内存。</p>
+<p>o 是优化器存储的动量的数量（通常是0、1或2，取决于是否使用动量以及使用的动量类型）。</p>
+<h1 id="trick">trick<a aria-hidden="true" class="anchor-heading icon-link" href="#trick"></a></h1>
+<ol>
+<li>with torch.no_grad(): 
+<ol>
+<li>用于减少内存使用量，因为它不会跟踪梯度。</li>
+</ol>
+</li>
+</ol>

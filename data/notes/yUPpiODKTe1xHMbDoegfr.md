@@ -17,3 +17,10 @@
 
 第四项为 Court Address : 这一地址为你应上庭的法院地址，一般也为你上交书面辩护的地方。
 
+# Top 10 Traffic Violations
+
+1. Speeding
+2. Failure to stop at a red light
+3. violating pedestrian right-of-way in a crosswalk
+4. running stop signs
+5. failing to yield while turning. 

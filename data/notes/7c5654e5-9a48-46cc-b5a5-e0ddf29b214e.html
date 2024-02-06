@@ -1,4 +1,4 @@
-<h1 id="recovery"><a aria-hidden="true" class="anchor-heading icon-link" href="#recovery"></a>Recovery</h1>
+<h1 id="recovery">Recovery<a aria-hidden="true" class="anchor-heading icon-link" href="#recovery"></a></h1>
 <p>Recovery algorithms are techniques to ensure database consistency, transaction atomicity, and durability despite failures. Recovery algorithm has two parts: actions during normal transaction, actions after a failure to recover the database.The key primitives are UNDO, the process of removing the effects of an incomplete or aborted transaction. REDO: the process of re-instating the effects of a committed transaction for durability.</p>
 <p>Storage can be volatile storage, data will be lost after powering off. Non-Volatile have data persistent after powering off. Stable storage never lose data. It could achieve approximately by using multiple storages. </p>
 <p>Failure can be transaction failure: transaction cannot complete due to some internal error and DBMS must terminate an active transaction due to an error condition. System failure is DBMS fails and system is crashed, non-volatile storage are not corrupted. Storage media failure is a disk failure and destroy parts of non-volatile storage. </p>
@@ -9,7 +9,7 @@ shadow. For undo, it remove the shadow pages. Leave master and the DB root point
 <p><strong>Write-Ahead Logging</strong> means DBMS records all changes made to the db in log file before changes is made to a disk page. The log contains information to perform undo and redo. It has fast runtime performance but slow recovery time. Log records are written to disk before update is allowed to be written on disk. Transaction is committed until all its log records have been written to stable storage.Write BEGIN in the beginning, COMMITTED to make sure all log records are flushed. Log records contains tid, object id, before value(UNDO), after value(REDO). If we use NO-STEAL policy, we don't need original value, but in that way we could not undo for aborted transaction.</p>
 <p>DBMS can periodically takes a checkpoint where it flushes all buffers out to disk. The DBMS stops accepting new transactions and waits for all active transactions to complete. Flush all log records and dirty blocks currently residing in main memory to stable storage. Write a <checkpoint> entry to the log and flush to stable storage.</checkpoint></p>
 <p>Logging schemes could be physical logging: record the changes made to a specific location in the database. Logical logging records the high operations executed by transactions. Physiological logging means log records target a single page but do not specify data organization of the page.</p>
-<h2 id="aries"><a aria-hidden="true" class="anchor-heading icon-link" href="#aries"></a>ARIES</h2>
+<h2 id="aries">ARIES<a aria-hidden="true" class="anchor-heading icon-link" href="#aries"></a></h2>
 <p>Algorithms for Recovery and Isolation Exploiting Semantics. </p>
 <ul>
 <li>WAL</li>

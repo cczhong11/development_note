@@ -1,0 +1,43 @@
+<h1 id="json">Json<a aria-hidden="true" class="anchor-heading icon-link" href="#json"></a></h1>
+<h1 id="swift中的decodable协议">Swift中的<code>Decodable</code>协议<a aria-hidden="true" class="anchor-heading icon-link" href="#swift中的decodable协议"></a></h1>
+<h2 id="概述">概述<a aria-hidden="true" class="anchor-heading icon-link" href="#概述"></a></h2>
+<p><code>Decodable</code>是Swift标准库中的一个协议，用于将数据（如JSON）解码为Swift的数据类型。</p>
+<h2 id="作用">作用<a aria-hidden="true" class="anchor-heading icon-link" href="#作用"></a></h2>
+<ul>
+<li><strong>数据解码</strong>: 允许你将符合外部格式（如JSON、XML）的数据转换成Swift内部的数据类型。</li>
+<li><strong>简化解析流程</strong>: 使用<code>Decodable</code>可以大幅简化从外部数据源到Swift对象的转换过程。</li>
+</ul>
+<h2 id="使用decodable">使用<code>Decodable</code><a aria-hidden="true" class="anchor-heading icon-link" href="#使用decodable"></a></h2>
+<h3 id="1-定义符合decodable的类型">1. 定义符合<code>Decodable</code>的类型<a aria-hidden="true" class="anchor-heading icon-link" href="#1-定义符合decodable的类型"></a></h3>
+<p>首先，你需要定义一个符合<code>Decodable</code>协议的结构体或类。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">struct</span> <span class="token class-name">User</span><span class="token punctuation">:</span> <span class="token class-name">Decodable</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> name<span class="token punctuation">:</span> <span class="token class-name">String</span>
+    <span class="token keyword">var</span> age<span class="token punctuation">:</span> <span class="token class-name">Int</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>在这个例子中，<code>User</code>结构体可以解码包含<code>name</code>和<code>age</code>字段的JSON对象。</p>
+<h3 id="2-解码json">2. 解码JSON<a aria-hidden="true" class="anchor-heading icon-link" href="#2-解码json"></a></h3>
+<p>然后，你可以使用如<code>JSONDecoder</code>的解码器来将JSON数据转换为<code>User</code>类型的实例。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">let</span> json <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"""
+{
+    "name": "张三",
+    "age": 28
+}
+"""</span></span><span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span>using<span class="token punctuation">:</span> <span class="token punctuation">.</span>utf8<span class="token punctuation">)</span><span class="token operator">!</span>
+
+<span class="token keyword">let</span> decoder <span class="token operator">=</span> <span class="token class-name">JSONDecoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> user <span class="token operator">=</span> <span class="token keyword">try</span> decoder<span class="token punctuation">.</span><span class="token function">decode</span><span class="token punctuation">(</span><span class="token class-name">User</span><span class="token punctuation">.</span><span class="token keyword">self</span><span class="token punctuation">,</span> from<span class="token punctuation">:</span> json<span class="token punctuation">)</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment">// 输出: 张三</span>
+<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="注意事项">注意事项<a aria-hidden="true" class="anchor-heading icon-link" href="#注意事项"></a></h2>
+<ul>
+<li>字段匹配：<code>Decodable</code>类型的属性名需要与JSON中的键匹配，或者你需要自定义<code>CodingKeys</code>来映射不匹配的键。</li>
+<li>数据类型匹配：JSON中的数据类型需要与Swift中的对应类型匹配。</li>
+<li>错误处理：解码过程可能会抛出错误，通常需要使用<code>try-catch</code>语句来处理。</li>
+</ul>
+<h2 id="总结">总结<a aria-hidden="true" class="anchor-heading icon-link" href="#总结"></a></h2>
+<p><code>Decodable</code>协议是Swift中处理数据解码的关键工具。它在将外部数据（如JSON）解码为Swift内部数据类型时非常有用，使得数据处理变得简单和直接。</p>

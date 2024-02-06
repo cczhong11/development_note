@@ -1,11 +1,11 @@
-<h1 id="network"><a aria-hidden="true" class="anchor-heading icon-link" href="#network"></a>Network</h1>
+<h1 id="network">Network<a aria-hidden="true" class="anchor-heading icon-link" href="#network"></a></h1>
 <p>□　接收和发送的数据包。 这个指标用来通知你，一个给定网络接口接收和发送数据包的数量。</p>
 <p>□　接收和发送的字节。 这个指标描述了一个给定网络接口接收和发送的字节数。</p>
 <p>□　每秒钟的冲突数量。 这个值给出了在网络上连接的每个接口发生冲突的相对数量。如果发生持续冲突通常要关注网络基础设施的问题，而不是服务器。在大多数正确配置的网络中，冲突一般是非常罕见的，除非网络基础设备是由集线器（HUB）组成的。</p>
 <p>□　丢弃的数据包。 已经被内核丢弃的数据包的统计数。丢弃的原因可能是由于防火墙配置，也可能是由于缺乏网络缓冲区。</p>
 <p>□　溢出。 该指标表示网络接口溢出缓冲区空间的次数。这个指标应该结合数据包被丢弃的值使用，用来确定是网络缓冲区还是网络队列长度出现瓶颈。</p>
 <p>□　错误。 被标记为故障帧的数量。通常这些错误是由网络不匹配或是部分网络电缆中断导致的。部分网络电缆中断对于铜线千兆网络是一个明显的性能问题。</p>
-<h2 id="netstatss"><a aria-hidden="true" class="anchor-heading icon-link" href="#netstatss"></a>netstat、ss</h2>
+<h2 id="netstatss">netstat、ss<a aria-hidden="true" class="anchor-heading icon-link" href="#netstatss"></a></h2>
 <p>netstat是最流行的工具之一。如果在网络上工作，你应该熟悉这个工具。它显示许多网络相关的信息，比如socket的使用、路由、接口、协议及网络统计信息等。</p>
 <p>替换netstat的是ss，替换netstat -r的是ip route，替换netstat -i的是ip -s link，替换netstat -g的是ip maddr。</p>
 <pre><code>root@zyg ～]# netstat -n

@@ -1,5 +1,5 @@
-<h1 id="process"><a aria-hidden="true" class="anchor-heading icon-link" href="#process"></a>Process</h1>
-<h1 id="process-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#process-1"></a>process</h1>
+<h1 id="process">Process<a aria-hidden="true" class="anchor-heading icon-link" href="#process"></a></h1>
+<h1 id="process-1">process<a aria-hidden="true" class="anchor-heading icon-link" href="#process-1"></a></h1>
 <p><img src="/assets/images/2021-05-11-20-16-21.png"></p>
 <p>是执行中程序的实例，系统中的每一个程序都运行在某个进程的上下文中，上下文是由程序正确运行所需状态组成的，这个状态包括存放内存中程序的代码和数据，它的栈，通用目的寄存器的内容，程序计数器，环境变量，以及打开文件描述符的集合。每次用户通过shell输入一个可执行目标文件，shell就会创建新的进程。</p>
 <p>The classic definition of a process is an instance of a program in execution. Each program in the system runs in the context of some process.The context consists of the state that the program needs to run correctly. This state includes the program's code and data stored in memory, its stack, the contents of its general-purpose registers, its program counter, environment variables, and the set of open file descriptors.</p>
@@ -9,11 +9,11 @@
 <p>加载并运行程序使用execve函数。execve调用一次从不返回。加载filename之后，调用启动代码，设置栈，将控制传递给新程序的main。</p>
 <p>the typical difference is that <strong>threads</strong> (of the same process) run in a <strong>shared memory space</strong>, while processes run in separate memory spaces. thread有自己的tid，栈，sp，pc，general register and flag, <strong>the code, data and heap areas are shared</strong></p>
 <p><img src="/assets/images/2022-04-19-19-44-28.png"></p>
-<h2 id="struct"><a aria-hidden="true" class="anchor-heading icon-link" href="#struct"></a>struct</h2>
+<h2 id="struct">struct<a aria-hidden="true" class="anchor-heading icon-link" href="#struct"></a></h2>
 <p>在Linux操作系统上运行的所有进程都是通过task_struct结构来管理的，其也被称为“进程描述符”。一个进程描述符包含了单个进程在运行期间所有必要的信息，比如进程标识、进程的属性、构建进程的资源等。如果知道进程的结构，就能了解进程的执行对性能的重要性。</p>
 <p><img src="/assets/images/2022-04-19-19-32-18.png"></p>
 <p><img src="/assets/images/2022-04-19-19-48-42.png"></p>
-<h2 id="process-control"><a aria-hidden="true" class="anchor-heading icon-link" href="#process-control"></a>process control</h2>
+<h2 id="process-control">process control<a aria-hidden="true" class="anchor-heading icon-link" href="#process-control"></a></h2>
 <p>进程控制：获取进程id。进程有三种状态：运行，停止(suspended) 收到SIGSTOP, SIGTSTP,SIGTTIN or SIGTTOU，直到收到SIGCONT继续。终止，收到终止进程的信号，从主程序返回，调用exit函数。
 进程创建用fork， 当一个进程由于某种原因终止时，内核并不是立刻把它从系统中清除，相反进程将会，被保持在一种已经终止的状态，直到被父进程回收。waitpid 等待子进程终止。进程休眠就是sleep。</p>
 <ul>
@@ -37,7 +37,7 @@
 <p>Copy-on-write or COW: when a write request is made, the data are copied into a new storage area, and then the original data are modified.</p>
 <p><img src="/assets/images/2022-04-19-19-34-30.png"></p>
 </div></div><p></p><p></p>
-<h2 id="context-switch"><a aria-hidden="true" class="anchor-heading icon-link" href="#context-switch"></a>context switch</h2>
+<h2 id="context-switch">context switch<a aria-hidden="true" class="anchor-heading icon-link" href="#context-switch"></a></h2>
 <p><img src="/assets/images/2021-04-25-23-04-15.png"></p>
 <p>registers是唯一被所有过程共享的资源，当调用时，把所有原始值压入栈中，改变寄存器的值，在返回之前从栈中弹出旧值。</p>
 <p>It consists of the values of objects such as the general-purpose registers, the floating-point registers, the program counter, user's stack, status registers, kernel's stack, and various kernel data structures such as a page table that characterizes the address space, a process table that contains information about the current process, and a file table that contains information about the files that the process has opened.</p>
@@ -45,7 +45,7 @@
 (1) saves the context of the current process, (2) restores the saved context of some previously preempted process, and (3) passes control to this newly restored process.</p>
 <p>The context is the state that the kernel needs to restart a preempted process. It consists of the values of objects such as the <strong>general-purpose registers, the floating-point registers, the program counter, user's stack, status registers, kernel's stack, and various kernel data structures such as a page table that characterizes the address space, a process table that contains information about the current process, and a file table that contains information about the files that the process has opened</strong>.</p>
 <p><img src="/assets/images/2022-04-19-19-47-02.png"></p>
-<h2 id="zombie-process"><a aria-hidden="true" class="anchor-heading icon-link" href="#zombie-process"></a>zombie process</h2>
+<h2 id="zombie-process">zombie process<a aria-hidden="true" class="anchor-heading icon-link" href="#zombie-process"></a></h2>
 <p>Zombie process
 what is zombie process? When does it become zombie process?</p>
 <p>当进程由于某种原因终止时，内核不会立即清除，而是保持在一种已经终止的状态直至被父进程回收，一个终止未被回收的叫zombie。用waitpid函数等待子进程终止或停止。</p>

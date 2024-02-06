@@ -1,0 +1,16 @@
+<h1 id="self_reflectio">self_reflectio<a aria-hidden="true" class="anchor-heading icon-link" href="#self_reflectio"></a></h1>
+<h1 id="react">ReAct<a aria-hidden="true" class="anchor-heading icon-link" href="#react"></a></h1>
+<p>通过将行动空间扩展为特定任务离散行动和语言空间的组合，在 LLM 中整合了推理和行动。前者使 LLM 能够与环境互动（例如使用维基百科搜索 API），而后者则促使 LLM 以自然语言生成推理痕迹。</p>
+<p>The ReAct prompt template incorporates explicit steps for LLM to think, roughly formatted as:</p>
+<p>Thought: ...
+Action: ...
+Observation: ...
+... (Repeated many times)</p>
+<h1 id="reflexion">Reflexion<a aria-hidden="true" class="anchor-heading icon-link" href="#reflexion"></a></h1>
+<p><img src="/assets/images/2023-09-21-22-37-31.png"></p>
+<p>自我反思是通过向 LLM 展示two shot示例来创建的，每个示例都是一对（失败的轨迹、用于指导未来计划变更的理想反思）。然后将反思添加到代理的工作记忆中，最多可添加三个，作为查询 LLM 的上下文。</p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/s07zvgrc9ml2ld5difpj0jg">agent (my_note)</a></li>
+</ul>

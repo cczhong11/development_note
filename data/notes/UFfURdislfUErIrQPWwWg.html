@@ -1,20 +1,20 @@
-<h1 id="hugo"><a aria-hidden="true" class="anchor-heading icon-link" href="#hugo"></a>Hugo</h1>
-<h1 id="hugo-template"><a aria-hidden="true" class="anchor-heading icon-link" href="#hugo-template"></a>hugo template</h1>
+<h1 id="hugo">Hugo<a aria-hidden="true" class="anchor-heading icon-link" href="#hugo"></a></h1>
+<h1 id="hugo-template">hugo template<a aria-hidden="true" class="anchor-heading icon-link" href="#hugo-template"></a></h1>
 <p>基于<a href="https://pkg.go.dev/text/template">go html template</a></p>
-<h2 id="variables"><a aria-hidden="true" class="anchor-heading icon-link" href="#variables"></a>variables</h2>
+<h2 id="variables">variables<a aria-hidden="true" class="anchor-heading icon-link" href="#variables"></a></h2>
 <pre class="language-go"><code class="language-go"><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">.</span>Title <span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token punctuation">{</span><span class="token punctuation">{</span> $address <span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token punctuation">{</span><span class="token punctuation">{</span> $address <span class="token operator">:=</span> <span class="token string">"123 Main St."</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
 </code></pre>
-<h2 id="functions"><a aria-hidden="true" class="anchor-heading icon-link" href="#functions"></a>functions</h2>
+<h2 id="functions">functions<a aria-hidden="true" class="anchor-heading icon-link" href="#functions"></a></h2>
 <pre class="language-go"><code class="language-go"><span class="token punctuation">{</span><span class="token punctuation">{</span> FUNCTION ARG1 ARG2 <span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token punctuation">{</span><span class="token punctuation">{</span> add <span class="token number">1</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
 </code></pre>
-<h2 id="include"><a aria-hidden="true" class="anchor-heading icon-link" href="#include"></a>include</h2>
+<h2 id="include">include<a aria-hidden="true" class="anchor-heading icon-link" href="#include"></a></h2>
 <pre class="language-go"><code class="language-go"><span class="token punctuation">{</span><span class="token punctuation">{</span> partial <span class="token string">"header.html"</span> <span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token punctuation">{</span><span class="token punctuation">{</span> template <span class="token string">"_internal/opengraph.html"</span> <span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
 </code></pre>
-<h2 id="logic"><a aria-hidden="true" class="anchor-heading icon-link" href="#logic"></a>logic</h2>
+<h2 id="logic">logic<a aria-hidden="true" class="anchor-heading icon-link" href="#logic"></a></h2>
 <pre class="language-go"><code class="language-go"><span class="token comment">// iteration</span>
 <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">range</span> $array <span class="token punctuation">}</span><span class="token punctuation">}</span>
     <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">.</span> <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">&#x3C;</span><span class="token operator">!</span><span class="token operator">--</span> The <span class="token punctuation">.</span> represents an element in $array <span class="token operator">--</span><span class="token operator">></span>
@@ -52,12 +52,12 @@
 
 <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>and <span class="token punctuation">(</span>or <span class="token punctuation">(</span>isset <span class="token punctuation">.</span>Params <span class="token string">"title"</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>isset <span class="token punctuation">.</span>Params <span class="token string">"caption"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>isset <span class="token punctuation">.</span>Params <span class="token string">"attr"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">}</span>
 </code></pre>
-<h2 id="pipes"><a aria-hidden="true" class="anchor-heading icon-link" href="#pipes"></a>pipes</h2>
+<h2 id="pipes">pipes<a aria-hidden="true" class="anchor-heading icon-link" href="#pipes"></a></h2>
 <pre class="language-go"><code class="language-go">
 <span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">(</span>seq <span class="token number">1</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token operator">|</span> shuffle <span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token punctuation">{</span><span class="token punctuation">{</span> index <span class="token punctuation">.</span>Params <span class="token string">"disqus_url"</span> <span class="token operator">|</span> html <span class="token punctuation">}</span><span class="token punctuation">}</span>
 </code></pre>
-<h2 id="context"><a aria-hidden="true" class="anchor-heading icon-link" href="#context"></a>context</h2>
+<h2 id="context">context<a aria-hidden="true" class="anchor-heading icon-link" href="#context"></a></h2>
 <p>The most easily overlooked concept to understand about Go Templates is that [object Object] always refers to the current context.</p>
 <p>In the top level of your template, this will be the data set made available to it.
 Inside of an iteration, however, it will have the value of the current item in the loop; i.e., [object Object] will no longer refer to the data available to the entire page.</p>
@@ -71,7 +71,7 @@ Inside of an iteration, however, it will have the value of the current item in t
 <span class="token punctuation">{</span><span class="token punctuation">{</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token operator">&#x3C;</span><span class="token operator">/</span>ul<span class="token operator">></span>
 </code></pre>
-<h2 id="whitespace"><a aria-hidden="true" class="anchor-heading icon-link" href="#whitespace"></a>whitespace</h2>
+<h2 id="whitespace">whitespace<a aria-hidden="true" class="anchor-heading icon-link" href="#whitespace"></a></h2>
 <pre class="language-go"><code class="language-go"><span class="token operator">&#x3C;</span>div<span class="token operator">></span>
   <span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token operator">-</span> <span class="token punctuation">.</span>Title <span class="token operator">-</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
 <span class="token operator">&#x3C;</span><span class="token operator">/</span>div<span class="token operator">></span>

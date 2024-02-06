@@ -1,17 +1,17 @@
-<h1 id="chef"><a aria-hidden="true" class="anchor-heading icon-link" href="#chef"></a>Chef</h1>
-<h1 id="chef-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#chef-1"></a>chef</h1>
+<h1 id="chef">Chef<a aria-hidden="true" class="anchor-heading icon-link" href="#chef"></a></h1>
+<h1 id="chef-1">chef<a aria-hidden="true" class="anchor-heading icon-link" href="#chef-1"></a></h1>
 <ul>
 <li>环境管理</li>
 <li>以自动化的方式进行服务器环境初始化或变更工作</li>
 </ul>
-<h2 id="environment"><a aria-hidden="true" class="anchor-heading icon-link" href="#environment"></a>environment</h2>
+<h2 id="environment">environment<a aria-hidden="true" class="anchor-heading icon-link" href="#environment"></a></h2>
 <p>Chef环境由三个部分组成：Chef server，Workstation, Node（Client）。</p>
 <p>Chef server是Chef环境的中枢，其中存储了基础设施环境的信息。你可以使用开源Chef server，也可以使用Chef官方提供的商业服务：Enterprise Chef。</p>
 <p>Workstation是你的工作台，一般情况下就是你的开发机器。你会在Workstation中创建cookbook，并且上传到Chef server，以及其他与Chef相关的工作。</p>
 <p>一个Node就是你基础设施环境中的一台服务器，也就是你用Chef来管理的机器。</p>
 <p>一个Node可以是一台物理机器，一个虚拟机，也可以是cloud环境中的一个instance，甚至是你网络环境中的一个交换机或路由器。</p>
 <p>如果你想要在Node上部署环境，那么Node会与Chef server进行交互获取信息，并在Node上执行环境初始化操作。</p>
-<h2 id="recipe"><a aria-hidden="true" class="anchor-heading icon-link" href="#recipe"></a>recipe</h2>
+<h2 id="recipe">recipe<a aria-hidden="true" class="anchor-heading icon-link" href="#recipe"></a></h2>
 <p>每个cookbook都会包含一到多个recipe（默认是default.rb）。一个recipe就是实现cookbook所描述场景的步骤。看以下这个简单的recipe：</p>
 <pre><code>package 'apache2' do
   action :install
@@ -27,5 +27,5 @@ cookbook_file '/var/www/index.html' do
 end
 </code></pre>
 <p>可以看出这个recipe分为三个步骤，分别是安装apache2、启动apache2、拷贝文件。</p>
-<h2 id="resource和provider"><a aria-hidden="true" class="anchor-heading icon-link" href="#resource和provider"></a>resource和provider</h2>
+<h2 id="resource和provider">resource和provider<a aria-hidden="true" class="anchor-heading icon-link" href="#resource和provider"></a></h2>
 <p>resource就是recipe中的配置项，可以是package、service、bash等等。provider就是为这些resource提供实现的程序。以编程语言来描述的话，resource定义了接口，provider提供了不同平台的实现。</p>

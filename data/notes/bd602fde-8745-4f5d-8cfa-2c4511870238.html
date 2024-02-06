@@ -1,13 +1,13 @@
-<h1 id="raft"><a aria-hidden="true" class="anchor-heading icon-link" href="#raft"></a>Raft</h1>
-<h1 id="共识机制-raft"><a aria-hidden="true" class="anchor-heading icon-link" href="#共识机制-raft"></a>共识机制 raft</h1>
+<h1 id="raft">Raft<a aria-hidden="true" class="anchor-heading icon-link" href="#raft"></a></h1>
+<h1 id="共识机制-raft">共识机制 raft<a aria-hidden="true" class="anchor-heading icon-link" href="#共识机制-raft"></a></h1>
 <p>main idea is to allow a collection of machines to work as a group that can survive the failures fo some of its members.</p>
-<h2 id="leader-election"><a aria-hidden="true" class="anchor-heading icon-link" href="#leader-election"></a>leader election</h2>
+<h2 id="leader-election">leader election<a aria-hidden="true" class="anchor-heading icon-link" href="#leader-election"></a></h2>
 <ul>
 <li>what: in each term, elect a leader. when time out, start a new election.</li>
 <li>why: one leader to recieve request and syn among all machines.</li>
 <li>how: begin one election with term++, every one vote itself first and request others, if it finds other have more latest term, it will become follower.</li>
 </ul>
-<h2 id="log-replication"><a aria-hidden="true" class="anchor-heading icon-link" href="#log-replication"></a>log replication</h2>
+<h2 id="log-replication">log replication<a aria-hidden="true" class="anchor-heading icon-link" href="#log-replication"></a></h2>
 <ul>
 <li>what: append command as a log entry.</li>
 <li>why: make sure everyone has same log</li>

@@ -1,0 +1,33 @@
+<h1 id="guard">Guard<a aria-hidden="true" class="anchor-heading icon-link" href="#guard"></a></h1>
+<h1 id="swift中的guard语句">Swift中的<code>guard</code>语句<a aria-hidden="true" class="anchor-heading icon-link" href="#swift中的guard语句"></a></h1>
+<h2 id="基本概念">基本概念<a aria-hidden="true" class="anchor-heading icon-link" href="#基本概念"></a></h2>
+<p><code>guard</code>语句在Swift中用于提前退出一个代码块，如果其条件不满足。它主要用于提高代码的可读性，通过减少嵌套并快速处理错误情况。</p>
+<h2 id="基本语法">基本语法<a aria-hidden="true" class="anchor-heading icon-link" href="#基本语法"></a></h2>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">guard</span> 条件 <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 条件不满足时执行的代码</span>
+    <span class="token keyword">return</span>或<span class="token keyword">throw</span>或<span class="token keyword">break</span>等
+<span class="token punctuation">}</span>
+<span class="token comment">// 条件满足时继续执行的代码</span>
+</code></pre>
+<h2 id="使用示例">使用示例<a aria-hidden="true" class="anchor-heading icon-link" href="#使用示例"></a></h2>
+<h3 id="1-检查条件并提前退出">1. 检查条件并提前退出<a aria-hidden="true" class="anchor-heading icon-link" href="#1-检查条件并提前退出"></a></h3>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">func</span> <span class="token function-definition function">greet</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token class-name">String</span><span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">guard</span> <span class="token keyword">let</span> name <span class="token operator">=</span> name <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"没有提供名字"</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello, </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">name</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">!"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>在这个例子中，如果<code>name</code>是<code>nil</code>，<code>guard</code>语句将确保函数提前退出，并打印一条消息。如果<code>name</code>不是<code>nil</code>，它的值将被解包并用于后面的<code>print</code>语句。</p>
+<h3 id="2-与if语句的比较">2. 与<code>if</code>语句的比较<a aria-hidden="true" class="anchor-heading icon-link" href="#2-与if语句的比较"></a></h3>
+<p><code>guard</code>语句与<code>if</code>语句的主要区别在于，<code>guard</code>总是有一个<code>else</code>分支，用于处理条件不满足的情况。而<code>if</code>语句则是可选的。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">if</span> <span class="token keyword">let</span> name <span class="token operator">=</span> name <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Hello, </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">name</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">!"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"没有提供名字"</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>相比之下，使用<code>guard</code>可以减少嵌套，使代码更清晰。</p>
+<h2 id="总结">总结<a aria-hidden="true" class="anchor-heading icon-link" href="#总结"></a></h2>
+<p><code>guard</code>语句是Swift中处理错误和提前退出的强大工具。它帮助你写出更清晰、更易于维护的代码，特别是在需要多个条件检查时。</p>

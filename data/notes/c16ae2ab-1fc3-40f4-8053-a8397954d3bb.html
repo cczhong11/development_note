@@ -1,8 +1,8 @@
-<h1 id="reliable_data_transfer"><a aria-hidden="true" class="anchor-heading icon-link" href="#reliable_data_transfer"></a>Reliable_data_transfer</h1>
-<h1 id="rdt"><a aria-hidden="true" class="anchor-heading icon-link" href="#rdt"></a>RDT</h1>
-<h2 id="possible-failure"><a aria-hidden="true" class="anchor-heading icon-link" href="#possible-failure"></a>possible failure</h2>
+<h1 id="reliable_data_transfer">Reliable_data_transfer<a aria-hidden="true" class="anchor-heading icon-link" href="#reliable_data_transfer"></a></h1>
+<h1 id="rdt">RDT<a aria-hidden="true" class="anchor-heading icon-link" href="#rdt"></a></h1>
+<h2 id="possible-failure">possible failure<a aria-hidden="true" class="anchor-heading icon-link" href="#possible-failure"></a></h2>
 <p>bit-errors, lossy, duplicate delivery , out-of-order delivery</p>
-<h2 id="methods"><a aria-hidden="true" class="anchor-heading icon-link" href="#methods"></a>methods</h2>
+<h2 id="methods">methods<a aria-hidden="true" class="anchor-heading icon-link" href="#methods"></a></h2>
 <ul>
 <li>checksums: bit error </li>
 <li>receiver feedback: bit error, ACK/NACK， Cumulative acknowledgments(I have received all packets with sequence numbers up to but not including sn.) allow acknowledgment of numerous packets at a time. They can be useful in pipelined protocols. 可能lost</li>
@@ -11,8 +11,8 @@
 <li>timer expiration: Segment or receiver feedback is lost (sender: Resends a packet after a timer fires. Sends a new packet after an acknowledgment (positive) arrives.)</li>
 <li>window:Control sending of multiple segments, allow for reuse of sequence numbers, also allow for pipeling segments</li>
 </ul>
-<h2 id="protocols"><a aria-hidden="true" class="anchor-heading icon-link" href="#protocols"></a>protocols</h2>
-<h3 id="stop-n-wait"><a aria-hidden="true" class="anchor-heading icon-link" href="#stop-n-wait"></a>Stop-n-Wait</h3>
+<h2 id="protocols">protocols<a aria-hidden="true" class="anchor-heading icon-link" href="#protocols"></a></h2>
+<h3 id="stop-n-wait">Stop-n-Wait<a aria-hidden="true" class="anchor-heading icon-link" href="#stop-n-wait"></a></h3>
 <ul>
 <li>Simplest Protocol that will handle bit errors and segment loss
 <ul>
@@ -26,7 +26,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="go-back-n"><a aria-hidden="true" class="anchor-heading icon-link" href="#go-back-n"></a>Go Back N</h2>
+<h2 id="go-back-n">Go Back N<a aria-hidden="true" class="anchor-heading icon-link" href="#go-back-n"></a></h2>
 <ul>
 <li>sliding window: A mechanism to control multiple, in-flight segments without overwhelming receiver, Sender is allowed to transmit N segments without waiting for an ACK</li>
 <li>“window” of up to N, consecutive unACKed segments allowed</li>
@@ -49,7 +49,7 @@
 </li>
 <li>A single segment error can cause many segments to be retransmitted</li>
 </ul>
-<h2 id="selective-repeat"><a aria-hidden="true" class="anchor-heading icon-link" href="#selective-repeat"></a>Selective Repeat</h2>
+<h2 id="selective-repeat">Selective Repeat<a aria-hidden="true" class="anchor-heading icon-link" href="#selective-repeat"></a></h2>
 <ul>
 <li>Receiver individually ACKs all correctly received segments</li>
 <li>Buffers segs for eventual in-order delivery</li>

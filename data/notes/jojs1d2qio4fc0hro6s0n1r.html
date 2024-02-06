@@ -1,0 +1,27 @@
+<h1 id="indeed">Indeed<a aria-hidden="true" class="anchor-heading icon-link" href="#indeed"></a></h1>
+<h1 id="indeed-1">Indeed<a aria-hidden="true" class="anchor-heading icon-link" href="#indeed-1"></a></h1>
+<p>分为两部分，原因是反爬虫机制比较强</p>
+<h2 id="search-page">search page<a aria-hidden="true" class="anchor-heading icon-link" href="#search-page"></a></h2>
+<p>通过indeed job search api 获取数据，存在sqlite中</p>
+<h2 id="get-detail-info">get detail info<a aria-hidden="true" class="anchor-heading icon-link" href="#get-detail-info"></a></h2>
+<p>获取每个job的详细信息，存在sqlite中</p>
+<h2 id="sqlite-column">sqlite column<a aria-hidden="true" class="anchor-heading icon-link" href="#sqlite-column"></a></h2>
+<pre><code>Table("indeed", metadata,
+          Column('Id', String, primary_key=True, nullable=False),
+          Column('Date', Date), Column('Company', String),
+          Column('Title', String), Column('Review', Float),
+          Column('Experience', String),
+          Column('Citizen', Boolean),
+          Column('Type', String),
+          Column('H1B', String), Column('Fulltime', String),
+          Column('City', String), Column('State', String),
+          Column('Link', String),
+          Column('Clicked', Integer),
+          Column('Liked', Integer),
+          Column('Disliked', Integer),
+          Column('ApplyLink', String),
+          Column('Expire', Boolean),
+          Column('TestCount', Integer),
+          Index('date_index', 'Date'), Index('state_index', 'State'))
+
+</code></pre>

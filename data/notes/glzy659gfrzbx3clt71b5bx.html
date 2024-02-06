@@ -1,0 +1,24 @@
+<h1 id="class_imbalance">Class_imbalance<a aria-hidden="true" class="anchor-heading icon-link" href="#class_imbalance"></a></h1>
+<h2 id="类别不平衡问题及解决方法">类别不平衡问题及解决方法<a aria-hidden="true" class="anchor-heading icon-link" href="#类别不平衡问题及解决方法"></a></h2>
+<h3 id="问题描述">问题描述<a aria-hidden="true" class="anchor-heading icon-link" href="#问题描述"></a></h3>
+<ul>
+<li><strong>检测困难</strong>：当某一类别数据较少时，模型难以检测到这个小众类别。</li>
+<li><strong>倾向于多数类别</strong>：模型倾向于将样本标注为数量较多的类别。</li>
+<li><strong>错误估计增加</strong>：由于类别不平衡，可能导致更高的错误估计。</li>
+</ul>
+<h3 id="解决策略">解决策略<a aria-hidden="true" class="anchor-heading icon-link" href="#解决策略"></a></h3>
+<h4 id="选择正确的指标">选择正确的指标<a aria-hidden="true" class="anchor-heading icon-link" href="#选择正确的指标"></a></h4>
+<ul>
+<li><strong>准确度</strong>：真正例 / (真正例 + 假正例) Precision</li>
+<li><strong>召回率</strong>：真正例 / (真正例 + 假反例) Recall</li>
+<li><strong>ROC曲线</strong>：用于二元分类，通过准确度和召回率判断模型效果。</li>
+</ul>
+<h4 id="数据层面的处理">数据层面的处理<a aria-hidden="true" class="anchor-heading icon-link" href="#数据层面的处理"></a></h4>
+<ul>
+<li><strong>过采样</strong>：复制少数类别的数据，使得数据更平衡。适用于少数类别数据较少的情况。</li>
+</ul>
+<h4 id="算法层面的调整">算法层面的调整<a aria-hidden="true" class="anchor-heading icon-link" href="#算法层面的调整"></a></h4>
+<ul>
+<li><strong>loss Function</strong>：在损失函数中对不同类别的结果赋予不同的权重，实现类别平衡损失。</li>
+<li><strong>类别分布的调整</strong>：针对每个类别做适当的概率分布调整。</li>
+</ul>

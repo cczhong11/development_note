@@ -1,0 +1,18 @@
+<h1 id="syncthing">Syncthing<a aria-hidden="true" class="anchor-heading icon-link" href="#syncthing"></a></h1>
+<h1 id="syncthing-1">Syncthing<a aria-hidden="true" class="anchor-heading icon-link" href="#syncthing-1"></a></h1>
+<h2 id="install-on-linux">install on linux<a aria-hidden="true" class="anchor-heading icon-link" href="#install-on-linux"></a></h2>
+<pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> -s https://syncthing.net/release-key.txt <span class="token operator">|</span> gpg --dearmor <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /usr/share/keyrings/syncthing-archive-keyring.gpg <span class="token operator">></span>/dev/null
+<span class="token builtin class-name">echo</span> <span class="token string">"deb [signed-by=/usr/share/keyrings/syncthing-archive-keyring.gpg] https://apt.syncthing.net/ syncthing stable"</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> /etc/apt/sources.list.d/syncthing.list
+<span class="token function">sudo</span> <span class="token function">apt-get</span> update
+<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> syncthing
+</code></pre>
+<h2 id="start-syncthing">start syncthing<a aria-hidden="true" class="anchor-heading icon-link" href="#start-syncthing"></a></h2>
+<pre class="language-bash"><code class="language-bash">syncthing
+</code></pre>
+<h2 id="open-port-8384">open port 8384<a aria-hidden="true" class="anchor-heading icon-link" href="#open-port-8384"></a></h2>
+<p>in webui or <code>sudo ufw allow 8384/tcp</code></p>
+<h2 id="add-syncthing-to-autostart">add syncthing to autostart<a aria-hidden="true" class="anchor-heading icon-link" href="#add-syncthing-to-autostart"></a></h2>
+<pre class="language-bash"><code class="language-bash"><span class="token function">sudo</span> systemctl <span class="token builtin class-name">enable</span> syncthing@<span class="token environment constant">$USER</span>.service
+</code></pre>
+<h2 id="allow-device">allow device<a aria-hidden="true" class="anchor-heading icon-link" href="#allow-device"></a></h2>
+<p>in webui</p>

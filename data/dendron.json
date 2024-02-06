@@ -26,7 +26,9 @@
       "enableMarker": false
     },
     "randomNote": {},
-    "copyNoteLink": {},
+    "copyNoteLink": {
+      "aliasMode": "title"
+    },
     "templateHierarchy": "template"
   },
   "workspace": {
@@ -98,7 +100,7 @@
     "enableEditorDecorations": true,
     "enableHandlebarTemplates": true,
     "enableFullHierarchyNoteTitle": false,
-    "enableSmartRefs": false
+    "enablePersistentHistory": false
   },
   "preview": {
     "enableFMTitle": true,
@@ -113,7 +115,6 @@
   "publishing": {
     "enableFMTitle": true,
     "enableNoteTitleForLink": true,
-    "enableMermaid": true,
     "enablePrettyRefs": true,
     "enableKatex": true,
     "copyAssets": true,
@@ -121,13 +122,8 @@
       "development",
       "life"
     ],
-    "enableSiteLastModified": true,
-    "siteRootDir": "docs",
-    "siteUrl": "https://notes.tczhong.com",
-    "enableFrontmatterTags": true,
-    "enableHashesForFMTags": false,
-    "enableRandomlyColoredTags": true,
     "writeStubs": false,
+    "siteRootDir": "docs",
     "seo": {
       "title": "my_note",
       "description": "Personal knowledge space"
@@ -138,8 +134,15 @@
       "editBranch": "main",
       "editViewMode": "tree"
     },
-    "enablePrettyLinks": true,
+    "enableSiteLastModified": true,
+    "enableFrontmatterTags": true,
+    "enableHashesForFMTags": false,
+    "enableRandomlyColoredTags": true,
     "enableTaskNotes": true,
+    "enablePrettyLinks": true,
+    "searchMode": "lookup",
+    "enableMermaid": true,
+    "siteUrl": "https://notes.tczhong.com",
     "siteFaviconPath": "favicon.ico",
     "siteIndex": "development"
   }

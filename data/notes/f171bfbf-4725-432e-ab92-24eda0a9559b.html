@@ -1,14 +1,14 @@
-<h1 id="replication"><a aria-hidden="true" class="anchor-heading icon-link" href="#replication"></a>Replication</h1>
-<h1 id="master-slave"><a aria-hidden="true" class="anchor-heading icon-link" href="#master-slave"></a>master-slave</h1>
+<h1 id="replication">Replication<a aria-hidden="true" class="anchor-heading icon-link" href="#replication"></a></h1>
+<h1 id="master-slave">master-slave<a aria-hidden="true" class="anchor-heading icon-link" href="#master-slave"></a></h1>
 <p>For replica configurations,  Master-Replica will receive all updates and it propagates those updates to its replicas. K-safety is a threshold for determining the fault tolerance of the replicated database. The value K represents the number of replicas per data object that must exist at all times.</p>
-<h1 id="propagation"><a aria-hidden="true" class="anchor-heading icon-link" href="#propagation"></a>propagation</h1>
+<h1 id="propagation">propagation<a aria-hidden="true" class="anchor-heading icon-link" href="#propagation"></a></h1>
 <p>When a txn commits on a replicated database, the DBMS has to decide whether it has to wait for that txn's changes to propagate to other nodes before it can send the acknowledgement to application.</p>
 <ul>
 <li>Synchronous: The master sends updates to replicas and then waits for them to acknowledge that they fully applied (i.e., logged) the changes.</li>
 <li>Asynchronous: The master immediately returns the acknowledgement to the client without waiting for replicas to apply the changes.</li>
 <li>Semi-Synchronous:  Replicas immediately send acknowledgements without logging them</li>
 </ul>
-<h2 id="cvv"><a aria-hidden="true" class="anchor-heading icon-link" href="#cvv"></a>CVV</h2>
+<h2 id="cvv">CVV<a aria-hidden="true" class="anchor-heading icon-link" href="#cvv"></a></h2>
 <ol>
 <li>It asks all replicas for their version number</li>
 <li>It then asks the replica with the greatest version number for the file</li>

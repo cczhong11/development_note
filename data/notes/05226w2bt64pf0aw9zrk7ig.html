@@ -1,0 +1,40 @@
+<h1 id="async">Async<a aria-hidden="true" class="anchor-heading icon-link" href="#async"></a></h1>
+<h1 id="swift中的async关键字">Swift中的<code>async</code>关键字<a aria-hidden="true" class="anchor-heading icon-link" href="#swift中的async关键字"></a></h1>
+<h2 id="异步函数-async">异步函数 (<code>async</code>)<a aria-hidden="true" class="anchor-heading icon-link" href="#异步函数-async"></a></h2>
+<p>在Swift中，<code>async</code>关键字用于标记一个函数或方法是异步的。这意味着该函数可以在等待某些长时间运行的操作完成时暂停其执行，而不会阻塞当前线程。</p>
+<h2 id="基本语法">基本语法<a aria-hidden="true" class="anchor-heading icon-link" href="#基本语法"></a></h2>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">func</span> <span class="token function-definition function">functionName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token operator">-></span> <span class="token class-name">ReturnType</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 异步操作</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="使用async的优势">使用<code>async</code>的优势<a aria-hidden="true" class="anchor-heading icon-link" href="#使用async的优势"></a></h2>
+<ul>
+<li><strong>非阻塞</strong>: 异步函数允许CPU继续处理其他任务，而不是等待当前任务完成。</li>
+<li><strong>更好的性能</strong>: 在处理I/O、网络请求或其他耗时操作时，提高了应用的响应性和性能。</li>
+<li><strong>改善代码可读性</strong>: 异步函数有助于写出更简洁、更易于理解的代码。</li>
+</ul>
+<h2 id="示例异步函数">示例：异步函数<a aria-hidden="true" class="anchor-heading icon-link" href="#示例异步函数"></a></h2>
+<h3 id="1-定义一个异步函数">1. 定义一个异步函数<a aria-hidden="true" class="anchor-heading icon-link" href="#1-定义一个异步函数"></a></h3>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">func</span> <span class="token function-definition function">fetchData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token operator">-></span> <span class="token class-name">Data</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 假设这是一个从网络获取数据的操作</span>
+    <span class="token keyword">let</span> url <span class="token operator">=</span> <span class="token function">URL</span><span class="token punctuation">(</span>string<span class="token punctuation">:</span> <span class="token string-literal"><span class="token string">"https://example.com/data"</span></span><span class="token punctuation">)</span><span class="token operator">!</span>
+    <span class="token keyword">let</span> <span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token omit keyword">_</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token keyword">try</span><span class="token operator">!</span> <span class="token keyword">await</span> <span class="token class-name">URLSession</span><span class="token punctuation">.</span>shared<span class="token punctuation">.</span><span class="token function">data</span><span class="token punctuation">(</span>from<span class="token punctuation">:</span> url<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> data
+<span class="token punctuation">}</span>
+</code></pre>
+<p>在这个例子中，<code>fetchData</code>函数使用<code>async</code>关键字标记。它执行一个网络请求，这是一个典型的异步操作。</p>
+<h3 id="2-调用异步函数">2. 调用异步函数<a aria-hidden="true" class="anchor-heading icon-link" href="#2-调用异步函数"></a></h3>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">func</span> <span class="token function-definition function">displayData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">async</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> data <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetchData</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// 使用数据进行一些操作</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>要调用异步函数，你需要使用<code>await</code>关键字。这告诉Swift暂停函数的执行，直到异步操作完成。</p>
+<h2 id="注意事项">注意事项<a aria-hidden="true" class="anchor-heading icon-link" href="#注意事项"></a></h2>
+<ul>
+<li>异步函数只能在另一个异步上下文中被<code>await</code>调用。</li>
+<li>不能在同步函数中直接调用异步函数，除非使用特定的异步API，如<code>Task</code>。</li>
+<li><code>async</code>与<code>await</code>是Swift并发模型的一部分，要充分利用它们，需要对Swift的并发模型有一定的了解。</li>
+</ul>
+<h2 id="总结">总结<a aria-hidden="true" class="anchor-heading icon-link" href="#总结"></a></h2>
+<p><code>async</code>关键字是Swift中处理异步操作的强大工具，它有助于编写同时高效和可读的代码，特别是在处理网络请求、文件I/O或其他需要等待的操作时。</p>

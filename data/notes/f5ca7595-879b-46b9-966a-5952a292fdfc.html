@@ -1,5 +1,5 @@
-<h1 id="loadbalance"><a aria-hidden="true" class="anchor-heading icon-link" href="#loadbalance"></a>Loadbalance</h1>
-<h1 id="load-balance"><a aria-hidden="true" class="anchor-heading icon-link" href="#load-balance"></a>load balance</h1>
+<h1 id="loadbalance">Loadbalance<a aria-hidden="true" class="anchor-heading icon-link" href="#loadbalance"></a></h1>
+<h1 id="load-balance">load balance<a aria-hidden="true" class="anchor-heading icon-link" href="#load-balance"></a></h1>
 <p>把一系列task分给不同的机器。</p>
 <ul>
 <li>静态
@@ -15,7 +15,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="proxy"><a aria-hidden="true" class="anchor-heading icon-link" href="#proxy"></a>proxy</h2>
+<h2 id="proxy">proxy<a aria-hidden="true" class="anchor-heading icon-link" href="#proxy"></a></h2>
 <ul>
 <li>
 <p>Client-side random load balancing: deliver a list of server IPs to the client, and then to have client randomly select the IP from the list on each connection</p>
@@ -45,16 +45,16 @@
 </ul>
 </li>
 </ul>
-<h3 id="forward"><a aria-hidden="true" class="anchor-heading icon-link" href="#forward"></a>forward</h3>
+<h3 id="forward">forward<a aria-hidden="true" class="anchor-heading icon-link" href="#forward"></a></h3>
 <p>前向代理作为客户端的代理，将从互联网上获取的资源返回给一个或多个的客户端，服务端（如Web服务器）只知道代理的IP地址而不知道客户端的IP地址
 Forward proxies ensure that websites never communicate directly with a user</p>
 <p><img src="/assets/images/2021-05-03-22-38-13.png"></p>
-<h3 id="reverse"><a aria-hidden="true" class="anchor-heading icon-link" href="#reverse"></a>reverse</h3>
+<h3 id="reverse">reverse<a aria-hidden="true" class="anchor-heading icon-link" href="#reverse"></a></h3>
 <p>反向代理是作为服务器端（如Web服务器）的代理使用，而不是客户端。反向代理是供很多客户端都通过它间接访问不同后端服务器上的资源，而不需要知道这些后端服务器的存在，而以为所有资源都来自于这个反向代理服务器。
 reverse proxies ensure that users would not communicate directly with a back-end server.
 <img src="/assets/images/2021-05-03-22-39-21.png"></p>
 <p>A reverse proxy server is a type of proxy server that typically sits behind the firewall in a private network and directs client requests to the appropriate backend server. A reverse proxy provides an additional level of abstraction and control to ensure the smooth flow of network traffic between clients and servers.</p>
-<h2 id="dns"><a aria-hidden="true" class="anchor-heading icon-link" href="#dns"></a>DNS</h2>
+<h2 id="dns">DNS<a aria-hidden="true" class="anchor-heading icon-link" href="#dns"></a></h2>
 <ul>
 <li>round-robin DNS: multiple IP addresses are associated with a single domain name</li>
 <li><a href="https://en.wikipedia.org/wiki/Load_balancing_(computing)#DNS_delegation">DNS delegation</a>: delegate <a href="http://www.example.org">www.example.org</a> as a sub-domain whose zone is served by each of the same servers that are serving the web site. This technique works particularly well where individual servers are spread geographically on the Internet. </li>

@@ -1,0 +1,39 @@
+<h1 id="array">Array<a aria-hidden="true" class="anchor-heading icon-link" href="#array"></a></h1>
+<h1 id="swift中的数组操作">Swift中的数组操作<a aria-hidden="true" class="anchor-heading icon-link" href="#swift中的数组操作"></a></h1>
+<h2 id="初始化数组">初始化数组<a aria-hidden="true" class="anchor-heading icon-link" href="#初始化数组"></a></h2>
+<h3 id="1-空数组">1. 空数组<a aria-hidden="true" class="anchor-heading icon-link" href="#1-空数组"></a></h3>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">var</span> emptyArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token class-name">Int</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="2-具有默认值的数组">2. 具有默认值的数组<a aria-hidden="true" class="anchor-heading icon-link" href="#2-具有默认值的数组"></a></h3>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">var</span> defaultValuesArray <span class="token operator">=</span> <span class="token class-name">Array</span><span class="token punctuation">(</span>repeating<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> count<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token comment">// [0, 0, 0, 0, 0]</span>
+</code></pre>
+<h3 id="3-字面量初始化">3. 字面量初始化<a aria-hidden="true" class="anchor-heading icon-link" href="#3-字面量初始化"></a></h3>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">var</span> literalArray<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token class-name">String</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string-literal"><span class="token string">"Apple"</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"Banana"</span></span><span class="token punctuation">,</span> <span class="token string-literal"><span class="token string">"Cherry"</span></span><span class="token punctuation">]</span>
+</code></pre>
+<h2 id="增加元素">增加元素<a aria-hidden="true" class="anchor-heading icon-link" href="#增加元素"></a></h2>
+<h3 id="1-使用append">1. 使用<code>append</code><a aria-hidden="true" class="anchor-heading icon-link" href="#1-使用append"></a></h3>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">var</span> fruits <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string-literal"><span class="token string">"Apple"</span></span><span class="token punctuation">]</span>
+fruits<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"Banana"</span></span><span class="token punctuation">)</span> <span class="token comment">// ["Apple", "Banana"]</span>
+</code></pre>
+<h3 id="2-使用运算符">2. 使用<code>+=</code>运算符<a aria-hidden="true" class="anchor-heading icon-link" href="#2-使用运算符"></a></h3>
+<pre class="language-swift"><code class="language-swift">fruits <span class="token operator">+=</span> <span class="token punctuation">[</span><span class="token string-literal"><span class="token string">"Cherry"</span></span><span class="token punctuation">]</span> <span class="token comment">// ["Apple", "Banana", "Cherry"]</span>
+</code></pre>
+<h2 id="删除元素">删除元素<a aria-hidden="true" class="anchor-heading icon-link" href="#删除元素"></a></h2>
+<h3 id="1-使用remove">1. 使用<code>remove</code><a aria-hidden="true" class="anchor-heading icon-link" href="#1-使用remove"></a></h3>
+<pre class="language-swift"><code class="language-swift">fruits<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>at<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// 移除第一个元素，剩下["Banana", "Cherry"]</span>
+</code></pre>
+<h3 id="2-移除最后一个元素">2. 移除最后一个元素<a aria-hidden="true" class="anchor-heading icon-link" href="#2-移除最后一个元素"></a></h3>
+<pre class="language-swift"><code class="language-swift">fruits<span class="token punctuation">.</span><span class="token function">removeLast</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 移除最后一个元素，剩下["Banana"]</span>
+</code></pre>
+<h2 id="修改元素">修改元素<a aria-hidden="true" class="anchor-heading icon-link" href="#修改元素"></a></h2>
+<p>直接通过索引修改数组中的元素。</p>
+<pre class="language-swift"><code class="language-swift">fruits<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"Strawberry"</span></span> <span class="token comment">// ["Strawberry"]</span>
+</code></pre>
+<h2 id="遍历数组">遍历数组<a aria-hidden="true" class="anchor-heading icon-link" href="#遍历数组"></a></h2>
+<p>使用<code>for-in</code>循环遍历数组。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">for</span> fruit <span class="token keyword">in</span> fruits <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>fruit<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="总结">总结<a aria-hidden="true" class="anchor-heading icon-link" href="#总结"></a></h2>
+<p>数组是Swift中常用的数据结构，用于存储同类型的多个值。理解如何有效地初始化、添加、删除和修改数组中的元素对于任何Swift开发者来说都是基本且重要的技能。</p>

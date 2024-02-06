@@ -1,5 +1,5 @@
-<h1 id="graphsearch"><a aria-hidden="true" class="anchor-heading icon-link" href="#graphsearch"></a>Graphsearch</h1>
-<h1 id="bfs"><a aria-hidden="true" class="anchor-heading icon-link" href="#bfs"></a>BFS</h1>
+<h1 id="graphsearch">Graphsearch<a aria-hidden="true" class="anchor-heading icon-link" href="#graphsearch"></a></h1>
+<h1 id="bfs">BFS<a aria-hidden="true" class="anchor-heading icon-link" href="#bfs"></a></h1>
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">BFS</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">:</span>
  
     <span class="token comment"># Mark all the vertices as not visited</span>
@@ -31,7 +31,7 @@
  
 
 </code></pre>
-<h1 id="dfs"><a aria-hidden="true" class="anchor-heading icon-link" href="#dfs"></a>DFS</h1>
+<h1 id="dfs">DFS<a aria-hidden="true" class="anchor-heading icon-link" href="#dfs"></a></h1>
 <pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">DFSUtil</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> v<span class="token punctuation">,</span> visited<span class="token punctuation">)</span><span class="token punctuation">:</span>
  
     <span class="token comment"># Mark the current node as visited</span>
@@ -57,7 +57,7 @@
     self<span class="token punctuation">.</span>DFSUtil<span class="token punctuation">(</span>v<span class="token punctuation">,</span> visited<span class="token punctuation">)</span>
 
 </code></pre>
-<h1 id="最短路径算法"><a aria-hidden="true" class="anchor-heading icon-link" href="#最短路径算法"></a>最短路径算法</h1>
+<h1 id="最短路径算法">最短路径算法<a aria-hidden="true" class="anchor-heading icon-link" href="#最短路径算法"></a></h1>
 <p>单点最短路径算法： bellman-ford 算法，基本思路就是每次更新从起点到v的距离，如果起点到u再到v的路程短，那么就更新。</p>
 <pre><code> for i from 1 to size(vertices)-1:
        for each edge (u, v) with weight w in edges:
@@ -78,7 +78,7 @@
             if d[v] > d[u] + w(u,v)  // 拓展边（u,v）。w(u,v)为从u到v的路径长度。
                 d[v] := d[u] + w(u,v)  // 更新路径长度到更小的那个和值。
 </code></pre>
-<h1 id="a"><a aria-hidden="true" class="anchor-heading icon-link" href="#a"></a>A*</h1>
+<h1 id="a">A*<a aria-hidden="true" class="anchor-heading icon-link" href="#a"></a></h1>
 <hr>
 <strong>Backlinks</strong>
 <ul>

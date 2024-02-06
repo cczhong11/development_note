@@ -1,11 +1,11 @@
-<h1 id="service_management"><a aria-hidden="true" class="anchor-heading icon-link" href="#service_management"></a>Service_management</h1>
-<h1 id="systemd"><a aria-hidden="true" class="anchor-heading icon-link" href="#systemd"></a>systemd</h1>
+<h1 id="service_management">Service_management<a aria-hidden="true" class="anchor-heading icon-link" href="#service_management"></a></h1>
+<h1 id="systemd">systemd<a aria-hidden="true" class="anchor-heading icon-link" href="#systemd"></a></h1>
 <p>systemd allows you to create and manage services in extremely powerful and flexible ways. </p>
-<h2 id="unit-files"><a aria-hidden="true" class="anchor-heading icon-link" href="#unit-files"></a>Unit files</h2>
+<h2 id="unit-files">Unit files<a aria-hidden="true" class="anchor-heading icon-link" href="#unit-files"></a></h2>
 <p>If you're creating a brand new unit file for your service, you must first come up with a name. The name you select must not collide with any existing service name.</p>
 <p>Create your service's unit file with the ".service" suffix in the /etc/systemd/system directory. In our example, we will be creating a /etc/systemd/system/myservice.service file.</p>
 <p>The first thing you must identify is what type of service you will be managing. Most services should use the simple type, which means a program that runs in the foreground. If your service normally runs itself in the background, search the documentation to see if it has an option to disable that. Running in the foreground is preferred.</p>
-<h2 id="command"><a aria-hidden="true" class="anchor-heading icon-link" href="#command"></a>command</h2>
+<h2 id="command">command<a aria-hidden="true" class="anchor-heading icon-link" href="#command"></a></h2>
 <ul>
 <li>systemctl start service</li>
 <li>systemctl status 命令查看一下该服务的状态</li>

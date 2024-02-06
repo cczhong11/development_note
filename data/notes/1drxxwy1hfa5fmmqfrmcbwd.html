@@ -1,0 +1,30 @@
+<h1 id="slick">Slick<a aria-hidden="true" class="anchor-heading icon-link" href="#slick"></a></h1>
+<p>SLICK is a dedicated SLO(service level objectives). With SLICK, we are able to centralize SLI and SLO definitions to easily find and understand another service’s reliability; provide service owners with insights using high-retention, full granularity data for key service metrics not found in other tools; and integrate SLOs with various other workflows at the company to ensure that SLOs become a part of day-to-day work.</p>
+<ul>
+<li>Define SLOs in a unified way for our services</li>
+<li>Have up to per-minute granularity metric data with up to two years of retention</li>
+<li>Have standard visualizations and insights for SLI/SLO metrics</li>
+<li>Send periodic reliability reports to internal groups, allowing teams to use them for reliability reviews</li>
+</ul>
+<h1 id="how-to-onboard">how to onboard<a aria-hidden="true" class="anchor-heading icon-link" href="#how-to-onboard"></a></h1>
+<p><img src="/assets/images/2022-12-27-15-08-22.png"></p>
+<h1 id="using">using<a aria-hidden="true" class="anchor-heading icon-link" href="#using"></a></h1>
+<ul>
+<li>dashboard</li>
+</ul>
+<p><img src="/assets/images/2022-12-27-15-08-39.png"></p>
+<ul>
+<li>report</li>
+<li>cli</li>
+</ul>
+<h1 id="arch">Arch<a aria-hidden="true" class="anchor-heading icon-link" href="#arch"></a></h1>
+<p><img src="/assets/images/2022-12-27-15-09-04.png"></p>
+<ul>
+<li>SLICK Configs: A config file written using SLICK’s DSL, committed by the user to the SLICK config store.</li>
+<li>SLICK Syncer: A service that synchronizes changes made to SLICK configs into SLICK’s config metadata storage.</li>
+<li>SLICK UI: These are the generated SLICK dashboards for every service. The SLICK UI also provides the index mentioned previously.</li>
+<li>SLICK Service: A server that provides an API that is able to answer queries such as “How to compute the SLO for a specific visualization?”. The server allows us to abstract away all the details around data placement and sharding, and it enables the caller to easily find the data needed.</li>
+<li>SLICK Data Pipelines: Pipelines that periodically run in order to capture SLI data over the long term.</li>
+</ul>
+<h2 id="data-ingestion">Data ingestion<a aria-hidden="true" class="anchor-heading icon-link" href="#data-ingestion"></a></h2>
+<p><img src="/assets/images/2022-12-27-15-09-50.png"></p>

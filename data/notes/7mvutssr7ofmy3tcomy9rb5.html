@@ -1,0 +1,48 @@
+<h1 id="string">String<a aria-hidden="true" class="anchor-heading icon-link" href="#string"></a></h1>
+<h1 id="swift字符串插值和操作">Swift字符串插值和操作<a aria-hidden="true" class="anchor-heading icon-link" href="#swift字符串插值和操作"></a></h1>
+<h2 id="字符串插值">字符串插值<a aria-hidden="true" class="anchor-heading icon-link" href="#字符串插值"></a></h2>
+<p>在Swift中，字符串插值是一种构建新字符串的方式，可以将常量、变量、字面量和表达式的值包含在长字符串中。格式是将值放在<code>\()</code>中。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"小明"</span></span>
+<span class="token keyword">let</span> greeting <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"你好, </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">name</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">!"</span></span>
+<span class="token function">print</span><span class="token punctuation">(</span>greeting<span class="token punctuation">)</span> <span class="token comment">// 输出: 你好, 小明!</span>
+</code></pre>
+<h2 id="常用的字符串操作">常用的字符串操作<a aria-hidden="true" class="anchor-heading icon-link" href="#常用的字符串操作"></a></h2>
+<h3 id="1-字符串连接">1. 字符串连接<a aria-hidden="true" class="anchor-heading icon-link" href="#1-字符串连接"></a></h3>
+<p>可以使用<code>+</code>运算符来连接两个字符串。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">let</span> firstPart <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"Swift"</span></span>
+<span class="token keyword">let</span> secondPart <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"UI"</span></span>
+<span class="token keyword">let</span> completeString <span class="token operator">=</span> firstPart <span class="token operator">+</span> secondPart
+<span class="token function">print</span><span class="token punctuation">(</span>completeString<span class="token punctuation">)</span> <span class="token comment">// 输出: SwiftUI</span>
+</code></pre>
+<h3 id="2-多行字符串">2. 多行字符串<a aria-hidden="true" class="anchor-heading icon-link" href="#2-多行字符串"></a></h3>
+<p>使用三个双引号(<code>"""</code>)来创建多行字符串。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">let</span> multiLineString <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"""
+这是一个
+多行
+字符串
+"""</span></span>
+<span class="token function">print</span><span class="token punctuation">(</span>multiLineString<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="3-字符串长度">3. 字符串长度<a aria-hidden="true" class="anchor-heading icon-link" href="#3-字符串长度"></a></h3>
+<p>使用<code>.count</code>属性来获取字符串的长度。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">let</span> message <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"Hello, Swift!"</span></span>
+<span class="token function">print</span><span class="token punctuation">(</span><span class="token string-literal"><span class="token string">"字符串长度为 </span><span class="token interpolation-punctuation punctuation">\(</span><span class="token interpolation">message<span class="token punctuation">.</span>count</span><span class="token interpolation-punctuation punctuation">)</span><span class="token string">"</span></span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="4-访问字符串中的字符">4. 访问字符串中的字符<a aria-hidden="true" class="anchor-heading icon-link" href="#4-访问字符串中的字符"></a></h3>
+<p>可以使用下标语法来访问字符串中的特定字符。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">let</span> word <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"Hello"</span></span>
+<span class="token keyword">let</span> firstLetter <span class="token operator">=</span> word<span class="token punctuation">[</span>word<span class="token punctuation">.</span>startIndex<span class="token punctuation">]</span>
+<span class="token function">print</span><span class="token punctuation">(</span>firstLetter<span class="token punctuation">)</span> <span class="token comment">// 输出: H</span>
+</code></pre>
+<h3 id="5-字符串的遍历">5. 字符串的遍历<a aria-hidden="true" class="anchor-heading icon-link" href="#5-字符串的遍历"></a></h3>
+<p>使用<code>for-in</code>循环遍历字符串中的每个字符。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">for</span> char <span class="token keyword">in</span> <span class="token string-literal"><span class="token string">"Swift"</span></span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="6-字符串的修改">6. 字符串的修改<a aria-hidden="true" class="anchor-heading icon-link" href="#6-字符串的修改"></a></h3>
+<p>字符串可以通过各种方法进行修改，例如添加字符、替换子字符串等。</p>
+<pre class="language-swift"><code class="language-swift"><span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token string-literal"><span class="token string">"I like Swift"</span></span>
+str <span class="token operator">+=</span> <span class="token string-literal"><span class="token string">" programming"</span></span>
+<span class="token function">print</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span> <span class="token comment">// 输出: I like Swift programming</span>
+</code></pre>

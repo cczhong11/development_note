@@ -1,5 +1,5 @@
-<h1 id="virtualization"><a aria-hidden="true" class="anchor-heading icon-link" href="#virtualization"></a>Virtualization</h1>
-<h1 id="vm"><a aria-hidden="true" class="anchor-heading icon-link" href="#vm"></a>VM</h1>
+<h1 id="virtualization">Virtualization<a aria-hidden="true" class="anchor-heading icon-link" href="#virtualization"></a></h1>
+<h1 id="vm">VM<a aria-hidden="true" class="anchor-heading icon-link" href="#vm"></a></h1>
 <p>Virtual machines are based on computer architectures and provide functionality of a physical computer. Their implementations may involve specialized hardware, software, or a combination.</p>
 <ul>
 <li>System virtual machines (also termed full virtualization VMs) provide a substitute for a real machine. They provide functionality needed to execute entire operating systems. A <strong>hypervisor</strong> uses native execution to share and manage hardware, allowing for multiple environments which are <strong>isolated</strong> from one another, yet exist on the same physical machine. Modern hypervisors use hardware-assisted virtualization, virtualization-specific hardware, primarily from the host CPUs.</li>
@@ -7,7 +7,7 @@
 <li>Operating-system-level virtualization: docker.  physical server is virtualized at the operating system level, enabling multiple isolated and secure virtualized servers to run on a single physical server. The "guest" operating system environments share the same running instance of the operating system as the host system. Thus, the same operating system kernel is also used to implement the "guest" environments, and applications running in a given "guest" environment view it as a stand-alone system</li>
 </ul>
 <p>The hypervisor sits in between the physical machine and virtual machines and provides virtualization services to the virtual machines. </p>
-<h2 id="how-does-virtualization-work"><a aria-hidden="true" class="anchor-heading icon-link" href="#how-does-virtualization-work"></a>How does virtualization work?</h2>
+<h2 id="how-does-virtualization-work">How does virtualization work?<a aria-hidden="true" class="anchor-heading icon-link" href="#how-does-virtualization-work"></a></h2>
 <p>Software called hypervisors separate the physical resources from the virtual environments—the things that need those resources. Hypervisors take your physical resources and divide them up so that virtual environments can use them.</p>
 <p><img src="/assets/images/2021-05-03-15-30-39.png"></p>
 <p>Resources are partitioned as needed from the physical environment to the many virtual environments. Users interact with and run computations within the virtual environment (typically called a guest machine or virtual machine). The virtual machine functions as a single data file. And like any digital file, it can be moved from one computer to another, opened in either one, and be expected to work the same.</p>

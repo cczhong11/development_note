@@ -1,10 +1,10 @@
-<h1 id="consistency"><a aria-hidden="true" class="anchor-heading icon-link" href="#consistency"></a>Consistency</h1>
-<h1 id="weak-consistency"><a aria-hidden="true" class="anchor-heading icon-link" href="#weak-consistency"></a>Weak consistency</h1>
+<h1 id="consistency">Consistency<a aria-hidden="true" class="anchor-heading icon-link" href="#consistency"></a></h1>
+<h1 id="weak-consistency">Weak consistency<a aria-hidden="true" class="anchor-heading icon-link" href="#weak-consistency"></a></h1>
 <p>After a write, reads may or may not see it. A best effort approach is taken.</p>
 <p>This approach is seen in systems such as memcached. Weak consistency works well in real time use cases such as VoIP, video chat, and realtime multiplayer games. For example, if you are on a phone call and lose reception for a few seconds, when you regain connection you do not hear what was spoken during connection loss.</p>
-<h1 id="eventual-consistency"><a aria-hidden="true" class="anchor-heading icon-link" href="#eventual-consistency"></a>Eventual consistency</h1>
+<h1 id="eventual-consistency">Eventual consistency<a aria-hidden="true" class="anchor-heading icon-link" href="#eventual-consistency"></a></h1>
 <p>After a write, reads will eventually see it (typically within milliseconds). Data is replicated asynchronously.</p>
 <p>This approach is seen in systems such as DNS and email. Eventual consistency works well in highly available systems.</p>
-<h1 id="strong-consistency"><a aria-hidden="true" class="anchor-heading icon-link" href="#strong-consistency"></a>Strong consistency</h1>
+<h1 id="strong-consistency">Strong consistency<a aria-hidden="true" class="anchor-heading icon-link" href="#strong-consistency"></a></h1>
 <p>After a write, reads will see it. Data is replicated synchronously.</p>
 <p>This approach is seen in file systems and RDBMSes. Strong consistency works well in systems that need transactions.</p>

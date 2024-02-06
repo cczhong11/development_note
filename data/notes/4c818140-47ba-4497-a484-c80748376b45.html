@@ -1,3 +1,3 @@
-<h1 id="execve"><a aria-hidden="true" class="anchor-heading icon-link" href="#execve"></a>Execve</h1>
+<h1 id="execve">Execve<a aria-hidden="true" class="anchor-heading icon-link" href="#execve"></a></h1>
 <p>加载并运行可执行目标文件，调用一次从不返回。</p>
 <p>execve使用新的程序，有效替代当前程序，加载并运行，可执行目标程序需要以下几个步骤，第一点删除已存在的用户区域，第二点映射私有区域，为新程序区域创建新的区域结构。所以我现在去都是私有的，写时复制的。第三点应设共享区域。还要设置程序计数器，使之指向代码区的入口点。</p>

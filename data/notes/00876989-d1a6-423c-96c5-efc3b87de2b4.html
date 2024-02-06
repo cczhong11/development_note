@@ -1,55 +1,55 @@
-<h1 id="distributed_system"><a aria-hidden="true" class="anchor-heading icon-link" href="#distributed_system"></a>Distributed_system</h1>
-<h2 id="多个server的concurrency解决思路"><a aria-hidden="true" class="anchor-heading icon-link" href="#多个server的concurrency解决思路"></a>多个server的concurrency解决思路</h2>
-<h3 id="centralized-approach-中央集权"><a aria-hidden="true" class="anchor-heading icon-link" href="#centralized-approach-中央集权"></a>Centralized Approach 中央集权</h3>
+<h1 id="distributed_system">Distributed_system<a aria-hidden="true" class="anchor-heading icon-link" href="#distributed_system"></a></h1>
+<h2 id="多个server的concurrency解决思路">多个server的concurrency解决思路<a aria-hidden="true" class="anchor-heading icon-link" href="#多个server的concurrency解决思路"></a></h2>
+<h3 id="centralized-approach-中央集权">Centralized Approach 中央集权<a aria-hidden="true" class="anchor-heading icon-link" href="#centralized-approach-中央集权"></a></h3>
 <ul>
 <li>what: 直接指派一个作为中央</li>
 <li>why:easy and gurante</li>
 <li>how: 3 messeages per cs entry : (request, permission, done)</li>
 <li>problem: central dies and threads dies in the cs</li>
 </ul>
-<h3 id="lamport-timestamp"><a aria-hidden="true" class="anchor-heading icon-link" href="#lamport-timestamp"></a>lamport timestamp</h3>
+<h3 id="lamport-timestamp">lamport timestamp<a aria-hidden="true" class="anchor-heading icon-link" href="#lamport-timestamp"></a></h3>
 <ul>
 <li>what: global pripority queue for cs. send to each node request</li>
 <li>why:  every node know what happens.</li>
 <li>how: 3(N-1) messeages per requests (request,reply,release)</li>
 <li>problem: no falut tolerant. message may not arrive in time, especially when sending requst</li>
 </ul>
-<h3 id="ricarti-and-agrawala-timestamp-approach"><a aria-hidden="true" class="anchor-heading icon-link" href="#ricarti-and-agrawala-timestamp-approach"></a>Ricarti and Agrawala timestamp approach</h3>
+<h3 id="ricarti-and-agrawala-timestamp-approach">Ricarti and Agrawala timestamp approach<a aria-hidden="true" class="anchor-heading icon-link" href="#ricarti-and-agrawala-timestamp-approach"></a></h3>
 <ul>
 <li>what: combine reply and release. change global queue to voting.</li>
 <li>why: reduce message number</li>
 <li>how: send request to others and if other agree(not in CS, or in cs and exit will reply) will reply. Get enough vote can start. 2*(n-1) messages.</li>
 <li>problem: workhorses. too much messages. Even a single failure can disable the entire system. Both timestamp approaches require more messages than a centralized approach -- and have lower fault tolerance. The centralized approach provides one single point of failure (SPF). These timestamp approaches have N SPFs.</li>
 </ul>
-<h3 id="voting"><a aria-hidden="true" class="anchor-heading icon-link" href="#voting"></a>Voting</h3>
+<h3 id="voting">Voting<a aria-hidden="true" class="anchor-heading icon-link" href="#voting"></a></h3>
 <ul>
 <li>what: send request to others, if other have voted, put it in queue. When one exit cs, it send release to others and other could handle request in the queue.</li>
 <li>why: only majority agree is ok. change the way of message and queue. </li>
 <li>how: break ties could use <strong>lamport time</strong>. break deadlock when no one win, use inqure message, and other could vote again.It sends an INQUIRE message to the candidate for who it voted. If this candidate won the election, it can just ignore the INQUIRE and RELEASE normally when done. But, if it hasn't yet entered the critical section, it gives back the vote and signals this by sending back a RELINQUISH. Upon receipt of the RELINQUISH, the voter is free to vote for the preceding request.</li>
 <li>problem: less message. (3+x)(1/2 N+?) request, vote, release</li>
 </ul>
-<h3 id="voting-districts"><a aria-hidden="true" class="anchor-heading icon-link" href="#voting-districts"></a>voting districts</h3>
+<h3 id="voting-districts">voting districts<a aria-hidden="true" class="anchor-heading icon-link" href="#voting-districts"></a></h3>
 <ul>
 <li>what: send message to districts, just in the same line and cloumn. </li>
 <li>why: reduce message</li>
 <li>how: same voting techniques. 3*(2sqrt(N)-1)</li>
 <li>problem: not falut tolerant, no deadlock. one server die may change.选择多个进入cs</li>
 </ul>
-<h3 id="token-ring"><a aria-hidden="true" class="anchor-heading icon-link" href="#token-ring"></a>token ring</h3>
+<h3 id="token-ring">token ring<a aria-hidden="true" class="anchor-heading icon-link" href="#token-ring"></a></h3>
 <ul>
 <li>what: everyone know successor, and move token one by one. hold it until done cs</li>
 <li>why: fault tolerance. good at high contention</li>
 <li>how: if one dies with token, last one see time out and generate a new one. Under high contention, message low. Every one has limited time with token.</li>
 <li>problem: not good at low contention. </li>
 </ul>
-<h3 id="raymonds-algorithm"><a aria-hidden="true" class="anchor-heading icon-link" href="#raymonds-algorithm"></a>raymond's algorithm</h3>
+<h3 id="raymonds-algorithm">raymond's algorithm<a aria-hidden="true" class="anchor-heading icon-link" href="#raymonds-algorithm"></a></h3>
 <ul>
 <li>what: use tree to pass token ring. </li>
 <li>why: more quick in low contention</li>
 <li>how: pass by node.</li>
 <li>problem: worst case, travel long</li>
 </ul>
-<h3 id="path-compression"><a aria-hidden="true" class="anchor-heading icon-link" href="#path-compression"></a>path compression</h3>
+<h3 id="path-compression">path compression<a aria-hidden="true" class="anchor-heading icon-link" href="#path-compression"></a></h3>
 <ul>
 <li>what: allow short cut to pass token ring</li>
 <li>why: current_dir may out-of-date, when request happened, node can get into current_dir end and enqueue in <strong>next</strong> queue. </li>

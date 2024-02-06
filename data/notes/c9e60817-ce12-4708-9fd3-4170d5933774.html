@@ -1,5 +1,5 @@
-<h1 id="mvcc"><a aria-hidden="true" class="anchor-heading icon-link" href="#mvcc"></a>MVCC</h1>
-<h1 id="multi-version-concurrency-control"><a aria-hidden="true" class="anchor-heading icon-link" href="#multi-version-concurrency-control"></a>Multi-Version Concurrency Control</h1>
+<h1 id="mvcc">MVCC<a aria-hidden="true" class="anchor-heading icon-link" href="#mvcc"></a></h1>
+<h1 id="multi-version-concurrency-control">Multi-Version Concurrency Control<a aria-hidden="true" class="anchor-heading icon-link" href="#multi-version-concurrency-control"></a></h1>
 <p>The DBMS maintains multiple physical versions of a single logical object in the database. When a transaction writes to an object, the DBMS creates a new version of that object. When a transaction reads an object, it reads the newest version that existed when the transaction started.</p>
 <p>The key properties: Writers don’t block the readers. Readers don’t block the writers. Read-only transactions can read a consistent snapshot without acquiring locks. Timestamps are used to determine visibility. It supports time-travel queries. </p>
 <p>Version storage will help DBMS decide how to store different physical versions of a logical object. The DBMS uses the tuple’s pointer field to create a version chain per logical tuple. Indexes always point to the head of the chain. A thread traverses chain until you find the version thats visible to you. </p>
