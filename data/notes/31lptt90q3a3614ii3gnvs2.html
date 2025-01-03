@@ -1,0 +1,34 @@
+<h1 id="other">Other<a aria-hidden="true" class="anchor-heading icon-link" href="#other"></a></h1>
+<h1 id="分布式训练技术">分布式训练技术<a aria-hidden="true" class="anchor-heading icon-link" href="#分布式训练技术"></a></h1>
+<h2 id="数据并行">数据并行<a aria-hidden="true" class="anchor-heading icon-link" href="#数据并行"></a></h2>
+<ul>
+<li><strong>挑战</strong>：准确有效地收集不同模型的梯度。</li>
+<li><strong>异步SGD</strong>：每个GPU计算梯度后上传，服务器更新模型后，各GPU下载新模型。</li>
+<li><strong>同步SGD</strong>：所有梯度收集完毕后，更新所有GPU。</li>
+</ul>
+<h2 id="模型并行">模型并行<a aria-hidden="true" class="anchor-heading icon-link" href="#模型并行"></a></h2>
+<ul>
+<li>将一个网络分布到多个机器上计算。</li>
+</ul>
+<h2 id="流水线并行">流水线并行<a aria-hidden="true" class="anchor-heading icon-link" href="#流水线并行"></a></h2>
+<ul>
+<li>将前向传播和反向传播分布到不同机器上，采用流水线方式运行。</li>
+</ul>
+<h1 id="automl核心要点">AutoML核心要点<a aria-hidden="true" class="anchor-heading icon-link" href="#automl核心要点"></a></h1>
+<h2 id="架构搜索">架构搜索<a aria-hidden="true" class="anchor-heading icon-link" href="#架构搜索"></a></h2>
+<ul>
+<li><strong>搜索空间</strong>：确定搜索的范围。</li>
+<li><strong>性能评估策略</strong>：如何评价模型性能。</li>
+<li><strong>搜索策略</strong>：模型的离线评估。</li>
+</ul>
+<h2 id="基线选择">基线选择<a aria-hidden="true" class="anchor-heading icon-link" href="#基线选择"></a></h2>
+<ul>
+<li><strong>Random Baseline</strong>：随机预测数据，与模型性能比较。</li>
+<li><strong>Simple Heuristic</strong>：与简单预测结果比较。</li>
+<li><strong>ZeroRule Baseline</strong>：仅预测最常见结果。</li>
+<li><strong>Human Baseline</strong>：与人类表现比较。</li>
+</ul>
+<h2 id="模型校准">模型校准<a aria-hidden="true" class="anchor-heading icon-link" href="#模型校准"></a></h2>
+<ul>
+<li><strong>Platt Scaling Calibrate</strong>：调整模型预测以更接近实际情况。</li>
+</ul>

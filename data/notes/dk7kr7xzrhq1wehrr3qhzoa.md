@@ -19,8 +19,8 @@ My Book
 
 ## 手机照片
 
-- iphone 12：2024-1-6
-- iphone 13 pro：204-1-29
+- iphone 12：2024-10-05
+- iphone 15 pro：latest
 
 ### 清理
 

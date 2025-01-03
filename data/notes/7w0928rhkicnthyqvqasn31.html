@@ -1,0 +1,15 @@
+<h1 id="rss">Rss<a aria-hidden="true" class="anchor-heading icon-link" href="#rss"></a></h1>
+<h1 id="rsshub">RSSHUB<a aria-hidden="true" class="anchor-heading icon-link" href="#rsshub"></a></h1>
+<p>rsshub.tczhong.com</p>
+<h1 id="wechat">Wechat<a aria-hidden="true" class="anchor-heading icon-link" href="#wechat"></a></h1>
+<p>in raspberrypi /home/tczhong/Documents/wechatrss</p>
+<pre><code>sudo docker run -d \
+  --name wewe-rss \
+  -p 4000:4000 \
+  -e DATABASE_TYPE=sqlite \
+  -e AUTH_CODE=123567 \
+  -v $(pwd)/data:/app/data \
+  cooderl/wewe-rss-sqlite:latest
+</code></pre>
+<p><a href="https://wechatrss.tczhong.com/feeds/MP_WXS_3086720555.atom">https://wechatrss.tczhong.com/feeds/MP_WXS_3086720555.atom</a></p>
+<p><a href="https://wechatrss.tczhong.com/dash">https://wechatrss.tczhong.com/dash</a></p>
