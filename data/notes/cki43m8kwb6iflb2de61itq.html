@@ -1,8 +1,86 @@
 <h1 id="llm">LLM<a aria-hidden="true" class="anchor-heading icon-link" href="#llm"></a></h1>
 <p>大语言模型是一种基于深度学习技术的自然语言处理模型，它能够学习和生成自然语言文本。大语言模型通常由多层神经网络组成，可以根据历史文本数据预测下一个单词或一段文本的概率。大语言模型的应用包括语言翻译、问答系统、自动摘要、语音识别等领域。其中最著名的大语言模型是Google的BERT、OpenAI的GPT-3等。大语言模型的优点是可以在大规模数据上进行训练，支持生成高质量的自然语言文本，但是也存在一些问题，比如需要大量的计算资源和数据、对于少见的单词或短语容易出现错误等。</p>
+<ol>
+<li>AI 技术栈概览
+•	应用开发层：如何使用大模型（如 GPT、PaLM 等），构建 Agent，聚焦 Prompt Engineering 与 Context Engineering。
+•	模型开发层：涉及模型的训练、微调、评估及部署。
+•	基础设施层：包括 Serving Infra、数据管理（Data Ops）与模型运行监控（Monitoring）。</li>
+</ol>
+<p>⸻</p>
+<ol start="2">
+<li>应用开发层（Application Development）
+<ol>
+<li>大模型使用
+•	选型：接口调用 vs. 本地部署
+•	性能与成本权衡</li>
+<li>Agent 设计
+•	单任务 Agent vs. 多任务 Agent
+•	模块化思路：Planner → Executor → Verifier</li>
+<li>Prompt Engineering
+•	技术手段：零样本、少样本、链式思维（Chain-of-Thought）
+•	动态上下文筛选与检索增强（Retrieval-Augmented Generation）</li>
+<li>Context Engineering
+•	上下文窗口管理
+•	长文档检索与摘要拼接</li>
+</ol>
+</li>
+</ol>
+<p>⸻</p>
+<ol start="3">
+<li>模型开发层（Model Development）</li>
+</ol>
+<p>3.1 数据来源与处理
+•	Common Crawl / C4：大规模互联网网页抓取数据集，涵盖多语种
+•	Domain-Specific Corpora：如医学（PubMed）、法律（CourtListener）、金融（SEC filings）等
+•	开源语料：Wikipedia、OpenWebText、The Pile
+•	数据清洗与预处理：去重、过滤低质量、子词切分（BPE/WordPiece）</p>
+<p>3.2 模型架构（Transformer）
+•	核心思想：自注意力（Self-Attention）
+•	Attention 公式（LaTeX）：
+<span class="math math-inline"><span class="katex-error" title="ParseError: KaTeX parse error: Can&#x27;t use function &#x27;$&#x27; in math mode at position 89: …d_k}}\Bigr)\,V $̲  • Q, K, V 分别为…" style="color:#cc0000">\mathrm{Attention}(Q, K, V) = \mathrm{softmax}\Bigl(\frac{QK^\top}{\sqrt{d_k}}\Bigr)\,V $  • Q, K, V 分别为查询（Query）、键（Key）、值（Value）矩阵  • $\sqrt{d_k}</span></span> 为缩放因子
+•	多头注意力（Multi-Head Attention）：并行多组 Q,K,V，再拼接投影
+•	位置编码（Positional Encoding）：Sin/Cos 或可学习向量
+•	前馈网络：两层线性层 + 激活（GELU/ReLU）
+•	残差连接 &#x26; LayerNorm</p>
+<p>3.3 模型训练与微调</p>
+<pre><code>1.	预训练（Pre-Training）
+•	自监督目标：Masked Language Modeling（如 BERT）／自回归（如 GPT）
+•	大规模分布式训练：数据并行 + 模型并行
+2.	微调（Fine-Tuning）
+•	全量微调 vs. 参数高效方法（PEFT）
+•	LoRA、Adapter、Prefix-Tuning
+•	强化学习 + 人类反馈（RLHF）
+</code></pre>
+<p>3.4 模型评估
+•	自动化指标：Perplexity、BLEU、ROUGE、F1
+•	基准测试：GLUE、SuperGLUE、MMLU、SQuAD
+•	人类评估：流畅度、相关性、安全性</p>
+<p>3.5 模型服务（Serving）
+•	推理框架：TensorFlow Serving、TorchServe、NVIDIA Triton
+•	优化手段：量化（Quantization）、剪枝（Pruning）、蒸馏（Distillation）、ONNX
+•	高可用设计：负载均衡、水平扩展、冷/热启动</p>
+<p>⸻</p>
+<ol start="4">
+<li>基础设施层（Infra）
+<ol>
+<li>Serving Infra
+•	Kubernetes + Helm 部署
+•	服务网格（Istio）</li>
+<li>数据管理（Data Ops）
+•	版本控制：DVC、Git-LFS
+•	元数据管理：MLflow、Weights &#x26; Biases</li>
+<li>监控与告警
+•	指标收集：Prometheus
+•	可视化：Grafana
+•	日志与追踪：ELK Stack、Jaeger</li>
+</ol>
+</li>
+</ol>
 <hr>
 <strong>Children</strong>
 <ol>
+<li><a href="/notes/qzhktnz6o28v08msov6iph3">Evaluation</a></li>
+<li><a href="/notes/mtcseghv7a6x4cqeoyqxgrv">Model</a></li>
 <li><a href="/notes/s07zvgrc9ml2ld5difpj0jg">agent</a></li>
 <li><a href="/notes/pzsuculkyms2gvuotyaykab">instructGPT</a></li>
 <li><a href="/notes/9cp08wuyd7t35jzracxxqbv">llama</a></li>

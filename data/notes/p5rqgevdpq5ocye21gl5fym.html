@@ -1,0 +1,80 @@
+<h1 id="sampling">Sampling<a aria-hidden="true" class="anchor-heading icon-link" href="#sampling"></a></h1>
+<h1 id="-大语言模型中的-sampling-与-logit-总结">🧠 大语言模型中的 Sampling 与 Logit 总结<a aria-hidden="true" class="anchor-heading icon-link" href="#-大语言模型中的-sampling-与-logit-总结"></a></h1>
+<h2 id="1-什么是-logits">1. 什么是 Logits？<a aria-hidden="true" class="anchor-heading icon-link" href="#1-什么是-logits"></a></h2>
+<ul>
+<li>模型输出的“原始分数”向量</li>
+<li>大小 = 词表大小（例如 50,000）</li>
+<li>每个值代表某个词的“倾向性分数”</li>
+<li>是 softmax 的输入</li>
+</ul>
+<hr>
+<h2 id="2-softmax-的作用">2. softmax 的作用<a aria-hidden="true" class="anchor-heading icon-link" href="#2-softmax-的作用"></a></h2>
+<p>将 logits 转换为概率分布：</p>
+<pre class="language-math"><code class="language-math">softmax(logits_i) = exp(logits_i) / ∑_j exp(logits_j)
+</code></pre>
+<ul>
+<li>logits 越大，softmax 概率越高</li>
+<li>输出概率和为 1</li>
+</ul>
+<h2 id="3-sampling-策略">3. Sampling 策略<a aria-hidden="true" class="anchor-heading icon-link" href="#3-sampling-策略"></a></h2>
+<h3 id="-top-k-sampling固定数量">🎯 Top-k Sampling（固定数量）<a aria-hidden="true" class="anchor-heading icon-link" href="#-top-k-sampling固定数量"></a></h3>
+<ul>
+<li>只保留前 k 个最高概率的词</li>
+<li>将其重新归一化为概率，再随机采样一个词</li>
+</ul>
+<p>✅ 控制强，稳定
+❗不够灵活，不自适应</p>
+<hr>
+<h3 id="-top-p-samplingnucleus-sampling">🎯 Top-p Sampling（Nucleus Sampling）<a aria-hidden="true" class="anchor-heading icon-link" href="#-top-p-samplingnucleus-sampling"></a></h3>
+<ul>
+<li>累加概率，直到总和 ≥ p（如 0.9）</li>
+<li>在这组词中重新归一化并采样</li>
+</ul>
+<p>✅ 自适应，语言更自然
+❗不稳定，p 太高可能引入低质量词</p>
+<hr>
+<h2 id="4-temperature温度">4. Temperature（温度）<a aria-hidden="true" class="anchor-heading icon-link" href="#4-temperature温度"></a></h2>
+<p>控制 logits 在 softmax 之前的缩放：</p>
+<pre class="language-python"><code class="language-python">probs <span class="token operator">=</span> softmax<span class="token punctuation">(</span>logits <span class="token operator">/</span> T<span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>T &#x3C; 1：概率分布变尖锐 → 更“自信”</li>
+<li>T = 1：原始分布</li>
+<li>T > 1：分布更平滑 → 更“创造性”</li>
+</ul>
+<hr>
+<h2 id="-小复习口诀">🔁 小复习口诀：<a aria-hidden="true" class="anchor-heading icon-link" href="#-小复习口诀"></a></h2>
+<pre><code>Top-k → 固定选前 k 个  
+Top-p → 累加到 p 就停  
+
+T 小 → 冷静果断  
+T 大 → 放飞自由
+</code></pre>
+<hr>
+<h2 id="推荐参数实践中常用">推荐参数（实践中常用）<a aria-hidden="true" class="anchor-heading icon-link" href="#推荐参数实践中常用"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>策略</th><th>常用值</th><th>效果描述</th></tr></thead><tbody><tr><td>Temperature</td><td>0.7–1.0</td><td>平衡创造力与稳定性</td></tr><tr><td>Top-k</td><td>40–100</td><td>控制最大选择范围</td></tr><tr><td>Top-p</td><td>0.85–0.95</td><td>自适应生成流畅性</td></tr></tbody></table></div>

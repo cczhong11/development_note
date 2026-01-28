@@ -1,1 +1,69 @@
 <h1 id="quantize">quantize<a aria-hidden="true" class="anchor-heading icon-link" href="#quantize"></a></h1>
+<h2 id="-1-pretrain-量化pretraining-quantization">🧠 1. Pretrain 量化（Pretraining Quantization）<a aria-hidden="true" class="anchor-heading icon-link" href="#-1-pretrain-量化pretraining-quantization"></a></h2>
+<p>原始训练的时候，模型参数都是用 <strong>float32</strong> 表示的，虽然很精确，但超级占内存🥲</p>
+<p>为了让训练更快、更省显存，现在有些研究开始探索：</p>
+<ul>
+<li><strong>Quantization-aware training (QAT)</strong>：在训练过程中模拟低精度（比如 fp8、int8）的效果，提前适应。</li>
+<li><strong>PTQ (Post-training quantization)</strong>：训练完再量化，但预训练阶段很少这么做，因为会损伤模型性能。</li>
+</ul>
+<p>不过 LLaMA 的官方预训练模型一般还是 float16/float32，真正的量化都是<strong>训练完之后做的</strong>！</p>
+<hr>
+<h2 id="-2-lora-量化low-rank-adaptation--quantization">🐏 2. LoRA 量化（Low-Rank Adaptation + Quantization）<a aria-hidden="true" class="anchor-heading icon-link" href="#-2-lora-量化low-rank-adaptation--quantization"></a></h2>
+<p>LoRA 是一种「低秩微调」的方法，它冻结原始模型，只训练小小的 adapter 📦</p>
+<p>👉 所以量化分两块：</p>
+<ol>
+<li><strong>原始模型参数</strong>可以量化成 int8 / int4（比如用 GPTQ、AWQ、Exllama2）</li>
+<li><strong>LoRA adapter</strong> 通常保留为 float16（因为很小～）</li>
+</ol>
+<p>这种方式你可以边量化边微调，或者：</p>
+<ul>
+<li>先量化 float 模型</li>
+<li>再用 LoRA 做少量微调</li>
+<li>推理时加载量化模型 + float16 的 adapter 💡</li>
+</ul>
+<hr>
+<h2 id="-3-ffn-only-量化比如-outlier-aware-quantization">💡 3. FFN-only 量化（比如 Outlier-Aware Quantization）<a aria-hidden="true" class="anchor-heading icon-link" href="#-3-ffn-only-量化比如-outlier-aware-quantization"></a></h2>
+<p>在 LLaMA 中，<strong>Feed-Forward Network（FFN）层的激活值分布特别“爆炸”💥，有很多 outlier（异常值）</strong></p>
+<p>所以大家发现可以只量化这些部分：</p>
+<ul>
+<li>使用 <strong>group-wise quantization</strong>（分组量化）来处理 outlier</li>
+<li>或者只量化 Attention，不量化 FFN</li>
+</ul>
+<p>👉 比如 <a href="https://arxiv.org/abs/2306.00978">AWQ</a> 和 <a href="https://arxiv.org/abs/2211.10438">SmoothQuant</a> 都对 FFN 做特殊处理！</p>
+<p>目的就是：<strong>保留重要的精度，同时压缩模型大小 ✨</strong></p>
+<hr>
+<h2 id="️-4-推理阶段量化serving-time-quantization">🛰️ 4. 推理阶段量化（Serving-time Quantization）<a aria-hidden="true" class="anchor-heading icon-link" href="#️-4-推理阶段量化serving-time-quantization"></a></h2>
+<p>到了真正上线部署（serving）的时候，量化就超重要了！这里一般用：</p>
+<h3 id="-常见-serving-量化方法">✨ 常见 serving 量化方法：<a aria-hidden="true" class="anchor-heading icon-link" href="#-常见-serving-量化方法"></a></h3>
+<ul>
+<li><strong>GPTQ</strong>：离线量化，很快但有些损精度</li>
+<li><strong>AWQ</strong>：考虑 outlier，适合 FFN 层，性能和精度更平衡</li>
+<li><strong>Exllama / Exllama2</strong>：专为 LLaMA 优化的 int4 后端（巨快）</li>
+<li><strong>AutoGPTQ</strong>：支持 HuggingFace，易用！</li>
+<li><strong>MLC / vLLM / TensorRT-LLM</strong>：部署神器，支持不同硬件后端！</li>
+</ul>
+<h3 id="-serving-的目标">🚀 Serving 的目标：<a aria-hidden="true" class="anchor-heading icon-link" href="#-serving-的目标"></a></h3>
+<ul>
+<li>内存占用低（int4 一般只有原来 1/8）</li>
+<li>吞吐量高（更多 token/s）</li>
+<li>精度损失尽可能小</li>
+</ul>
+<hr>
+<h2 id="-总结一张图逻辑流">🍰 总结一张图（逻辑流）：<a aria-hidden="true" class="anchor-heading icon-link" href="#-总结一张图逻辑流"></a></h2>
+<pre><code>[Pretraining] (float32/fp16)
+      ↓
+[Post-training Quantization] → GPTQ, AWQ
+      ↓
+[Optional: LoRA Fine-tuning]
+      ↓
+[FFN-aware Optimizations] → SmoothQuant, AWQ
+      ↓
+[Serving] → Exllama2, AutoGPTQ, vLLM, MLC
+</code></pre>
+<hr>
+<h2 id="-小贴士-time-">💬 小贴士 Time ～<a aria-hidden="true" class="anchor-heading icon-link" href="#-小贴士-time-"></a></h2>
+<ul>
+<li>想用 int4 LLaMA 可以直接试试 Huggingface 上的 <a href="https://huggingface.co/TheBloke">GGUF 模型</a>，配合 <code>llama.cpp</code> 或 <code>Exllama</code> 后端用超爽～</li>
+<li>不同量化方案适合不同的显卡或硬件平台哦，要看是 CPU/GPU 还是手机 📱</li>
+<li>推理的时候 batch size 和 quant scheme 选得好，可以快 3~5 倍！</li>
+</ul>

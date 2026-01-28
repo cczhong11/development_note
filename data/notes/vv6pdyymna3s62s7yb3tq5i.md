@@ -1,0 +1,47 @@
+
+# url schemes
+
+[source](https://inside.omnifocus.com/url-schemes)
+
+## Add
+Let’s start with this simple URL:
+
+`omnifocus:///add?name=Pick%20up%20milk&note=You%20gotta`
+
+We’ve added a basic action to OmniFocus by using these variables:
+
+name (your action’s name)
+note (an optional note)
+That link will work anywhere OmniFocus is installed. The app will launch from Safari, Mail, or any app capable of opening a URL. But a lot more can be done with parameters recently in OmniFocus for iOS 2.14 and OmniFocus for Mac 2.10.
+
+New parameters for the add action:
+```
+attachment (base64 encoded)
+attachment-name (repeated if necessary for multiple files)
+parallel (true or false)
+flag (true or false)
+defer (date and time, like jun 25 8am)
+due (date and time, like jun 25 8am)
+project (case-insensitive match)
+context (case-insensitive match)
+autocomplete (true or false; do children mark project complete?)
+estimate (30m for 30 minutes)
+reveal-new-item (true or false)
+repeat-rule (see here for format information)
+repeat-method (fixed, start-after-completion, or due-after-completion)
+completed (date and time, like jun 25 6pm)
+```
+
+## view
+
+only work on ios
+```
+omnifocus:///past
+omnifocus:///today*
+omnifocus:///soon
+
+```
+
+work on mac
+
+`omnifocus:///forecast`

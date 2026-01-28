@@ -14,8 +14,8 @@
       "title": "This page has not yet sprouted",
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883519074,
-      "created": 1735883519074,
+      "updated": 1769575622288,
+      "created": 1769575622288,
       "desc": "",
       "links": [],
       "anchors": {},
@@ -205,14 +205,14 @@
         "efxujPMmo91nKhmMDwmxy",
         "pM7z7xLUf6hSNwawvfTSO",
         "c2644f8b-dfac-433a-9cff-af811875b7e0",
-        "t2q443j3dsnll8w8azjqn87",
-        "apgr6o8wqfvmtn1f95xx7ga",
-        "8viy38k9snh3rmd4uawf4gt",
-        "qzjiuijbo7yv5xgm57tx34t",
-        "ww7ld6vptpvuub6a6f9d1aw",
-        "b9wvlg0nn5y7v306qagvgdr",
-        "21zs0vh858wvozny1br38wk",
-        "ck9s9nmfsfcluthsrxs0rz8"
+        "3tkbngw5th3nt1cbr8at1qx",
+        "aoqrhfxch8vn8mvx6bxev67",
+        "ktjkxcbhzpia2sirbgse3nl",
+        "saazxp3zkdc605x1exwr30j",
+        "lmhp5a5blsmv4gh8e3dv4ds",
+        "pnvuzs99i5trx5nlqzx5lue",
+        "h0gry6sj3wv8s8bhw1aucc9",
+        "g3m2z6eu99pug2vd46u9ku3"
       ],
       "data": {},
       "custom": {
@@ -220,7 +220,7 @@
       },
       "contentHash": "5c4315b6180dbb7a27044e87a1901e4e"
     },
-    "ck9s9nmfsfcluthsrxs0rz8": {
+    "g3m2z6eu99pug2vd46u9ku3": {
       "fname": "life.music",
       "stub": true,
       "vault": {
@@ -233,20 +233,20 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444384,
-      "created": 1735883444384,
-      "id": "ck9s9nmfsfcluthsrxs0rz8",
+      "updated": 1769574937840,
+      "created": 1769574937840,
+      "id": "g3m2z6eu99pug2vd46u9ku3",
       "desc": "",
       "links": [],
       "anchors": {},
       "children": [
-        "a85qhrbtzzrexwc45yvu0wy"
+        "bb0ewsq1hxe85w64jnqbkhd"
       ],
       "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
       "data": {},
       "title": "Music"
     },
-    "a85qhrbtzzrexwc45yvu0wy": {
+    "bb0ewsq1hxe85w64jnqbkhd": {
       "fname": "life.music.concept",
       "stub": true,
       "vault": {
@@ -259,9 +259,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444384,
-      "created": 1735883444384,
-      "id": "a85qhrbtzzrexwc45yvu0wy",
+      "updated": 1769574937840,
+      "created": 1769574937840,
+      "id": "bb0ewsq1hxe85w64jnqbkhd",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -272,7 +272,7 @@
         "rff4dkxej8g59qf822g1qij",
         "3kvnoouwq8eigrofs26me1s"
       ],
-      "parent": "ck9s9nmfsfcluthsrxs0rz8",
+      "parent": "g3m2z6eu99pug2vd46u9ku3",
       "data": {},
       "title": "Concept"
     },
@@ -297,7 +297,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "a85qhrbtzzrexwc45yvu0wy",
+      "parent": "bb0ewsq1hxe85w64jnqbkhd",
       "data": {}
     },
     "rff4dkxej8g59qf822g1qij": {
@@ -346,7 +346,7 @@
         }
       },
       "children": [],
-      "parent": "a85qhrbtzzrexwc45yvu0wy",
+      "parent": "bb0ewsq1hxe85w64jnqbkhd",
       "data": {}
     },
     "cuqihwl9zcdcdjpni6on91k": {
@@ -379,7 +379,7 @@
         }
       },
       "children": [],
-      "parent": "a85qhrbtzzrexwc45yvu0wy",
+      "parent": "bb0ewsq1hxe85w64jnqbkhd",
       "data": {}
     },
     "i51nnoa28idh8mr7sqnib2a": {
@@ -428,7 +428,7 @@
         }
       },
       "children": [],
-      "parent": "a85qhrbtzzrexwc45yvu0wy",
+      "parent": "bb0ewsq1hxe85w64jnqbkhd",
       "data": {}
     },
     "lcwifuxc2xdystbstynzjt4": {
@@ -452,10 +452,10 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "a85qhrbtzzrexwc45yvu0wy",
+      "parent": "bb0ewsq1hxe85w64jnqbkhd",
       "data": {}
     },
-    "21zs0vh858wvozny1br38wk": {
+    "h0gry6sj3wv8s8bhw1aucc9": {
       "fname": "life.economics",
       "stub": true,
       "vault": {
@@ -468,20 +468,20 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444372,
-      "created": 1735883444372,
-      "id": "21zs0vh858wvozny1br38wk",
+      "updated": 1769574937787,
+      "created": 1769574937787,
+      "id": "h0gry6sj3wv8s8bhw1aucc9",
       "desc": "",
       "links": [],
       "anchors": {},
       "children": [
-        "60eayjveuyarhxz1h5bbajn"
+        "sg57f91gb54il508i4tgb2e"
       ],
       "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
       "data": {},
       "title": "Economics"
     },
-    "60eayjveuyarhxz1h5bbajn": {
+    "sg57f91gb54il508i4tgb2e": {
       "fname": "life.economics.principles",
       "stub": true,
       "vault": {
@@ -494,16 +494,16 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444372,
-      "created": 1735883444372,
-      "id": "60eayjveuyarhxz1h5bbajn",
+      "updated": 1769574937787,
+      "created": 1769574937787,
+      "id": "sg57f91gb54il508i4tgb2e",
       "desc": "",
       "links": [],
       "anchors": {},
       "children": [
         "9bbo8cyi32eoo7c0lr7x5s6"
       ],
-      "parent": "21zs0vh858wvozny1br38wk",
+      "parent": "h0gry6sj3wv8s8bhw1aucc9",
       "data": {},
       "title": "Principles"
     },
@@ -553,10 +553,10 @@
         }
       },
       "children": [],
-      "parent": "60eayjveuyarhxz1h5bbajn",
+      "parent": "sg57f91gb54il508i4tgb2e",
       "data": {}
     },
-    "b9wvlg0nn5y7v306qagvgdr": {
+    "pnvuzs99i5trx5nlqzx5lue": {
       "fname": "life.writing",
       "stub": true,
       "vault": {
@@ -569,9 +569,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444323,
-      "created": 1735883444323,
-      "id": "b9wvlg0nn5y7v306qagvgdr",
+      "updated": 1769574937714,
+      "created": 1769574937714,
+      "id": "pnvuzs99i5trx5nlqzx5lue",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -664,12 +664,12 @@
         "63emh1k1uteiqzlglsxwl3u",
         "yx4kmycbe4lzn8zkulcjo3e",
         "qfsp5k83n3u47hth8prrrov",
-        "5ac1zqv4g5e041tc1atqgam"
+        "o8yg37o2zwg2elpvu4ja9rw"
       ],
-      "parent": "b9wvlg0nn5y7v306qagvgdr",
+      "parent": "pnvuzs99i5trx5nlqzx5lue",
       "data": {}
     },
-    "5ac1zqv4g5e041tc1atqgam": {
+    "o8yg37o2zwg2elpvu4ja9rw": {
       "fname": "life.writing.story.design",
       "stub": true,
       "vault": {
@@ -682,9 +682,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444402,
-      "created": 1735883444402,
-      "id": "5ac1zqv4g5e041tc1atqgam",
+      "updated": 1769574937902,
+      "created": 1769574937902,
+      "id": "o8yg37o2zwg2elpvu4ja9rw",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -758,7 +758,7 @@
         }
       },
       "children": [],
-      "parent": "5ac1zqv4g5e041tc1atqgam",
+      "parent": "o8yg37o2zwg2elpvu4ja9rw",
       "data": {}
     },
     "wmhk77yy3v4c8wogb201iq3": {
@@ -825,7 +825,7 @@
       "children": [
         "zq686hwcumiquip2433r3p5"
       ],
-      "parent": "5ac1zqv4g5e041tc1atqgam",
+      "parent": "o8yg37o2zwg2elpvu4ja9rw",
       "data": {}
     },
     "zq686hwcumiquip2433r3p5": {
@@ -882,7 +882,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "5ac1zqv4g5e041tc1atqgam",
+      "parent": "o8yg37o2zwg2elpvu4ja9rw",
       "data": {}
     },
     "achxo6xzn8kyishgu1kce4z": {
@@ -955,7 +955,7 @@
         }
       },
       "children": [],
-      "parent": "5ac1zqv4g5e041tc1atqgam",
+      "parent": "o8yg37o2zwg2elpvu4ja9rw",
       "data": {}
     },
     "pq368bf5ierte3p2bcefiuc": {
@@ -979,7 +979,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "5ac1zqv4g5e041tc1atqgam",
+      "parent": "o8yg37o2zwg2elpvu4ja9rw",
       "data": {}
     },
     "ufvynh5wr6yhoxmorns1rso": {
@@ -1003,7 +1003,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "5ac1zqv4g5e041tc1atqgam",
+      "parent": "o8yg37o2zwg2elpvu4ja9rw",
       "data": {}
     },
     "c78qkw80cv9o79l6c607b0w": {
@@ -1068,7 +1068,7 @@
         }
       },
       "children": [],
-      "parent": "5ac1zqv4g5e041tc1atqgam",
+      "parent": "o8yg37o2zwg2elpvu4ja9rw",
       "data": {}
     },
     "g5npb5f4sl5zfjpb3j64x07": {
@@ -1125,7 +1125,7 @@
         }
       },
       "children": [],
-      "parent": "5ac1zqv4g5e041tc1atqgam",
+      "parent": "o8yg37o2zwg2elpvu4ja9rw",
       "data": {}
     },
     "c4nnfu48qwfp3kxvk1sq6z4": {
@@ -1214,7 +1214,7 @@
         }
       },
       "children": [],
-      "parent": "5ac1zqv4g5e041tc1atqgam",
+      "parent": "o8yg37o2zwg2elpvu4ja9rw",
       "data": {}
     },
     "u37slyp3dulk4qv5mgtkhuc": {
@@ -1263,7 +1263,7 @@
         }
       },
       "children": [],
-      "parent": "5ac1zqv4g5e041tc1atqgam",
+      "parent": "o8yg37o2zwg2elpvu4ja9rw",
       "data": {}
     },
     "qfsp5k83n3u47hth8prrrov": {
@@ -1430,7 +1430,7 @@
       "parent": "fbi82trqnupon50qxb8kpc0",
       "data": {}
     },
-    "ww7ld6vptpvuub6a6f9d1aw": {
+    "lmhp5a5blsmv4gh8e3dv4ds": {
       "fname": "life.video",
       "stub": true,
       "vault": {
@@ -1443,9 +1443,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444321,
-      "created": 1735883444321,
-      "id": "ww7ld6vptpvuub6a6f9d1aw",
+      "updated": 1769574937711,
+      "created": 1769574937711,
+      "id": "lmhp5a5blsmv4gh8e3dv4ds",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -1454,6 +1454,7 @@
         "bga0xfve56yaj1x4zvlmnx1",
         "6028sqbc59bqa4l1fykw5aq",
         "m3kwcjprhci38ajsgahc019",
+        "tlcyad7uhh6f9qg9fzixuqa",
         "3rl410b385v6iwt41mx0g1s"
       ],
       "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
@@ -1514,7 +1515,178 @@
         }
       },
       "children": [],
-      "parent": "ww7ld6vptpvuub6a6f9d1aw",
+      "parent": "lmhp5a5blsmv4gh8e3dv4ds",
+      "data": {}
+    },
+    "tlcyad7uhh6f9qg9fzixuqa": {
+      "fname": "life.video.tips",
+      "stub": true,
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "schemaStub": false,
+      "type": "note",
+      "updated": 1769575460885,
+      "created": 1769575460885,
+      "id": "tlcyad7uhh6f9qg9fzixuqa",
+      "desc": "",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "ngsz6bdyyskvwwfm5fro47n"
+      ],
+      "parent": "lmhp5a5blsmv4gh8e3dv4ds",
+      "data": {},
+      "title": "Tips"
+    },
+    "ngsz6bdyyskvwwfm5fro47n": {
+      "id": "ngsz6bdyyskvwwfm5fro47n",
+      "title": "Travel",
+      "desc": "",
+      "updated": 1769575465023,
+      "created": 1769575460870,
+      "custom": {},
+      "fname": "life.video.tips.travel",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "f9f9b83d162340a6f6f199754a4534fe",
+      "links": [],
+      "anchors": {
+        "-旅行-vlog-拍摄--剪辑-checklist拉片总结版": {
+          "type": "header",
+          "text": "🧳 旅行 Vlog 拍摄 & 剪辑 Checklist（拉片总结版）",
+          "value": "-旅行-vlog-拍摄--剪辑-checklist拉片总结版",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "一出发前--出发瞬间建立要旅行了的感觉": {
+          "type": "header",
+          "text": "一、出发前 / 出发瞬间（建立「要旅行了」的感觉）",
+          "value": "一出发前--出发瞬间建立要旅行了的感觉",
+          "line": 15,
+          "column": 0,
+          "depth": 2
+        },
+        "二机场空间感--设计感": {
+          "type": "header",
+          "text": "二、机场（空间感 + 设计感）",
+          "value": "二机场空间感--设计感",
+          "line": 27,
+          "column": 0,
+          "depth": 2
+        },
+        "空镜--氛围": {
+          "type": "header",
+          "text": "空镜 & 氛围",
+          "value": "空镜--氛围",
+          "line": 29,
+          "column": 0,
+          "depth": 3
+        },
+        "设计好的互动片段可提前想": {
+          "type": "header",
+          "text": "设计好的互动片段（可提前想）",
+          "value": "设计好的互动片段可提前想",
+          "line": 34,
+          "column": 0,
+          "depth": 3
+        },
+        "三飞机--路途路有多远": {
+          "type": "header",
+          "text": "三、飞机 / 路途（“路有多远”）",
+          "value": "三飞机--路途路有多远",
+          "line": 43,
+          "column": 0,
+          "depth": 2
+        },
+        "四到达--旅途中日常--情绪": {
+          "type": "header",
+          "text": "四、到达 & 旅途中（日常 + 情绪）",
+          "value": "四到达--旅途中日常--情绪",
+          "line": 54,
+          "column": 0,
+          "depth": 2
+        },
+        "情绪--感受": {
+          "type": "header",
+          "text": "情绪 & 感受",
+          "value": "情绪--感受",
+          "line": 56,
+          "column": 0,
+          "depth": 3
+        },
+        "内容价值": {
+          "type": "header",
+          "text": "内容价值",
+          "value": "内容价值",
+          "line": 61,
+          "column": 0,
+          "depth": 3
+        },
+        "五拍摄技巧为剪辑留余地": {
+          "type": "header",
+          "text": "五、拍摄技巧（为剪辑留余地）",
+          "value": "五拍摄技巧为剪辑留余地",
+          "line": 68,
+          "column": 0,
+          "depth": 2
+        },
+        "同一主体多覆盖": {
+          "type": "header",
+          "text": "同一主体，多覆盖",
+          "value": "同一主体多覆盖",
+          "line": 70,
+          "column": 0,
+          "depth": 3
+        },
+        "可爱--对照": {
+          "type": "header",
+          "text": "可爱 & 对照",
+          "value": "可爱--对照",
+          "line": 74,
+          "column": 0,
+          "depth": 3
+        },
+        "六b-roll-素材剪辑自由度": {
+          "type": "header",
+          "text": "六、B-roll 素材（剪辑自由度）",
+          "value": "六b-roll-素材剪辑自由度",
+          "line": 80,
+          "column": 0,
+          "depth": 2
+        },
+        "七转场--标题出口": {
+          "type": "header",
+          "text": "七、转场 & 标题出口",
+          "value": "七转场--标题出口",
+          "line": 91,
+          "column": 0,
+          "depth": 2
+        },
+        "八剪辑逻辑提醒拍的时候心里要有": {
+          "type": "header",
+          "text": "八、剪辑逻辑提醒（拍的时候心里要有）",
+          "value": "八剪辑逻辑提醒拍的时候心里要有",
+          "line": 100,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "tlcyad7uhh6f9qg9fzixuqa",
       "data": {}
     },
     "m3kwcjprhci38ajsgahc019": {
@@ -1579,7 +1751,7 @@
         }
       },
       "children": [],
-      "parent": "ww7ld6vptpvuub6a6f9d1aw",
+      "parent": "lmhp5a5blsmv4gh8e3dv4ds",
       "data": {}
     },
     "6028sqbc59bqa4l1fykw5aq": {
@@ -1660,7 +1832,7 @@
         }
       },
       "children": [],
-      "parent": "ww7ld6vptpvuub6a6f9d1aw",
+      "parent": "lmhp5a5blsmv4gh8e3dv4ds",
       "data": {}
     },
     "bga0xfve56yaj1x4zvlmnx1": {
@@ -1709,7 +1881,7 @@
         }
       },
       "children": [],
-      "parent": "ww7ld6vptpvuub6a6f9d1aw",
+      "parent": "lmhp5a5blsmv4gh8e3dv4ds",
       "data": {}
     },
     "gzwwj8ci3gdodc6qu1af3mk": {
@@ -1785,7 +1957,7 @@
         "olrqkhl2ej6obm3hr5gvkz0",
         "fa57ea7fb86qripe0suvytd"
       ],
-      "parent": "ww7ld6vptpvuub6a6f9d1aw",
+      "parent": "lmhp5a5blsmv4gh8e3dv4ds",
       "data": {}
     },
     "fa57ea7fb86qripe0suvytd": {
@@ -1904,7 +2076,7 @@
       "parent": "gzwwj8ci3gdodc6qu1af3mk",
       "data": {}
     },
-    "qzjiuijbo7yv5xgm57tx34t": {
+    "saazxp3zkdc605x1exwr30j": {
       "fname": "life.travel",
       "stub": true,
       "vault": {
@@ -1917,21 +2089,21 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444320,
-      "created": 1735883444320,
-      "id": "qzjiuijbo7yv5xgm57tx34t",
+      "updated": 1769574937711,
+      "created": 1769574937711,
+      "id": "saazxp3zkdc605x1exwr30j",
       "desc": "",
       "links": [],
       "anchors": {},
       "children": [
         "lmtQL7IZGas5l0r7ksGCi",
-        "ua7e7roxf5q5bwsqggp9m7t"
+        "8g2ly48uclplqggqizgnihl"
       ],
       "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
       "data": {},
       "title": "Travel"
     },
-    "ua7e7roxf5q5bwsqggp9m7t": {
+    "8g2ly48uclplqggqizgnihl": {
       "fname": "life.travel.visa",
       "stub": true,
       "vault": {
@@ -1944,9 +2116,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444388,
-      "created": 1735883444388,
-      "id": "ua7e7roxf5q5bwsqggp9m7t",
+      "updated": 1769574937844,
+      "created": 1769574937844,
+      "id": "8g2ly48uclplqggqizgnihl",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -1954,7 +2126,7 @@
         "vwffvlfss9hsfbia6oxc7cm",
         "iy46oo3ftv3417uszp1ijba"
       ],
-      "parent": "qzjiuijbo7yv5xgm57tx34t",
+      "parent": "saazxp3zkdc605x1exwr30j",
       "data": {},
       "title": "Visa"
     },
@@ -1962,7 +2134,7 @@
       "id": "iy46oo3ftv3417uszp1ijba",
       "title": "Japan",
       "desc": "",
-      "updated": 1684392550725,
+      "updated": 1769575228076,
       "created": 1684392546586,
       "custom": {},
       "fname": "life.travel.visa.japan",
@@ -1975,11 +2147,11 @@
         },
         "name": "my_note"
       },
-      "contentHash": "14bc5b7d839d8745e685356e835d394b",
+      "contentHash": "b9b9e96623e6506409196c445fa42cde",
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "ua7e7roxf5q5bwsqggp9m7t",
+      "parent": "8g2ly48uclplqggqizgnihl",
       "data": {}
     },
     "vwffvlfss9hsfbia6oxc7cm": {
@@ -2003,7 +2175,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "ua7e7roxf5q5bwsqggp9m7t",
+      "parent": "8g2ly48uclplqggqizgnihl",
       "data": {}
     },
     "lmtQL7IZGas5l0r7ksGCi": {
@@ -2255,13 +2427,13 @@
       "fname": "life.travel.coupon",
       "updated": 1639078764579,
       "created": 1639078561400,
-      "parent": "qzjiuijbo7yv5xgm57tx34t",
+      "parent": "saazxp3zkdc605x1exwr30j",
       "children": [],
       "data": {},
       "contentHash": "7d983cc50cec637bc4fc44f1c401e25b",
       "custom": {}
     },
-    "8viy38k9snh3rmd4uawf4gt": {
+    "ktjkxcbhzpia2sirbgse3nl": {
       "fname": "life.introverted",
       "stub": true,
       "vault": {
@@ -2274,9 +2446,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444293,
-      "created": 1735883444293,
-      "id": "8viy38k9snh3rmd4uawf4gt",
+      "updated": 1769574937669,
+      "created": 1769574937669,
+      "id": "ktjkxcbhzpia2sirbgse3nl",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -2326,7 +2498,7 @@
         }
       },
       "children": [],
-      "parent": "8viy38k9snh3rmd4uawf4gt",
+      "parent": "ktjkxcbhzpia2sirbgse3nl",
       "data": {}
     },
     "ncfwg1fo1cgimkf6ynqptki": {
@@ -2403,7 +2575,7 @@
         "n908yp3qizibmdhdmuxqvh5",
         "xv77y5sfanoejzlj521alhc"
       ],
-      "parent": "8viy38k9snh3rmd4uawf4gt",
+      "parent": "ktjkxcbhzpia2sirbgse3nl",
       "data": {}
     },
     "xv77y5sfanoejzlj521alhc": {
@@ -2504,7 +2676,7 @@
       "parent": "ncfwg1fo1cgimkf6ynqptki",
       "data": {}
     },
-    "apgr6o8wqfvmtn1f95xx7ga": {
+    "aoqrhfxch8vn8mvx6bxev67": {
       "fname": "life.hiking",
       "stub": true,
       "vault": {
@@ -2517,9 +2689,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444291,
-      "created": 1735883444291,
-      "id": "apgr6o8wqfvmtn1f95xx7ga",
+      "updated": 1769574937665,
+      "created": 1769574937666,
+      "id": "aoqrhfxch8vn8mvx6bxev67",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -2551,10 +2723,10 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "apgr6o8wqfvmtn1f95xx7ga",
+      "parent": "aoqrhfxch8vn8mvx6bxev67",
       "data": {}
     },
-    "t2q443j3dsnll8w8azjqn87": {
+    "3tkbngw5th3nt1cbr8at1qx": {
       "fname": "life.belief",
       "stub": true,
       "vault": {
@@ -2567,9 +2739,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444275,
-      "created": 1735883444275,
-      "id": "t2q443j3dsnll8w8azjqn87",
+      "updated": 1769574937647,
+      "created": 1769574937647,
+      "id": "3tkbngw5th3nt1cbr8at1qx",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -2829,7 +3001,7 @@
         "cuca9mnfgkr2ec3o7i940lc",
         "2f2fovyz68nw2p3zc9uzi69"
       ],
-      "parent": "t2q443j3dsnll8w8azjqn87",
+      "parent": "3tkbngw5th3nt1cbr8at1qx",
       "data": {},
       "title": "Bazi"
     },
@@ -5806,14 +5978,14 @@
         "3d47f956-2397-439d-bcf0-d5616645cdcd",
         "u6f1NrHpnPtZoHcCGPEyw",
         "122ddbd4-46fb-4ec9-b05a-1005f1743abc",
-        "5mdy5ly85jyopmw9ajbdpie",
-        "zgfmbnb9ddn7ehljxy6swj3"
+        "fp8bqm1meo3nu6p3aqytja3",
+        "gu9k4wwmj46fq7o5oaxegyg"
       ],
       "data": {},
       "custom": {},
       "contentHash": "7e752d788050e83dd28b8a3a7fbdbfa1"
     },
-    "zgfmbnb9ddn7ehljxy6swj3": {
+    "gu9k4wwmj46fq7o5oaxegyg": {
       "fname": "life.love.sex",
       "stub": true,
       "vault": {
@@ -5826,9 +5998,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444383,
-      "created": 1735883444383,
-      "id": "zgfmbnb9ddn7ehljxy6swj3",
+      "updated": 1769574937839,
+      "created": 1769574937839,
+      "id": "gu9k4wwmj46fq7o5oaxegyg",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -5902,7 +6074,7 @@
         }
       },
       "children": [],
-      "parent": "zgfmbnb9ddn7ehljxy6swj3",
+      "parent": "gu9k4wwmj46fq7o5oaxegyg",
       "data": {}
     },
     "0tzkzu5cxp8lcapx2csvm8i": {
@@ -5926,10 +6098,10 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "zgfmbnb9ddn7ehljxy6swj3",
+      "parent": "gu9k4wwmj46fq7o5oaxegyg",
       "data": {}
     },
-    "5mdy5ly85jyopmw9ajbdpie": {
+    "fp8bqm1meo3nu6p3aqytja3": {
       "fname": "life.love.abuse",
       "stub": true,
       "vault": {
@@ -5942,9 +6114,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444380,
-      "created": 1735883444380,
-      "id": "5mdy5ly85jyopmw9ajbdpie",
+      "updated": 1769574937802,
+      "created": 1769574937802,
+      "id": "fp8bqm1meo3nu6p3aqytja3",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -5976,7 +6148,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "5mdy5ly85jyopmw9ajbdpie",
+      "parent": "fp8bqm1meo3nu6p3aqytja3",
       "data": {}
     },
     "122ddbd4-46fb-4ec9-b05a-1005f1743abc": {
@@ -6080,7 +6252,7 @@
       "id": "3d47f956-2397-439d-bcf0-d5616645cdcd",
       "title": "My_point",
       "desc": "",
-      "updated": 1734417387533,
+      "updated": 1740272423580,
       "created": 1613633241155,
       "custom": {},
       "fname": "life.love.my_point",
@@ -6093,7 +6265,7 @@
         },
         "name": "my_note"
       },
-      "contentHash": "26462dbef2beea2732576a934bac8001",
+      "contentHash": "d3cc18636f6d5614d20f8327587e5bb4",
       "links": [
         {
           "type": "ref",
@@ -6146,6 +6318,22 @@
           "line": 27,
           "column": 0,
           "depth": 1
+        },
+        "希望的": {
+          "type": "header",
+          "text": "希望的",
+          "value": "希望的",
+          "line": 96,
+          "column": 0,
+          "depth": 1
+        },
+        "我无法容忍的点": {
+          "type": "header",
+          "text": "我无法容忍的点",
+          "value": "我无法容忍的点",
+          "line": 114,
+          "column": 0,
+          "depth": 1
         }
       },
       "children": [],
@@ -6171,10 +6359,109 @@
       "updated": 1613961479944,
       "created": 1613961464647,
       "parent": "5b984740-f1d4-4e7b-bd92-ceb2ec59f7f5",
-      "children": [],
+      "children": [
+        "ws3kguiwym69g2ssu3gvrr1"
+      ],
       "data": {},
       "custom": {},
       "contentHash": "51b570241caa34748e0f3f4c1cfd76c6"
+    },
+    "ws3kguiwym69g2ssu3gvrr1": {
+      "id": "ws3kguiwym69g2ssu3gvrr1",
+      "title": "Housework",
+      "desc": "",
+      "updated": 1764207204503,
+      "created": 1764207062523,
+      "custom": {},
+      "fname": "life.love.live_together.housework",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "9d6084cb9e55a6c6aa965d78706eba9c",
+      "links": [],
+      "anchors": {
+        "housework-cheat-sheet": {
+          "type": "header",
+          "text": "Housework Cheat Sheet",
+          "value": "housework-cheat-sheet",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "书摘概览": {
+          "type": "header",
+          "text": "书摘概览",
+          "value": "书摘概览",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "1-无名家务是什么": {
+          "type": "header",
+          "text": "1. “无名家务”是什么？",
+          "value": "1-无名家务是什么",
+          "line": 13,
+          "column": 0,
+          "depth": 2
+        },
+        "2-为什么女性会因此生气": {
+          "type": "header",
+          "text": "2. 为什么女性会因此生气？",
+          "value": "2-为什么女性会因此生气",
+          "line": 32,
+          "column": 0,
+          "depth": 2
+        },
+        "3-男性应该怎么做": {
+          "type": "header",
+          "text": "3. 男性应该怎么做？",
+          "value": "3-男性应该怎么做",
+          "line": 38,
+          "column": 0,
+          "depth": 2
+        },
+        "31-主动发现主动承担无名家务": {
+          "type": "header",
+          "text": "3.1 主动发现、主动承担无名家务",
+          "value": "31-主动发现主动承担无名家务",
+          "line": 39,
+          "column": 0,
+          "depth": 3
+        },
+        "32-忘了就道歉重点是情绪不是事件": {
+          "type": "header",
+          "text": "3.2 忘了就道歉（重点是情绪，不是事件）",
+          "value": "32-忘了就道歉重点是情绪不是事件",
+          "line": 48,
+          "column": 0,
+          "depth": 3
+        },
+        "4-为什么演一下悔恨有效": {
+          "type": "header",
+          "text": "4. 为什么“演一下悔恨”有效？",
+          "value": "4-为什么演一下悔恨有效",
+          "line": 55,
+          "column": 0,
+          "depth": 2
+        },
+        "小结最重要的-3-点": {
+          "type": "header",
+          "text": "小结：最重要的 3 点",
+          "value": "小结最重要的-3-点",
+          "line": 61,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "375e0fea-4eea-47cd-9365-ffed689aae0c",
+      "data": {}
     },
     "c3f04e3e-584e-4d1b-b679-54cb76e1b68f": {
       "id": "c3f04e3e-584e-4d1b-b679-54cb76e1b68f",
@@ -6421,8 +6708,34 @@
           "depth": 1
         }
       },
-      "children": [],
+      "children": [
+        "2d0iez89t5ncgdjb3u9bewm"
+      ],
       "parent": "5b984740-f1d4-4e7b-bd92-ceb2ec59f7f5",
+      "data": {}
+    },
+    "2d0iez89t5ncgdjb3u9bewm": {
+      "id": "2d0iez89t5ncgdjb3u9bewm",
+      "title": "Apologize",
+      "desc": "",
+      "updated": 1764206986719,
+      "created": 1764206976472,
+      "custom": {},
+      "fname": "life.love.comfort.apologize",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "47ff6b41e4e654269f65d9707f4e15d1",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "23b79b39-3378-4b62-b5b5-8b04ab437f69",
       "data": {}
     },
     "wbo0fAYmThTNJ367yx8Ea": {
@@ -6629,9 +6942,34 @@
         }
       },
       "children": [
-        "GHhQXpa5HPkBQMXs8VDP2"
+        "GHhQXpa5HPkBQMXs8VDP2",
+        "kc8t40hq5zgns0wzj1vwz1q"
       ],
       "parent": "5b984740-f1d4-4e7b-bd92-ceb2ec59f7f5",
+      "data": {}
+    },
+    "kc8t40hq5zgns0wzj1vwz1q": {
+      "id": "kc8t40hq5zgns0wzj1vwz1q",
+      "title": "Woman",
+      "desc": "",
+      "updated": 1764206946667,
+      "created": 1764206886839,
+      "custom": {},
+      "fname": "life.love.chat.woman",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "db4e349542b872ae8a3c7be9144d7eed",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "wbo0fAYmThTNJ367yx8Ea",
       "data": {}
     },
     "GHhQXpa5HPkBQMXs8VDP2": {
@@ -6803,7 +7141,7 @@
       "id": "8113e251-47b4-4497-8d45-f2bb2969b0f0",
       "title": "Basic",
       "desc": "",
-      "updated": 1667365690173,
+      "updated": 1764207217321,
       "created": 1613629235490,
       "custom": {},
       "fname": "life.love.basic",
@@ -6816,7 +7154,7 @@
         },
         "name": "my_note"
       },
-      "contentHash": "ed1090d135d86ab9378e0152d7195f35",
+      "contentHash": "a00dcc8d532b1f3ecea4d3262fa3dad2",
       "links": [
         {
           "from": {
@@ -6910,16 +7248,407 @@
           "type": "header",
           "text": "了解自己",
           "value": "了解自己",
-          "line": 84,
+          "line": 85,
           "column": 0,
           "depth": 1
         }
       },
       "children": [
         "qQSlPlLJhG6oSipcnNQNv",
-        "9asWALGIyZ8jlcax1ijUX"
+        "9asWALGIyZ8jlcax1ijUX",
+        "dnu2x5eietntwdocshwqpbc"
       ],
       "parent": "5b984740-f1d4-4e7b-bd92-ceb2ec59f7f5",
+      "data": {}
+    },
+    "dnu2x5eietntwdocshwqpbc": {
+      "id": "dnu2x5eietntwdocshwqpbc",
+      "title": "Woman",
+      "desc": "",
+      "updated": 1764207518057,
+      "created": 1764207256591,
+      "custom": {},
+      "fname": "life.love.basic.woman",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "447ee8d543cd890577a32fb37f9c08a6",
+      "links": [],
+      "anchors": {
+        "女性沟通脑回路备忘": {
+          "type": "header",
+          "text": "女性沟通脑回路备忘",
+          "value": "女性沟通脑回路备忘",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "1-女性的敏锐扫描力": {
+          "type": "header",
+          "text": "1) 女性的敏锐扫描力",
+          "value": "1-女性的敏锐扫描力",
+          "line": 13,
+          "column": 0,
+          "depth": 2
+        },
+        "2-你说我就做为何是雷区": {
+          "type": "header",
+          "text": "2) “你说我就做”为何是雷区？",
+          "value": "2-你说我就做为何是雷区",
+          "line": 19,
+          "column": 0,
+          "depth": 2
+        },
+        "3-男性常用的爱之表达": {
+          "type": "header",
+          "text": "3) 男性常用的爱之表达",
+          "value": "3-男性常用的爱之表达",
+          "line": 27,
+          "column": 0,
+          "depth": 2
+        },
+        "4-男性黄金回应": {
+          "type": "header",
+          "text": "4) 男性黄金回应",
+          "value": "4-男性黄金回应",
+          "line": 34,
+          "column": 0,
+          "depth": 2
+        },
+        "5-双线路-vs-单线路": {
+          "type": "header",
+          "text": "5) 双线路 vs 单线路",
+          "value": "5-双线路-vs-单线路",
+          "line": 40,
+          "column": 0,
+          "depth": 2
+        },
+        "女性双线路心理--事实": {
+          "type": "header",
+          "text": "女性：双线路（心理 + 事实）",
+          "value": "女性双线路心理--事实",
+          "line": 41,
+          "column": 0,
+          "depth": 3
+        },
+        "男性单线路事实": {
+          "type": "header",
+          "text": "男性：单线路（事实）",
+          "value": "男性单线路事实",
+          "line": 45,
+          "column": 0,
+          "depth": 3
+        },
+        "6-女性四种对话模式": {
+          "type": "header",
+          "text": "6) 女性四种对话模式",
+          "value": "6-女性四种对话模式",
+          "line": 51,
+          "column": 0,
+          "depth": 2
+        },
+        "7-为何男性话语会深度伤害": {
+          "type": "header",
+          "text": "7) 为何男性话语会深度伤害？",
+          "value": "7-为何男性话语会深度伤害",
+          "line": 61,
+          "column": 0,
+          "depth": 2
+        },
+        "8-正确沟通步骤先心后事": {
+          "type": "header",
+          "text": "8) 正确沟通步骤（先心后事）",
+          "value": "8-正确沟通步骤先心后事",
+          "line": 68,
+          "column": 0,
+          "depth": 2
+        },
+        "9-一句话总括": {
+          "type": "header",
+          "text": "9) 一句话总括",
+          "value": "9-一句话总括",
+          "line": 82,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [
+        "fbeagylj20jkaw8nk6f8i2n",
+        "qceowar2fe9f8iwdgtq51a0"
+      ],
+      "parent": "8113e251-47b4-4497-8d45-f2bb2969b0f0",
+      "data": {}
+    },
+    "qceowar2fe9f8iwdgtq51a0": {
+      "id": "qceowar2fe9f8iwdgtq51a0",
+      "title": "Why",
+      "desc": "",
+      "updated": 1764207637191,
+      "created": 1764207521942,
+      "custom": {},
+      "fname": "life.love.basic.woman.why",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "27abe9389c5d5d4c9595d30aed31d5f5",
+      "links": [],
+      "anchors": {
+        "男女爱意错频指南": {
+          "type": "header",
+          "text": "男女爱意错频指南",
+          "value": "男女爱意错频指南",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "1-男性完成义务--爱的证明": {
+          "type": "header",
+          "text": "1) 男性：完成义务 = 爱的证明",
+          "value": "1-男性完成义务--爱的证明",
+          "line": 14,
+          "column": 0,
+          "depth": 2
+        },
+        "2-女性揣摩情绪--爱的确认": {
+          "type": "header",
+          "text": "2) 女性：揣摩情绪 = 爱的确认",
+          "value": "2-女性揣摩情绪--爱的确认",
+          "line": 18,
+          "column": 0,
+          "depth": 2
+        },
+        "3-典型错配": {
+          "type": "header",
+          "text": "3) 典型错配",
+          "value": "3-典型错配",
+          "line": 22,
+          "column": 0,
+          "depth": 2
+        },
+        "4-为什么履责打动不了她": {
+          "type": "header",
+          "text": "4) 为什么履责打动不了她？",
+          "value": "4-为什么履责打动不了她",
+          "line": 27,
+          "column": 0,
+          "depth": 2
+        },
+        "5-妻子唠叨--风险预警系统": {
+          "type": "header",
+          "text": "5) 妻子唠叨 = 风险预警系统",
+          "value": "5-妻子唠叨--风险预警系统",
+          "line": 32,
+          "column": 0,
+          "depth": 2
+        },
+        "6-数据男人离不开妻子": {
+          "type": "header",
+          "text": "6) 数据：男人离不开妻子",
+          "value": "6-数据男人离不开妻子",
+          "line": 36,
+          "column": 0,
+          "depth": 2
+        },
+        "金句速背": {
+          "type": "header",
+          "text": "金句速背.",
+          "value": "金句速背",
+          "line": 43,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "dnu2x5eietntwdocshwqpbc",
+      "data": {}
+    },
+    "fbeagylj20jkaw8nk6f8i2n": {
+      "id": "fbeagylj20jkaw8nk6f8i2n",
+      "title": "How",
+      "desc": "",
+      "updated": 1764207584872,
+      "created": 1764207399790,
+      "custom": {},
+      "fname": "life.love.basic.woman.how",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "801a9ac3460763611c9dd0797d987c12",
+      "links": [],
+      "anchors": {
+        "女性情绪价值实操手册": {
+          "type": "header",
+          "text": "女性情绪价值实操手册",
+          "value": "女性情绪价值实操手册",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "part-a纪念日情绪放大术": {
+          "type": "header",
+          "text": "Part A：纪念日情绪放大术",
+          "value": "part-a纪念日情绪放大术",
+          "line": 14,
+          "column": 0,
+          "depth": 2
+        },
+        "a1-为何重要": {
+          "type": "header",
+          "text": "A1. 为何重要",
+          "value": "a1-为何重要",
+          "line": 18,
+          "column": 0,
+          "depth": 3
+        },
+        "a2-关键动作提前-30-天告知计划": {
+          "type": "header",
+          "text": "A2. 关键动作：提前 30 天告知计划",
+          "value": "a2-关键动作提前-30-天告知计划",
+          "line": 21,
+          "column": 0,
+          "depth": 3
+        },
+        "a3-男性常犯错": {
+          "type": "header",
+          "text": "A3. 男性常犯错",
+          "value": "a3-男性常犯错",
+          "line": 27,
+          "column": 0,
+          "depth": 3
+        },
+        "a4-最浓缩总结": {
+          "type": "header",
+          "text": "A4. 最浓缩总结",
+          "value": "a4-最浓缩总结",
+          "line": 32,
+          "column": 0,
+          "depth": 3
+        },
+        "part-b日常互动与吵架修复-sop": {
+          "type": "header",
+          "text": "Part B：日常互动与吵架修复 SOP",
+          "value": "part-b日常互动与吵架修复-sop",
+          "line": 37,
+          "column": 0,
+          "depth": 2
+        },
+        "b1-不知道回什么--复述她的话": {
+          "type": "header",
+          "text": "B1. 不知道回什么 → 复述她的话",
+          "value": "b1-不知道回什么--复述她的话",
+          "line": 40,
+          "column": 0,
+          "depth": 3
+        },
+        "b2-小礼物--超级好感器": {
+          "type": "header",
+          "text": "B2. 小礼物 = 超级好感器",
+          "value": "b2-小礼物--超级好感器",
+          "line": 45,
+          "column": 0,
+          "depth": 3
+        },
+        "b3-设定幸福礼物吵架专用": {
+          "type": "header",
+          "text": "B3. 设定“幸福礼物”（吵架专用）",
+          "value": "b3-设定幸福礼物吵架专用",
+          "line": 49,
+          "column": 0,
+          "depth": 3
+        },
+        "b4-吵架后的完美修复流程": {
+          "type": "header",
+          "text": "B4. 吵架后的完美修复流程",
+          "value": "b4-吵架后的完美修复流程",
+          "line": 53,
+          "column": 0,
+          "depth": 3
+        },
+        "b5-小结男性速记": {
+          "type": "header",
+          "text": "B5. 小结（男性速记）",
+          "value": "b5-小结男性速记",
+          "line": 62,
+          "column": 0,
+          "depth": 3
+        },
+        "part-c称赞妻子的终极指南": {
+          "type": "header",
+          "text": "Part C：称赞妻子的终极指南",
+          "value": "part-c称赞妻子的终极指南",
+          "line": 71,
+          "column": 0,
+          "depth": 2
+        },
+        "c1-男女差异": {
+          "type": "header",
+          "text": "C1. 男女差异",
+          "value": "c1-男女差异",
+          "line": 74,
+          "column": 0,
+          "depth": 3
+        },
+        "c2-赞美偏好对比": {
+          "type": "header",
+          "text": "C2. 赞美偏好对比",
+          "value": "c2-赞美偏好对比",
+          "line": 79,
+          "column": 0,
+          "depth": 3
+        },
+        "c3-女性心动型赞美照抄": {
+          "type": "header",
+          "text": "C3. 女性心动型赞美（照抄）",
+          "value": "c3-女性心动型赞美照抄",
+          "line": 83,
+          "column": 0,
+          "depth": 3
+        },
+        "c4-日常家务型赞美": {
+          "type": "header",
+          "text": "C4. 日常家务型赞美",
+          "value": "c4-日常家务型赞美",
+          "line": 90,
+          "column": 0,
+          "depth": 3
+        },
+        "c5-时机比措辞更重要": {
+          "type": "header",
+          "text": "C5. 时机比措辞更重要",
+          "value": "c5-时机比措辞更重要",
+          "line": 96,
+          "column": 0,
+          "depth": 3
+        },
+        "c6-总结速背": {
+          "type": "header",
+          "text": "C6. 总结速背",
+          "value": "c6-总结速背",
+          "line": 101,
+          "column": 0,
+          "depth": 3
+        }
+      },
+      "children": [],
+      "parent": "dnu2x5eietntwdocshwqpbc",
       "data": {}
     },
     "9asWALGIyZ8jlcax1ijUX": {
@@ -8703,7 +9432,8 @@
         "5eq2p7u8qdjjalv6wy9zajl",
         "teiyai1qev15be5gyfgezhl",
         "dld3g3m6jpelsrlo5zrurqq",
-        "pcokxJGUyLKUFhpWQabJ7"
+        "pcokxJGUyLKUFhpWQabJ7",
+        "y5kmtod364er41pu9ekjp4e"
       ],
       "data": {},
       "contentHash": "dd52b5579a792d039bb65ecdeb97a019",
@@ -8711,6 +9441,715 @@
       "custom": {
         "stub": true
       }
+    },
+    "y5kmtod364er41pu9ekjp4e": {
+      "id": "y5kmtod364er41pu9ekjp4e",
+      "title": "菜谱",
+      "desc": "",
+      "updated": 1754575491405,
+      "created": 1754575457382,
+      "custom": {},
+      "fname": "life.food.菜谱",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "4a6c9099a33de337c1ea26f150a7bf8b",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "ddcs70jgp5owmzrxng4o9gz",
+        "36eawa2g0g5v7y05rdl9jgn",
+        "0mzke4dpjh6mjymvb9xx88w",
+        "ws80e7ekllpmte4wgr491u4",
+        "50sbyqlergavus0oa82stb7",
+        "0e3bxek003i25cnjdtfz80b",
+        "w3fc6ytjnb979tuq2opfl5r",
+        "y80winkip0lhm00jmveyf8r",
+        "2gjr7m0z337rjicd6ouvftg",
+        "oe185ma0tlaqdl21dlrzsxf"
+      ],
+      "parent": "OFi7hM5EYDLGlvf2dyZGl",
+      "data": {}
+    },
+    "oe185ma0tlaqdl21dlrzsxf": {
+      "id": "oe185ma0tlaqdl21dlrzsxf",
+      "title": "鸡肉脯炒黄瓜",
+      "desc": "",
+      "updated": 1754575590311,
+      "created": 1754575589342,
+      "custom": {},
+      "fname": "life.food.菜谱.鸡肉脯炒黄瓜",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "8dd099881ae11fa348bee693bff72b21",
+      "links": [],
+      "anchors": {
+        "鸡脯肉炒黄瓜": {
+          "type": "header",
+          "text": "鸡脯肉炒黄瓜",
+          "value": "鸡脯肉炒黄瓜",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "原材料": {
+          "type": "header",
+          "text": "原材料",
+          "value": "原材料",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "前期准备": {
+          "type": "header",
+          "text": "前期准备",
+          "value": "前期准备",
+          "line": 14,
+          "column": 0,
+          "depth": 2
+        },
+        "步骤": {
+          "type": "header",
+          "text": "步骤",
+          "value": "步骤",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        },
+        "注意点": {
+          "type": "header",
+          "text": "注意点",
+          "value": "注意点",
+          "line": 25,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "y5kmtod364er41pu9ekjp4e",
+      "data": {}
+    },
+    "2gjr7m0z337rjicd6ouvftg": {
+      "id": "2gjr7m0z337rjicd6ouvftg",
+      "title": "鱼豆腐汤",
+      "desc": "",
+      "updated": 1754575602960,
+      "created": 1754575602085,
+      "custom": {},
+      "fname": "life.food.菜谱.鱼豆腐汤",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "a0576f9dc941996aadc1458eeef850c2",
+      "links": [],
+      "anchors": {
+        "鱼豆腐汤": {
+          "type": "header",
+          "text": "鱼豆腐汤",
+          "value": "鱼豆腐汤",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "原材料": {
+          "type": "header",
+          "text": "原材料",
+          "value": "原材料",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "前期准备": {
+          "type": "header",
+          "text": "前期准备",
+          "value": "前期准备",
+          "line": 15,
+          "column": 0,
+          "depth": 2
+        },
+        "步骤": {
+          "type": "header",
+          "text": "步骤",
+          "value": "步骤",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        },
+        "注意点": {
+          "type": "header",
+          "text": "注意点",
+          "value": "注意点",
+          "line": 28,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "y5kmtod364er41pu9ekjp4e",
+      "data": {}
+    },
+    "y80winkip0lhm00jmveyf8r": {
+      "id": "y80winkip0lhm00jmveyf8r",
+      "title": "芹菜饺子",
+      "desc": "",
+      "updated": 1754575530668,
+      "created": 1754575529412,
+      "custom": {},
+      "fname": "life.food.菜谱.芹菜饺子",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "a330cdfd346a7a063289a3e56f105265",
+      "links": [],
+      "anchors": {
+        "原材料": {
+          "type": "header",
+          "text": "原材料",
+          "value": "原材料",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "前期准备": {
+          "type": "header",
+          "text": "前期准备",
+          "value": "前期准备",
+          "line": 15,
+          "column": 0,
+          "depth": 2
+        },
+        "和面": {
+          "type": "header",
+          "text": "和面",
+          "value": "和面",
+          "line": 17,
+          "column": 0,
+          "depth": 3
+        },
+        "步骤": {
+          "type": "header",
+          "text": "步骤",
+          "value": "步骤",
+          "line": 23,
+          "column": 0,
+          "depth": 2
+        },
+        "馅料准备": {
+          "type": "header",
+          "text": "馅料准备",
+          "value": "馅料准备",
+          "line": 25,
+          "column": 0,
+          "depth": 3
+        },
+        "芹菜处理": {
+          "type": "header",
+          "text": "芹菜处理",
+          "value": "芹菜处理",
+          "line": 28,
+          "column": 0,
+          "depth": 3
+        },
+        "注意点": {
+          "type": "header",
+          "text": "注意点",
+          "value": "注意点",
+          "line": 34,
+          "column": 0,
+          "depth": 2
+        },
+        "原材料的英文": {
+          "type": "header",
+          "text": "原材料的英文",
+          "value": "原材料的英文",
+          "line": 37,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "y5kmtod364er41pu9ekjp4e",
+      "data": {}
+    },
+    "w3fc6ytjnb979tuq2opfl5r": {
+      "id": "w3fc6ytjnb979tuq2opfl5r",
+      "title": "胡萝卜芦笋肉丝面",
+      "desc": "",
+      "updated": 1754575552950,
+      "created": 1754575550946,
+      "custom": {},
+      "fname": "life.food.菜谱.胡萝卜芦笋肉丝面",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "41cc1fcaa691aab9b8038711c63943a0",
+      "links": [],
+      "anchors": {
+        "胡萝卜芦笋肉丝面": {
+          "type": "header",
+          "text": "胡萝卜芦笋肉丝面",
+          "value": "胡萝卜芦笋肉丝面",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "原材料": {
+          "type": "header",
+          "text": "原材料",
+          "value": "原材料",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "前期准备": {
+          "type": "header",
+          "text": "前期准备",
+          "value": "前期准备",
+          "line": 15,
+          "column": 0,
+          "depth": 2
+        },
+        "步骤": {
+          "type": "header",
+          "text": "步骤",
+          "value": "步骤",
+          "line": 21,
+          "column": 0,
+          "depth": 2
+        },
+        "注意点": {
+          "type": "header",
+          "text": "注意点",
+          "value": "注意点",
+          "line": 27,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "y5kmtod364er41pu9ekjp4e",
+      "data": {}
+    },
+    "0e3bxek003i25cnjdtfz80b": {
+      "id": "0e3bxek003i25cnjdtfz80b",
+      "title": "粽子",
+      "desc": "",
+      "updated": 1754575540049,
+      "created": 1754575538961,
+      "custom": {},
+      "fname": "life.food.菜谱.粽子",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "c0275cdbc91249d6afeccc8f2dc42570",
+      "links": [],
+      "anchors": {
+        "原材料": {
+          "type": "header",
+          "text": "原材料",
+          "value": "原材料",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "前期准备": {
+          "type": "header",
+          "text": "前期准备",
+          "value": "前期准备",
+          "line": 13,
+          "column": 0,
+          "depth": 2
+        },
+        "步骤": {
+          "type": "header",
+          "text": "步骤",
+          "value": "步骤",
+          "line": 19,
+          "column": 0,
+          "depth": 2
+        },
+        "注意点": {
+          "type": "header",
+          "text": "注意点",
+          "value": "注意点",
+          "line": 27,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "y5kmtod364er41pu9ekjp4e",
+      "data": {}
+    },
+    "50sbyqlergavus0oa82stb7": {
+      "id": "50sbyqlergavus0oa82stb7",
+      "title": "排骨莲藕汤",
+      "desc": "",
+      "updated": 1754575517516,
+      "created": 1754575515629,
+      "custom": {},
+      "fname": "life.food.菜谱.排骨莲藕汤",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "ef52e00747f955a2261a4cdb0d7cc74f",
+      "links": [],
+      "anchors": {
+        "原材料": {
+          "type": "header",
+          "text": "原材料",
+          "value": "原材料",
+          "line": 8,
+          "column": 0,
+          "depth": 2
+        },
+        "前期准备": {
+          "type": "header",
+          "text": "前期准备",
+          "value": "前期准备",
+          "line": 12,
+          "column": 0,
+          "depth": 2
+        },
+        "排骨处理": {
+          "type": "header",
+          "text": "排骨处理",
+          "value": "排骨处理",
+          "line": 14,
+          "column": 0,
+          "depth": 3
+        },
+        "藕处理": {
+          "type": "header",
+          "text": "藕处理",
+          "value": "藕处理",
+          "line": 22,
+          "column": 0,
+          "depth": 3
+        },
+        "步骤": {
+          "type": "header",
+          "text": "步骤",
+          "value": "步骤",
+          "line": 27,
+          "column": 0,
+          "depth": 2
+        },
+        "注意点": {
+          "type": "header",
+          "text": "注意点",
+          "value": "注意点",
+          "line": 30,
+          "column": 0,
+          "depth": 2
+        },
+        "原材料的英文": {
+          "type": "header",
+          "text": "原材料的英文",
+          "value": "原材料的英文",
+          "line": 33,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "y5kmtod364er41pu9ekjp4e",
+      "data": {}
+    },
+    "ws80e7ekllpmte4wgr491u4": {
+      "id": "ws80e7ekllpmte4wgr491u4",
+      "title": "土豆鸡翅",
+      "desc": "",
+      "updated": 1754575564580,
+      "created": 1754575563625,
+      "custom": {},
+      "fname": "life.food.菜谱.土豆鸡翅",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "a514f5b16e3c8ca9b3808d08778c200a",
+      "links": [],
+      "anchors": {
+        "鸡翅土豆": {
+          "type": "header",
+          "text": "鸡翅土豆",
+          "value": "鸡翅土豆",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "原材料": {
+          "type": "header",
+          "text": "原材料",
+          "value": "原材料",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "前期准备": {
+          "type": "header",
+          "text": "前期准备",
+          "value": "前期准备",
+          "line": 14,
+          "column": 0,
+          "depth": 2
+        },
+        "步骤": {
+          "type": "header",
+          "text": "步骤",
+          "value": "步骤",
+          "line": 19,
+          "column": 0,
+          "depth": 2
+        },
+        "注意点": {
+          "type": "header",
+          "text": "注意点",
+          "value": "注意点",
+          "line": 24,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "y5kmtod364er41pu9ekjp4e",
+      "data": {}
+    },
+    "0mzke4dpjh6mjymvb9xx88w": {
+      "id": "0mzke4dpjh6mjymvb9xx88w",
+      "title": "咖喱鸡块",
+      "desc": "",
+      "updated": 1754575622965,
+      "created": 1754575622113,
+      "custom": {},
+      "fname": "life.food.菜谱.咖喱鸡块",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "bc054e27bd399368a4c0f0961bc7696e",
+      "links": [],
+      "anchors": {
+        "咖喱鸡块": {
+          "type": "header",
+          "text": "咖喱鸡块",
+          "value": "咖喱鸡块",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "原材料": {
+          "type": "header",
+          "text": "原材料",
+          "value": "原材料",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "前期准备": {
+          "type": "header",
+          "text": "前期准备",
+          "value": "前期准备",
+          "line": 15,
+          "column": 0,
+          "depth": 2
+        },
+        "步骤": {
+          "type": "header",
+          "text": "步骤",
+          "value": "步骤",
+          "line": 18,
+          "column": 0,
+          "depth": 2
+        },
+        "注意点": {
+          "type": "header",
+          "text": "注意点",
+          "value": "注意点",
+          "line": 24,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "y5kmtod364er41pu9ekjp4e",
+      "data": {}
+    },
+    "36eawa2g0g5v7y05rdl9jgn": {
+      "id": "36eawa2g0g5v7y05rdl9jgn",
+      "title": "台式卤肉饭",
+      "desc": "",
+      "updated": 1754575637827,
+      "created": 1754575636915,
+      "custom": {},
+      "fname": "life.food.菜谱.台式卤肉饭",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "c39516f875aa725b0d124ec4f0a2a330",
+      "links": [],
+      "anchors": {
+        "台式卤肉饭": {
+          "type": "header",
+          "text": "台式卤肉饭",
+          "value": "台式卤肉饭",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "原材料": {
+          "type": "header",
+          "text": "原材料",
+          "value": "原材料",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "步骤": {
+          "type": "header",
+          "text": "步骤",
+          "value": "步骤",
+          "line": 18,
+          "column": 0,
+          "depth": 2
+        },
+        "注意点": {
+          "type": "header",
+          "text": "注意点",
+          "value": "注意点",
+          "line": 32,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "y5kmtod364er41pu9ekjp4e",
+      "data": {}
+    },
+    "ddcs70jgp5owmzrxng4o9gz": {
+      "id": "ddcs70jgp5owmzrxng4o9gz",
+      "title": "元宵",
+      "desc": "",
+      "updated": 1754575574592,
+      "created": 1754575573689,
+      "custom": {},
+      "fname": "life.food.菜谱.元宵",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "3d197bf6377825f0a23e92acacd2bf4f",
+      "links": [],
+      "anchors": {
+        "元宵": {
+          "type": "header",
+          "text": "元宵",
+          "value": "元宵",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "原材料": {
+          "type": "header",
+          "text": "原材料",
+          "value": "原材料",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "前期准备": {
+          "type": "header",
+          "text": "前期准备",
+          "value": "前期准备",
+          "line": 14,
+          "column": 0,
+          "depth": 2
+        },
+        "步骤": {
+          "type": "header",
+          "text": "步骤",
+          "value": "步骤",
+          "line": 17,
+          "column": 0,
+          "depth": 2
+        },
+        "注意点": {
+          "type": "header",
+          "text": "注意点",
+          "value": "注意点",
+          "line": 23,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "y5kmtod364er41pu9ekjp4e",
+      "data": {}
     },
     "pcokxJGUyLKUFhpWQabJ7": {
       "id": "pcokxJGUyLKUFhpWQabJ7",
@@ -10464,17 +11903,18 @@
         "jojs1d2qio4fc0hro6s0n1r",
         "5amryyh4db98vvqewmg7tog",
         "rnpejt5mhixo8w3581ochep",
+        "vv6pdyymna3s62s7yb3tq5i",
         "m9hixd1ba27ejnjqsf46iqp",
         "dk7kr7xzrhq1wehrr3qhzoa",
         "r8syy78lh46tn150m10zwut",
         "7w0928rhkicnthyqvqasn31",
         "qk7q7r1iukcgft3aj4tq6ed",
-        "48683zlg4foa0ya39blh01o"
+        "5b2mzexvnikbfvfne2fpa0x"
       ],
       "parent": "1723e833-135e-4267-af98-9c0eb39b8260",
       "data": {}
     },
-    "48683zlg4foa0ya39blh01o": {
+    "5b2mzexvnikbfvfne2fpa0x": {
       "fname": "life.automation.server",
       "stub": true,
       "vault": {
@@ -10487,9 +11927,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444364,
-      "created": 1735883444364,
-      "id": "48683zlg4foa0ya39blh01o",
+      "updated": 1769574937766,
+      "created": 1769574937766,
+      "id": "5b2mzexvnikbfvfne2fpa0x",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -10554,7 +11994,7 @@
         }
       },
       "children": [],
-      "parent": "48683zlg4foa0ya39blh01o",
+      "parent": "5b2mzexvnikbfvfne2fpa0x",
       "data": {}
     },
     "qk7q7r1iukcgft3aj4tq6ed": {
@@ -10811,6 +12251,55 @@
           "line": 29,
           "column": 0,
           "depth": 1
+        }
+      },
+      "children": [],
+      "parent": "bjj9gxh6yu1vdal4w8sttth",
+      "data": {}
+    },
+    "vv6pdyymna3s62s7yb3tq5i": {
+      "id": "vv6pdyymna3s62s7yb3tq5i",
+      "title": "Omnifocus",
+      "desc": "",
+      "updated": 1753939370849,
+      "created": 1753846519948,
+      "custom": {},
+      "fname": "life.automation.omnifocus",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "20174e1222dd82600b0fb57ea14f00b3",
+      "links": [],
+      "anchors": {
+        "url-schemes": {
+          "type": "header",
+          "text": "url schemes",
+          "value": "url-schemes",
+          "line": 8,
+          "column": 0,
+          "depth": 1
+        },
+        "add": {
+          "type": "header",
+          "text": "Add",
+          "value": "add",
+          "line": 12,
+          "column": 0,
+          "depth": 2
+        },
+        "view": {
+          "type": "header",
+          "text": "view",
+          "value": "view",
+          "line": 41,
+          "column": 0,
+          "depth": 2
         }
       },
       "children": [],
@@ -11218,7 +12707,7 @@
         "62daf50d-a39e-463f-aabd-be53790281fd",
         "3524d0a7-be73-45d6-847e-c970f5c1c760",
         "eac0f243-05b3-4b95-bec3-848e33edbc40",
-        "ubbcds8vm331to6kyei2kwk"
+        "zrjuka02gkzrqxt5djp2aws"
       ],
       "data": {},
       "custom": {
@@ -11227,7 +12716,7 @@
       },
       "contentHash": "38357962f5a50c6fd7d318dfa66bea90"
     },
-    "ubbcds8vm331to6kyei2kwk": {
+    "zrjuka02gkzrqxt5djp2aws": {
       "fname": "development.lang",
       "stub": true,
       "vault": {
@@ -11240,9 +12729,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444241,
-      "created": 1735883444241,
-      "id": "ubbcds8vm331to6kyei2kwk",
+      "updated": 1769574937560,
+      "created": 1769574937560,
+      "id": "zrjuka02gkzrqxt5djp2aws",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -11276,7 +12765,7 @@
       "children": [
         "albrvvfr3tsfsy8xh1pmpw4"
       ],
-      "parent": "ubbcds8vm331to6kyei2kwk",
+      "parent": "zrjuka02gkzrqxt5djp2aws",
       "data": {}
     },
     "albrvvfr3tsfsy8xh1pmpw4": {
@@ -11978,13 +13467,13 @@
         "da63a48e-f890-48b0-b051-d4e545a0e1ba",
         "3a5260a3-2387-484f-a8ad-e072c37424dd",
         "cd3ae684-36e9-4c66-af36-7b2891db3cde",
-        "nctp8snr2xlhwiulgz57qdj"
+        "yhb13ov5mduuj20g7l84lxq"
       ],
       "data": {},
       "custom": {},
       "contentHash": "eb615e5a54b0ca33416275965b2d8364"
     },
-    "nctp8snr2xlhwiulgz57qdj": {
+    "yhb13ov5mduuj20g7l84lxq": {
       "fname": "development.system.linux",
       "stub": true,
       "vault": {
@@ -11997,9 +13486,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444360,
-      "created": 1735883444360,
-      "id": "nctp8snr2xlhwiulgz57qdj",
+      "updated": 1769574937760,
+      "created": 1769574937760,
+      "id": "yhb13ov5mduuj20g7l84lxq",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -12031,7 +13520,7 @@
       "links": [],
       "anchors": {},
       "children": [],
-      "parent": "nctp8snr2xlhwiulgz57qdj",
+      "parent": "yhb13ov5mduuj20g7l84lxq",
       "data": {}
     },
     "cd3ae684-36e9-4c66-af36-7b2891db3cde": {
@@ -15421,12 +16910,12 @@
         "iyva7b4g1rzpr45c4h89z7n",
         "kwzu42tyby2lc28btxfpmfs",
         "0l0jwy8pp520u30r80sc8fd",
-        "2gapaa97z92a7x7dtt45yrz"
+        "qserrgt70scz4ieugup6b5r"
       ],
       "parent": "0f1b48c7-3a25-4016-83a5-15864d7803ad",
       "data": {}
     },
-    "2gapaa97z92a7x7dtt45yrz": {
+    "qserrgt70scz4ieugup6b5r": {
       "fname": "development.mlops.data",
       "stub": true,
       "vault": {
@@ -15439,9 +16928,9 @@
       },
       "schemaStub": false,
       "type": "note",
-      "updated": 1735883444355,
-      "created": 1735883444355,
-      "id": "2gapaa97z92a7x7dtt45yrz",
+      "updated": 1769574937752,
+      "created": 1769574937752,
+      "id": "qserrgt70scz4ieugup6b5r",
       "desc": "",
       "links": [],
       "anchors": {},
@@ -15509,7 +16998,7 @@
         }
       },
       "children": [],
-      "parent": "2gapaa97z92a7x7dtt45yrz",
+      "parent": "qserrgt70scz4ieugup6b5r",
       "data": {}
     },
     "wyu1njlceyhhk541p1d3kev": {
@@ -15558,7 +17047,7 @@
         }
       },
       "children": [],
-      "parent": "2gapaa97z92a7x7dtt45yrz",
+      "parent": "qserrgt70scz4ieugup6b5r",
       "data": {}
     },
     "mjwjf16rv9u2b31pii4gaw7": {
@@ -15615,7 +17104,7 @@
         }
       },
       "children": [],
-      "parent": "2gapaa97z92a7x7dtt45yrz",
+      "parent": "qserrgt70scz4ieugup6b5r",
       "data": {}
     },
     "glzy659gfrzbx3clt71b5bx": {
@@ -15688,7 +17177,7 @@
         }
       },
       "children": [],
-      "parent": "2gapaa97z92a7x7dtt45yrz",
+      "parent": "qserrgt70scz4ieugup6b5r",
       "data": {}
     },
     "0l0jwy8pp520u30r80sc8fd": {
@@ -16353,7 +17842,7 @@
       "id": "cki43m8kwb6iflb2de61itq",
       "title": "LLM",
       "desc": "",
-      "updated": 1678338082102,
+      "updated": 1757213819234,
       "created": 1678338043210,
       "custom": {},
       "fname": "development.ml.LLM",
@@ -16366,7 +17855,7 @@
         },
         "name": "my_note"
       },
-      "contentHash": "43c412dbd8653443218e028545997a15",
+      "contentHash": "6826f99cc5cd03c2661c0a953d3fe6a9",
       "links": [],
       "anchors": {},
       "children": [
@@ -16376,9 +17865,233 @@
         "vlbjb19104pkzyg8nmai5pa",
         "282jaazafck51k0dd93k6wu",
         "82undztzy7arc9g53jgjoas",
-        "orvk6ml0kophjt1oddyzcs7"
+        "orvk6ml0kophjt1oddyzcs7",
+        "qzhktnz6o28v08msov6iph3",
+        "mtcseghv7a6x4cqeoyqxgrv"
       ],
       "parent": "09d9081f-3dff-453d-8488-7d2344cc8895",
+      "data": {}
+    },
+    "mtcseghv7a6x4cqeoyqxgrv": {
+      "id": "mtcseghv7a6x4cqeoyqxgrv",
+      "title": "Model",
+      "desc": "",
+      "updated": 1757214074860,
+      "created": 1757213861084,
+      "custom": {},
+      "fname": "development.ml.llm.model",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "c2144edc5de55dc03e4a9c6e3d9ae760",
+      "links": [],
+      "anchors": {},
+      "children": [
+        "r705ke8aod05k1t1mc48isc",
+        "x0zq5fhec0rw4x81c0q5cg4",
+        "p5rqgevdpq5ocye21gl5fym",
+        "p3ytzouohfopwbd6pzvpau2"
+      ],
+      "parent": "cki43m8kwb6iflb2de61itq",
+      "data": {}
+    },
+    "p3ytzouohfopwbd6pzvpau2": {
+      "id": "p3ytzouohfopwbd6pzvpau2",
+      "title": "Training",
+      "desc": "",
+      "updated": 1757215075310,
+      "created": 1757214914313,
+      "custom": {},
+      "fname": "development.ml.llm.model.training",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "7a93853b282c4dbcb0605c1ca25379f3",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "mtcseghv7a6x4cqeoyqxgrv",
+      "data": {}
+    },
+    "p5rqgevdpq5ocye21gl5fym": {
+      "id": "p5rqgevdpq5ocye21gl5fym",
+      "title": "Sampling",
+      "desc": "",
+      "updated": 1753939411350,
+      "created": 1753939358790,
+      "custom": {},
+      "fname": "development.ml.llm.model.sampling",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "9572993656a2615ce2acad3f9b6d1196",
+      "links": [],
+      "anchors": {
+        "-大语言模型中的-sampling-与-logit-总结": {
+          "type": "header",
+          "text": "🧠 大语言模型中的 Sampling 与 Logit 总结",
+          "value": "-大语言模型中的-sampling-与-logit-总结",
+          "line": 9,
+          "column": 0,
+          "depth": 1
+        },
+        "1-什么是-logits": {
+          "type": "header",
+          "text": "1. 什么是 Logits？",
+          "value": "1-什么是-logits",
+          "line": 11,
+          "column": 0,
+          "depth": 2
+        },
+        "2-softmax-的作用": {
+          "type": "header",
+          "text": "2. softmax 的作用",
+          "value": "2-softmax-的作用",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        },
+        "3-sampling-策略": {
+          "type": "header",
+          "text": "3. Sampling 策略",
+          "value": "3-sampling-策略",
+          "line": 32,
+          "column": 0,
+          "depth": 2
+        },
+        "-top-k-sampling固定数量": {
+          "type": "header",
+          "text": "🎯 Top-k Sampling（固定数量）",
+          "value": "-top-k-sampling固定数量",
+          "line": 34,
+          "column": 0,
+          "depth": 3
+        },
+        "-top-p-samplingnucleus-sampling": {
+          "type": "header",
+          "text": "🎯 Top-p Sampling（Nucleus Sampling）",
+          "value": "-top-p-samplingnucleus-sampling",
+          "line": 44,
+          "column": 0,
+          "depth": 3
+        },
+        "4-temperature温度": {
+          "type": "header",
+          "text": "4. Temperature（温度）",
+          "value": "4-temperature温度",
+          "line": 54,
+          "column": 0,
+          "depth": 2
+        },
+        "-小复习口诀": {
+          "type": "header",
+          "text": "🔁 小复习口诀：",
+          "value": "-小复习口诀",
+          "line": 68,
+          "column": 0,
+          "depth": 2
+        },
+        "推荐参数实践中常用": {
+          "type": "header",
+          "text": "推荐参数（实践中常用）",
+          "value": "推荐参数实践中常用",
+          "line": 80,
+          "column": 0,
+          "depth": 2
+        }
+      },
+      "children": [],
+      "parent": "mtcseghv7a6x4cqeoyqxgrv",
+      "data": {}
+    },
+    "x0zq5fhec0rw4x81c0q5cg4": {
+      "id": "x0zq5fhec0rw4x81c0q5cg4",
+      "title": "Parameter",
+      "desc": "",
+      "updated": 1757214125992,
+      "created": 1757214125121,
+      "custom": {},
+      "fname": "development.ml.llm.model.parameter",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "5d5d6d459da8c24ba60ed6de15b3a9a5",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "mtcseghv7a6x4cqeoyqxgrv",
+      "data": {}
+    },
+    "r705ke8aod05k1t1mc48isc": {
+      "id": "r705ke8aod05k1t1mc48isc",
+      "title": "Output",
+      "desc": "",
+      "updated": 1757215214556,
+      "created": 1757215206916,
+      "custom": {},
+      "fname": "development.ml.llm.model.output",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "fde9e94db4bfd24ed39f0cc3a9baf124",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "mtcseghv7a6x4cqeoyqxgrv",
+      "data": {}
+    },
+    "qzhktnz6o28v08msov6iph3": {
+      "id": "qzhktnz6o28v08msov6iph3",
+      "title": "Evaluation",
+      "desc": "",
+      "updated": 1757217917253,
+      "created": 1757217913772,
+      "custom": {},
+      "fname": "development.ml.llm.evaluation",
+      "type": "note",
+      "vault": {
+        "fsPath": "repos/dendron-aws-vault",
+        "remote": {
+          "type": "git",
+          "url": "https://github.com/cczhong11/my_note.git"
+        },
+        "name": "my_note"
+      },
+      "contentHash": "5d45f2f13e7c06fff70bcfb3679881e2",
+      "links": [],
+      "anchors": {},
+      "children": [],
+      "parent": "cki43m8kwb6iflb2de61itq",
       "data": {}
     },
     "orvk6ml0kophjt1oddyzcs7": {
@@ -16586,7 +18299,7 @@
       "id": "aar1sktn882l7ik25bq09gi",
       "title": "quantize",
       "desc": "",
-      "updated": 1687625470939,
+      "updated": 1753335870007,
       "created": 1687625469268,
       "custom": {},
       "fname": "development.ml.LLM.llama.quantize",
@@ -16599,9 +18312,74 @@
         },
         "name": "my_note"
       },
-      "contentHash": "cdbcfa15c36fb3dcf5c375098e3abec0",
+      "contentHash": "15dd17c05e7ded4777285c6e7f00bed9",
       "links": [],
-      "anchors": {},
+      "anchors": {
+        "-1-pretrain-量化pretraining-quantization": {
+          "type": "header",
+          "text": "🧠 1. Pretrain 量化（Pretraining Quantization）",
+          "value": "-1-pretrain-量化pretraining-quantization",
+          "line": 10,
+          "column": 0,
+          "depth": 2
+        },
+        "-2-lora-量化low-rank-adaptation--quantization": {
+          "type": "header",
+          "text": "🐏 2. LoRA 量化（Low-Rank Adaptation + Quantization）",
+          "value": "-2-lora-量化low-rank-adaptation--quantization",
+          "line": 23,
+          "column": 0,
+          "depth": 2
+        },
+        "-3-ffn-only-量化比如-outlier-aware-quantization": {
+          "type": "header",
+          "text": "💡 3. FFN-only 量化（比如 Outlier-Aware Quantization）",
+          "value": "-3-ffn-only-量化比如-outlier-aware-quantization",
+          "line": 40,
+          "column": 0,
+          "depth": 2
+        },
+        "️-4-推理阶段量化serving-time-quantization": {
+          "type": "header",
+          "text": "🛰️ 4. 推理阶段量化（Serving-time Quantization）",
+          "value": "️-4-推理阶段量化serving-time-quantization",
+          "line": 55,
+          "column": 0,
+          "depth": 2
+        },
+        "-常见-serving-量化方法": {
+          "type": "header",
+          "text": "✨ 常见 serving 量化方法：",
+          "value": "-常见-serving-量化方法",
+          "line": 59,
+          "column": 0,
+          "depth": 3
+        },
+        "-serving-的目标": {
+          "type": "header",
+          "text": "🚀 Serving 的目标：",
+          "value": "-serving-的目标",
+          "line": 67,
+          "column": 0,
+          "depth": 3
+        },
+        "-总结一张图逻辑流": {
+          "type": "header",
+          "text": "🍰 总结一张图（逻辑流）：",
+          "value": "-总结一张图逻辑流",
+          "line": 75,
+          "column": 0,
+          "depth": 2
+        },
+        "-小贴士-time-": {
+          "type": "header",
+          "text": "💬 小贴士 Time ～",
+          "value": "-小贴士-time-",
+          "line": 91,
+          "column": 0,
+          "depth": 2
+        }
+      },
       "children": [],
       "parent": "9cp08wuyd7t35jzracxxqbv",
       "data": {}
@@ -16610,7 +18388,7 @@
       "id": "b2rvyxr67k0xnabypxc9u9z",
       "title": "qlora",
       "desc": "",
-      "updated": 1687625458019,
+      "updated": 1753335919911,
       "created": 1687625458019,
       "custom": {},
       "fname": "development.ml.LLM.llama.qlora",
@@ -16623,9 +18401,82 @@
         },
         "name": "my_note"
       },
-      "contentHash": "b822700c12966a2c5953240db712dd72",
+      "contentHash": "7ce0cf4a8d3bfc4325fd698b2dac75ab",
       "links": [],
-      "anchors": {},
+      "anchors": {
+        "-什么是-qlora": {
+          "type": "header",
+          "text": "🧠 什么是 QLoRA？",
+          "value": "-什么是-qlora",
+          "line": 9,
+          "column": 0,
+          "depth": 2
+        },
+        "-它怎么做的内部机制讲解-": {
+          "type": "header",
+          "text": "🧩 它怎么做的？内部机制讲解 👇",
+          "value": "-它怎么做的内部机制讲解-",
+          "line": 20,
+          "column": 0,
+          "depth": 2
+        },
+        "-qlora-核心-idea": {
+          "type": "header",
+          "text": "💡 QLoRA 核心 idea：",
+          "value": "-qlora-核心-idea",
+          "line": 22,
+          "column": 0,
+          "depth": 3
+        },
+        "-qlora-详细流程": {
+          "type": "header",
+          "text": "🧪 QLoRA 详细流程",
+          "value": "-qlora-详细流程",
+          "line": 30,
+          "column": 0,
+          "depth": 2
+        },
+        "-qlora-vs-lora-vs-gptq": {
+          "type": "header",
+          "text": "🧠 QLoRA vs LoRA vs GPTQ",
+          "value": "-qlora-vs-lora-vs-gptq",
+          "line": 41,
+          "column": 0,
+          "depth": 2
+        },
+        "-使用-qlora-的工具推荐": {
+          "type": "header",
+          "text": "🔧 使用 QLoRA 的工具推荐",
+          "value": "-使用-qlora-的工具推荐",
+          "line": 51,
+          "column": 0,
+          "depth": 2
+        },
+        "-优势总结为啥大家都用-qlora": {
+          "type": "header",
+          "text": "✨ 优势总结（为啥大家都用 QLoRA？）",
+          "value": "-优势总结为啥大家都用-qlora",
+          "line": 59,
+          "column": 0,
+          "depth": 2
+        },
+        "-举个可爱的例子": {
+          "type": "header",
+          "text": "🧸 举个可爱的例子：",
+          "value": "-举个可爱的例子",
+          "line": 68,
+          "column": 0,
+          "depth": 2
+        },
+        "要不要来试一下-qlora️": {
+          "type": "header",
+          "text": "要不要来试一下 QLoRA？🛠️",
+          "value": "要不要来试一下-qlora️",
+          "line": 78,
+          "column": 0,
+          "depth": 2
+        }
+      },
       "children": [],
       "parent": "9cp08wuyd7t35jzracxxqbv",
       "data": {}
@@ -21683,7 +23534,7 @@
         "62daf50d-a39e-463f-aabd-be53790281fd",
         "3524d0a7-be73-45d6-847e-c970f5c1c760",
         "eac0f243-05b3-4b95-bec3-848e33edbc40",
-        "ubbcds8vm331to6kyei2kwk"
+        "zrjuka02gkzrqxt5djp2aws"
       ],
       "data": {},
       "custom": {
@@ -21875,14 +23726,14 @@
         "efxujPMmo91nKhmMDwmxy",
         "pM7z7xLUf6hSNwawvfTSO",
         "c2644f8b-dfac-433a-9cff-af811875b7e0",
-        "t2q443j3dsnll8w8azjqn87",
-        "apgr6o8wqfvmtn1f95xx7ga",
-        "8viy38k9snh3rmd4uawf4gt",
-        "qzjiuijbo7yv5xgm57tx34t",
-        "ww7ld6vptpvuub6a6f9d1aw",
-        "b9wvlg0nn5y7v306qagvgdr",
-        "21zs0vh858wvozny1br38wk",
-        "ck9s9nmfsfcluthsrxs0rz8"
+        "3tkbngw5th3nt1cbr8at1qx",
+        "aoqrhfxch8vn8mvx6bxev67",
+        "ktjkxcbhzpia2sirbgse3nl",
+        "saazxp3zkdc605x1exwr30j",
+        "lmhp5a5blsmv4gh8e3dv4ds",
+        "pnvuzs99i5trx5nlqzx5lue",
+        "h0gry6sj3wv8s8bhw1aucc9",
+        "g3m2z6eu99pug2vd46u9ku3"
       ],
       "data": {},
       "custom": {
@@ -21949,7 +23800,7 @@
       "62daf50d-a39e-463f-aabd-be53790281fd",
       "3524d0a7-be73-45d6-847e-c970f5c1c760",
       "eac0f243-05b3-4b95-bec3-848e33edbc40",
-      "ubbcds8vm331to6kyei2kwk"
+      "zrjuka02gkzrqxt5djp2aws"
     ],
     "data": {},
     "custom": {

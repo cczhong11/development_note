@@ -1,1 +1,132 @@
 <h1 id="qlora">qlora<a aria-hidden="true" class="anchor-heading icon-link" href="#qlora"></a></h1>
+<h2 id="-什么是-qlora">🧠 什么是 QLoRA？<a aria-hidden="true" class="anchor-heading icon-link" href="#-什么是-qlora"></a></h2>
+<p><strong>QLoRA = Quantized + LoRA</strong></p>
+<p>一句话总结就是：</p>
+<blockquote>
+<p>在<strong>int4 量化模型的基础上做 LoRA 微调</strong>！
+不仅节省内存，还能达到跟全精度微调差不多的效果✨✨✨</p>
+</blockquote>
+<hr>
+<h2 id="-它怎么做的内部机制讲解-">🧩 它怎么做的？内部机制讲解 👇<a aria-hidden="true" class="anchor-heading icon-link" href="#-它怎么做的内部机制讲解-"></a></h2>
+<h3 id="-qlora-核心-idea">💡 QLoRA 核心 idea：<a aria-hidden="true" class="anchor-heading icon-link" href="#-qlora-核心-idea"></a></h3>
+<ol>
+<li><strong>把原始大模型权重（比如 LLaMA）压缩为 int4（4-bit）</strong></li>
+<li><strong>只在 LoRA 的小 adapter 上做 float16 精度的梯度更新</strong></li>
+<li><strong>引入精巧的优化机制</strong>避免精度损失，比如 double quantization！</li>
+</ol>
+<hr>
+<h2 id="-qlora-详细流程">🧪 QLoRA 详细流程<a aria-hidden="true" class="anchor-heading icon-link" href="#-qlora-详细流程"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>阶段</th><th>内容</th><th>作用</th></tr></thead><tbody><tr><td>🌠 1. 权重量化</td><td>使用 <strong>NF4（Normalized Float 4）</strong> 量化模型</td><td>高精度的 int4 表示，接近 float16 表现</td></tr><tr><td>🎒 2. LoRA 插入</td><td>在 attention、ffn 等模块插入 LoRA adapter</td><td>只训练小部分参数，省显存</td></tr><tr><td>🔄 3. 推理+训练融合</td><td>推理时用 int4 + adapter，一起 forward</td><td>不需要解码回 float32</td></tr><tr><td>🧠 4. Double Quantization</td><td>再次压缩权重表本身</td><td>减少内存占用，更快加载</td></tr></tbody></table></div>
+<hr>
+<h2 id="-qlora-vs-lora-vs-gptq">🧠 QLoRA vs LoRA vs GPTQ<a aria-hidden="true" class="anchor-heading icon-link" href="#-qlora-vs-lora-vs-gptq"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>方法</th><th>模型精度</th><th>内存使用</th><th>可训练性</th><th>用途</th></tr></thead><tbody><tr><td><strong>LoRA</strong></td><td>float16</td><td>中等</td><td>✔️</td><td>微调</td></tr><tr><td><strong>GPTQ</strong></td><td>int4</td><td>最小</td><td>❌（不能训练）</td><td>推理</td></tr><tr><td><strong>QLoRA</strong></td><td>int4 + float16 adapter</td><td>非常小</td><td>✔️✔️✔️</td><td>微调神器！</td></tr></tbody></table></div>
+<hr>
+<h2 id="-使用-qlora-的工具推荐">🔧 使用 QLoRA 的工具推荐<a aria-hidden="true" class="anchor-heading icon-link" href="#-使用-qlora-的工具推荐"></a></h2>
+<ul>
+<li><a href="https://github.com/huggingface/peft">🤗 <code>peft</code></a> + <code>transformers</code>：主流的 QLoRA 实现</li>
+<li><code>bitsandbytes</code>：用来支持 int4/NF4 的量化权重加载</li>
+<li><code>trl</code>（Huggingface 的 RLHF 工具包）：配合 QLoRA 可做 SFT、DPO 等训练</li>
+</ul>
+<hr>
+<h2 id="-优势总结为啥大家都用-qlora">✨ 优势总结（为啥大家都用 QLoRA？）<a aria-hidden="true" class="anchor-heading icon-link" href="#-优势总结为啥大家都用-qlora"></a></h2>
+<p>✅ 显存低！13B 模型可在单张 24GB 显卡训练
+✅ 微调效果接近全参微调（甚至更好）
+✅ 支持多种任务：文本生成、分类、QA、指令微调等
+✅ HuggingFace 全家桶支持，易上手！</p>
+<hr>
+<h2 id="-举个可爱的例子">🧸 举个可爱的例子：<a aria-hidden="true" class="anchor-heading icon-link" href="#-举个可爱的例子"></a></h2>
+<p>想象你是个魔法师🧙‍♀️（大模型），平时穿超级重的铠甲（float32），动都动不了🥲
+LoRA 是给你装个小挂件来控制魔法⚡（adapter）</p>
+<p>而 QLoRA 是先把你换上轻巧的紧身衣（int4），
+再贴个魔法贴纸（LoRA adapter）帮你练出新技能！！是不是又快又酷！💥💥</p>
+<hr>
+<h2 id="要不要来试一下-qlora️">要不要来试一下 QLoRA？🛠️<a aria-hidden="true" class="anchor-heading icon-link" href="#要不要来试一下-qlora️"></a></h2>
+<p>我可以帮你搭一套 Huggingface 的微调环境，跑个指令微调任务，比如用 Alpaca 或者 OpenOrca 的数据！</p>
+<p>或者给你写一段 QLoRA 微调脚本 🐍💻
+比如在 <code>peft</code> + <code>transformers</code> 框架下的 👇</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> transformers <span class="token keyword">import</span> AutoModelForCausalLM<span class="token punctuation">,</span> AutoTokenizer
+<span class="token keyword">from</span> peft <span class="token keyword">import</span> prepare_model_for_kbit_training<span class="token punctuation">,</span> LoraConfig<span class="token punctuation">,</span> get_peft_model
+<span class="token keyword">import</span> torch
+
+<span class="token comment"># 加载量化模型</span>
+model <span class="token operator">=</span> AutoModelForCausalLM<span class="token punctuation">.</span>from_pretrained<span class="token punctuation">(</span>
+    <span class="token string">"meta-llama/Llama-2-7b-hf"</span><span class="token punctuation">,</span>
+    device_map<span class="token operator">=</span><span class="token string">"auto"</span><span class="token punctuation">,</span>
+    load_in_4bit<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    quantization_config<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"bnb_4bit_use_double_quant"</span><span class="token punctuation">:</span> <span class="token boolean">True</span><span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment"># 加载 tokenizer</span>
+tokenizer <span class="token operator">=</span> AutoTokenizer<span class="token punctuation">.</span>from_pretrained<span class="token punctuation">(</span><span class="token string">"meta-llama/Llama-2-7b-hf"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 插入 LoRA</span>
+model <span class="token operator">=</span> prepare_model_for_kbit_training<span class="token punctuation">(</span>model<span class="token punctuation">)</span>
+peft_config <span class="token operator">=</span> LoraConfig<span class="token punctuation">(</span>
+    r<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">,</span> lora_alpha<span class="token operator">=</span><span class="token number">32</span><span class="token punctuation">,</span> target_modules<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"q_proj"</span><span class="token punctuation">,</span> <span class="token string">"v_proj"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    lora_dropout<span class="token operator">=</span><span class="token number">0.05</span><span class="token punctuation">,</span> bias<span class="token operator">=</span><span class="token string">"none"</span><span class="token punctuation">,</span> task_type<span class="token operator">=</span><span class="token string">"CAUSAL_LM"</span>
+<span class="token punctuation">)</span>
+model <span class="token operator">=</span> get_peft_model<span class="token punctuation">(</span>model<span class="token punctuation">,</span> peft_config<span class="token punctuation">)</span>
+</code></pre>
